@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- <link rel="icon" type="image/x-icon" href="/images/favicon.ico" /> -->
 
-    <title>My Page Title</title>
+    <title>Kyunghyang News</title>
     <meta name="keywords" content="HTML, CSS, JavaScript" />
     <meta name="description" content="Free Web tutorials" />
     <meta name="author" content="John Doe" />
@@ -16,19 +16,12 @@
   </head>
   <body class="kyunghyang-news home">
     <!-- page header -->
-    <header></header>
-
-    <!-- page content -->
-    <section class="s1">
-      <div class="home-section_banner">
-        <img
-          class="fullscreen"
-          src="/assets/images/home/young-girl-bg/04_img.png"
-          srcset="
-            /assets/images/home/young-girl-bg/04_img@2x.png 2x,
-            /assets/images/home/young-girl-bg/04_img@3x.png 3x
-          "
-        />
+    <header class="kyunghyang-header">
+      <video autoplay muted loop preload="metadata">
+        <source src="/assets/videos/home-banner-bg.mp4" type="video/mp4" />
+        귀하의 브라우저는 HTML5 비디오를 지원하지 않습니다
+      </video>
+      <div class="header-viewport fullscreen">
         <div class="tag-title">공공디자인으로 행복한 공간 만들기</div>
         <div class="main-title">
           <h1>
@@ -46,111 +39,275 @@
           <img src="/assets/svgs/icon_down-arrow.svg" alt="scroll-down" />
         </div>
       </div>
+    </header>
 
-      <div class="home-section_quotes">
-        <img
-          class="fullscreen"
-          src="/assets/images/home/young-girl-bg/04_img.png"
-          srcset="
-            /assets/images/home/young-girl-bg/04_img@2x.png 2x,
-            /assets/images/home/young-girl-bg/04_img@3x.png 3x
-          "
-        />
-        <h1 class="quotes-title text-strong-2">
-          &ldquo;
-          <div class="text-strong">우리는 늙습니다.</div>
-          &rdquo;
-        </h1>
+    <main class="kyunghyang-main">
+      <!-- page content -->
+      <section class="s1">
+        <div class="home-section_quotes fullscreen">
+          <img
+            class="fullscreen"
+            src="/assets/images/home/young-girl-bg/04_img.png"
+            srcset="
+              /assets/images/home/young-girl-bg/04_img@2x.png 2x,
+              /assets/images/home/young-girl-bg/04_img@3x.png 3x
+            "
+          />
+          <h1 class="quotes-title text-strong-2">
+            &ldquo;
+            <div class="text-strong">우리는 늙습니다.</div>
+            &rdquo;
+          </h1>
+        </div>
+
+        <div class="home-section_quotes fullscreen">
+          <img
+            class="fullscreen"
+            src="/assets/images/home/middle-woman-bg/05_img.png"
+            srcset="
+              /assets/images/home/middle-woman-bg/05_img@2x.png 2x,
+              /assets/images/home/middle-woman-bg/05_img@3x.png 3x
+            "
+          />
+          <h1 class="quotes-title text-strong-2">
+            &ldquo;
+            <div class="text-strong">노화를 겪으면 어떻게 바뀔까요?</div>
+            &rdquo;
+          </h1>
+        </div>
+
+        <div class="home-section_intro fullscreen">
+          <img
+            class="fullscreen"
+            src="/assets/images/home/old-man-bg/06_img.png"
+            srcset="
+              /assets/images/home/old-man-bg/06_img@2x.png 2x,
+              /assets/images/home/old-man-bg/06_img@3x.png 3x
+            "
+          />
+          <h2 class="left text-strong-2">
+            균형 감각이 떨어져 걷기 어렵고<br />
+            내가 지금 어디에 있는지 헷갈리 때가 많아져요.<br />
+            청각·후각 등의 감각이 무뎌지죠.
+          </h2>
+        </div>
+
+        <div class="home-section_intro fullscreen">
+          <img
+            class="fullscreen"
+            src="/assets/images/home/old-woman-bg/07_img.png"
+            srcset="
+              /assets/images/home/old-woman-bg/07_img@2x.png 2x,
+              /assets/images/home/old-woman-bg/07_img@3x.png 3x
+            "
+          />
+          <h2 class="right text-strong-2">
+            사회 활동이 줄어 자존감이 떨어지고<br />
+            홀로 회상에 잠기거나<br />
+            우울감에 허우적거리기도 합니다.
+          </h2>
+        </div>
+      </section>
+
+      <section class="s2">
+        <div class="home-section_statistics fullscreen">
+          <div style="flex: 1">
+            <div class="section-title-tag">대한민국 치매 현황</div>
+            <div class="statistics">
+              <div class="statistics-chart">
+                <canvas id="statistics-chart-canvas"></canvas>
+                <p class="text-light">
+                  출처 : 전국치매역학조사 (보건복지부 중앙치매센터, 2017 ),
+                  2017~2022년 주민등록연양인구(통계청, 2023)
+                </p>
+              </div>
+              <div class="statistics-contents">
+                <h3 class="text-light">
+                  이 같은 어려움을 겪는 어르신은 해마다 늘고 있어요.
+                </h3>
+                <h3 class="text-light">
+                  <span class="text-strong">2026년</span>이면
+                  <span class="text-strong">65세 이상</span>이
+                </h3>
+                <h3 class="text-light">
+                  우리나라 <span class="text-strong">인구 5명 중 1명</span>이
+                  됩니다.
+                </h3>
+                <h3 class="text-light">
+                  어른신들은 홀로 지낼수록 치매에 걸리기 쉽습니다.
+                </h3>
+                <h3 class="text-light">
+                  사회가 감당해야 할 비용도 늘어납니다.
+                </h3>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="home-section_map fullscreen">
+          <img
+            class="fullscreen"
+            src="/assets/images/home/map-bg/09-bg.png"
+            srcset="
+              /assets/images/home/map-bg/09-bg@2x.png 2x,
+              /assets/images/home/map-bg/09-bg@3x.png 3x
+            "
+          />
+        </div>
+      </section>
+
+      <!-- scroll bar -->
+      <div class="scroll-progress-container">
+        <ul class="scroll-progress-list">
+          <li>
+            <span class="text-light progress-item-content"
+              >노인들의 인지장애</span
+            >
+            <div class="progress-container">
+              <div class="progress"></div>
+            </div>
+          </li>
+          <li>
+            <span class="text-light progress-item-content"
+              >노인들의 치매와<br />
+              사회적 비용</span
+            >
+            <div class="progress-container">
+              <div class="progress"></div>
+            </div>
+          </li>
+          <li>
+            <span class="text-light progress-item-content"
+              >하안노인<br />
+              종합복지관</span
+            >
+            <div class="progress-container">
+              <div class="progress"></div>
+            </div>
+          </li>
+          <li>
+            <span class="text-light progress-item-content">인생정원 MAP</span>
+            <div class="progress-container">
+              <div class="progress"></div>
+            </div>
+          </li>
+          <li>
+            <span class="text-light progress-item-content">입구</span>
+            <div class="progress-container">
+              <div class="progress"></div>
+            </div>
+          </li>
+          <li>
+            <span class="text-light progress-item-content">기억산책길</span>
+            <div class="progress-container">
+              <div class="progress"></div>
+            </div>
+          </li>
+          <li>
+            <span class="text-light progress-item-content">오감놀이터</span>
+            <div class="progress-container">
+              <div class="progress"></div>
+            </div>
+          </li>
+          <li>
+            <span class="text-light progress-item-content">정원 쉼터</span>
+            <div class="progress-container">
+              <div class="progress"></div>
+            </div>
+          </li>
+          <li>
+            <span class="text-light progress-item-content">마음 숲</span>
+            <div class="progress-container">
+              <div class="progress"></div>
+            </div>
+          </li>
+          <li>
+            <span class="text-light progress-item-content">초록마루</span>
+            <div class="progress-container">
+              <div class="progress"></div>
+            </div>
+          </li>
+          <li>
+            <span class="text-light progress-item-content"
+              >인생정원<br />
+              해설사</span
+            >
+            <div class="progress-container">
+              <div class="progress"></div>
+            </div>
+          </li>
+        </ul>
       </div>
 
-      <div class="home-section_quotes">
-        <img
-          class="fullscreen"
-          src="/assets/images/home/middle-woman-bg/05_img.png"
-          srcset="
-            /assets/images/home/middle-woman-bg/05_img@2x.png 2x,
-            /assets/images/home/middle-woman-bg/05_img@3x.png 3x
-          "
-        />
-        <h1 class="quotes-title text-strong-2">
-          &ldquo;
-          <div class="text-strong">노화를 겪으면 어떻게 바뀔까요?</div>
-          &rdquo;
-        </h1>
-      </div>
-
-      <div class="home-section_intro">
-        <img
-          class="fullscreen"
-          src="/assets/images/home/old-man-bg/06_img.png"
-          srcset="
-            /assets/images/home/old-man-bg/06_img@2x.png 2x,
-            /assets/images/home/old-man-bg/06_img@3x.png 3x
-          "
-        />
-        <h2 class="left text-strong-2">
-          균형 감각이 떨어져 걷기 어렵고<br />
-          내가 지금 어디에 있는지 헷갈리 때가 많아져요.<br />
-          청각·후각 등의 감각이 무뎌지죠.
-        </h2>
-      </div>
-
-      <div class="home-section_intro">
-        <img
-          class="fullscreen"
-          src="/assets/images/home/old-woman-bg/07_img.png"
-          srcset="
-            /assets/images/home/old-woman-bg/07_img@2x.png 2x,
-            /assets/images/home/old-woman-bg/07_img@3x.png 3x
-          "
-        />
-        <h2 class="right text-strong-2">
-          사회 활동이 줄어 자존감이 떨어지고<br />
-          홀로 회상에 잠기거나<br />
-          우울감에 허우적거리기도 합니다.
-        </h2>
-      </div>
-    </section>
-
-    <!-- page footer -->
-    <footer class="kyunghyang-footer">
-      <div>
-        <p class="text-body">
-          공공디자인으로 행복한 공간 만들기 프로젝트 광명 인생정원편
-        </p>
-        <p class="text-body">취재·제작 경향신문 곽희양기자·최유진PD·양다영PD</p>
-        <p class="text-body">사업주관 한국공예·디자인문화진흥원</p>
-        <p class="text-body">협력 경기 광명시</p>
-      </div>
-      <div class="footer-logos">
+      <!-- page footer -->
+      <footer class="kyunghyang-footer">
         <div>
-          <a href="#">
-            <img
-              src="/assets/images/footer-logo/logo1.png"
-              srcset="
-                /assets/images/footer-logo/logo1@2x.png 2x,
-                /assets/images/footer-logo/logo1@3x.png 3x
-              "
-            />
-          </a>
+          <p class="text-body">
+            공공디자인으로 행복한 공간 만들기 프로젝트 광명 인생정원편
+          </p>
+          <p class="text-body">
+            취재·제작 경향신문 곽희양기자·최유진PD·양다영PD
+          </p>
+          <p class="text-body">사업주관 한국공예·디자인문화진흥원</p>
+          <p class="text-body">협력 경기 광명시</p>
+        </div>
+        <div class="footer-logos">
+          <div>
+            <a href="#">
+              <img
+                src="/assets/images/footer-logo/logo1.png"
+                srcset="
+                  /assets/images/footer-logo/logo1@2x.png 2x,
+                  /assets/images/footer-logo/logo1@3x.png 3x
+                "
+              />
+            </a>
+          </div>
+          <div>
+            <a href="#">
+              <img
+                src="/assets/images/footer-logo/logo2.png"
+                srcset="
+                  /assets/images/footer-logo/logo2@2x.png 2x,
+                  /assets/images/footer-logo/logo2@3x.png 3x
+                "
+              />
+            </a>
+          </div>
         </div>
         <div>
-          <a href="#">
-            <img
-              src="/assets/images/footer-logo/logo2.png"
-              srcset="
-                /assets/images/footer-logo/logo2@2x.png 2x,
-                /assets/images/footer-logo/logo2@3x.png 3x
-              "
-            />
-          </a>
+          <p class="copyright text-body">
+            CopyrightⓒThe Kyunghyang Shinmun, All rights reserved
+          </p>
         </div>
-      </div>
-      <div>
-        <p class="copyright text-body">
-          CopyrightⓒThe Kyunghyang Shinmun, All rights reserved
-        </p>
-      </div>
-    </footer>
+      </footer>
+    </main>
+
+    <!-- scripts -->
+    <!-- chart -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.min.js"
+      integrity="sha512-7U4rRB8aGAHGVad3u2jiC7GA5/1YhQcQjxKeaVms/bT66i3LVBMRcBI9KwABNWnxOSwulkuSXxZLGuyfvo7V1A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+      defer
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.umd.min.js"
+      integrity="sha512-SIMGYRUjwY8+gKg7nn9EItdD8LCADSDfJNutF9TPrvEo86sQmFMh6MyralfIyhADlajSxqc7G0gs7+MwWF/ogQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+      defer
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/helpers.min.js"
+      integrity="sha512-JG3S/EICkp8Lx9YhtIpzAVJ55WGnxT3T6bfiXYbjPRUoN9yu+ZM+wVLDsI/L2BWRiKjw/67d+/APw/CDn+Lm0Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+      defer
+    ></script>
+    <script src="/scripts/statistics-chat.js" type="module"></script>
+
+    <!-- scroll progress bar -->
+    <script src="/scripts/scroll-progress.js" type="module"></script>
   </body>
 </html>

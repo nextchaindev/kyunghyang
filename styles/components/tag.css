@@ -3,5 +3,6 @@ div.section-title-tag {
   color: var(--white);
   border-radius: 30px;
   padding: 7px 31px;
+  width: fit-content;
   margin: auto;
 }

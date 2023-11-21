@@ -1,19 +1,27 @@
+/* variables and common */
 @import "font.css";
 @import "utilities.css";
+
+/* global components */
+@import "components/scroll-progress.css";
+@import "components/layout.css";
 
 /* gloabal styles */
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
-body::-webkit-scrollbar {
-  display: none;
-}
-
+html,
 body {
+  height: 100%;
+  overflow-x: hidden;
   -ms-overflow-style: none;
   scrollbar-width: none;
+}
+body::-webkit-scrollbar {
+  display: none;
 }
 
 .container {
@@ -30,44 +38,32 @@ body {
   align-items: center;
 }
 
+h1 {
+  font-size: 50px;
+}
+
+h2 {
+  font-size: 40px;
+}
+
+h3 {
+  font-size: 36px;
+}
+
+h4 {
+  font-size: 28px;
+}
+
+h5 {
+  font-size: 25px;
+}
+
+h6 {
+  font-size: 20px;
+}
+
 @media only screen and (min-width: 768px) {
 }
 
 @media only screen and (min-width: 1200px) {
-}
-
-/* layout */
-
-body.kyunghyang-news {
-  font-family: Pretendard-Regular;
-  color: var(--dark);
-}
-
-header.kyunghyang-header {
-}
-
-footer.kyunghyang-footer {
-  background-color: var(--primary);
-  color: var(--white);
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 60px;
-  padding: 60px 0;
-}
-
-footer.kyunghyang-footer div.footer-logos {
-  width: 100vw;
-  display: flex;
-  gap: 80px;
-}
-
-footer.kyunghyang-footer div.footer-logos > div {
-  flex: 1;
-  display: flex;
-}
-
-footer.kyunghyang-footer div.footer-logos > div:first-of-type {
-  justify-content: flex-end;
 }

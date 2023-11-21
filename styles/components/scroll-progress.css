@@ -1,2 +1,40 @@
 div.scroll-progress-container {
+  position: fixed;
+  top: 50%;
+  right: 41px;
+  transform: translateY(-50%);
+  text-align: right;
+  width: 144px;
+}
+
+ul.scroll-progress-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+ul.scroll-progress-list li {
+  height: 79px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 11px;
+  align-items: center;
+}
+
+ul.scroll-progress-list li .progress-container {
+  width: 4px;
+  height: 79px;
+  background-color: var(--grey);
+}
+
+ul.scroll-progress-list li .progress {
+  width: 4px;
+  background-color: var(--primary);
+}
+
+ul.scroll-progress-list li .progress-item-content {
+  transition: 0.3s all;
 }
