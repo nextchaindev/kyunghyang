@@ -1,0 +1,15 @@
+@import "font.css";
+@import "color.css";
+
+/* gloabl styles */
+* {
+  transition: 2s all;
+  margin: 0;
+  padding: 0;
+  font-family: Pretendard-Regular;
+}
+
+div.full-screen {
+  height: 100vh;
+  width: 100vw;
+}

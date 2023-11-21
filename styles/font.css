@@ -1,0 +1,28 @@
+/* Pretendard -- primary */
+
+@font-face {
+  font-family: Pretendard-Regular;
+  src: url(../assets/fonts/pretendard/public/static/Pretendard-Regular.otf);
+}
+
+@font-face {
+  font-family: Pretendard-Bold;
+  src: url(../assets/fonts/pretendard/public/static/Pretendard-Bold.otf);
+}
+
+@font-face {
+  font-family: Pretendard-Light;
+  src: url(../assets/fonts/pretendard/public/static/Pretendard-Light.otf);
+}
+
+@font-face {
+  font-family: Pretendard-SemiBold;
+  src: url(../assets/fonts/pretendard/public/static/Pretendard-SemiBold.otf);
+}
+
+/* NotoSans -- secondary */
+
+@font-face {
+  font-family: NotoSans-Bold;
+  src: url(../assets/fonts/Noto_Sans_KR/static/NotoSansKR-Bold.ttf);
+}
