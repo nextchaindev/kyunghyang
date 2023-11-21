@@ -1,0 +1,123 @@
+@import "../components/media.css";
+@import "../components/scroll-progress.css";
+@import "../components/tag.css";
+
+.home {
+}
+
+/* ------------------------------ banner section ------------------------------ */
+
+.home div.home-section_banner {
+  position: relative;
+  color: var(--white);
+}
+
+.home div.home-section_banner .tag-title {
+  position: absolute;
+  top: 140px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 28px;
+  background-color: var(--white);
+  color: var(--dark);
+  border-radius: 30px;
+  padding: 7px 31px;
+}
+
+.home div.home-section_banner .main-title {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+.home div.home-section_banner .main-title h1 {
+  font-size: 50px;
+}
+
+.home div.home-section_banner .main-title h5 {
+  font-size: 25px;
+  margin-top: 43px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.home div.home-section_banner .main-title .rounded-number {
+  font-size: 21px;
+  width: 26px;
+  height: 26px;
+  border: 1px solid var(--white);
+  border-radius: 13px;
+  margin: 0 9px 0 19px;
+}
+
+.home div.home-section_banner .scroll-down {
+  position: absolute;
+  bottom: 90px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 23px;
+  align-items: center;
+  font-size: 20px;
+  color: var(--white);
+}
+
+/* ------------------------------ quote section ------------------------------ */
+
+.home div.home-section_quotes {
+  position: relative;
+}
+
+.home div.home-section_quotes h1.quotes-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: fit-content;
+
+  color: var(--secondary);
+  font-size: 50px;
+  display: flex;
+  align-items: center;
+  gap: 74px;
+}
+
+.home div.home-section_quotes h1.quotes-title div {
+  border-bottom: 5px solid var(--secondary);
+  padding: 45px 0 23px;
+  color: var(--dark);
+}
+
+/* ------------------------------ intro section ------------------------------ */
+
+.home div.home-section_intro {
+  position: relative;
+}
+
+.home div.home-section_intro h2 {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: fit-content;
+
+  font-family: NotoSans-Bold;
+  font-size: 40px;
+  color: var(--white);
+}
+
+.home div.home-section_intro h2.left {
+  left: 100px;
+  text-align: left;
+}
+
+.home div.home-section_intro h2.right {
+  right: 100px;
+  text-align: right;
+}
+
+/* animation */
+@import "../animations/home.animation.css";

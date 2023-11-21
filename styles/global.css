@@ -1,15 +1,73 @@
 @import "font.css";
-@import "color.css";
+@import "utilities.css";
 
-/* gloabl styles */
+/* gloabal styles */
 * {
-  transition: 2s all;
   margin: 0;
   padding: 0;
-  font-family: Pretendard-Regular;
 }
 
-div.full-screen {
+body::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.container {
+}
+
+.fullscreen {
   height: 100vh;
   width: 100vw;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media only screen and (min-width: 768px) {
+}
+
+@media only screen and (min-width: 1200px) {
+}
+
+/* layout */
+
+body.kyunghyang-news {
+  font-family: Pretendard-Regular;
+  color: var(--dark);
+}
+
+header.kyunghyang-header {
+}
+
+footer.kyunghyang-footer {
+  background-color: var(--primary);
+  color: var(--white);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 60px;
+  padding: 60px 0;
+}
+
+footer.kyunghyang-footer div.footer-logos {
+  width: 100vw;
+  display: flex;
+  gap: 80px;
+}
+
+footer.kyunghyang-footer div.footer-logos > div {
+  flex: 1;
+  display: flex;
+}
+
+footer.kyunghyang-footer div.footer-logos > div:first-of-type {
+  justify-content: flex-end;
 }

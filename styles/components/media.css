@@ -1,0 +1,25 @@
+/* video */
+div.video-container {
+  padding: 90px 160px;
+}
+
+div.video-container > video {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  height: auto;
+}
+
+/* image */
+div.image-container {
+}
+
+img {
+  object-fit: cover;
+}
+
+img.fullscreen {
+  object-fit: cover;
+  display: block;
+}
+
+/* file */
