@@ -92,5 +92,78 @@
 
 /* ------------------------------ map section ------------------------------ */
 
+/* ------------------------------ garden life guide section ------------------------------ */
+
+.home div.home-section_garden-life-guide {
+  background-color: var(--light);
+  padding: 90px 160px 180px;
+  text-align: center;
+}
+
+.home div.home-section_garden-life-guide .block-content1 {
+  margin-top: 100px;
+}
+
+.home div.home-section_garden-life-guide .block-content2 {
+  margin-top: 60px;
+}
+
+.home div.home-section_garden-life-guide video {
+  margin-top: 90px;
+}
+
+.home div.home-section_garden-life-guide .block-content3 {
+  margin-top: 100px;
+}
+
+/* ------------------------------ garden life feedback section ------------------------------ */
+
+.home div.home-section_garden-life-feedback > .fullscreen {
+  display: flex;
+  align-items: flex-end;
+}
+
+.home div.home-section_garden-life-feedback .title {
+  position: absolute;
+  bottom: calc(100% + 50px);
+  right: 160px;
+  text-align: right;
+}
+
+.home div.home-section_garden-life-feedback .title.left {
+  left: 160px;
+}
+
+.home div.home-section_garden-life-feedback .title.right {
+  right: 160px;
+}
+
+.home div.home-section_garden-life-feedback .feedback-container {
+  width: 100%;
+  height: 760px;
+  position: relative;
+}
+
+.home div.home-section_garden-life-feedback .feedback-content {
+  position: absolute;
+  top: 50%;
+  left: 50px;
+  transform: translateY(-50%);
+  text-align: center;
+  color: var(--secondary);
+}
+
+.home div.home-section_garden-life-feedback .feedback-content.left {
+  left: 50px;
+}
+
+.home div.home-section_garden-life-feedback .feedback-content.right {
+  right: 50px;
+}
+
+.home div.home-section_garden-life-feedback .feedback-content > div {
+  color: var(--white);
+}
+
 /* animation */
 @import "../animations/home.animation.css";
