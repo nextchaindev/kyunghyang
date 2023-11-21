@@ -49,9 +49,6 @@ header.kyunghyang-header div.header-viewport .main-title {
 
 header.kyunghyang-header div.header-viewport .main-title h5 {
   margin-top: 43px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 header.kyunghyang-header div.header-viewport .main-title .rounded-number {

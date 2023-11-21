@@ -3,12 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- <link rel="icon" type="image/x-icon" href="/images/favicon.ico" /> -->
 
     <title>Kyunghyang News</title>
-    <meta name="keywords" content="HTML, CSS, JavaScript" />
-    <meta name="description" content="Free Web tutorials" />
-    <meta name="author" content="John Doe" />
+    <!-- <link rel="icon" type="image/x-icon" href="/images/favicon.ico" /> -->
+    <meta name="keywords" content="Kyunghyang News" />
+    <meta name="description" content="Kyunghyang News" />
+    <meta name="author" content="Kyunghyang News" />
 
     <link rel="stylesheet" href="/styles/color.css" />
     <link rel="stylesheet" href="/styles/global.css" />
@@ -17,7 +17,7 @@
   <body class="kyunghyang-news home">
     <!-- page header -->
     <header class="kyunghyang-header">
-      <video autoplay muted loop preload="metadata">
+      <video autoplay muted loop>
         <source src="/assets/videos/home-banner-bg.mp4" type="video/mp4" />
         귀하의 브라우저는 HTML5 비디오를 지원하지 않습니다
       </video>
@@ -28,7 +28,7 @@
             <span class="text-strong">인생정원</span
             ><span class="text-light">에서 새 삶을 가꾸어요</span>
           </h1>
-          <h5>
+          <h5 class="flex-center">
             <span class="text-strong">다정한 도시</span>
             <div class="rounded-number flex-center">1</div>
             <span class="text-light">광명 인생정원 편</span>
@@ -109,6 +109,7 @@
         </div>
       </section>
 
+      <!-- waiting till last -->
       <section class="s2">
         <div class="home-section_statistics fullscreen">
           <div style="flex: 1">
@@ -150,6 +151,25 @@
             srcset="
               /assets/images/home/map-bg/09-bg@2x.png 2x,
               /assets/images/home/map-bg/09-bg@3x.png 3x
+            "
+          />
+        </div>
+      </section>
+
+      <section class="s10">
+        <div class="video-container">
+          <video class="single-video" autoplay muted loop>
+            <source src="/assets/videos/home-banner-bg.mp4" type="video/mp4" />
+            귀하의 브라우저는 HTML5 비디오를 지원하지 않습니다
+          </video>
+        </div>
+        <div class="fullscreen">
+          <img
+            class="fullscreen"
+            src="/assets/images/home/footer/49_img.png"
+            srcset="
+              /assets/images/home/footer/49_img@2x.png 2x,
+              /assets/images/home/footer/49_img@3x.png 3x
             "
           />
         </div>
