@@ -14,6 +14,10 @@
     <link rel="stylesheet" href="/styles/global.css" />
     <link rel="stylesheet" href="/styles/pages/01.css" />
     <link rel="stylesheet" href="/styles/animations/01.animation.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/flickity@2/dist/flickity.min.css"
+    />
   </head>
   <body class="kyunghyang-news page01">
     <!-- page header -->
@@ -157,10 +161,10 @@
         <div class="page01_map fullscreen">
           <img
             class="fullscreen"
-            src="/assets/images/01/map-bg/09-bg.png"
+            src="/assets/images/01/map/map-bg.png"
             srcset="
-              /assets/images/01/map-bg/09-bg@2x.png 2x,
-              /assets/images/01/map-bg/09-bg@3x.png 3x
+              /assets/images/01/map/map-bg@2x.png 2x,
+              /assets/images/01/map/map-bg@3x.png 3x
             "
           />
           <div class="map-popup-content">
@@ -168,6 +172,123 @@
               경기도 광명시 구도심에 있는 하안노인복지관은<br />어르신들의
               <span class="text-strong">핫 플레이스</span> 입니다.
             </h3>
+          </div>
+        </div>
+        <div class="focused-place fullscreen flex-center">
+          <img
+            src="/assets/images/01/map/11_img.png"
+            srcset="
+              /assets/images/01/map/11_img@2x.png 2x,
+              /assets/images/01/map/11_img@3x.png 3x
+            "
+          />
+          <div>
+            <h3>
+              집을 떠나 실·내외 공간에서 활동한다면,<br />
+              그 공간에서 쉬는 것뿐 아니라<br />
+              <span class="text-strong"
+                >놀고, 치료받고, 일자리까지 얻을 수 있다면,</span
+              >
+            </h3>
+            <h3>어르신들에게 어떤 변화가 생길까요.</h3>
+          </div>
+        </div>
+        <div class="centre-2d-map-info fullscreen">
+          <img
+            class="fullscreen"
+            src="/assets/images/01/map/12_img.png"
+            srcset="
+              /assets/images/01/map/12_img@2x.png 2x,
+              /assets/images/01/map/12_img@3x.png 3x
+            "
+            alt=""
+          />
+          <div class="info-content left">
+            <h2 class="text-light">
+              <span class="text-strong">하안노인종합복지관</span>은<br />
+              어린이집 2곳과 함께 있는
+              <span class="text-strong">복합시설</span>입니다.
+            </h2>
+          </div>
+        </div>
+        <div
+          class="centre-2d-map-info fullscreen"
+          style="background-color: #00000099"
+        >
+          <div class="centre-map-img-container">
+            <img
+              src="/assets/images/01/map/13_img.png"
+              srcset="
+                /assets/images/01/map/13_img@2x.png 2x,
+                /assets/images/01/map/13_img@3x.png 3x
+              "
+              alt=""
+            />
+          </div>
+          <div class="info-content right">
+            <h2 class="text-light">
+              복지관 본관이 아닌 ‘별관’은 활용도가 낮았어요.<br />
+              공간의 성격이 모호하고,
+              <span class="text-strong"
+                >공간이 쉽게 인식되지 못했기 때문이었죠.</span
+              >
+            </h2>
+          </div>
+        </div>
+        <div class="page01_gallery">
+          <div class="section-title-tag">대한민국 치매 현황</div>
+          <div
+            class="gallery js-flickity"
+            data-flickity-options='{ "wrapAround": true, "pageDots": false, "arrowShape": "M92.5,42.5H25.6L37.8,30.3A7.5,7.5,0,1,0,27.2,19.7l-25,25a7.5,7.5,0,0,0,0,10.6l25,25a7.5,7.5,0,0,0,10.6,0,7.5,7.5,0,0,0,0-10.6L25.6,57.5H92.5a7.5,7.5,0,0,0,0-15Z" }'
+          >
+            <div class="gallery-cell">
+              <img
+                src="/assets/images/01/gallery/gallery-1.jpg"
+                width="100%"
+                height="100%"
+                alt=""
+              />
+            </div>
+            <div class="gallery-cell">
+              <img
+                src="/assets/images/01/gallery/gallery-2.JPEG"
+                width="100%"
+                height="100%"
+                alt=""
+              />
+            </div>
+            <div class="gallery-cell">
+              <img
+                src="/assets/images/01/gallery/gallery-3.JPEG"
+                width="100%"
+                height="100%"
+                alt=""
+              />
+            </div>
+            <div class="gallery-cell">
+              <img
+                src="/assets/images/01/gallery/gallery-4.jpg"
+                width="100%"
+                height="100%"
+                alt=""
+              />
+            </div>
+            <div class="gallery-cell">
+              <img
+                src="/assets/images/01/gallery/gallery-5.jpg"
+                width="100%"
+                height="100%"
+                alt=""
+              />
+            </div>
+            <div class="gallery-cell">
+              <img
+                src="/assets/images/01/gallery/gallery-6.jpg"
+                width="100%"
+                height="100%"
+                alt=""
+              />
+            </div>
           </div>
         </div>
         <div class="page01_oganization-content pt-90 pb-90">
@@ -1089,6 +1210,11 @@
     </main>
 
     <!-- scripts -->
+
+    <!-- gallery -->
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <script src="/scripts/gallery.js" type="module"></script>
+
     <!-- chart -->
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.min.js"

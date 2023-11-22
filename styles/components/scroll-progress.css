@@ -1,4 +1,6 @@
 div.scroll-progress-container {
+  mix-blend-mode: exclusion;
+  color: var(--white);
   position: fixed;
   top: 50%;
   right: 41px;

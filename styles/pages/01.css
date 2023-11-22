@@ -1,5 +1,6 @@
 @import "../components/media.css";
 @import "../components/tag.css";
+@import "../components/gallery.css";
 
 .page01 {
 }
@@ -121,6 +122,38 @@
   text-align: center;
 }
 
+.page01 div.focused-place {
+  /* position: absolute;
+  top: 0;
+  left: 0; */
+  background-color: rgb(0, 0, 0, 0.7);
+  gap: 90px;
+}
+
+.page01 div.focused-place > * {
+  flex: 1;
+  max-width: 690px;
+}
+
+.page01 div.focused-place > img {
+  max-width: 690px;
+  height: auto;
+  aspect-ratio: 1;
+}
+
+.page01 div.focused-place > div {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+/* ------------------------------ gallery section ------------------------------ */
+
+.page01 div.page01_gallery {
+  padding-top: 90px;
+}
+
 /* ------------------------------ centre-2d-map section ------------------------------ */
 
 .page01 div.page01_centre-2d-map {
@@ -139,6 +172,18 @@
 
 .page01 div.centre-2d-map-info {
   position: relative;
+}
+
+.page01 div.centre-2d-map-info .centre-map-img-container {
+  height: 80vh;
+  width: fit-content;
+  margin: auto;
+  padding: 10vh 0;
+}
+
+.page01 div.centre-2d-map-info .centre-map-img-container img {
+  width: 100%;
+  height: 100%;
 }
 
 .page01 div.centre-2d-map-info .absolute-bg {

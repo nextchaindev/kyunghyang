@@ -1,0 +1,34 @@
+.gallery {
+  margin-top: 60px;
+}
+
+.gallery .gallery-cell {
+  width: 22% !important;
+  aspect-ratio: 1.5;
+  height: auto;
+  margin-right: 10px;
+  background: #8c8;
+  counter-increment: gallery-cell;
+}
+
+.gallery .gallery-cell img {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+.gallery .flickity-button {
+  background-color: var(--primary) !important;
+}
+
+.gallery .flickity-button.previous {
+  left: 15%;
+}
+
+.gallery .flickity-button.next {
+  right: 15%;
+}
+
+.gallery .flickity-button svg.flickity-button-icon {
+  fill: var(--white);
+}
