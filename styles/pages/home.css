@@ -92,6 +92,36 @@
 
 /* ------------------------------ map section ------------------------------ */
 
+.home div.home-section_map {
+  position: relative;
+}
+
+.home div.home-section_map .map-popup-content {
+  position: absolute;
+  top: 30%;
+  left: 40%;
+  background-color: rgb(0, 0, 0, 0.5);
+  padding: 56px 64px;
+  color: var(--white);
+  text-align: center;
+}
+
+/* ------------------------------ center-2d-map section ------------------------------ */
+
+.home div.home-section_center-2d-map {
+  position: relative;
+  background-color: #cacaca;
+  padding: 90px 200px 90px 72px;
+}
+
+.home div.home-section_center-2d-map .top-fixed-2d-map {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  width: 500px;
+  height: auto;
+}
+
 /* ------------------------------ garden life guide section ------------------------------ */
 
 .home div.home-section_garden-life-guide {
