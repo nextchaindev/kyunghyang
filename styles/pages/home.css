@@ -126,6 +126,12 @@
   position: relative;
 }
 
+.home div.centre-2d-map-info .absolute-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
 .home div.centre-2d-map-info .info-content {
   position: absolute;
   bottom: 60px;

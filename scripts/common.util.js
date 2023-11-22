@@ -1,5 +1,4 @@
 export const ColorUtil = {
-  // check if color (hex) is light color
   getComputedColor(color) {
     const computedStyle = getComputedStyle(document.documentElement);
     return computedStyle.getPropertyValue(color);
