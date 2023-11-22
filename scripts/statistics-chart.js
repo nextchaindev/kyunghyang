@@ -17,31 +17,23 @@ window.addEventListener("DOMContentLoaded", () => {
           label: "60세 이상 추정치매환자수",
           backgroundColor: firstColor,
           data: [4, 5, 6, 7, 8],
+          barThickness: 15,
         },
         {
           label: "치매환자 1인당 치매관리비",
           backgroundColor: secondColor,
           data: [5, 6, 7, 8, 9],
+          barThickness: 15,
         },
       ],
     },
     options: {
       responsive: true,
-      legend: {
-        position: "top",
-      },
-      title: {
-        display: true,
-        text: "Chart.js Bar Chart",
-      },
-      scales: {
-        yAxes: [
-          {
-            ticks: {
-              beginAtZero: true,
-            },
-          },
-        ],
+      plugins: {
+        legend: {
+          display: false,
+          labels: {},
+        },
       },
     },
   });

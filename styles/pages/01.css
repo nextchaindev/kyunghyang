@@ -1,16 +1,16 @@
 @import "../components/media.css";
 @import "../components/tag.css";
 
-.home {
+.page01 {
 }
 
 /* ------------------------------ quote section ------------------------------ */
 
-.home div.home-section_quotes {
+.page01 div.page01_quotes {
   position: relative;
 }
 
-.home div.home-section_quotes h1.quotes-title {
+.page01 div.page01_quotes h1.quotes-title {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -24,7 +24,7 @@
   gap: 74px;
 }
 
-.home div.home-section_quotes h1.quotes-title div {
+.page01 div.page01_quotes h1.quotes-title div {
   border-bottom: 5px solid var(--secondary);
   padding: 45px 0 23px;
   color: var(--dark);
@@ -32,11 +32,11 @@
 
 /* ------------------------------ intro section ------------------------------ */
 
-.home div.home-section_intro {
+.page01 div.page01_intro {
   position: relative;
 }
 
-.home div.home-section_intro h2 {
+.page01 div.page01_intro h2 {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -47,41 +47,56 @@
   color: var(--white);
 }
 
-.home div.home-section_intro h2.left {
+.page01 div.page01_intro h2.left {
   left: 100px;
   text-align: left;
 }
 
-.home div.home-section_intro h2.right {
+.page01 div.page01_intro h2.right {
   right: 100px;
   text-align: right;
 }
 
 /* ------------------------------ statistics section ------------------------------ */
 
-.home div.home-section_statistics {
+.page01 div.page01_statistics {
   background-color: var(--light);
   padding: 0 100px;
   display: flex;
   align-items: center;
 }
 
-.home div.home-section_statistics .statistics {
+.page01 div.page01_statistics .statistics {
   display: flex;
   margin-top: 88px;
 }
 
-.home div.home-section_statistics .statistics-chart {
+.page01 div.page01_statistics .statistics-chart {
   width: 50%;
   background-color: var(--white);
   padding: 40px 45px;
 }
 
-.home div.home-section_statistics .statistics-chart p {
+.page01 div.page01_statistics .statistics-chart > *:not(canvas) {
   margin-top: 26px;
+  text-align: center;
 }
 
-.home div.home-section_statistics .statistics-contents {
+.page01 div.page01_statistics .statistics-chart .primary {
+  width: 20px;
+  height: 20px;
+  background-color: var(--primary);
+  margin-right: 10px;
+}
+
+.page01 div.page01_statistics .statistics-chart .secondary {
+  width: 20px;
+  height: 20px;
+  background-color: var(--primary-light);
+  margin-right: 10px;
+}
+
+.page01 div.page01_statistics .statistics-contents {
   width: 50%;
   padding-left: 43px;
   display: flex;
@@ -92,11 +107,11 @@
 
 /* ------------------------------ map section ------------------------------ */
 
-.home div.home-section_map {
+.page01 div.page01_map {
   position: relative;
 }
 
-.home div.home-section_map .map-popup-content {
+.page01 div.page01_map .map-popup-content {
   position: absolute;
   top: 30%;
   left: 40%;
@@ -108,13 +123,13 @@
 
 /* ------------------------------ centre-2d-map section ------------------------------ */
 
-.home div.home-section_centre-2d-map {
+.page01 div.page01_centre-2d-map {
   position: relative;
   background-color: #cacaca;
   padding: 90px 200px 90px 72px;
 }
 
-.home div.home-section_centre-2d-map .top-fixed-2d-map {
+.page01 div.page01_centre-2d-map .top-fixed-2d-map {
   position: absolute;
   top: 50px;
   left: 50px;
@@ -122,17 +137,17 @@
   height: auto;
 }
 
-.home div.centre-2d-map-info {
+.page01 div.centre-2d-map-info {
   position: relative;
 }
 
-.home div.centre-2d-map-info .absolute-bg {
+.page01 div.centre-2d-map-info .absolute-bg {
   position: absolute;
   top: 0;
   left: 0;
 }
 
-.home div.centre-2d-map-info .info-content {
+.page01 div.centre-2d-map-info .info-content {
   position: absolute;
   bottom: 60px;
   left: 100px;
@@ -142,67 +157,67 @@
   gap: 42px;
 }
 
-.home div.centre-2d-map-info .info-content.left {
+.page01 div.centre-2d-map-info .info-content.left {
   left: 100px;
   text-align: left;
 }
 
-.home div.centre-2d-map-info .info-content.right {
+.page01 div.centre-2d-map-info .info-content.right {
   right: 100px;
   text-align: right;
 }
 
 /* ------------------------------ garden life guide section ------------------------------ */
 
-.home div.home-section_garden-life-guide {
+.page01 div.page01_garden-life-guide {
   background-color: var(--light);
   padding: 90px 160px 180px;
   text-align: center;
 }
 
-.home div.home-section_garden-life-guide .block-content1 {
+.page01 div.page01_garden-life-guide .block-content1 {
   margin-top: 100px;
 }
 
-.home div.home-section_garden-life-guide .block-content2 {
+.page01 div.page01_garden-life-guide .block-content2 {
   margin-top: 60px;
 }
 
-.home div.home-section_garden-life-guide video {
+.page01 div.page01_garden-life-guide video {
   margin-top: 90px;
 }
 
-.home div.home-section_garden-life-guide .block-content3 {
+.page01 div.page01_garden-life-guide .block-content3 {
   margin-top: 100px;
 }
 
 /* ------------------------------ garden life feedback section ------------------------------ */
 
-.home div.home-section_garden-life-feedback > .fullscreen {
+.page01 div.page01_garden-life-feedback > .fullscreen {
   display: flex;
   align-items: flex-end;
 }
 
-.home div.home-section_garden-life-feedback .title {
+.page01 div.page01_garden-life-feedback .title {
   position: absolute;
   bottom: calc(100% + 50px);
 }
 
-.home div.home-section_garden-life-feedback .title.left {
+.page01 div.page01_garden-life-feedback .title.left {
   left: 160px;
 }
 
-.home div.home-section_garden-life-feedback .title.right {
+.page01 div.page01_garden-life-feedback .title.right {
   right: 160px;
 }
 
-.home div.home-section_garden-life-feedback .feedback-container {
+.page01 div.page01_garden-life-feedback .feedback-container {
   width: 100%;
   height: 760px;
   position: relative;
 }
 
-.home div.home-section_garden-life-feedback .feedback-content {
+.page01 div.page01_garden-life-feedback .feedback-content {
   position: absolute;
   text-align: center;
   color: var(--secondary);
@@ -212,40 +227,48 @@
   font-size: 80px;
 }
 
-.home div.home-section_garden-life-feedback .feedback-content.left {
+.page01 div.page01_garden-life-feedback .feedback-content.left {
   top: 50%;
   transform: translateY(-50%);
   left: 50px;
 }
 
-.home div.home-section_garden-life-feedback .feedback-content.right {
+.page01 div.page01_garden-life-feedback .feedback-content.right {
   top: 50%;
   transform: translateY(-50%);
   right: 50px;
 }
 
-.home div.home-section_garden-life-feedback .feedback-content.bottom {
+.page01 div.page01_garden-life-feedback .feedback-content.bottom {
   bottom: 110px;
   left: 50%;
   transform: translateX(-50%);
 }
 
-.home div.home-section_garden-life-feedback .feedback-content > div {
+.page01 div.page01_garden-life-feedback .feedback-content > div {
   color: var(--white);
   font-size: 36px;
 }
 
 /* ------------------------------ oganization content section ------------------------------ */
 
-.home div.home-section_oganization-content {
+.page01 div.page01_oganization-content {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  gap: 60px;
+  gap: 40px;
 }
 
-.home div.home-section_oganization-content h3.content {
+.page01 div.page01_oganization-content.pt-90 {
+  padding-top: 90px;
+}
+
+.page01 div.page01_oganization-content.pb-90 {
+  padding-bottom: 90px;
+}
+
+.page01 div.page01_oganization-content h3.content {
   color: var(--secondary);
   display: flex;
   align-items: center;
@@ -253,11 +276,7 @@
   font-size: 80px;
 }
 
-.home div.home-section_oganization-content h3 > div {
+.page01 div.page01_oganization-content h3 > div {
   color: var(--dark);
   font-size: 36px;
-  max-width: 980px;
 }
-
-/* animation */
-@import "../animations/home.animation.css";
