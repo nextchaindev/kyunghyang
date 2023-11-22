@@ -25,6 +25,7 @@ header.kyunghyang-header video {
 header.kyunghyang-header div.header-viewport {
   position: relative;
   color: var(--white);
+  background-color: rgb(0, 0, 0, 0.3);
 }
 
 header.kyunghyang-header div.header-viewport .tag-title {

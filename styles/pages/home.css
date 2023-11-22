@@ -122,6 +122,30 @@
   height: auto;
 }
 
+.home div.center-2d-map-info {
+  position: relative;
+}
+
+.home div.center-2d-map-info .info-content {
+  position: absolute;
+  bottom: 60px;
+  left: 100px;
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  gap: 42px;
+}
+
+.home div.center-2d-map-info .info-content.left {
+  left: 100px;
+  text-align: left;
+}
+
+.home div.center-2d-map-info .info-content.right {
+  right: 100px;
+  text-align: right;
+}
+
 /* ------------------------------ garden life guide section ------------------------------ */
 
 .home div.home-section_garden-life-guide {
