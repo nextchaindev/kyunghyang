@@ -106,15 +106,15 @@
   text-align: center;
 }
 
-/* ------------------------------ center-2d-map section ------------------------------ */
+/* ------------------------------ centre-2d-map section ------------------------------ */
 
-.home div.home-section_center-2d-map {
+.home div.home-section_centre-2d-map {
   position: relative;
   background-color: #cacaca;
   padding: 90px 200px 90px 72px;
 }
 
-.home div.home-section_center-2d-map .top-fixed-2d-map {
+.home div.home-section_centre-2d-map .top-fixed-2d-map {
   position: absolute;
   top: 50px;
   left: 50px;
@@ -122,11 +122,11 @@
   height: auto;
 }
 
-.home div.center-2d-map-info {
+.home div.centre-2d-map-info {
   position: relative;
 }
 
-.home div.center-2d-map-info .info-content {
+.home div.centre-2d-map-info .info-content {
   position: absolute;
   bottom: 60px;
   left: 100px;
@@ -136,12 +136,12 @@
   gap: 42px;
 }
 
-.home div.center-2d-map-info .info-content.left {
+.home div.centre-2d-map-info .info-content.left {
   left: 100px;
   text-align: left;
 }
 
-.home div.center-2d-map-info .info-content.right {
+.home div.centre-2d-map-info .info-content.right {
   right: 100px;
   text-align: right;
 }
