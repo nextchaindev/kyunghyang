@@ -32,6 +32,14 @@
   );
 }
 
+.bg-grey-1 {
+  background-color: var(--grey-1);
+}
+
+.bg-grey-2 {
+  background-color: var(--grey-2);
+}
+
 /* typography */
 .text-body {
   font-size: 18px;

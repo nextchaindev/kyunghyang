@@ -2,7 +2,57 @@
 @import "../components/tag.css";
 @import "../components/gallery.css";
 
-.page01 {
+.page01_hero {
+  position: relative;
+  color: var(--white);
+  background-attachment: fixed;
+}
+
+.page01_hero .tag-title {
+  position: absolute;
+  top: 140px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 28px;
+  background-color: var(--white);
+  color: var(--dark);
+  border-radius: 30px;
+  padding: 7px 31px;
+}
+
+.page01_hero .main-title {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+.page01_hero .main-title h5 {
+  margin-top: 43px;
+}
+
+.page01_hero .main-title .rounded-number {
+  font-size: 21px;
+  width: 26px;
+  height: 26px;
+  border: 1px solid var(--white);
+  border-radius: 13px;
+  margin: 0 9px 0 19px;
+}
+
+.page01_hero .scroll-down {
+  position: absolute;
+  bottom: 90px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 23px;
+  align-items: center;
+  font-size: 20px;
+  color: var(--white);
+  cursor: pointer;
 }
 
 /* ------------------------------ quote section ------------------------------ */
@@ -172,6 +222,8 @@
 
 .page01 div.centre-2d-map-info {
   position: relative;
+  background-color: var(--white);
+  color: var(--white);
 }
 
 .page01 div.centre-2d-map-info .centre-map-img-container {
@@ -196,7 +248,6 @@
   position: absolute;
   bottom: 60px;
   left: 100px;
-  color: var(--white);
   display: flex;
   flex-direction: column;
   gap: 42px;
@@ -241,6 +292,7 @@
 .page01 div.page01_garden-life-feedback > .fullscreen {
   display: flex;
   align-items: flex-end;
+  background-color: var(--white);
 }
 
 .page01 div.page01_garden-life-feedback .title {
@@ -303,6 +355,7 @@
   align-items: center;
   text-align: center;
   gap: 40px;
+  background-color: var(--white);
 }
 
 .page01 div.page01_oganization-content.pt-90 {

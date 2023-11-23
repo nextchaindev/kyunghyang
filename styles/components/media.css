@@ -6,6 +6,7 @@ div.image-fullscreen-container {
   justify-content: center;
   align-items: center;
   padding: 100px;
+  background-color: var(--white);
 }
 
 div.image-fullscreen-container .img-container {
@@ -36,6 +37,7 @@ div.video-fullscreen-container {
   justify-content: center;
   align-items: center;
   padding: 90px;
+  background-color: var(--white);
 }
 
 div.video-container {
