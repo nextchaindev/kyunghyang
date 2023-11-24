@@ -1,0 +1,350 @@
+@keyframes a_scale {
+  100% {
+    transform: a_scale(1);
+  }
+}
+
+@keyframes a_fading {
+  100% {
+    opacity: 1;
+    filter: blur(0);
+  }
+}
+
+.fading-text {
+  transform: a_scale(0.94);
+  animation: a_scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
+}
+
+span.fading-character {
+  display: inline-block;
+  opacity: 0;
+  filter: blur(4px);
+}
+
+span.fading-character-1 {
+  animation: a_fading 0.8s 0.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span.fading-character-2 {
+  animation: a_fading 0.8s 0.2s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span.fading-character-3 {
+  animation: a_fading 0.8s 0.3s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span.fading-character-4 {
+  animation: a_fading 0.8s 0.4s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span.fading-character-5 {
+  animation: a_fading 0.8s 0.5s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span.fading-character-6 {
+  animation: a_fading 0.8s 0.6s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span.fading-character-7 {
+  animation: a_fading 0.8s 0.7s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span.fading-character-8 {
+  animation: a_fading 0.8s 0.8s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span.fading-character-9 {
+  animation: a_fading 0.8s 0.9s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span.fading-character-10 {
+  animation: a_fading 0.8s 1s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span.fading-character-11 {
+  animation: a_fading 0.8s 1.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span.fading-character-12 {
+  animation: a_fading 0.8s 1.2s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span.fading-character-13 {
+  animation: a_fading 0.8s 1.3s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span.fading-character-14 {
+  animation: a_fading 0.8s 1.4s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span.fading-character-15 {
+  animation: a_fading 0.8s 1.5s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span.fading-character-16 {
+  animation: a_fading 0.8s 1.6s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span.fading-character-17 {
+  animation: a_fading 0.8s 1.7s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span.fading-character-18 {
+  animation: a_fading 0.8s 1.8s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span.fading-character-19 {
+  animation: a_fading 0.8s 1.9s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span.fading-character-20 {
+  animation: a_fading 0.8s 2s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span.fading-character-21 {
+  animation: a_fading 0.8s 2.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span.fading-character-22 {
+  animation: a_fading 0.8s 2.2s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span.fading-character-23 {
+  animation: a_fading 0.8s 2.3s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span.fading-character-24 {
+  animation: a_fading 0.8s 2.4s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span.fading-character-25 {
+  animation: a_fading 0.8s 2.5s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span.fading-character-26 {
+  animation: a_fading 0.8s 2.6s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span.fading-character-27 {
+  animation: a_fading 0.8s 2.7s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span.fading-character-28 {
+  animation: a_fading 0.8s 2.8s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span.fading-character-29 {
+  animation: a_fading 0.8s 2.9s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span.fading-character-30 {
+  animation: a_fading 0.8s 3s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span.fading-character-31 {
+  animation: a_fading 0.8s 3.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span.fading-character-32 {
+  animation: a_fading 0.8s 3.2s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span.fading-character-33 {
+  animation: a_fading 0.8s 3.3s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span.fading-character-34 {
+  animation: a_fading 0.8s 3.4s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span.fading-character-35 {
+  animation: a_fading 0.8s 3.5s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span.fading-character-36 {
+  animation: a_fading 0.8s 3.6s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span.fading-character-37 {
+  animation: a_fading 0.8s 3.7s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span.fading-character-38 {
+  animation: a_fading 0.8s 3.8s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span.fading-character-39 {
+  animation: a_fading 0.8s 3.9s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span.fading-character-40 {
+  animation: a_fading 0.8s 4s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span.fading-character-41 {
+  animation: a_fading 0.8s 4.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span.fading-character-42 {
+  animation: a_fading 0.8s 4.2s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span.fading-character-43 {
+  animation: a_fading 0.8s 4.3s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span.fading-character-44 {
+  animation: a_fading 0.8s 4.4s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span.fading-character-45 {
+  animation: a_fading 0.8s 4.5s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span.fading-character-46 {
+  animation: a_fading 0.8s 4.6s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span.fading-character-47 {
+  animation: a_fading 0.8s 4.7s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span.fading-character-48 {
+  animation: a_fading 0.8s 4.8s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span.fading-character-49 {
+  animation: a_fading 0.8s 4.9s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span.fading-character-50 {
+  animation: a_fading 0.8s 5s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span.fading-character-51 {
+  animation: a_fading 0.8s 5.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span.fading-character-52 {
+  animation: a_fading 0.8s 5.2s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span.fading-character-53 {
+  animation: a_fading 0.8s 5.3s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span.fading-character-54 {
+  animation: a_fading 0.8s 5.4s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span.fading-character-55 {
+  animation: a_fading 0.8s 5.5s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span.fading-character-56 {
+  animation: a_fading 0.8s 5.6s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span.fading-character-57 {
+  animation: a_fading 0.8s 5.7s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span.fading-character-58 {
+  animation: a_fading 0.8s 5.8s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span.fading-character-59 {
+  animation: a_fading 0.8s 5.9s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span.fading-character-60 {
+  animation: a_fading 0.8s 6s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span.fading-character-61 {
+  animation: a_fading 0.8s 6.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span.fading-character-62 {
+  animation: a_fading 0.8s 6.2s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span.fading-character-63 {
+  animation: a_fading 0.8s 6.3s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span.fading-character-64 {
+  animation: a_fading 0.8s 6.4s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span.fading-character-65 {
+  animation: a_fading 0.8s 6.5s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span.fading-character-66 {
+  animation: a_fading 0.8s 6.6s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span.fading-character-67 {
+  animation: a_fading 0.8s 6.7s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span.fading-character-68 {
+  animation: a_fading 0.8s 6.8s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span.fading-character-69 {
+  animation: a_fading 0.8s 6.9s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span.fading-character-70 {
+  animation: a_fading 0.8s 7s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span.fading-character-71 {
+  animation: a_fading 0.8s 7.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span.fading-character-72 {
+  animation: a_fading 0.8s 7.2s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span.fading-character-73 {
+  animation: a_fading 0.8s 7.3s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span.fading-character-74 {
+  animation: a_fading 0.8s 7.4s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span.fading-character-75 {
+  animation: a_fading 0.8s 7.5s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span.fading-character-76 {
+  animation: a_fading 0.8s 7.6s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span.fading-character-77 {
+  animation: a_fading 0.8s 7.7s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span.fading-character-78 {
+  animation: a_fading 0.8s 7.8s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span.fading-character-79 {
+  animation: a_fading 0.8s 7.9s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span.fading-character-80 {
+  animation: a_fading 0.8s 8s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+/*  */
+
+.revealUp {
+  opacity: 0;
+  visibility: hidden;
+}

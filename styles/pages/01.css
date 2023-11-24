@@ -66,7 +66,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: fit-content;
+  width: max-content;
 
   color: var(--secondary);
   font-size: 50px;
@@ -75,10 +75,10 @@
   gap: 74px;
 }
 
-.page01 div.page01_quotes h1.quotes-title div {
+.page01 div.page01_quotes h1.quotes-title > div {
   border-bottom: 5px solid var(--secondary);
   padding: 45px 0 23px;
-  color: var(--dark);
+  color: var(--white);
 }
 
 /* ------------------------------ intro section ------------------------------ */

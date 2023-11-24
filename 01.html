@@ -38,12 +38,13 @@
           <span class="text-light">광명 인생정원 편</span>
         </h5>
       </div>
-      <div class="scroll-down">
-        <span class="text-light">Scroll Down</span>
-        <img src="/assets/svgs/icon_down-arrow.svg" alt="scroll-down" />
-      </div>
+      <a href="#scroll">
+        <div class="scroll-down">
+          <span class="text-light">Scroll Down</span>
+          <img src="/assets/svgs/icon_down-arrow.svg" alt="scroll-down" /></div
+      ></a>
     </div>
-    <div class="page01_quotes fullscreen">
+    <div class="page01_quotes fullscreen" id="scroll">
       <img
         class="fullscreen"
         src="/assets/images/01/young-girl-bg/04_img.png"
@@ -54,7 +55,9 @@
       />
       <h1 class="quotes-title text-strong-2">
         &ldquo;
-        <div class="text-strong">우리는 늙습니다.</div>
+        <div class="text-strong">
+          <div class="revealUp">우리는 늙습니다.</div>
+        </div>
         &rdquo;
       </h1>
     </div>
@@ -69,7 +72,9 @@
       />
       <h1 class="quotes-title text-strong-2">
         &ldquo;
-        <div class="text-strong">노화를 겪으면 어떻게 바뀔까요?</div>
+        <div class="text-strong">
+          <div class="revealUp">노화를 겪으면 어떻게 바뀔까요?</div>
+        </div>
         &rdquo;
       </h1>
     </div>
@@ -82,10 +87,10 @@
           /assets/images/01/old-man-bg/06_img@3x.png 3x
         "
       />
-      <h2 class="left text-strong-2">
-        균형 감각이 떨어져 걷기 어렵고<br />
+      <h2 class="left text-strong-2 fading-text">
+        <!-- 균형 감각이 떨어져 걷기 어렵고<br />
         내가 지금 어디에 있는지 헷갈리 때가 많아져요.<br />
-        청각·후각 등의 감각이 무뎌지죠.
+        청각·후각 등의 감각이 무뎌지죠. -->
       </h2>
     </div>
     <div class="page01_intro fullscreen">
@@ -705,16 +710,20 @@
         />
       </div>
     </div>
-    <div class="centre-2d-map-info-3d fullscreen">
-      <img
+    <div
+      class="centre-2d-map-info-3d fullscreen"
+      id="viewer"
+      style="cursor: grab"
+    >
+      <!-- <img
         class="fullscreen"
         src="/assets/images/01/2d-map-4th/36.1.JPG"
         alt=""
-      />
+      /> -->
     </div>
     <div class="centre-2d-map-info fullscreen">
       <img
-        class="fullscreen"
+        class="fullscreen absolute"
         src="/assets/images/01/2d-map-4th/37_img.png"
         srcset="
           /assets/images/01/2d-map-4th/37_img@2x.png 2x,
@@ -1191,5 +1200,145 @@
 
     <!-- scroll progress bar -->
     <script src="/scripts/scroll-progress.js" type="module"></script>
+
+    <!-- animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/TextPlugin.min.js"></script>
+    <script>
+      gsap.registerPlugin(ScrollTrigger, TextPlugin);
+      gsap.utils.toArray(".revealUp").forEach(function (elem) {
+        ScrollTrigger.create({
+          trigger: elem,
+          start: "top 80%",
+          end: "bottom 20%",
+          onEnter: function () {
+            gsap.fromTo(
+              elem,
+              { y: 100, autoAlpha: 0 },
+              {
+                duration: 1.25,
+                y: 0,
+                autoAlpha: 1,
+                ease: "back",
+                overwrite: "auto",
+              }
+            );
+          },
+          onLeave: function () {
+            gsap.fromTo(
+              elem,
+              { autoAlpha: 1 },
+              { autoAlpha: 0, overwrite: "auto" }
+            );
+          },
+          onEnterBack: function () {
+            gsap.fromTo(
+              elem,
+              { y: -100, autoAlpha: 0 },
+              {
+                duration: 1.25,
+                y: 0,
+                autoAlpha: 1,
+                ease: "back",
+                overwrite: "auto",
+              }
+            );
+          },
+          onLeaveBack: function () {
+            gsap.fromTo(
+              elem,
+              { autoAlpha: 1 },
+              { autoAlpha: 0, overwrite: "auto" }
+            );
+          },
+        });
+      });
+      // gsap.utils.toArray(".fading-text").forEach(function (elem) {
+      //   ScrollTrigger.create({
+      //     trigger: elem,
+      //     start: "top 80%",
+      //     end: "bottom 20%",
+      //     markers: true,
+      //     onEnter: () => {
+      //       // const splitText = new SplitText("#splitText1", {type: 'words,chars'})
+      //       gsap.timeline().to("#splitText1", {
+      //         duration: 1.5,
+      //         text: {
+      //           value: "균형 감각이 떨어져 걷기 어렵고",
+      //           oldClass: "opacity10",
+      //           newClass: "opacity100",
+      //         },
+      //       });
+      //       setTimeout(() => {
+      //         gsap.timeline().to("#splitText2", {
+      //           duration: 1.8,
+      //           text: "내가 지금 어디에 있는지 헷갈리 때가 많아져요.",
+      //         });
+      //       }, 1500);
+      //       setTimeout(() => {
+      //         gsap.timeline().to("#splitText3", {
+      //           duration: 1.5,
+      //           text: "청각·후각 등의 감각이 무뎌지죠.",
+      //         });
+      //       }, 3200);
+      //     },
+      //   });
+      // });
+    </script>
+    <script type="module">
+      import { ElementUtil } from "/scripts/common.util.js";
+
+      const elements = document.getElementsByClassName("fading-text");
+
+      window.addEventListener("load", () => {
+        const words =
+          '<span class="fading-character">' +
+          "균형 감각이 떨어져 걷기 어렵고\n내가 지금 어디에 있는지 헷갈리 때가 많아져요.\n청각·후각 등의 감각이 무뎌지죠."
+            .split("")
+            .join('</span><span class="fading-character">') +
+          "</span>";
+        elements[0].innerHTML = words;
+        elements[0].style["white-space"] = "pre-line";
+      });
+
+      document.body.addEventListener("scroll", () => {
+        const spans = elements[0].getElementsByTagName("span");
+        if (ElementUtil.isInViewport(elements[0]) && spans) {
+          spans.forEach((c, ci) => {
+            c.classList.add = `fading-character-${ci + 1}`;
+          });
+        } else {
+          spans.forEach((c, ci) => {
+            c.classList.remove = `fading-character-${ci + 1}`;
+          });
+        }
+      });
+    </script>
+
+    <!-- 360 -->
+    <script src="https://pchen66.github.io/js/three/three.min.js"></script>
+    <script src="https://rawgit.com/pchen66/panolens.js/dev/build/panolens.min.js"></script>
+
+    <script>
+      const container = document.getElementById("viewer");
+      const viewer = new PANOLENS.Viewer({
+        container,
+      });
+      const panorama = new PANOLENS.ImagePanorama(
+        "/assets/images/01/2d-map-4th/36.1.JPG"
+      );
+      viewer.add(panorama);
+      viewer.OrbitControls.noZoom = true;
+      container.onmousedown = () => {
+        container.onmousemove = () => {
+          container.style.cursor = "grabbing";
+        };
+      };
+      container.onmouseup = () => {
+        container.style.cursor = "grab";
+      };
+    </script>
   </body>
 </html>
