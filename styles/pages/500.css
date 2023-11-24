@@ -1,0 +1,26 @@
+.server-error {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.server-error h1 {
+  font-size: 100px;
+  color: var(--primary);
+}
+
+.server-error .back-btn {
+  margin: auto;
+  margin-top: 40px;
+  padding: 18px 20px;
+  width: fit-content;
+  background-color: var(--primary);
+}
+
+.server-error .back-btn a {
+  text-decoration: none;
+  color: var(--white);
+}

@@ -1,0 +1,26 @@
+.notfound {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.notfound h1 {
+  font-size: 100px;
+  color: var(--primary);
+}
+
+.notfound .back-btn {
+  margin: auto;
+  margin-top: 40px;
+  padding: 8px 20px;
+  width: fit-content;
+  background-color: var(--primary);
+}
+
+.notfound .back-btn a {
+  text-decoration: none;
+  color: var(--white);
+}
