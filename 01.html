@@ -38,13 +38,13 @@
           <span class="text-light">광명 인생정원 편</span>
         </h5>
       </div>
-      <a href="#scroll">
+      <a href="#main-content">
         <div class="scroll-down">
           <span class="text-light">Scroll Down</span>
           <img src="/assets/svgs/icon_down-arrow.svg" alt="scroll-down" /></div
       ></a>
     </div>
-    <div class="page01_quotes fullscreen" id="scroll">
+    <div class="page01_quotes fullscreen" id="main-content">
       <img
         class="fullscreen"
         src="/assets/images/01/young-girl-bg/04_img.png"
@@ -56,7 +56,7 @@
       <h1 class="quotes-title text-strong-2">
         &ldquo;
         <div class="text-strong">
-          <div class="revealUp">우리는 늙습니다.</div>
+          <div class="goingUp-text">우리는 늙습니다.</div>
         </div>
         &rdquo;
       </h1>
@@ -73,7 +73,7 @@
       <h1 class="quotes-title text-strong-2">
         &ldquo;
         <div class="text-strong">
-          <div class="revealUp">노화를 겪으면 어떻게 바뀔까요?</div>
+          <div class="goingUp-text">노화를 겪으면 어떻게 바뀔까요?</div>
         </div>
         &rdquo;
       </h1>
@@ -88,6 +88,9 @@
         "
       />
       <h2 class="left text-strong-2 fading-text">
+        <span id="splitText1"></span><br />
+        <span id="splitText2"></span><br />
+        <span id="splitText3"></span>
         <!-- 균형 감각이 떨어져 걷기 어렵고<br />
         내가 지금 어디에 있는지 헷갈리 때가 많아져요.<br />
         청각·후각 등의 감각이 무뎌지죠. -->
@@ -102,10 +105,13 @@
           /assets/images/01/old-woman-bg/07_img@3x.png 3x
         "
       />
-      <h2 class="right text-strong-2">
-        사회 활동이 줄어 자존감이 떨어지고<br />
+      <h2 class="right text-strong-2 fading-text">
+        <span id="splitText4"></span><br />
+        <span id="splitText5"></span><br />
+        <span id="splitText6"></span>
+        <!-- 사회 활동이 줄어 자존감이 떨어지고<br />
         홀로 회상에 잠기거나<br />
-        우울감에 허우적거리기도 합니다.
+        우울감에 허우적거리기도 합니다. -->
       </h2>
     </div>
 
@@ -1181,6 +1187,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
       defer
+      type="module"
     ></script>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.umd.min.js"
@@ -1206,116 +1213,15 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/TextPlugin.min.js"></script>
-    <script>
-      gsap.registerPlugin(ScrollTrigger, TextPlugin);
-      gsap.utils.toArray(".revealUp").forEach(function (elem) {
-        ScrollTrigger.create({
-          trigger: elem,
-          start: "top 80%",
-          end: "bottom 20%",
-          onEnter: function () {
-            gsap.fromTo(
-              elem,
-              { y: 100, autoAlpha: 0 },
-              {
-                duration: 1.25,
-                y: 0,
-                autoAlpha: 1,
-                ease: "back",
-                overwrite: "auto",
-              }
-            );
-          },
-          onLeave: function () {
-            gsap.fromTo(
-              elem,
-              { autoAlpha: 1 },
-              { autoAlpha: 0, overwrite: "auto" }
-            );
-          },
-          onEnterBack: function () {
-            gsap.fromTo(
-              elem,
-              { y: -100, autoAlpha: 0 },
-              {
-                duration: 1.25,
-                y: 0,
-                autoAlpha: 1,
-                ease: "back",
-                overwrite: "auto",
-              }
-            );
-          },
-          onLeaveBack: function () {
-            gsap.fromTo(
-              elem,
-              { autoAlpha: 1 },
-              { autoAlpha: 0, overwrite: "auto" }
-            );
-          },
-        });
-      });
-      // gsap.utils.toArray(".fading-text").forEach(function (elem) {
-      //   ScrollTrigger.create({
-      //     trigger: elem,
-      //     start: "top 80%",
-      //     end: "bottom 20%",
-      //     markers: true,
-      //     onEnter: () => {
-      //       // const splitText = new SplitText("#splitText1", {type: 'words,chars'})
-      //       gsap.timeline().to("#splitText1", {
-      //         duration: 1.5,
-      //         text: {
-      //           value: "균형 감각이 떨어져 걷기 어렵고",
-      //           oldClass: "opacity10",
-      //           newClass: "opacity100",
-      //         },
-      //       });
-      //       setTimeout(() => {
-      //         gsap.timeline().to("#splitText2", {
-      //           duration: 1.8,
-      //           text: "내가 지금 어디에 있는지 헷갈리 때가 많아져요.",
-      //         });
-      //       }, 1500);
-      //       setTimeout(() => {
-      //         gsap.timeline().to("#splitText3", {
-      //           duration: 1.5,
-      //           text: "청각·후각 등의 감각이 무뎌지죠.",
-      //         });
-      //       }, 3200);
-      //     },
-      //   });
-      // });
-    </script>
     <script type="module">
-      import { ElementUtil } from "/scripts/common.util.js";
+      /**
+       * global gsap plugins (free)
+       * works for animations modules below
+       */
 
-      const elements = document.getElementsByClassName("fading-text");
-
-      window.addEventListener("load", () => {
-        const words =
-          '<span class="fading-character">' +
-          "균형 감각이 떨어져 걷기 어렵고\n내가 지금 어디에 있는지 헷갈리 때가 많아져요.\n청각·후각 등의 감각이 무뎌지죠."
-            .split("")
-            .join('</span><span class="fading-character">') +
-          "</span>";
-        elements[0].innerHTML = words;
-        elements[0].style["white-space"] = "pre-line";
-      });
-
-      document.body.addEventListener("scroll", () => {
-        const spans = elements[0].getElementsByTagName("span");
-        if (ElementUtil.isInViewport(elements[0]) && spans) {
-          spans.forEach((c, ci) => {
-            c.classList.add = `fading-character-${ci + 1}`;
-          });
-        } else {
-          spans.forEach((c, ci) => {
-            c.classList.remove = `fading-character-${ci + 1}`;
-          });
-        }
-      });
+      gsap.registerPlugin(ScrollTrigger, TextPlugin);
     </script>
+    <script src="/scripts/animations/index.js" type="module"></script>
 
     <!-- 360 -->
     <script src="https://pchen66.github.io/js/three/three.min.js"></script>
