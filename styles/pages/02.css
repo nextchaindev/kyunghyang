@@ -1,0 +1,414 @@
+@import "../components/media.css";
+@import "../components/tag.css";
+@import "../components/gallery.css";
+
+.page02_section01 {
+  position: relative;
+  color: var(--white);
+  background-attachment: fixed;
+}
+
+.page02_section01 .tag-title {
+  position: absolute;
+  top: 140px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 28px;
+  background-color: var(--white);
+  color: var(--dark);
+  border-radius: 30px;
+  padding: 7px 31px;
+}
+
+.page02_section01 .main-title {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+.page02_section01 .main-title h5 {
+  margin-top: 43px;
+}
+
+.page02_section01 .main-title .rounded-number {
+  font-size: 21px;
+  width: 26px;
+  height: 26px;
+  border: 1px solid var(--white);
+  border-radius: 13px;
+  margin: 0 9px 0 19px;
+}
+
+.page02_section01 .scroll-down {
+  position: absolute;
+  bottom: 90px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 23px;
+  align-items: center;
+  font-size: 20px;
+  color: var(--white);
+  cursor: pointer;
+}
+
+/* ------------------------------ section 02 ------------------------------ */
+
+.page02 div.page02_section02 {
+  position: relative;
+}
+
+.page02 div.page02_section02 h2.section02-title {
+  position: absolute;
+  top: 80px;
+  right: 100px;
+  width: max-content;
+  text-align: right;
+  color: var(--secondary);
+  font-size: 50px;
+  display: flex;
+  align-items: center;
+  gap: 74px;
+}
+
+.page02 div.page02_section02 h2.section02-title > div {
+  border-bottom: 5px solid var(--secondary);
+  padding: 45px 0 23px;
+  color: var(--white);
+}
+
+.page02 div.page02_section02 .street_background {
+  object-fit: fill;
+}
+
+/* ------------------------------ section 03 ------------------------------ */
+
+.page02 div.page02_section03 {
+  position: relative;
+}
+
+.page02 div.page02_section03 h2.section03-title {
+  position: absolute;
+  top: 80px;
+  right: 100px;
+  width: max-content;
+  text-align: right;
+  color: var(--secondary);
+  font-size: 50px;
+  display: flex;
+  align-items: center;
+  gap: 74px;
+}
+
+.page02 div.page02_section03 h2.section03-title > div {
+  border-bottom: 5px solid var(--secondary);
+  padding: 45px 0 23px;
+  color: var(--white);
+}
+
+.page02 div.page02_section03 .street_background {
+  object-fit: fill;
+}
+
+
+
+/* ------------------------------ intro section ------------------------------ */
+
+.page02 div.page02_intro {
+  position: relative;
+}
+
+.page02 div.page02_intro h2 {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: fit-content;
+
+  font-family: NotoSans-Bold;
+  font-size: 40px;
+  color: var(--white);
+}
+
+.page02 div.page02_intro h2.left {
+  left: 100px;
+  text-align: left;
+}
+
+.page02 div.page02_intro h2.right {
+  right: 100px;
+  text-align: right;
+}
+
+/* ------------------------------ statistics section ------------------------------ */
+
+.page02 div.page02_statistics {
+  background-color: var(--light);
+  padding: 0 100px;
+  display: flex;
+  align-items: center;
+}
+
+.page02 div.page02_statistics .statistics {
+  display: flex;
+  margin-top: 88px;
+}
+
+.page02 div.page02_statistics .statistics-chart {
+  width: 50%;
+  background-color: var(--white);
+  padding: 40px 45px;
+}
+
+.page02 div.page02_statistics .statistics-chart > *:not(canvas) {
+  margin-top: 26px;
+  text-align: center;
+}
+
+.page02 div.page02_statistics .statistics-chart .primary {
+  width: 20px;
+  height: 20px;
+  background-color: var(--primary);
+  margin-right: 10px;
+}
+
+.page02 div.page02_statistics .statistics-chart .secondary {
+  width: 20px;
+  height: 20px;
+  background-color: var(--primary-light);
+  margin-right: 10px;
+}
+
+.page02 div.page02_statistics .statistics-contents {
+  width: 50%;
+  padding-left: 43px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 43px;
+}
+
+/* ------------------------------ map section ------------------------------ */
+
+.page02 div.page02_map {
+  position: relative;
+}
+
+.page02 div.page02_map .map-popup-content {
+  position: absolute;
+  top: 30%;
+  left: 40%;
+  background-color: rgb(0, 0, 0, 0.5);
+  padding: 56px 64px;
+  color: var(--white);
+  text-align: center;
+}
+
+.page02 div.focused-place {
+  /* position: absolute;
+  top: 0;
+  left: 0; */
+  background-color: rgb(0, 0, 0, 0.7);
+  gap: 90px;
+}
+
+.page02 div.focused-place > * {
+  flex: 1;
+  max-width: 690px;
+}
+
+.page02 div.focused-place > img {
+  max-width: 690px;
+  height: auto;
+  aspect-ratio: 1;
+}
+
+.page02 div.focused-place > div {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+/* ------------------------------ gallery section ------------------------------ */
+
+.page02 div.page02_gallery {
+  padding-top: 90px;
+}
+
+/* ------------------------------ centre-2d-map section ------------------------------ */
+
+.page02 div.page02_centre-2d-map {
+  position: relative;
+  background-color: #cacaca;
+  padding: 90px 200px 90px 72px;
+}
+
+.page02 div.page02_centre-2d-map .top-fixed-2d-map {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  width: 500px;
+  height: auto;
+}
+
+.page02 div.centre-2d-map-info {
+  position: relative;
+  background-color: var(--white);
+  color: var(--white);
+}
+
+.page02 div.centre-2d-map-info .centre-map-img-container {
+  height: 80vh;
+  width: fit-content;
+  margin: auto;
+  padding: 10vh 0;
+}
+
+.page02 div.centre-2d-map-info .centre-map-img-container img {
+  width: 100%;
+  height: 100%;
+}
+
+.page02 div.centre-2d-map-info .absolute-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.page02 div.centre-2d-map-info .info-content {
+  position: absolute;
+  bottom: 60px;
+  left: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 42px;
+}
+
+.page02 div.centre-2d-map-info .info-content.left {
+  left: 100px;
+  text-align: left;
+}
+
+.page02 div.centre-2d-map-info .info-content.right {
+  right: 100px;
+  text-align: right;
+}
+
+/* ------------------------------ garden life guide section ------------------------------ */
+
+.page02 div.page02_garden-life-guide {
+  background-color: var(--light);
+  padding: 90px 160px 180px;
+  text-align: center;
+}
+
+.page02 div.page02_garden-life-guide .block-content1 {
+  margin-top: 100px;
+}
+
+.page02 div.page02_garden-life-guide .block-content2 {
+  margin-top: 60px;
+}
+
+.page02 div.page02_garden-life-guide video {
+  margin-top: 90px;
+}
+
+.page02 div.page02_garden-life-guide .block-content3 {
+  margin-top: 100px;
+}
+
+/* ------------------------------ garden life feedback section ------------------------------ */
+
+.page02 div.page02_garden-life-feedback > .fullscreen {
+  display: flex;
+  align-items: flex-end;
+  background-color: var(--white);
+}
+
+.page02 div.page02_garden-life-feedback .title {
+  position: absolute;
+  bottom: calc(100% + 50px);
+}
+
+.page02 div.page02_garden-life-feedback .title.left {
+  left: 160px;
+}
+
+.page02 div.page02_garden-life-feedback .title.right {
+  right: 160px;
+}
+
+.page02 div.page02_garden-life-feedback .feedback-container {
+  width: 100%;
+  height: 760px;
+  position: relative;
+}
+
+.page02 div.page02_garden-life-feedback .feedback-content {
+  position: absolute;
+  text-align: center;
+  color: var(--secondary);
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  font-size: 80px;
+}
+
+.page02 div.page02_garden-life-feedback .feedback-content.left {
+  top: 50%;
+  transform: translateY(-50%);
+  left: 50px;
+}
+
+.page02 div.page02_garden-life-feedback .feedback-content.right {
+  top: 50%;
+  transform: translateY(-50%);
+  right: 50px;
+}
+
+.page02 div.page02_garden-life-feedback .feedback-content.bottom {
+  bottom: 110px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.page02 div.page02_garden-life-feedback .feedback-content > div {
+  color: var(--white);
+  font-size: 36px;
+}
+
+/* ------------------------------ oganization content section ------------------------------ */
+
+.page02 div.page02_oganization-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 40px;
+  background-color: var(--white);
+}
+
+.page02 div.page02_oganization-content.pt-90 {
+  padding-top: 90px;
+}
+
+.page02 div.page02_oganization-content.pb-90 {
+  padding-bottom: 90px;
+}
+
+.page02 div.page02_oganization-content h3.content {
+  color: var(--secondary);
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  font-size: 80px;
+}
+
+.page02 div.page02_oganization-content h3 > div {
+  color: var(--dark);
+  font-size: 36px;
+}
