@@ -16,11 +16,10 @@
 html,
 body {
   height: 100%;
-  overflow-x: hidden;
+  overflow: hidden;
   -ms-overflow-style: none;
   scrollbar-width: none;
   line-height: 1.3;
-  scroll-behavior: smooth;
 }
 body::-webkit-scrollbar {
   display: none;

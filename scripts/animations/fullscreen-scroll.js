@@ -2,7 +2,6 @@
 
 document.onload = () => {
   document.body.scrollTop(0);
-  gsap.set("body", { overflow: "hidden" });
 };
 
 function goToSection(i, anim) {
