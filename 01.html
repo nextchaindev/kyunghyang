@@ -25,7 +25,7 @@
       귀하의 브라우저는 HTML5 비디오를 지원하지 않습니다
     </video>
 
-    <div class="page01_hero fullscreen">
+    <div class="page01_hero bg-black-30 fullscreen scrollable">
       <div class="tag-title">공공디자인으로 행복한 공간 만들기</div>
       <div class="main-title">
         <h1>
@@ -38,15 +38,15 @@
           <span class="text-light">광명 인생정원 편</span>
         </h5>
       </div>
-      <a href="#main-content">
-        <div class="scroll-down">
-          <span class="text-light">Scroll Down</span>
-          <img src="/assets/svgs/icon_down-arrow.svg" alt="scroll-down" /></div
-      ></a>
+      <div class="scroll-down" id="scrollOnclick">
+        <span class="text-light">Scroll Down</span>
+        <img src="/assets/svgs/icon_down-arrow.svg" alt="scroll-down" />
+      </div>
     </div>
-    <div class="page01_quotes fullscreen" id="main-content">
+
+    <div class="page01_quotes fullscreen scrollable" id="main-content">
       <img
-        class="fullscreen"
+        class="fullscreen fading-image"
         src="/assets/images/01/young-girl-bg/04_img.png"
         srcset="
           /assets/images/01/young-girl-bg/04_img@2x.png 2x,
@@ -61,14 +61,15 @@
         &rdquo;
       </h1>
     </div>
-    <div class="page01_quotes fullscreen">
+    <div class="page01_quotes fullscreen scrollable">
       <img
-        class="fullscreen"
+        class="fullscreen fading-image"
         src="/assets/images/01/middle-woman-bg/05_img.png"
         srcset="
           /assets/images/01/middle-woman-bg/05_img@2x.png 2x,
           /assets/images/01/middle-woman-bg/05_img@3x.png 3x
         "
+        class="fading-image"
       />
       <h1 class="quotes-title text-strong-2">
         &ldquo;
@@ -78,7 +79,7 @@
         &rdquo;
       </h1>
     </div>
-    <div class="page01_intro fullscreen">
+    <div class="page01_intro fullscreen scrollable">
       <img
         class="fullscreen"
         src="/assets/images/01/old-man-bg/06_img.png"
@@ -96,7 +97,7 @@
         청각·후각 등의 감각이 무뎌지죠. -->
       </h2>
     </div>
-    <div class="page01_intro fullscreen">
+    <div class="page01_intro fullscreen scrollable">
       <img
         class="fullscreen"
         src="/assets/images/01/old-woman-bg/07_img.png"
@@ -115,7 +116,7 @@
       </h2>
     </div>
 
-    <div class="page01_statistics fullscreen">
+    <div class="page01_statistics fullscreen scrollable">
       <div style="flex: 1">
         <div class="section-title-tag">대한민국 치매 현황</div>
         <div class="statistics">
@@ -1218,8 +1219,7 @@
        * global gsap plugins (free)
        * works for animations modules below
        */
-
-      gsap.registerPlugin(ScrollTrigger, TextPlugin);
+      gsap.registerPlugin(ScrollTrigger, TextPlugin, ScrollToPlugin);
     </script>
     <script src="/scripts/animations/index.js" type="module"></script>
 
