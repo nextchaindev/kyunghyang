@@ -34,11 +34,6 @@ body::-webkit-scrollbar {
   width: 100vw;
 }
 
-.fullwidth {
-  width: 100vw;
-  height: fit-content;
-}
-
 .flex-center {
   display: flex;
   justify-content: center;

@@ -29,18 +29,6 @@ img.fullscreen {
   display: block;
 }
 
-img.fullwidth {
-  object-fit: fill;
-  width: 100%;
-  display: block;
-}
-
-
-img.fullscreen {
-  object-fit: cover;
-  display: block;
-}
-
 /* video */
 div.video-fullscreen-container {
   width: 100vw;
