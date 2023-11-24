@@ -44,75 +44,79 @@
           <img src="/assets/svgs/icon_down-arrow.svg" alt="scroll-down" /></div
       ></a>
     </div>
-    <div class="page01_quotes fullscreen" id="main-content">
-      <img
-        class="fullscreen"
-        src="/assets/images/01/young-girl-bg/04_img.png"
-        srcset="
-          /assets/images/01/young-girl-bg/04_img@2x.png 2x,
-          /assets/images/01/young-girl-bg/04_img@3x.png 3x
-        "
-      />
-      <h1 class="quotes-title text-strong-2">
-        &ldquo;
-        <div class="text-strong">
-          <div class="goingUp-text">우리는 늙습니다.</div>
-        </div>
-        &rdquo;
-      </h1>
-    </div>
-    <div class="page01_quotes fullscreen">
-      <img
-        class="fullscreen"
-        src="/assets/images/01/middle-woman-bg/05_img.png"
-        srcset="
-          /assets/images/01/middle-woman-bg/05_img@2x.png 2x,
-          /assets/images/01/middle-woman-bg/05_img@3x.png 3x
-        "
-      />
-      <h1 class="quotes-title text-strong-2">
-        &ldquo;
-        <div class="text-strong">
-          <div class="goingUp-text">노화를 겪으면 어떻게 바뀔까요?</div>
-        </div>
-        &rdquo;
-      </h1>
-    </div>
-    <div class="page01_intro fullscreen">
-      <img
-        class="fullscreen"
-        src="/assets/images/01/old-man-bg/06_img.png"
-        srcset="
-          /assets/images/01/old-man-bg/06_img@2x.png 2x,
-          /assets/images/01/old-man-bg/06_img@3x.png 3x
-        "
-      />
-      <h2 class="left text-strong-2 fading-text">
-        <span id="splitText1"></span><br />
-        <span id="splitText2"></span><br />
-        <span id="splitText3"></span>
-        <!-- 균형 감각이 떨어져 걷기 어렵고<br />
+
+    <div class="swipe-sections">
+      <div class="page01_quotes fullscreen panel" id="main-content">
+        <img
+          class="fullscreen fading-image"
+          src="/assets/images/01/young-girl-bg/04_img.png"
+          srcset="
+            /assets/images/01/young-girl-bg/04_img@2x.png 2x,
+            /assets/images/01/young-girl-bg/04_img@3x.png 3x
+          "
+        />
+        <h1 class="quotes-title text-strong-2">
+          &ldquo;
+          <div class="text-strong">
+            <div class="goingUp-text">우리는 늙습니다.</div>
+          </div>
+          &rdquo;
+        </h1>
+      </div>
+      <div class="page01_quotes fullscreen panel">
+        <img
+          class="fullscreen fading-image"
+          src="/assets/images/01/middle-woman-bg/05_img.png"
+          srcset="
+            /assets/images/01/middle-woman-bg/05_img@2x.png 2x,
+            /assets/images/01/middle-woman-bg/05_img@3x.png 3x
+          "
+          class="fading-image"
+        />
+        <h1 class="quotes-title text-strong-2">
+          &ldquo;
+          <div class="text-strong">
+            <div class="goingUp-text">노화를 겪으면 어떻게 바뀔까요?</div>
+          </div>
+          &rdquo;
+        </h1>
+      </div>
+      <div class="page01_intro fullscreen panel">
+        <img
+          class="fullscreen"
+          src="/assets/images/01/old-man-bg/06_img.png"
+          srcset="
+            /assets/images/01/old-man-bg/06_img@2x.png 2x,
+            /assets/images/01/old-man-bg/06_img@3x.png 3x
+          "
+        />
+        <h2 class="left text-strong-2 fading-text">
+          <span id="splitText1"></span><br />
+          <span id="splitText2"></span><br />
+          <span id="splitText3"></span>
+          <!-- 균형 감각이 떨어져 걷기 어렵고<br />
         내가 지금 어디에 있는지 헷갈리 때가 많아져요.<br />
         청각·후각 등의 감각이 무뎌지죠. -->
-      </h2>
-    </div>
-    <div class="page01_intro fullscreen">
-      <img
-        class="fullscreen"
-        src="/assets/images/01/old-woman-bg/07_img.png"
-        srcset="
-          /assets/images/01/old-woman-bg/07_img@2x.png 2x,
-          /assets/images/01/old-woman-bg/07_img@3x.png 3x
-        "
-      />
-      <h2 class="right text-strong-2 fading-text">
-        <span id="splitText4"></span><br />
-        <span id="splitText5"></span><br />
-        <span id="splitText6"></span>
-        <!-- 사회 활동이 줄어 자존감이 떨어지고<br />
+        </h2>
+      </div>
+      <div class="page01_intro fullscreen panel">
+        <img
+          class="fullscreen"
+          src="/assets/images/01/old-woman-bg/07_img.png"
+          srcset="
+            /assets/images/01/old-woman-bg/07_img@2x.png 2x,
+            /assets/images/01/old-woman-bg/07_img@3x.png 3x
+          "
+        />
+        <h2 class="right text-strong-2 fading-text">
+          <span id="splitText4"></span><br />
+          <span id="splitText5"></span><br />
+          <span id="splitText6"></span>
+          <!-- 사회 활동이 줄어 자존감이 떨어지고<br />
         홀로 회상에 잠기거나<br />
         우울감에 허우적거리기도 합니다. -->
-      </h2>
+        </h2>
+      </div>
     </div>
 
     <div class="page01_statistics fullscreen">
@@ -1218,7 +1222,6 @@
        * global gsap plugins (free)
        * works for animations modules below
        */
-
       gsap.registerPlugin(ScrollTrigger, TextPlugin);
     </script>
     <script src="/scripts/animations/index.js" type="module"></script>
