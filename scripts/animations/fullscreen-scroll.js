@@ -5,12 +5,12 @@ document.onload = () => {
 };
 
 function goToSection(i, anim) {
-  gsap.set("body", { overflow: "hidden" });
+  gsap.set("body", { overflowY: "hidden" });
   gsap.to("body", {
     scrollTo: { y: i * innerHeight, autoKill: false },
     duration: 1,
     overwrite: true,
-    onComplete: () => gsap.set("body", { overflow: "auto" }),
+    onComplete: () => gsap.set("body", { overflowY: "auto" }),
   });
 }
 

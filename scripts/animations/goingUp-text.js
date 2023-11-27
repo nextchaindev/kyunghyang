@@ -1,12 +1,14 @@
 // should be placed after gsap scripts
 
-gsap.utils.toArray(".goingUp-text").forEach(function (elem) {
+const goingUpTexts = gsap.utils.toArray(".goingUp-text");
+
+goingUpTexts.forEach((elem) => {
   ScrollTrigger.create({
     trigger: elem,
     start: "top 90%",
     end: "bottom 10%",
     markers: window.location.hostname === "127.0.0.1",
-    onEnter: function () {
+    onEnter() {
       gsap.fromTo(
         elem,
         { y: 100, autoAlpha: 0 },
@@ -30,10 +32,10 @@ gsap.utils.toArray(".goingUp-text").forEach(function (elem) {
         }
       );
     },
-    onLeave: function () {
+    onLeave() {
       gsap.fromTo(elem, { autoAlpha: 1 }, { autoAlpha: 0, overwrite: "auto" });
     },
-    onEnterBack: function () {
+    onEnterBack() {
       gsap.fromTo(
         elem,
         { y: -100, autoAlpha: 0 },
@@ -46,7 +48,7 @@ gsap.utils.toArray(".goingUp-text").forEach(function (elem) {
         }
       );
     },
-    onLeaveBack: function () {
+    onLeaveBack() {
       gsap.fromTo(elem, { autoAlpha: 1 }, { autoAlpha: 0, overwrite: "auto" });
     },
   });
