@@ -1,0 +1,16 @@
+.circle-cursor {
+  width: fit-content;
+  padding: 4px 12px;
+  border-radius: 4px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  background: rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  color: var(--white);
+  font-size: 12px;
+}

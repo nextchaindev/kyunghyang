@@ -718,11 +718,7 @@
         />
       </div>
     </div>
-    <div
-      class="centre-2d-map-info-3d fullscreen"
-      id="viewer"
-      style="cursor: grab"
-    >
+    <div class="centre-2d-map-info-3d fullscreen" id="viewer1">
       <!-- <img
         class="fullscreen"
         src="/assets/images/01/2d-map-4th/36.1.JPG"
@@ -813,16 +809,16 @@
         />
       </div>
     </div>
-    <div class="centre-2d-map-info-3d fullscreen">
-      <img
+    <div class="centre-2d-map-info-3d fullscreen" id="viewer2">
+      <!-- <img
         class="fullscreen"
         src="/assets/images/01/2d-map-5th/41.1.JPG"
         alt=""
-      />
+      /> -->
     </div>
     <div class="centre-2d-map-info fullscreen">
       <img
-        class="fullscreen"
+        class="fullscreen absolute"
         src="/assets/images/01/2d-map-5th/42_img.png"
         srcset="
           /assets/images/01/2d-map-5th/42_img@2x.png 2x,
@@ -1139,6 +1135,8 @@
       </ul>
     </div>
 
+    <!-- <div class="circle-cursor">Grab me</div> -->
+
     <footer class="kyunghyang-footer">
       <div>
         <p class="text-body">
@@ -1230,25 +1228,6 @@
     <!-- 360 -->
     <script src="https://pchen66.github.io/js/three/three.min.js"></script>
     <script src="https://rawgit.com/pchen66/panolens.js/dev/build/panolens.min.js"></script>
-
-    <script>
-      const container = document.getElementById("viewer");
-      const viewer = new PANOLENS.Viewer({
-        container,
-      });
-      const panorama = new PANOLENS.ImagePanorama(
-        "/assets/images/01/2d-map-4th/36.1.JPG"
-      );
-      viewer.add(panorama);
-      viewer.OrbitControls.noZoom = true;
-      container.onmousedown = () => {
-        container.onmousemove = () => {
-          container.style.cursor = "grabbing";
-        };
-      };
-      container.onmouseup = () => {
-        container.style.cursor = "grab";
-      };
-    </script>
+    <script src="/scripts/virtual-tours/index.js" type="module"></script>
   </body>
 </html>

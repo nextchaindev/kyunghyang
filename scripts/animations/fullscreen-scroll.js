@@ -4,7 +4,7 @@ document.onload = () => {
   document.body.scrollTop(0);
 };
 
-function goToSection(i, anim) {
+function goToSection(i) {
   gsap.set("body", { overflowY: "hidden" });
   gsap.to("body", {
     scrollTo: { y: i * innerHeight, autoKill: false },
