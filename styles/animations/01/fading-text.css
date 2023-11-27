@@ -1,21 +1,33 @@
-/* .fading-text {
-  transform: scale(0.9);
-}
-
-.fading-text.active {
-  transform: scale(1);
-}
-
-.fading-text:nth-of-type(1) {
-  transition: 4.8s all;
-} */
-
 #splitText1,
 #splitText2,
 #splitText3,
 #splitText4,
 #splitText5,
-#splitText6 {
+#splitText6,
+#splitText7,
+#splitText8,
+#splitText9,
+#splitText10,
+#splitText11,
+#splitText12,
+#splitText13,
+#splitText14,
+#splitText15,
+#splitText16,
+#splitText17,
+#splitText18,
+#splitText19,
+#splitText20,
+#splitText21,
+#splitText22,
+#splitText23,
+#splitText24,
+#splitText25,
+#splitText26,
+#splitText27,
+#splitText28,
+#splitText29,
+#splitText30 {
   opacity: 0;
 }
 
@@ -24,22 +36,110 @@
 #splitText3.active,
 #splitText4.active,
 #splitText5.active,
-#splitText6.active {
+#splitText6.active,
+#splitText7.active,
+#splitText8.active,
+#splitText9.active,
+#splitText10.active,
+#splitText11.active,
+#splitText12.active,
+#splitText13.active,
+#splitText14.active,
+#splitText15.active,
+#splitText16.active,
+#splitText17.active,
+#splitText18.active,
+#splitText19.active,
+#splitText20.active,
+#splitText21.active,
+#splitText22.active,
+#splitText23.active,
+#splitText24.active,
+#splitText25.active,
+#splitText26.active,
+#splitText27.active,
+#splitText28.active,
+#splitText29.active,
+#splitText30.active {
   opacity: 1;
 }
 
 /* duration depending on text length ++200ms */
-#splitText5 {
+#splitText5,
+#splitText19,
+#splitText24,
+#splitText26 {
   transition: 1.2s opacity;
 }
 
 #splitText1,
 #splitText3,
 #splitText4,
-#splitText6 {
+#splitText6,
+#splitText16 {
   transition: 1.7s opacity;
 }
 
 #splitText2 {
   transition: 2s opacity;
+}
+
+#splitText7 {
+  transition: 1.8s opacity;
+}
+
+#splitText8,
+#splitText9,
+#splitText15 {
+  transition: 0.4s opacity;
+}
+
+#splitText10,
+#splitText12 {
+  transition: 0.5s opacity;
+}
+
+#splitText11,
+#splitText14 {
+  transition: 0.28s opacity;
+}
+
+#splitText13 {
+  transition: 0.7s opacity;
+}
+
+#splitText17,
+#splitText18,
+#splitText22,
+#splitText23 {
+  transition: 1.4s opacity;
+}
+
+#splitText20 {
+  transition: 1.5s opacity;
+}
+
+#splitText21 {
+  transition: 1.3s opacity;
+}
+
+#splitText25 {
+  transition: 0.35s opacity;
+}
+
+#splitText27,
+#splitText28 {
+  transition: 0.65s opacity;
+}
+
+#splitText29 {
+  transition: 2.2s opacity;
+}
+
+#splitText30 {
+  transition: 2.6s opacity;
+}
+
+#splitText31 {
+  transition: 1s opacity;
 }
