@@ -15,6 +15,16 @@ video.attached-video-bg {
   z-index: -20;
 }
 
+.parallax {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.parallax.bottom {
+}
+
 footer.kyunghyang-footer {
   background-color: var(--primary);
   color: var(--white);
