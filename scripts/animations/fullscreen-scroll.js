@@ -10,7 +10,9 @@ function goToSection(i) {
     scrollTo: { y: i * innerHeight, autoKill: false },
     duration: 0.6,
     overwrite: true,
-    onComplete: () => gsap.set("body", { overflowY: "auto" }),
+    onComplete: () => {
+      gsap.set("body", { overflowY: "auto" });
+    },
   });
 }
 
