@@ -18,7 +18,7 @@ html,
 body {
   height: 100%;
   overflow-x: hidden;
-  overflow-y: hidden;
+  /* overflow-y: hidden; */
   -ms-overflow-style: none;
   scrollbar-width: none;
   line-height: 1.3;
