@@ -62,7 +62,7 @@ listSections.forEach((values, index) => {
 });
 
 function goToSection(i) {
-  // gsap.set("body", { overflowY: "hidden" });
+  gsap.set("body", { overflowY: "hidden" });
 
   let scrolledSesssonHeight = 0;
   for (let index = 0; index < listHideScrollSreens.length; index++) {
@@ -128,14 +128,14 @@ function goToSection(i) {
       1;
   }
 
-  // gsap.to("body", {
-  //   scrollTo: { y: scrollY, autoKill: false },
-  //   duration: 0.8,
-  //   overwrite: true,
-  // });
-  // setTimeout(() => {
-  //   gsap.set("body", { overflowY: "auto" });
-  // }, 600);
+  gsap.to("body", {
+    scrollTo: { y: scrollY, autoKill: false },
+    duration: 1,
+    overwrite: true,
+  });
+  setTimeout(() => {
+    gsap.set("body", { overflowY: "auto" });
+  }, 990);
 }
 
 gsap.utils.toArray(".fullscreen.scrollable").forEach((panel, i) => {
@@ -154,15 +154,16 @@ gsap.utils.toArray(".fullscreen.scrollable").forEach((panel, i) => {
 });
 
 document.getElementById("scrollOnclick").onclick = () => {
-  gsap.set("body", { overflowY: "hidden" });
-  gsap.to("body", {
-    scrollTo: { y: innerHeight, autoKill: false },
-    duration: 1,
-    overwrite: true,
-  });
-  setTimeout(() => {
-    gsap.set("body", { overflowY: "auto" });
-  }, 1000);
+  // gsap.set("body", { overflowY: "hidden" });
+  // gsap.to("body", {
+  //   scrollTo: { y: innerHeight, autoKill: false },
+  //   duration: 1,
+  //   overwrite: true,
+  // });
+  // setTimeout(() => {
+  //   gsap.set("body", { overflowY: "auto" });
+  // }, 1000);
+  goToSection(1);
 };
 
 gsap.utils.toArray(".hide_scroll").forEach((panel, i) => {
