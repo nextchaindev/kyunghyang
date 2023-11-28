@@ -19,7 +19,7 @@ gsap.utils.toArray(".fading-image").forEach(function (elem) {
             overwrite: "auto",
           }
         );
-      }, 1300); // after goingup done
+      }, 2000); // after goingup done
     },
     onLeave: function () {
       gsap.fromTo(
