@@ -62,7 +62,7 @@ listSections.forEach((values, index) => {
 });
 
 function goToSection(i) {
-  gsap.set("body", { overflowY: "hidden" });
+  // gsap.set("body", { overflowY: "hidden" });
 
   let scrolledSesssonHeight = 0;
   for (let index = 0; index < listHideScrollSreens.length; index++) {
@@ -91,6 +91,7 @@ function goToSection(i) {
         sectionTextIDRest.classList.remove("text_active");
       }
       sectionTextID.classList.add("text_active");
+      document.getElementById(`myBar${qty || 1}`).style.height = "100%";
       if (sectionTextIDprevious != null) {
         sectionTextIDprevious.classList.remove("text_active");
       }
@@ -99,7 +100,7 @@ function goToSection(i) {
         (((i + 1) * innerHeight - scrolledSesssonHeight) /
           listSessionHeight[qty]) *
         100;
-      document.getElementById(`myBar${qty || 1}`).style.height = scrolled + "%";
+      // document.getElementById(`myBar${qty || 1}`).style.height = scrolled + "%";
       var previous = document.getElementById(`myBar${qty + 1}`);
       if (previous != null) {
         previous.style.height = 0 + "%";
@@ -127,22 +128,20 @@ function goToSection(i) {
       1;
   }
 
-  gsap.to("body", {
-    scrollTo: { y: scrollY, autoKill: false },
-    duration: 0.8,
-    overwrite: true,
-    onComplete: () => {
-      gsap.set("body", { overflowY: "auto" });
-    },
-  });
+  // gsap.to("body", {
+  //   scrollTo: { y: scrollY, autoKill: false },
+  //   duration: 0.8,
+  //   overwrite: true,
+  // });
+  // setTimeout(() => {
+  //   gsap.set("body", { overflowY: "auto" });
+  // }, 600);
 }
 
 gsap.utils.toArray(".fullscreen.scrollable").forEach((panel, i) => {
-  console.log(i);
   ScrollTrigger.create({
     trigger: panel,
     onEnter: () => {
-      console.log("enter", i);
       goToSection(i);
     },
   });
@@ -157,3 +156,29 @@ gsap.utils.toArray(".fullscreen.scrollable").forEach((panel, i) => {
 document.getElementById("scrollOnclick").onclick = () => {
   goToSection(1);
 };
+
+gsap.utils.toArray(".hide_scroll").forEach((panel, i) => {
+  ScrollTrigger.create({
+    trigger: panel,
+    onEnter: () => {
+      document.getElementById("section-scroll").style.opacity = 0;
+    },
+    onLeave: () => {
+      document.getElementById("section-scroll").style.opacity = 1;
+    },
+  });
+});
+
+ScrollTrigger.create({
+  trigger: "#section_scroll11",
+  onEnter: () => {
+    const sectionTextID = document.getElementById(`section_text11`);
+    sectionTextID.classList.add("text_active");
+    document.getElementById(`myBar11`).style.height = "100%";
+  },
+  onLeave: () => {
+    const sectionTextID = document.getElementById(`section_text11`);
+    sectionTextID.classList.remove("text_active");
+    document.getElementById(`myBar11`).style.height = "0%";
+  },
+});
