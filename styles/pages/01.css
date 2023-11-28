@@ -325,6 +325,11 @@
   position: relative;
 }
 
+.page01 div.page01_garden-life-feedback .feedback-container img {
+  width: 100%;
+  height: 100%;
+}
+
 .page01 div.page01_garden-life-feedback .feedback-content {
   position: absolute;
   text-align: center;

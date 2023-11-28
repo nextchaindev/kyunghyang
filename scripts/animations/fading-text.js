@@ -7,7 +7,7 @@ ScrollTrigger.create({
   trigger: fadingTexts[0],
   start: "top 90%",
   end: "bottom 10%",
-  markers: window.location.hostname === "127.0.0.1",
+  // markers: window.location.hostname === "127.0.0.1",
   onEnter: () => {
     fadingTexts[0].classList.add("active");
     gsap.timeline().to("#splitText1", {
@@ -36,7 +36,7 @@ ScrollTrigger.create({
   trigger: fadingTexts[1],
   start: "top 90%",
   end: "bottom 10%",
-  markers: window.location.hostname === "127.0.0.1",
+  // markers: window.location.hostname === "127.0.0.1",
   onEnter: () => {
     gsap.timeline().to("#splitText4", {
       duration: 1.5,
@@ -64,7 +64,7 @@ ScrollTrigger.create({
   trigger: fadingTexts[2],
   start: "top 90%",
   end: "bottom 10%",
-  markers: window.location.hostname === "127.0.0.1",
+  // markers: window.location.hostname === "127.0.0.1",
   onEnter: () => {
     gsap.timeline().to("#splitText7", {
       duration: 1.6,
@@ -148,7 +148,7 @@ ScrollTrigger.create({
   trigger: fadingTexts[5],
   start: "top 90%",
   end: "bottom 10%",
-  markers: window.location.hostname === "127.0.0.1",
+  // markers: window.location.hostname === "127.0.0.1",
   onEnter: () => {
     gsap.timeline().to("#splitText18", {
       duration: 1.2,
@@ -183,7 +183,7 @@ ScrollTrigger.create({
   trigger: fadingTexts[6],
   start: "top 90%",
   end: "bottom 10%",
-  markers: window.location.hostname === "127.0.0.1",
+  // markers: window.location.hostname === "127.0.0.1",
   onEnter: () => {
     gsap.timeline().to("#splitText22", {
       duration: 1.2,
@@ -246,7 +246,7 @@ ScrollTrigger.create({
   trigger: fadingTexts[11],
   start: "top 90%",
   end: "bottom 10%",
-  markers: window.location.hostname === "127.0.0.1",
+  // markers: window.location.hostname === "127.0.0.1",
   onEnter: () => {
     gsap.timeline().to("#splitText30", {
       duration: 2.4,
