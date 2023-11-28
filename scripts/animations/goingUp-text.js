@@ -7,7 +7,7 @@ goingUpTexts.forEach((elem) => {
     trigger: elem,
     start: "top 90%",
     end: "bottom 10%",
-    markers: window.location.hostname === "127.0.0.1",
+    // markers: window.location.hostname === "127.0.0.1",
     onEnter() {
       gsap.fromTo(
         elem,
