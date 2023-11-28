@@ -104,7 +104,7 @@ ScrollTrigger.create({
         duration: 0.3,
         text: "우리나라 ",
       });
-    }, 2180);
+    }, 2380);
     document.getElementById("splitText12").classList.add("active");
     setTimeout(() => {
       gsap.timeline().to("#splitText13", {
@@ -112,40 +112,40 @@ ScrollTrigger.create({
         text: "인구 5명 중 1명",
       });
       document.getElementById("splitText13").classList.add("active");
-    }, 2480);
+    }, 2680);
     setTimeout(() => {
       gsap.timeline().to("#splitText14", {
         duration: 0.08,
         text: "이",
       });
       document.getElementById("splitText14").classList.add("active");
-    }, 2980);
+    }, 3180);
     setTimeout(() => {
       gsap.timeline().to("#splitText15", {
         duration: 0.2,
         text: "됩니다.",
       });
       document.getElementById("splitText15").classList.add("active");
-    }, 3060);
+    }, 3260);
     setTimeout(() => {
       gsap.timeline().to("#splitText16", {
         duration: 1.5,
         text: "어른신들은 홀로 지낼수록 치매에 걸리기 쉽습니다.",
       });
       document.getElementById("splitText16").classList.add("active");
-    }, 3260);
+    }, 3460);
     setTimeout(() => {
       gsap.timeline().to("#splitText17", {
         duration: 1.2,
         text: "사회가 감당해야 할 비용도 늘어납니다.",
       });
       document.getElementById("splitText17").classList.add("active");
-    }, 4750);
+    }, 4950);
   },
 });
 
 ScrollTrigger.create({
-  trigger: fadingTexts[7],
+  trigger: fadingTexts[5],
   start: "top 90%",
   end: "bottom 10%",
   markers: window.location.hostname === "127.0.0.1",
@@ -180,7 +180,7 @@ ScrollTrigger.create({
 });
 
 ScrollTrigger.create({
-  trigger: fadingTexts[8],
+  trigger: fadingTexts[6],
   start: "top 90%",
   end: "bottom 10%",
   markers: window.location.hostname === "127.0.0.1",
@@ -243,7 +243,7 @@ ScrollTrigger.create({
 });
 
 ScrollTrigger.create({
-  trigger: fadingTexts[13],
+  trigger: fadingTexts[11],
   start: "top 90%",
   end: "bottom 10%",
   markers: window.location.hostname === "127.0.0.1",
