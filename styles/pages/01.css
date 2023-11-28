@@ -411,10 +411,12 @@ h1 {
 .page01 div.centre-2d-map-info .info-content {
   position: absolute;
   bottom: 60px;
-  left: 100px;
   display: flex;
   flex-direction: column;
   gap: 42px;
+  background-color: rgb(0, 0, 0, 0.3);
+  padding: 32px 20px;
+  width: max-content;
 }
 
 .page01 div.centre-2d-map-info .info-content.left {
