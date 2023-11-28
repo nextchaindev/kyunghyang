@@ -8,7 +8,7 @@ function goToSection(i) {
   gsap.set("body", { overflowY: "hidden" });
   gsap.to("body", {
     scrollTo: { y: i * innerHeight, autoKill: false },
-    duration: 1,
+    duration: 0.6,
     overwrite: true,
     onComplete: () => gsap.set("body", { overflowY: "auto" }),
   });
