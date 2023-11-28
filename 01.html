@@ -52,7 +52,9 @@
     <link rel="stylesheet" href="/styles/color.css" />
     <link rel="stylesheet" href="/styles/global.css" />
     <link rel="stylesheet" href="/styles/pages/01.css" />
+    <link rel="stylesheet" href="/styles/components/scroll-progress-2.css" />
     <link rel="stylesheet" href="/styles/animations/01.animation.css" />
+
     <link
       rel="stylesheet"
       href="https://unpkg.com/flickity@2/dist/flickity.min.css"
@@ -65,7 +67,9 @@
     </video>
 
     <!-- 01 -->
-    <div class="page01_hero bg-black-30 fullscreen scrollable">
+    <div
+      class="page01_hero bg-black-30 fullscreen scrollable section_scroll hide_scroll"
+    >
       <div class="tag-title">공공디자인으로 행복한 공간 만들기</div>
       <div class="main-title">
         <h1>
@@ -156,7 +160,7 @@
     </div>
 
     <!-- 02 -->
-    <div class="page01_statistics fullscreen scrollable">
+    <div class="page01_statistics fullscreen scrollable section_scroll">
       <div style="flex: 1">
         <div class="section-title-tag">대한민국 치매 현황</div>
         <div class="statistics">
@@ -199,7 +203,7 @@
         </div>
       </div>
     </div>
-    <div class="page01_map fullscreen scrollable" id="zoom1">
+    <div class="page01_map fullscreen scrollable section_scroll" id="zoom1">
       <img
         class="fullscreen"
         src="/assets/images/01/map/map-bg.png"
@@ -357,7 +361,7 @@
     </div>
 
     <!-- 03 -->
-    <div class="page01_centre-2d-map fullscreen">
+    <div class="page01_centre-2d-map fullscreen section_scroll">
       <!-- <img
         src="/assets/images/01/2d-map/15map_img.png"
         srcset="
@@ -381,7 +385,7 @@
         />
       </div>
     </div>
-    <div class="centre-2d-map-info fullscreen">
+    <div class="centre-2d-map-info fullscreen section_scroll">
       <img
         class="fullscreen"
         src="/assets/images/01/2d-map-1st/17_img.png"
@@ -462,7 +466,7 @@
         />
       </div>
     </div>
-    <div class="page01_garden-life-feedback">
+    <div class="page01_garden-life-feedback section_scroll">
       <div class="feedback-comp fullscreen">
         <div class="feedback-container">
           <h3 class="title left text-bold goingUp-text">
@@ -547,7 +551,7 @@
     </div>
 
     <!-- 05 -->
-    <div class="page01_centre-2d-map fullscreen">
+    <div class="page01_centre-2d-map fullscreen section_scroll">
       <!-- <img
         src="/assets/images/01/2d-map/15map_img.png"
         srcset="
@@ -626,7 +630,7 @@
     </div>
 
     <!-- 06 -->
-    <div class="page01_centre-2d-map fullscreen">
+    <div class="page01_centre-2d-map fullscreen section_scroll">
       <!-- <img
         src="/assets/images/01/2d-map/15map_img.png"
         srcset="
@@ -708,7 +712,7 @@
         </h2>
       </div>
     </div>
-    <div class="page01_garden-life-feedback">
+    <div class="page01_garden-life-feedback hide_scroll">
       <div class="feedback-comp fullscreen">
         <div class="feedback-container">
           <h3 class="title left text-bold goingUp-text">
@@ -741,7 +745,7 @@
         </div>
       </div>
     </div>
-    <div class="page01_centre-2d-map fullscreen">
+    <div class="page01_centre-2d-map fullscreen section_scroll">
       <!-- <img
         src="/assets/images/01/2d-map/15map_img.png"
         srcset="
@@ -833,7 +837,7 @@
     </div>
 
     <!-- 07 -->
-    <div class="page01_centre-2d-map fullscreen">
+    <div class="page01_centre-2d-map fullscreen section_scroll">
       <!-- <img
         src="/assets/images/01/2d-map/15map_img.png"
         srcset="
@@ -920,7 +924,7 @@
     </div>
 
     <!-- 08 -->
-    <div class="video-fullscreen-container">
+    <div class="video-fullscreen-container hide_scroll">
       <div class="video-container">
         <video muted>
           <source src="/assets/videos/home-edu-program.mp4" type="video/mp4" />
@@ -938,7 +942,7 @@
         </div>
       </div>
     </div>
-    <div class="page01_garden-life-guide">
+    <div class="page01_garden-life-guide section_scroll">
       <div class="section-title-tag">인생정원 해설사</div>
       <div class="block-content1">
         <h3 class="text-light fading-text">
@@ -975,7 +979,7 @@
         <h3 class="text-strong"><span id="splitText31"></span></h3>
       </div>
     </div>
-    <div class="page01_garden-life-feedback">
+    <div class="page01_garden-life-feedback hide_scroll">
       <div class="feedback-comp fullscreen">
         <div class="feedback-container">
           <h3 class="title right goingUp-text">
@@ -1061,7 +1065,7 @@
         </div>
       </div>
     </div>
-    <div class="page01_oganization-content pb-90">
+    <div class="page01_oganization-content pb-90 hide_scroll">
       <h3 class="text-light goingUp-text">
         노형석 하안노인종합복지관 팀장은 말합니다.
       </h3>
@@ -1108,7 +1112,7 @@
     </div>
 
     <!-- scroll bar -->
-    <div class="scroll-progress-container">
+    <!-- <div class="scroll-progress-container">
       <ul class="scroll-progress-list">
         <li>
           <span class="text-light progress-item-content"
@@ -1188,11 +1192,19 @@
           </div>
         </li>
       </ul>
+    </div> -->
+    <div class="section-stick" id="section-scroll">
+      <!-- <div class="section-wrap">
+        <div class="section-name">ff</div>
+        <div class="stick active">
+          <div class="stick-progress"></div>
+        </div>
+      </div> -->
     </div>
 
     <!-- <div class="circle-cursor">Grab me</div> -->
 
-    <footer class="kyunghyang-footer">
+    <footer class="kyunghyang-footer hide_scroll">
       <div>
         <p class="text-body">
           공공디자인으로 행복한 공간 만들기 프로젝트 광명 인생정원편
@@ -1264,7 +1276,8 @@
     <script src="/scripts/statistics-chart.js" type="module"></script>
 
     <!-- scroll progress bar -->
-    <script src="/scripts/scroll-progress.js" type="module"></script>
+    <!-- <script src="/scripts/scroll-progress.js" type="module"></script> -->
+    <script src="/scripts/scroll-progress-2.js" type="module"></script>
 
     <!-- animations -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
