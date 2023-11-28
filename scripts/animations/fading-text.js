@@ -18,7 +18,7 @@ ScrollTrigger.create({
     setTimeout(() => {
       gsap.timeline().to("#splitText2", {
         duration: 1.8,
-        text: "내가 지금 어디에 있는지 헷갈리 때가 많아져요",
+        text: "내가 지금 어디에 있는지 헷갈릴 때가 많아져요",
       });
       document.getElementById("splitText2").classList.add("active");
     }, 1500);
