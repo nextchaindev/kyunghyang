@@ -1,11 +1,11 @@
 /* variables and common */
-@import "font.css";
-@import "utilities.css";
+@import 'font.css';
+@import 'utilities.css';
 
 /* global components */
-@import "components/scroll-progress.css";
-@import "components/scroll-progress2.css";
-@import "components/layout.css";
+@import 'components/scroll-progress.css';
+@import 'components/scroll-progress2.css';
+@import 'components/layout.css';
 
 /* gloabal styles */
 * {
@@ -18,7 +18,7 @@ html,
 body {
   height: 100%;
   overflow-x: hidden;
-  overflow-y: hidden;
+  /* overflow-y: hidden; */
   -ms-overflow-style: none;
   scrollbar-width: none;
   line-height: 1.3;

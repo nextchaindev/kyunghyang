@@ -1,7 +1,7 @@
-@import "../components/media.css";
-@import "../components/tag.css";
-@import "../components/gallery.css";
-@import "../components/circle-cursor.css";
+@import '../components/media.css';
+@import '../components/tag.css';
+@import '../components/gallery.css';
+@import '../components/circle-cursor.css';
 
 .page01_hero {
   position: relative;
@@ -366,6 +366,88 @@ h1 {
 
 /* ------------------------------ centre-2d-map section ------------------------------ */
 
+.page01 div.page01-main-map-box {
+  position: relative;
+}
+
+.page01 .page01-main-box-bg {
+  background-image: url(/assets/images/01/2d-map/2d-bg.png);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  padding: 200px;
+}
+
+.page01 .life-garden-background-map-1 {
+  background-image: url(/assets/images/01/2d-map/15map_img.png);
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+.page01 .life-garden-background-map-2 {
+  background-image: url(/assets/images/01/2d-map/1map.png);
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+.page01 .life-garden-background-map-3 {
+  background-image: url(/assets/images/01/2d-map/2map.png);
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+.page01 .life-garden-background-map-4 {
+  background-image: url(/assets/images/01/2d-map/3map.png);
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+.page01 .life-garden-background-map-5 {
+  background-image: url(/assets/images/01/2d-map/4map.png);
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+.page01 .life-garden-background-map-6 {
+  background-image: url(/assets/images/01/2d-map/5map.png);
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.page01 .life-garden-background-map-7 {
+  background-image: url(/assets/images/01/2d-map/6map.png);
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.page01 .page01-main-box-bg > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.page01 .fullscreen-box {
+  width: 100vw;
+  height: 100vh;
+}
+
+.page01 .fullscreen-box-transparent {
+  width: 100vw;
+  height: 100vh;
+  background-image: url(/assets/images/01/2d-map/2d-bg.png);
+}
+
 .page01 div.page01_centre-2d-map {
   position: relative;
   padding: 90px 200px 90px 72px;
@@ -376,7 +458,7 @@ h1 {
   background-position: center;
 }
 
-.page01 div.page01_centre-2d-map .top-fixed-2d-map {
+.page01 .top-fixed-2d-map {
   position: absolute;
   top: 50px;
   left: 50px;
@@ -431,6 +513,18 @@ h1 {
 
 .page01 div.centre-2d-map-info-3d {
   cursor: grab;
+}
+
+.page01 div.page01_centre-2d-map-fixed {
+  position: fixed;
+  right: 0;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+.page01 .page01-main-minimap {
+  display: none;
 }
 
 /* ------------------------------ garden life guide section ------------------------------ */
