@@ -154,7 +154,15 @@ gsap.utils.toArray(".fullscreen.scrollable").forEach((panel, i) => {
 });
 
 document.getElementById("scrollOnclick").onclick = () => {
-  goToSection(1);
+  gsap.set("body", { overflowY: "hidden" });
+  gsap.to("body", {
+    scrollTo: { y: innerHeight, autoKill: false },
+    duration: 1,
+    overwrite: true,
+  });
+  setTimeout(() => {
+    gsap.set("body", { overflowY: "auto" });
+  }, 1000);
 };
 
 gsap.utils.toArray(".hide_scroll").forEach((panel, i) => {
