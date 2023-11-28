@@ -5,7 +5,7 @@ gsap.utils.toArray(".fading-image").forEach(function (elem) {
     trigger: elem,
     start: "top 90%",
     end: "bottom 10%",
-    markers: window.location.hostname === "127.0.0.1",
+    // markers: window.location.hostname === "127.0.0.1",
     onEnter: function () {
       setTimeout(() => {
         gsap.fromTo(
@@ -19,7 +19,7 @@ gsap.utils.toArray(".fading-image").forEach(function (elem) {
             overwrite: "auto",
           }
         );
-      }, 1300); // after goingup done
+      }, 2000); // after goingup done
     },
     onLeave: function () {
       gsap.fromTo(

@@ -164,15 +164,173 @@
   position: relative;
 }
 
+/* .zoom1-scrollable {
+  position: relative;
+  border-bottom: 1px solid #636363;
+}
+h1 {
+  color: #fff;
+}
+.zoom1 {
+  width: 100%;
+  position: fixed;
+  right: 0;
+  top: 0;
+  background: #333;
+  height: 100vh;
+  overflow: hidden;
+}
+.zoom1-photo {
+  width: 100%;
+  height: 100%;
+  background-image: url(https://www.voicesofyouth.org/sites/voy/files/images/2020-08/finding-sunshine.jpg);
+  background-size: cover;
+  background-position: center;
+} */
+
 .page01 div.page01_map .map-popup-content {
   position: absolute;
-  top: 30%;
-  left: 40%;
+  top: 55%;
+  left: 66%;
+  transform: translate(-50%, -95%);
   background-color: rgb(0, 0, 0, 0.5);
   padding: 56px 64px;
   color: var(--white);
   text-align: center;
+  width: max-content;
 }
+
+/* .page01 div.page01_map .map-popup-content {
+  position: absolute;
+  top: 54%;
+  left: 72%;
+  transform: translate(-50%, -95%);
+  background-color: rgb(0, 0, 0, 0.5);
+  padding: 56px 64px;
+  color: var(--white);
+  text-align: center;
+  width: max-content;
+} */
+
+.parallax-page01_map {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url(/assets/images/01/map/map-bg.png);
+  background-size: 120%;
+  transform-origin: 95% 95%;
+  -webkit-transform-origin: 95% 95%;
+}
+
+.page01 div.page01_map .circle-yellow {
+  position: absolute;
+  height: 14px;
+  width: 14px;
+  background-color: #d6c961;
+  border-radius: 27px;
+  font-size: 16px;
+}
+
+.page01 div.page01_map .circle-yellow > div {
+  transform: translate(-40%, 90%);
+  background-color: var(--primary);
+  color: white;
+  width: max-content;
+  padding: 3px 8px 2.6px;
+  border-radius: 13px;
+}
+
+.page01 div.page01_map .circle-yellow.point1 {
+  top: 72%;
+  left: 47%;
+}
+
+.page01 div.page01_map .circle-yellow.point1 > div {
+  background-color: black;
+}
+
+.page01 div.page01_map .circle-yellow.point2 {
+  top: 64%;
+  left: 57%;
+}
+
+.page01 div.page01_map .circle-yellow.point2 > div {
+  background-color: black;
+}
+
+.page01 div.page01_map .circle-yellow.point3 {
+  top: 60%;
+  left: 61%;
+}
+
+.page01 div.page01_map .circle-yellow.point3 > div {
+  background-color: black;
+}
+
+.page01 div.page01_map .circle-yellow.point4 {
+  top: 55%;
+  left: 66%;
+}
+
+.page01 div.page01_map .circle-yellow.point4 > div {
+  background-color: var(--primary);
+}
+
+/* 
+
+.page01 div.page01_map .circle-yellow {
+  position: absolute;
+  height: 27px;
+  width: 27px;
+  background-color: #d6c961;
+  border-radius: 27px;
+  font-size: 32px;
+}
+
+.page01 div.page01_map .circle-yellow > div {
+  transform: translate(-40%, 90%);
+  background-color: var(--primary);
+  color: white;
+  width: max-content;
+  padding: 3px 8px 2.6px;
+  border-radius: 13px;
+}
+
+.page01 div.page01_map .circle-yellow.point1 {
+  top: 75%;
+  left: 45%;
+}
+
+.page01 div.page01_map .circle-yellow.point1 > div {
+  background-color: black;
+}
+
+.page01 div.page01_map .circle-yellow.point2 {
+  top: 66%;
+  left: 58%;
+}
+
+.page01 div.page01_map .circle-yellow.point2 > div {
+  background-color: black;
+}
+
+.page01 div.page01_map .circle-yellow.point3 {
+  top: 61%;
+  left: 63%;
+}
+
+.page01 div.page01_map .circle-yellow.point3 > div {
+  background-color: black;
+}
+
+.page01 div.page01_map .circle-yellow.point4 {
+  top: 54%;
+  left: 72%;
+}
+
+.page01 div.page01_map .circle-yellow.point4 > div {
+  background-color: var(--primary);
+} */
 
 .page01 div.focused-place {
   /* position: absolute;
@@ -253,10 +411,12 @@
 .page01 div.centre-2d-map-info .info-content {
   position: absolute;
   bottom: 60px;
-  left: 100px;
   display: flex;
   flex-direction: column;
   gap: 42px;
+  background-color: rgb(0, 0, 0, 0.3);
+  padding: 32px 20px;
+  width: max-content;
 }
 
 .page01 div.centre-2d-map-info .info-content.left {
@@ -323,6 +483,11 @@
   height: 760px;
   max-height: 80vh;
   position: relative;
+}
+
+.page01 div.page01_garden-life-feedback .feedback-container img {
+  width: 100%;
+  height: 100%;
 }
 
 .page01 div.page01_garden-life-feedback .feedback-content {

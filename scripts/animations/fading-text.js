@@ -7,7 +7,7 @@ ScrollTrigger.create({
   trigger: fadingTexts[0],
   start: "top 90%",
   end: "bottom 10%",
-  markers: window.location.hostname === "127.0.0.1",
+  // markers: window.location.hostname === "127.0.0.1",
   onEnter: () => {
     fadingTexts[0].classList.add("active");
     gsap.timeline().to("#splitText1", {
@@ -18,14 +18,14 @@ ScrollTrigger.create({
     setTimeout(() => {
       gsap.timeline().to("#splitText2", {
         duration: 1.8,
-        text: "내가 지금 어디에 있는지 헷갈리 때가 많아져요.",
+        text: "내가 지금 어디에 있는지 헷갈리 때가 많아져요",
       });
       document.getElementById("splitText2").classList.add("active");
     }, 1500);
     setTimeout(() => {
       gsap.timeline().to("#splitText3", {
         duration: 1.5,
-        text: "청각·후각 등의 감각이 무뎌지죠.",
+        text: "청각·후각 등의 감각이 무뎌지죠",
       });
       document.getElementById("splitText3").classList.add("active");
     }, 3300);
@@ -36,7 +36,7 @@ ScrollTrigger.create({
   trigger: fadingTexts[1],
   start: "top 90%",
   end: "bottom 10%",
-  markers: window.location.hostname === "127.0.0.1",
+  // markers: window.location.hostname === "127.0.0.1",
   onEnter: () => {
     gsap.timeline().to("#splitText4", {
       duration: 1.5,
@@ -53,7 +53,7 @@ ScrollTrigger.create({
     setTimeout(() => {
       gsap.timeline().to("#splitText6", {
         duration: 1.5,
-        text: "우울감에 허우적거리기도 합니다.",
+        text: "우울감에 허우적거리기도 합니다",
       });
       document.getElementById("splitText6").classList.add("active");
     }, 2500);
@@ -64,11 +64,11 @@ ScrollTrigger.create({
   trigger: fadingTexts[2],
   start: "top 90%",
   end: "bottom 10%",
-  markers: window.location.hostname === "127.0.0.1",
+  // markers: window.location.hostname === "127.0.0.1",
   onEnter: () => {
     gsap.timeline().to("#splitText7", {
       duration: 1.6,
-      text: "이 같은 어려움을 겪는 어르신은 해마다 늘고 있어요.",
+      text: "이 같은 어려움을 겪는 어르신은 해마다 늘고 있어요",
     });
     document.getElementById("splitText7").classList.add("active");
     setTimeout(() => {
@@ -123,21 +123,21 @@ ScrollTrigger.create({
     setTimeout(() => {
       gsap.timeline().to("#splitText15", {
         duration: 0.2,
-        text: "됩니다.",
+        text: "됩니다",
       });
       document.getElementById("splitText15").classList.add("active");
     }, 3260);
     setTimeout(() => {
       gsap.timeline().to("#splitText16", {
         duration: 1.5,
-        text: "어른신들은 홀로 지낼수록 치매에 걸리기 쉽습니다.",
+        text: "어른신들은 홀로 지낼수록 치매에 걸리기 쉽습니다",
       });
       document.getElementById("splitText16").classList.add("active");
     }, 3460);
     setTimeout(() => {
       gsap.timeline().to("#splitText17", {
         duration: 1.2,
-        text: "사회가 감당해야 할 비용도 늘어납니다.",
+        text: "사회가 감당해야 할 비용도 늘어납니다",
       });
       document.getElementById("splitText17").classList.add("active");
     }, 4950);
@@ -148,7 +148,7 @@ ScrollTrigger.create({
   trigger: fadingTexts[5],
   start: "top 90%",
   end: "bottom 10%",
-  markers: window.location.hostname === "127.0.0.1",
+  // markers: window.location.hostname === "127.0.0.1",
   onEnter: () => {
     gsap.timeline().to("#splitText18", {
       duration: 1.2,
@@ -172,7 +172,7 @@ ScrollTrigger.create({
     setTimeout(() => {
       gsap.timeline().to("#splitText21", {
         duration: 1.1,
-        text: "어르신들에게 어떤 변화가 생길까요.",
+        text: "어르신들에게 어떤 변화가 생길까요",
       });
       document.getElementById("splitText21").classList.add("active");
     }, 3500);
@@ -183,7 +183,7 @@ ScrollTrigger.create({
   trigger: fadingTexts[6],
   start: "top 90%",
   end: "bottom 10%",
-  markers: window.location.hostname === "127.0.0.1",
+  // markers: window.location.hostname === "127.0.0.1",
   onEnter: () => {
     gsap.timeline().to("#splitText22", {
       duration: 1.2,
@@ -207,7 +207,7 @@ ScrollTrigger.create({
     setTimeout(() => {
       gsap.timeline().to("#splitText25", {
         duration: 0.15,
-        text: "입니다.",
+        text: "입니다",
       });
       document.getElementById("splitText25").classList.add("active");
     }, 3400);
@@ -228,14 +228,14 @@ ScrollTrigger.create({
     setTimeout(() => {
       gsap.timeline().to("#splitText28", {
         duration: 0.45,
-        text: "라는 직업이죠.",
+        text: "라는 직업이죠",
       });
       document.getElementById("splitText28").classList.add("active");
     }, 6000);
     setTimeout(() => {
       gsap.timeline().to("#splitText29", {
         duration: 2,
-        text: "한 달간 원예교육을 받은 어르신들은 인생정원 해설사가 될 수 있습니다.",
+        text: "한 달간 원예교육을 받은 어르신들은 인생정원 해설사가 될 수 있습니다",
       });
       document.getElementById("splitText29").classList.add("active");
     }, 6450);
@@ -246,17 +246,17 @@ ScrollTrigger.create({
   trigger: fadingTexts[11],
   start: "top 90%",
   end: "bottom 10%",
-  markers: window.location.hostname === "127.0.0.1",
+  // markers: window.location.hostname === "127.0.0.1",
   onEnter: () => {
     gsap.timeline().to("#splitText30", {
       duration: 2.4,
-      text: "해설사들은 주 3시간씩 인생정원을 가꾸고, 이곳을 찾는 이들에게 정원을 소개하는 일을 합니다.",
+      text: "해설사들은 주 3시간씩 인생정원을 가꾸고, 이곳을 찾는 이들에게 정원을 소개하는 일을 합니다",
     });
     document.getElementById("splitText30").classList.add("active");
     setTimeout(() => {
       gsap.timeline().to("#splitText31", {
         duration: 0.8,
-        text: "인생정원 해설사는 20명에 달합니다.",
+        text: "인생정원 해설사는 20명에 달합니다",
       });
       document.getElementById("splitText31").classList.add("active");
     }, 2400);
