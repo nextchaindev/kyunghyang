@@ -2,22 +2,22 @@
 
 @font-face {
   font-family: Pretendard-Regular;
-  src: url(../assets/fonts/pretendard/public/static/Pretendard-Regular.otf);
+  src: url(../assets/fonts/Pretendard/Pretendard-Regular.woff);
 }
 
 @font-face {
   font-family: Pretendard-Bold;
-  src: url(../assets/fonts/pretendard/public/static/Pretendard-Bold.otf);
+  src: url(../assets/fonts/Pretendard/Pretendard-Bold.woff);
 }
 
 @font-face {
   font-family: Pretendard-Light;
-  src: url(../assets/fonts/pretendard/public/static/Pretendard-Light.otf);
+  src: url(../assets/fonts/Pretendard/Pretendard-Light.woff);
 }
 
 @font-face {
   font-family: Pretendard-SemiBold;
-  src: url(../assets/fonts/pretendard/public/static/Pretendard-SemiBold.otf);
+  src: url(../assets/fonts/Pretendard/Pretendard-SemiBold.woff);
 }
 
 /* NotoSans -- secondary */
