@@ -4,16 +4,56 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Kyunghyang News</title>
-    <!-- <link rel="icon" type="image/x-icon" href="/images/favicon.ico" /> -->
-    <meta name="keywords" content="Kyunghyang News" />
-    <meta name="description" content="Kyunghyang News" />
+    <title>‘인생정원’에서 새 삶을 가꾸어요. 경기 광명편</title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://img.khan.co.kr/spko/icon/favicon.ico"
+    />
+    <link
+      rel="shortcut icon"
+      href="https://img.khan.co.kr/spko/icon/favicon.ico"
+      type="image/x-icon"
+    />
+    <link
+      rel="apple-touch-icon-precomposed"
+      href="https://img.khan.co.kr/spko/icon/apple-touch-icon-precomposed-web.png"
+    />
+    <meta
+      name="keywords"
+      content="어르신, 인지장애, 치매, 노인 일자리, 인생정원, 한국공예·디자인문화진흥원, 공공디자인, 스토리텔링, storytelling, 경기 광명시, 다정한 도시"
+    />
+    <meta
+      name="description"
+      content="어르신들은 홀로 지낼수록 치매에 걸리기 쉬워요. 집을 떠나 실·내외 공간에서 놀고 치료받고 일자리까지 얻을 수 있다면, 어르신들에게 어떤 변화가 생길까요?"
+    />
     <meta name="author" content="Kyunghyang News" />
+    <meta
+      name="twitter:title"
+      content="‘인생정원’에서 새 삶을 가꾸어요. 경기 광명편"
+    />
+    <meta
+      name="twitter:description"
+      content="어르신들은 홀로 지낼수록 치매에 걸리기 쉬워요. 집을 떠나 실·내외 공간에서 놀고 치료받고 일자리까지 얻을 수 있다면, 어르신들에게 어떤 변화가 생길까요?"
+    />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:image" content="summary" />
+    <meta property="og:url" content="" />
+    <meta
+      property="og:title"
+      content="‘인생정원’에서 새 삶을 가꾸어요. 경기 광명편"
+    />
+    <meta
+      property="og:description"
+      content="어르신들은 홀로 지낼수록 치매에 걸리기 쉬워요. 집을 떠나 실·내외 공간에서 놀고 치료받고 일자리까지 얻을 수 있다면, 어르신들에게 어떤 변화가 생길까요?"
+    />
+    <meta property="og:image" content="" />
 
     <link rel="stylesheet" href="/styles/color.css" />
     <link rel="stylesheet" href="/styles/global.css" />
     <link rel="stylesheet" href="/styles/pages/02.css" />
     <link rel="stylesheet" href="/styles/animations/01.animation.css" />
+    <link rel="stylesheet" href="/styles/animations/02.animation.css" />
     <link
       rel="stylesheet"
       href="https://unpkg.com/flickity@2/dist/flickity.min.css"
@@ -28,6 +68,111 @@
     <div w3-include-html="/components/page02/group01.html"></div>
     <div w3-include-html="/components/page02/group02.html"></div>
     <div w3-include-html="/components/page02/group03.html"></div>
+
+    <div
+      class="page01_intro fullscreen parallax scrollable"
+      style="background-image: url(/assets/images/01/old-man-bg/06_img.png)"
+    >
+      <!-- <img
+        class="fullscreen"
+        src="/assets/images/01/old-man-bg/06_img.png"
+        srcset="
+          /assets/images/01/old-man-bg/06_img@2x.png 2x,
+          /assets/images/01/old-man-bg/06_img@3x.png 3x
+        "
+      /> -->
+      <h2 class="left text-strong-2 fading-text">
+        <span id="splitText1"></span><br />
+        <span id="splitText2"></span><br />
+        <span id="splitText3"></span>
+      </h2>
+    </div>
+    <div
+      class="page01_intro fullscreen parallax scrollable"
+      style="background-image: url(/assets/images/01/old-woman-bg/07_img.png)"
+    >
+      <!-- <img
+        class="fullscreen"
+        src="/assets/images/01/old-woman-bg/07_img.png"
+        srcset="
+          /assets/images/01/old-woman-bg/07_img@2x.png 2x,
+          /assets/images/01/old-woman-bg/07_img@3x.png 3x
+        "
+      /> -->
+      <h2 class="right text-strong-2 fading-text">
+        <span id="splitText4"></span><br />
+        <span id="splitText5"></span><br />
+        <span id="splitText6"></span>
+      </h2>
+    </div>
+
+    <div class="page01_statistics fullscreen scrollable">
+      <div style="flex: 1">
+        <div class="section-title-tag">대한민국 치매 현황</div>
+        <div class="statistics">
+          <div class="statistics-chart">
+            <canvas id="statistics-chart-canvas"></canvas>
+            <div class="flex-center" style="gap: 25px">
+              <div class="flex-center">
+                <div class="primary"></div>
+                <h6 class="text-light">60세 이상 추정치매환자수</h6>
+              </div>
+              <div class="flex-center">
+                <div class="secondary"></div>
+                <h6 class="text-light">치매환자 1인당 치매관리비</h6>
+              </div>
+            </div>
+            <p class="text-light">
+              출처 : 전국치매역학조사 (보건복지부 중앙치매센터, 2017 ),
+              2017~2022년 주민등록연양인구(통계청, 2023)
+            </p>
+          </div>
+          <div class="statistics-contents">
+            <h3 class="text-light fading-text">
+              <span id="splitText7"></span>
+            </h3>
+            <h3 class="text-light fading-text">
+              <span class="text-strong" id="splitText8"></span>
+              <span id="splitText9"></span>
+              <span class="text-strong" id="splitText10"></span>
+              <span id="splitText11"></span>
+            </h3>
+            <h3 class="text-light fading-text">
+              <span id="splitText12"></span>
+              <span class="text-strong" id="splitText13"></span>
+              <span id="splitText14"></span>
+              <span id="splitText15"></span>
+            </h3>
+            <h3 class="text-light fading-text">
+              <span id="splitText16"></span>
+            </h3>
+            <h3 class="text-light fading-text">
+              <span id="splitText17"></span>
+            </h3>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="focused-place fullscreen flex-center">
+      <img
+        src="/assets/images/01/map/11_img.png"
+        srcset="
+          /assets/images/01/map/11_img@2x.png 2x,
+          /assets/images/01/map/11_img@3x.png 3x
+        "
+      />
+      <div>
+        <h3 class="fading-text">
+          <span id="splitText18"></span><br />
+          <span id="splitText19"></span><br />
+          <span class="text-strong" id="splitText20"></span>
+        </h3>
+        <h3 class="fading-text">
+          <span id="splitText21"></span>
+        </h3>
+      </div>
+    </div>
 
     <!-- scroll bar -->
     <div class="scroll-progress-container">
@@ -111,6 +256,8 @@
         </li>
       </ul>
     </div>
+
+    <!-- <div class="circle-cursor">Grab me</div> -->
 
     <footer class="kyunghyang-footer">
       <div>
@@ -196,35 +343,14 @@
        * global gsap plugins (free)
        * works for animations modules below
        */
-
-      gsap.registerPlugin(ScrollTrigger, TextPlugin);
+      gsap.registerPlugin(ScrollTrigger, TextPlugin, ScrollToPlugin);
     </script>
     <script src="/scripts/animations/index.js" type="module"></script>
 
     <!-- 360 -->
     <script src="https://pchen66.github.io/js/three/three.min.js"></script>
     <script src="https://rawgit.com/pchen66/panolens.js/dev/build/panolens.min.js"></script>
-
-    <script>
-      const container = document.getElementById("viewer");
-      const viewer = new PANOLENS.Viewer({
-        container,
-      });
-      const panorama = new PANOLENS.ImagePanorama(
-        "/assets/images/01/2d-map-4th/36.1.JPG"
-      );
-      viewer.add(panorama);
-      viewer.OrbitControls.noZoom = true;
-      container.onmousedown = () => {
-        container.onmousemove = () => {
-          container.style.cursor = "grabbing";
-        };
-      };
-      container.onmouseup = () => {
-        container.style.cursor = "grab";
-      };
-      includeHTML();
-    </script>
+    <script src="/scripts/virtual-tours/index.js" type="module"></script>
     <script>
       includeHTML();
     </script>
