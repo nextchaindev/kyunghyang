@@ -63,7 +63,22 @@ Array(sectionsQty)
   
 
 function goToSection(i) {
-  console.log(window.screenY);
+  progressBarPercent(i);
+  gsap.set("body", { overflowY: "hidden" });
+  gsap.to("body", {
+    scrollTo: { y: i * innerHeight, autoKill: false },
+    duration: 0.6,
+    overwrite: true,
+    onComplete: () => {
+      gsap.set("body", { overflowY: "auto" });
+    },
+  });
+
+}
+const scroller = document.querySelector("#page01");
+
+
+function progressBarPercent(i) {
   let scrolledSesssonHeight = 0;
   for(let index = 0; index < listHideScrollSreens.length; index++){
     const hideScrollScreen = document.getElementById(`hide_scroll${index + 1}`);
@@ -105,19 +120,54 @@ function goToSection(i) {
       sectionTextID.classList.remove("text_active");
     }
   })
-
-  
-  gsap.set("body", { overflowY: "hidden" });
-  gsap.to("body", {
-    scrollTo: { y: i * innerHeight, autoKill: false },
-    duration: 0.6,
-    overwrite: true,
-    onComplete: () => {
-      gsap.set("body", { overflowY: "auto" });
-    },
-  });
-
 }
+
+
+// scroller.addEventListener("scroll", (event) => {
+//   var positionTopY = scroller.scrollTop;
+//   let scrolledSesssonHeight = 0;
+//   console.log("check");;
+//   for(let index = 0; index < listHideScrollSreens.length; index++){
+//     const hideScrollScreen = document.getElementById(`hide_scroll${index + 1}`);
+//     if(positionTopY - hideScrollScreen.offsetTop == 0){
+//       sectionScroll.style.opacity = 0;
+//       index = listHideScrollSreens.length
+//     } else {
+//       sectionScroll.style.opacity = 1;
+//     }
+//   }
+//   listSections.forEach((values, index) => {
+//     const sectionTextID = document.getElementById(`section_text${index + 1}`);
+//     const sectionTextIDprevious = document.getElementById(`section_text${index}`);
+//     const sectionScreen = document.getElementById(values.getAttribute("id"));
+   
+//     if(positionTopY - sectionScreen.offsetTop >= 0){
+
+//       qty = index + 1
+//       for(let j = 0; j < qty - 1 ; j++){
+//         scrolledSesssonHeight += listSessionHeight[j]
+//       }
+//       for(let j = 0; j < listSections.length; j++){
+//         const sectionTextIDRest = document.getElementById(`section${j + 1}`);
+//         sectionTextIDRest.classList.remove("text_active");
+//       }
+//       sectionTextID.classList.add("text_active");
+//       if(sectionTextIDprevious != null)
+//       {
+//         sectionTextIDprevious.classList.remove("text_active");
+//       }
+      
+//       var scrolled = ((positionTopY + innerHeight - scrolledSesssonHeight) / listSessionHeight[qty]) * 100;
+//       document.getElementById(`myBar${qty || 1}`).style.height = scrolled + "%";
+//       var previous = document.getElementById(`myBar${qty + 1}`)
+//       if(previous != null){
+//         previous.style.height = 0 + "%";
+//       }
+//     } else {
+//       sectionTextID.classList.remove("text_active");
+//     }
+//   })
+// });
 
 
 
