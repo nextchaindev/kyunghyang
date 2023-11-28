@@ -1,0 +1,68 @@
+.page01 .section-stick {
+  mix-blend-mode: difference;
+  margin: auto;
+  opacity: 0;
+  position: fixed;
+  right: 41px;
+  bottom: 86px;
+  top: 86px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 4px;
+  z-index: 1000;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.page01 .section-stick .section-wrap{
+  mix-blend-mode: difference;
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 200px;
+  height: 8vh;
+  gap: 11px;
+}
+
+.page01 .section-stick .section-wrap .section-name{
+  color: var(--primary);
+}
+
+.page01 .section-stick .section-wrap .text_active {
+  color: var(--grey);
+}
+
+.page01 .section-stick .section-wrap .stick,
+.page01 .section-stick .section-wrap .active {
+  border: none;
+}
+
+.page01 .section-stick .section-wrap .stick {
+  position: relative;
+  width: 4px;
+  height: 100%;
+  background-color: var(--primary);
+  transition: all var(--time-animation) ease-in-out;
+}
+.page01 .section-stick .section-wrap .stick .stick-progress {
+  height: 0%;
+  background-color: var(--grey);
+  width: 4px;
+  max-height: 100%;
+  -webkit-transition: height 0.5s ease-in-out;
+  -moz-transition: height 0.5s ease-in-out;
+  -o-transition: height 0.5s ease-in-out;
+  transition: height 0.5s ease-in-out;
+}
+
+.page01 .section-stick .section-wrap .active {
+  position: absolute;
+  background-color: var(--primary);
+  box-shadow: 0px 0px 12px 1px #ffffff;
+  color: #ffffff;
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+}
