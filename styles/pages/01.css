@@ -276,7 +276,7 @@ h1 {
   background-color: var(--primary);
 }
 
-/* 
+/*
 
 .page01 div.page01_map .circle-yellow {
   position: absolute;
@@ -375,6 +375,65 @@ h1 {
   background-size: 80%;
   background-position: center;
 }
+
+.page01 div.page01_centre-2d-map-1 {
+  position: relative;
+  padding: 90px 200px 90px 72px;
+  background-color: #cacaca;
+  background-image: url(/assets/images/01/2d-map-image/map-1.png);
+  background-repeat: no-repeat;
+  background-size: 80%;
+  background-position: center;
+}
+
+.page01 div.page01_centre-2d-map-2 {
+  position: relative;
+  padding: 90px 200px 90px 72px;
+  background-color: #cacaca;
+  background-image: url(/assets/images/01/2d-map-image/map-2.png);
+  background-repeat: no-repeat;
+  background-size: 80%;
+  background-position: center;
+}
+
+.page01 div.page01_centre-2d-map-3 {
+  position: relative;
+  padding: 90px 200px 90px 72px;
+  background-color: #cacaca;
+  background-image: url(/assets/images/01/2d-map-image/map-3.png);
+  background-repeat: no-repeat;
+  background-size: 80%;
+  background-position: center;
+}
+.page01 div.page01_centre-2d-map-4 {
+  position: relative;
+  padding: 90px 200px 90px 72px;
+  background-color: #cacaca;
+  background-image: url(/assets/images/01/2d-map-image/map-4.png);
+  background-repeat: no-repeat;
+  background-size: 80%;
+  background-position: center;
+}
+
+.page01 div.page01_centre-2d-map-5 {
+  position: relative;
+  padding: 90px 200px 90px 72px;
+  background-color: #cacaca;
+  background-image: url(/assets/images/01/2d-map-image/map-5.png);
+  background-repeat: no-repeat;
+  background-size: 80%;
+  background-position: center;
+}
+.page01 div.page01_centre-2d-map-6 {
+  position: relative;
+  padding: 90px 200px 90px 72px;
+  background-color: #cacaca;
+  background-image: url(/assets/images/01/2d-map-image/map-6.png);
+  background-repeat: no-repeat;
+  background-size: 80%;
+  background-position: center;
+}
+
 
 .page01 div.page01_centre-2d-map .top-fixed-2d-map {
   position: absolute;

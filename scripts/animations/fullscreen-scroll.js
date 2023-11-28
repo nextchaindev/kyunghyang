@@ -57,10 +57,10 @@ Array(sectionsQty)
 
   listSections.forEach((values, index) =>  {
   listSessionHeight.push(values.offsetTop);
-  
+
   })
-  
-  
+
+
 
 function goToSection(i) {
   console.log(window.screenY);
@@ -78,7 +78,7 @@ function goToSection(i) {
     const sectionTextID = document.getElementById(`section_text${index + 1}`);
     const sectionTextIDprevious = document.getElementById(`section_text${index}`);
     const sectionScreen = document.getElementById(values.getAttribute("id"));
-   
+
     if(i * innerHeight - sectionScreen.offsetTop >= 0){
 
       qty = index + 1
@@ -94,7 +94,7 @@ function goToSection(i) {
       {
         sectionTextIDprevious.classList.remove("text_active");
       }
-      
+
       var scrolled = (((i + 1) * innerHeight - scrolledSesssonHeight) / listSessionHeight[qty]) * 100;
       document.getElementById(`myBar${qty || 1}`).style.height = scrolled + "%";
       var previous = document.getElementById(`myBar${qty + 1}`)
@@ -106,7 +106,7 @@ function goToSection(i) {
     }
   })
 
-  
+
   gsap.set("body", { overflowY: "hidden" });
   gsap.to("body", {
     scrollTo: { y: i * innerHeight, autoKill: false },
