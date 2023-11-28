@@ -9,7 +9,7 @@
 .page02 {
   /* transform: translate3d(0px, 0px, 0px);
   transition: all 700ms ease; */
-  overflow: auto;
+  overflow-y: auto;
 }
 
 .page02 .street_background {
