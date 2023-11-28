@@ -370,9 +370,10 @@ h1 {
   position: relative;
   padding: 90px 200px 90px 72px;
   background-color: #cacaca;
-  background-image: url(/assets/images/01/2d-map/15map_img.png);
+  background-image: url(/assets/images/01/2d-map/15map_img.png),
+    url(/assets/images/01/map/bg.png);
   background-repeat: no-repeat;
-  background-size: 80%;
+  background-size: 80%, 100%;
   background-position: center;
 }
 
@@ -380,9 +381,10 @@ h1 {
   position: relative;
   padding: 90px 200px 90px 72px;
   background-color: #cacaca;
-  background-image: url(/assets/images/01/2d-map-image/map-1.png);
+  background-image: url(/assets/images/01/2d-map-image/map-1.png),
+    url(/assets/images/01/map/bg.png);
   background-repeat: no-repeat;
-  background-size: 80%;
+  background-size: 80%, 100%;
   background-position: center;
 }
 
@@ -390,9 +392,10 @@ h1 {
   position: relative;
   padding: 90px 200px 90px 72px;
   background-color: #cacaca;
-  background-image: url(/assets/images/01/2d-map-image/map-2.png);
+  background-image: url(/assets/images/01/2d-map-image/map-2.png),
+    url(/assets/images/01/map/bg.png);
   background-repeat: no-repeat;
-  background-size: 80%;
+  background-size: 80%, 100%;
   background-position: center;
 }
 
@@ -400,18 +403,20 @@ h1 {
   position: relative;
   padding: 90px 200px 90px 72px;
   background-color: #cacaca;
-  background-image: url(/assets/images/01/2d-map-image/map-3.png);
+  background-image: url(/assets/images/01/2d-map-image/map-3.png),
+    url(/assets/images/01/map/bg.png);
   background-repeat: no-repeat;
-  background-size: 80%;
+  background-size: 80%, 100%;
   background-position: center;
 }
 .page01 div.page01_centre-2d-map-4 {
   position: relative;
   padding: 90px 200px 90px 72px;
   background-color: #cacaca;
-  background-image: url(/assets/images/01/2d-map-image/map-4.png);
+  background-image: url(/assets/images/01/2d-map-image/map-4.png),
+    url(/assets/images/01/map/bg.png);
   background-repeat: no-repeat;
-  background-size: 80%;
+  background-size: 80%, 100%;
   background-position: center;
 }
 
@@ -419,21 +424,22 @@ h1 {
   position: relative;
   padding: 90px 200px 90px 72px;
   background-color: #cacaca;
-  background-image: url(/assets/images/01/2d-map-image/map-5.png);
+  background-image: url(/assets/images/01/2d-map-image/map-5.png),
+    url(/assets/images/01/map/bg.png);
   background-repeat: no-repeat;
-  background-size: 80%;
+  background-size: 80%, 100%;
   background-position: center;
 }
 .page01 div.page01_centre-2d-map-6 {
   position: relative;
   padding: 90px 200px 90px 72px;
   background-color: #cacaca;
-  background-image: url(/assets/images/01/2d-map-image/map-6.png);
+  background-image: url(/assets/images/01/2d-map-image/map-6.png),
+    url(/assets/images/01/map/bg.png);
   background-repeat: no-repeat;
-  background-size: 80%;
+  background-size: 80%, 100%;
   background-position: center;
 }
-
 
 .page01 div.page01_centre-2d-map .top-fixed-2d-map {
   position: absolute;
@@ -473,7 +479,7 @@ h1 {
   display: flex;
   flex-direction: column;
   gap: 42px;
-  background-color: rgb(0, 0, 0, 0.3);
+  background-color: rgb(0, 0, 0, 0.4);
   padding: 32px 20px;
   width: max-content;
 }
@@ -508,7 +514,7 @@ h1 {
   margin-top: 60px;
 }
 
-.page01 div.page01_garden-life-guide video {
+.page01 div.page01_garden-life-guide .video-container {
   margin-top: 90px;
 }
 

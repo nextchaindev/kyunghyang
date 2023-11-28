@@ -179,86 +179,86 @@ ScrollTrigger.create({
   },
 });
 
-ScrollTrigger.create({
-  trigger: fadingTexts[6],
-  start: "top 90%",
-  end: "bottom 10%",
-  // markers: window.location.hostname === "127.0.0.1",
-  onEnter: () => {
-    gsap.timeline().to("#splitText22", {
-      duration: 1.2,
-      text: "인생정원을 더욱 특별하게 하는 것은",
-    });
-    document.getElementById("splitText22").classList.add("active");
-    setTimeout(() => {
-      gsap.timeline().to("#splitText23", {
-        duration: 1.2,
-        text: " 어르신들의 인지건강을 위한 활동뿐 아니라",
-      });
-      document.getElementById("splitText23").classList.add("active");
-    }, 1200);
-    setTimeout(() => {
-      gsap.timeline().to("#splitText24", {
-        duration: 1,
-        text: "어르신 일자리까지 제공한다는 점",
-      });
-      document.getElementById("splitText24").classList.add("active");
-    }, 2400);
-    setTimeout(() => {
-      gsap.timeline().to("#splitText25", {
-        duration: 0.15,
-        text: "입니다",
-      });
-      document.getElementById("splitText25").classList.add("active");
-    }, 3400);
-    setTimeout(() => {
-      gsap.timeline().to("#splitText26", {
-        duration: 1,
-        text: "광명시 일자리 프로그램과 연계한",
-      });
-      document.getElementById("splitText26").classList.add("active");
-    }, 4550);
-    setTimeout(() => {
-      gsap.timeline().to("#splitText27", {
-        duration: 0.45,
-        text: " ‘인생정원 해설사’",
-      });
-      document.getElementById("splitText27").classList.add("active");
-    }, 5550);
-    setTimeout(() => {
-      gsap.timeline().to("#splitText28", {
-        duration: 0.45,
-        text: "라는 직업이죠",
-      });
-      document.getElementById("splitText28").classList.add("active");
-    }, 6000);
-    setTimeout(() => {
-      gsap.timeline().to("#splitText29", {
-        duration: 2,
-        text: "한 달간 원예교육을 받은 어르신들은 인생정원 해설사가 될 수 있습니다",
-      });
-      document.getElementById("splitText29").classList.add("active");
-    }, 6450);
-  },
-});
+// ScrollTrigger.create({
+//   trigger: fadingTexts[6],
+//   start: "top 90%",
+//   end: "bottom 10%",
+//   // markers: window.location.hostname === "127.0.0.1",
+//   onEnter: () => {
+//     gsap.timeline().to("#splitText22", {
+//       duration: 1.2,
+//       text: "인생정원을 더욱 특별하게 하는 것은",
+//     });
+//     document.getElementById("splitText22").classList.add("active");
+//     setTimeout(() => {
+//       gsap.timeline().to("#splitText23", {
+//         duration: 1.2,
+//         text: " 어르신들의 인지건강을 위한 활동뿐 아니라",
+//       });
+//       document.getElementById("splitText23").classList.add("active");
+//     }, 1200);
+//     setTimeout(() => {
+//       gsap.timeline().to("#splitText24", {
+//         duration: 1,
+//         text: "어르신 일자리까지 제공한다는 점",
+//       });
+//       document.getElementById("splitText24").classList.add("active");
+//     }, 2400);
+//     setTimeout(() => {
+//       gsap.timeline().to("#splitText25", {
+//         duration: 0.15,
+//         text: "입니다",
+//       });
+//       document.getElementById("splitText25").classList.add("active");
+//     }, 3400);
+//     setTimeout(() => {
+//       gsap.timeline().to("#splitText26", {
+//         duration: 1,
+//         text: "광명시 일자리 프로그램과 연계한",
+//       });
+//       document.getElementById("splitText26").classList.add("active");
+//     }, 4550);
+//     setTimeout(() => {
+//       gsap.timeline().to("#splitText27", {
+//         duration: 0.45,
+//         text: " ‘인생정원 해설사’",
+//       });
+//       document.getElementById("splitText27").classList.add("active");
+//     }, 5550);
+//     setTimeout(() => {
+//       gsap.timeline().to("#splitText28", {
+//         duration: 0.45,
+//         text: "라는 직업이죠",
+//       });
+//       document.getElementById("splitText28").classList.add("active");
+//     }, 6000);
+//     setTimeout(() => {
+//       gsap.timeline().to("#splitText29", {
+//         duration: 2,
+//         text: "한 달간 원예교육을 받은 어르신들은 인생정원 해설사가 될 수 있습니다",
+//       });
+//       document.getElementById("splitText29").classList.add("active");
+//     }, 6450);
+//   },
+// });
 
-ScrollTrigger.create({
-  trigger: fadingTexts[11],
-  start: "top 90%",
-  end: "bottom 10%",
-  // markers: window.location.hostname === "127.0.0.1",
-  onEnter: () => {
-    gsap.timeline().to("#splitText30", {
-      duration: 2.4,
-      text: "해설사들은 주 3시간씩 인생정원을 가꾸고, 이곳을 찾는 이들에게 정원을 소개하는 일을 합니다",
-    });
-    document.getElementById("splitText30").classList.add("active");
-    setTimeout(() => {
-      gsap.timeline().to("#splitText31", {
-        duration: 0.8,
-        text: "인생정원 해설사는 20명에 달합니다",
-      });
-      document.getElementById("splitText31").classList.add("active");
-    }, 2400);
-  },
-});
+// ScrollTrigger.create({
+//   trigger: fadingTexts[11],
+//   start: "top 90%",
+//   end: "bottom 10%",
+//   // markers: window.location.hostname === "127.0.0.1",
+//   onEnter: () => {
+//     gsap.timeline().to("#splitText30", {
+//       duration: 2.4,
+//       text: "해설사들은 주 3시간씩 인생정원을 가꾸고, 이곳을 찾는 이들에게 정원을 소개하는 일을 합니다",
+//     });
+//     document.getElementById("splitText30").classList.add("active");
+//     setTimeout(() => {
+//       gsap.timeline().to("#splitText31", {
+//         duration: 0.8,
+//         text: "인생정원 해설사는 20명에 달합니다",
+//       });
+//       document.getElementById("splitText31").classList.add("active");
+//     }, 2400);
+//   },
+// });
