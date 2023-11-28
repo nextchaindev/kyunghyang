@@ -31,6 +31,9 @@ ScrollTrigger.create({
         ],
       },
       options: {
+        animation: {
+          duration: 4000,
+        },
         responsive: true,
         plugins: {
           legend: {
