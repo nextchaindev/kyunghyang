@@ -2,5 +2,8 @@
   "editor.tabSize": 2,
   "editor.insertSpaces": true,
   "editor.detectIndentation": false,
-  "html.format.wrapLineLength": 120
+  "html.format.wrapLineLength": 120,
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode"
 }
+

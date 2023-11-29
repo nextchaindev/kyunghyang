@@ -124,18 +124,17 @@ function goToSection(i) {
     scrollY +=
       document.getElementById("non1").offsetHeight +
       document.getElementById("non2").offsetHeight +
-      innerHeight -
-      1;
+      innerHeight;
   }
 
   gsap.to("body", {
     scrollTo: { y: scrollY, autoKill: false },
-    duration: 1,
+    duration: 0.5,
     overwrite: true,
   });
   setTimeout(() => {
     gsap.set("body", { overflowY: "auto" });
-  }, 990);
+  }, 500);
 }
 
 gsap.utils.toArray(".fullscreen.scrollable").forEach((panel, i) => {
@@ -154,15 +153,6 @@ gsap.utils.toArray(".fullscreen.scrollable").forEach((panel, i) => {
 });
 
 document.getElementById("scrollOnclick").onclick = () => {
-  // gsap.set("body", { overflowY: "hidden" });
-  // gsap.to("body", {
-  //   scrollTo: { y: innerHeight, autoKill: false },
-  //   duration: 1,
-  //   overwrite: true,
-  // });
-  // setTimeout(() => {
-  //   gsap.set("body", { overflowY: "auto" });
-  // }, 1000);
   goToSection(1);
 };
 
