@@ -52,8 +52,10 @@
     <link rel="stylesheet" href="/styles/color.css" />
     <link rel="stylesheet" href="/styles/global.css" />
     <link rel="stylesheet" href="/styles/pages/02.css" />
+    <link rel="stylesheet" href="/styles/pages/01.css" />
+    <link rel="stylesheet" href="/styles/components/scroll-progress-2.css" />
     <link rel="stylesheet" href="/styles/animations/01.animation.css" />
-    <link rel="stylesheet" href="/styles/animations/02.animation.css" />
+
     <link
       rel="stylesheet"
       href="https://unpkg.com/flickity@2/dist/flickity.min.css"
@@ -68,114 +70,11 @@
     <div w3-include-html="/components/page02/group01.html"></div>
     <div w3-include-html="/components/page02/group02.html"></div>
     <div w3-include-html="/components/page02/group03.html"></div>
-
-    <div
-      class="page01_intro fullscreen parallax scrollable"
-      style="background-image: url(/assets/images/01/old-man-bg/06_img.png)"
-    >
-      <!-- <img
-        class="fullscreen"
-        src="/assets/images/01/old-man-bg/06_img.png"
-        srcset="
-          /assets/images/01/old-man-bg/06_img@2x.png 2x,
-          /assets/images/01/old-man-bg/06_img@3x.png 3x
-        "
-      /> -->
-      <h2 class="left text-strong-2 fading-text">
-        <span id="splitText1"></span><br />
-        <span id="splitText2"></span><br />
-        <span id="splitText3"></span>
-      </h2>
-    </div>
-    <div
-      class="page01_intro fullscreen parallax scrollable"
-      style="background-image: url(/assets/images/01/old-woman-bg/07_img.png)"
-    >
-      <!-- <img
-        class="fullscreen"
-        src="/assets/images/01/old-woman-bg/07_img.png"
-        srcset="
-          /assets/images/01/old-woman-bg/07_img@2x.png 2x,
-          /assets/images/01/old-woman-bg/07_img@3x.png 3x
-        "
-      /> -->
-      <h2 class="right text-strong-2 fading-text">
-        <span id="splitText4"></span><br />
-        <span id="splitText5"></span><br />
-        <span id="splitText6"></span>
-      </h2>
-    </div>
-
-    <div class="page01_statistics fullscreen scrollable">
-      <div style="flex: 1">
-        <div class="section-title-tag">대한민국 치매 현황</div>
-        <div class="statistics">
-          <div class="statistics-chart">
-            <canvas id="statistics-chart-canvas"></canvas>
-            <div class="flex-center" style="gap: 25px">
-              <div class="flex-center">
-                <div class="primary"></div>
-                <h6 class="text-light">60세 이상 추정치매환자수</h6>
-              </div>
-              <div class="flex-center">
-                <div class="secondary"></div>
-                <h6 class="text-light">치매환자 1인당 치매관리비</h6>
-              </div>
-            </div>
-            <p class="text-light">
-              출처 : 전국치매역학조사 (보건복지부 중앙치매센터, 2017 ),
-              2017~2022년 주민등록연양인구(통계청, 2023)
-            </p>
-          </div>
-          <div class="statistics-contents">
-            <h3 class="text-light fading-text">
-              <span id="splitText7"></span>
-            </h3>
-            <h3 class="text-light fading-text">
-              <span class="text-strong" id="splitText8"></span>
-              <span id="splitText9"></span>
-              <span class="text-strong" id="splitText10"></span>
-              <span id="splitText11"></span>
-            </h3>
-            <h3 class="text-light fading-text">
-              <span id="splitText12"></span>
-              <span class="text-strong" id="splitText13"></span>
-              <span id="splitText14"></span>
-              <span id="splitText15"></span>
-            </h3>
-            <h3 class="text-light fading-text">
-              <span id="splitText16"></span>
-            </h3>
-            <h3 class="text-light fading-text">
-              <span id="splitText17"></span>
-            </h3>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="focused-place fullscreen flex-center">
-      <img
-        src="/assets/images/01/map/11_img.png"
-        srcset="
-          /assets/images/01/map/11_img@2x.png 2x,
-          /assets/images/01/map/11_img@3x.png 3x
-        "
-      />
-      <div>
-        <h3 class="fading-text">
-          <span id="splitText18"></span><br />
-          <span id="splitText19"></span><br />
-          <span class="text-strong" id="splitText20"></span>
-        </h3>
-        <h3 class="fading-text">
-          <span id="splitText21"></span>
-        </h3>
-      </div>
-    </div>
+    <div w3-include-html="/components/page02/group04.html"></div>
+    <div w3-include-html="/components/page02/group05.html"></div>
 
     <!-- scroll bar -->
-    <div class="scroll-progress-container">
+    <!-- <div class="scroll-progress-container">
       <ul class="scroll-progress-list">
         <li>
           <span class="text-light progress-item-content"
@@ -255,11 +154,22 @@
           </div>
         </li>
       </ul>
+    </div> -->
+    <div class="section-stick" id="section-scroll">
+      <!-- <div class="section-wrap">
+        <div class="section-name">ff</div>
+        <div class="stick active">
+          <div class="stick-progress"></div>
+        </div>
+      </div> -->
     </div>
 
-    <!-- <div class="circle-cursor">Grab me</div> -->
+    <div class="circle-cursor">
+      <img src="/assets/svgs/icon_globe.svg" width="90px" height="90px" />
+      <span class="text-strong text-primary">360</span>
+    </div>
 
-    <footer class="kyunghyang-footer">
+    <footer class="kyunghyang-footer hide_scroll">
       <div>
         <p class="text-body">
           공공디자인으로 행복한 공간 만들기 프로젝트 광명 인생정원편
@@ -328,10 +238,10 @@
       referrerpolicy="no-referrer"
       defer
     ></script>
-    <script src="/scripts/statistics-chart.js" type="module"></script>
 
     <!-- scroll progress bar -->
-    <script src="/scripts/scroll-progress.js" type="module"></script>
+    <!-- <script src="/scripts/scroll-progress.js" type="module"></script> -->
+    <script src="/scripts/scroll-progress-2.js" type="module"></script>
 
     <!-- animations -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
@@ -346,6 +256,13 @@
       gsap.registerPlugin(ScrollTrigger, TextPlugin, ScrollToPlugin);
     </script>
     <script src="/scripts/animations/index.js" type="module"></script>
+    <script
+      src="/scripts/animations/fading-text-page02.js"
+      type="module"
+    ></script>
+
+    <!-- video -->
+    <script type="module" src="/scripts/video-control.js"></script>
 
     <!-- 360 -->
     <script src="https://pchen66.github.io/js/three/three.min.js"></script>
