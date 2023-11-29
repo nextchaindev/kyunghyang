@@ -390,34 +390,35 @@
 
     <!-- start 2d-map -->
     <!-- 03 -->
-  </div>
-  <div class="fullscreen parallax section_scroll relative">
-    <div class="page01_centre-2d-map">
-            <img
-            src="/assets/images/01/2d-map/15map_img.png"
+    <div class="fullscreen parallax section_scroll relative hidden">
+      <div class="page01_centre-2d-map">
+        <img
+          src="/assets/images/01/2d-map/15map_img.png"
+          srcset="
+            /assets/images/01/2d-map/15map_img@2x.png 2x,
+            /assets/images/01/2d-map/15map_img@3x.png 3x
+          "
+          alt="Life Garden 2d Map"
+          class="page01-main-fullmap"
+        />
+        <div class="top-fixed-2d-map">
+          <img
+            src="/assets/images/01/2d-map/map-1st.png"
             srcset="
-              /assets/images/01/2d-map/15map_img@2x.png 2x,
-              /assets/images/01/2d-map/15map_img@3x.png 3x
+              /assets/images/01/2d-map/map-1st@2x.png 2x,
+              /assets/images/01/2d-map/map-1st@3x.png 3x
             "
+            width="500px"
+            height="auto"
             alt="Life Garden 2d Map"
-            class="page01-main-fullmap"
+            class="page01-main-minimap"
           />
-            <div class="top-fixed-2d-map">
-              <img
-                src="/assets/images/01/2d-map/map-1st.png"
-                srcset="
-                  /assets/images/01/2d-map/map-1st@2x.png 2x,
-                  /assets/images/01/2d-map/map-1st@3x.png 3x
-                "
-                width="500px"
-                height="auto"
-                alt="Life Garden 2d Map"
-                class="page01-main-minimap"
-              />
-            </div>
+        </div>
+      </div>
     </div>
-  </div>
-    <div class="page01_centre-2d-map-1 fullscreen scrollable parallax section_scroll page01_centre-2d-map-zoom relative" ></div>
+    <div
+      class="page01_centre-2d-map-1 fullscreen scrollable parallax section_scroll page01_centre-2d-map-zoom relative"
+    ></div>
     <div
       class="centre-2d-map-info fullscreen scrollable parallax page01_centre-2d-map-zoom relative"
       style="background-image: url(/assets/images/01/2d-map-1st/17_img.png)"
@@ -697,7 +698,9 @@
         </h2>
       </div>
     </div>
-    <div class="page01_garden-life-feedback hide_scroll page01_centre-2d-map-zoom relative">
+    <div
+      class="page01_garden-life-feedback hide_scroll page01_centre-2d-map-zoom relative"
+    >
       <div class="feedback-comp fullscreen scrollable relative">
         <div class="feedback-container">
           <h3 class="title left text-bold goingUp-text">
@@ -746,7 +749,10 @@
         />
       </div> -->
     </div>
-    <div class="centre-2d-map-info-3d fullscreen scrollable page01_centre-2d-map-zoom relative" id="viewer1"></div>
+    <div
+      class="centre-2d-map-info-3d fullscreen scrollable page01_centre-2d-map-zoom relative"
+      id="viewer1"
+    ></div>
     <div
       class="centre-2d-map-info fullscreen scrollable parallax page01_centre-2d-map-zoom relative"
       style="background-image: url(/assets/images/01/2d-map-4th/37_img.png)"
@@ -817,7 +823,10 @@
         />
       </div> -->
     </div>
-    <div class="centre-2d-map-info-3d fullscreen scrollable page01_centre-2d-map-zoom relative" id="viewer2"></div>
+    <div
+      class="centre-2d-map-info-3d fullscreen scrollable page01_centre-2d-map-zoom relative"
+      id="viewer2"
+    ></div>
     <div
       class="centre-2d-map-info fullscreen scrollable parallax page01_centre-2d-map-zoom relative"
       style="background-image: url(/assets/images/01/2d-map-5th/42_img.png)"
@@ -1069,95 +1078,7 @@
     </div>
 
     <!-- scroll bar -->
-    <!-- <div class="scroll-progress-container">
-      <ul class="scroll-progress-list">
-        <li>
-          <span class="text-light progress-item-content"
-            >노인들의 인지장애</span
-          >
-          <div class="progress-container">
-            <div class="progress"></div>
-          </div>
-        </li>
-        <li>
-          <span class="text-light progress-item-content"
-            >노인들의 치매와<br />
-            사회적 비용</span
-          >
-          <div class="progress-container">
-            <div class="progress"></div>
-          </div>
-        </li>
-        <li>
-          <span class="text-light progress-item-content"
-            >하안노인<br />
-            종합복지관</span
-          >
-          <div class="progress-container">
-            <div class="progress"></div>
-          </div>
-        </li>
-        <li>
-          <span class="text-light progress-item-content">인생정원 MAP</span>
-          <div class="progress-container">
-            <div class="progress"></div>
-          </div>
-        </li>
-        <li>
-          <span class="text-light progress-item-content">입구</span>
-          <div class="progress-container">
-            <div class="progress"></div>
-          </div>
-        </li>
-        <li>
-          <span class="text-light progress-item-content">기억산책길</span>
-          <div class="progress-container">
-            <div class="progress"></div>
-          </div>
-        </li>
-        <li>
-          <span class="text-light progress-item-content">오감놀이터</span>
-          <div class="progress-container">
-            <div class="progress"></div>
-          </div>
-        </li>
-        <li>
-          <span class="text-light progress-item-content">정원 쉼터</span>
-          <div class="progress-container">
-            <div class="progress"></div>
-          </div>
-        </li>
-        <li>
-          <span class="text-light progress-item-content">마음 숲</span>
-          <div class="progress-container">
-            <div class="progress"></div>
-          </div>
-        </li>
-        <li>
-          <span class="text-light progress-item-content">초록마루</span>
-          <div class="progress-container">
-            <div class="progress"></div>
-          </div>
-        </li>
-        <li>
-          <span class="text-light progress-item-content"
-            >인생정원<br />
-            해설사</span
-          >
-          <div class="progress-container">
-            <div class="progress"></div>
-          </div>
-        </li>
-      </ul>
-    </div> -->
-    <div class="section-stick" id="section-scroll">
-      <!-- <div class="section-wrap">
-        <div class="section-name">ff</div>
-        <div class="stick active">
-          <div class="stick-progress"></div>
-        </div>
-      </div> -->
-    </div>
+    <div class="section-stick" id="section-scroll"></div>
 
     <div class="circle-cursor">
       <img src="/assets/svgs/icon_globe.svg" width="90px" height="90px" />
@@ -1206,9 +1127,13 @@
 
     <!-- scripts -->
 
-
     <!-- jquery -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
 
     <!-- gallery -->
     <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>

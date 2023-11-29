@@ -91,6 +91,12 @@
   position: sticky !important;
 }
 
+/* overflow */
+
+.hidden {
+  overflow: hidden !important;
+}
+
 /* spacing */
 
 /* border */
