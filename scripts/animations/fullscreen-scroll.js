@@ -1,12 +1,12 @@
 // should be placed after gsap scripts
 
 const TIME_OUT = 600; // It should be the same transition time of the sections
-const body = document.querySelector("body");
-const listSections = document.querySelectorAll(".section_scroll");
-const sectionsQty = document.querySelectorAll(".section_scroll").length;
-const sectionStick = document.querySelector(".section-stick");
-const sectionScroll = document.getElementById("section-scroll");
-const listHideScrollSreens = document.querySelectorAll(".hide_scroll");
+const body = document.querySelector('body');
+const listSections = document.querySelectorAll('.section_scroll');
+const sectionsQty = document.querySelectorAll('.section_scroll').length;
+const sectionStick = document.querySelector('.section-stick');
+const sectionScroll = document.getElementById('section-scroll');
+const listHideScrollSreens = document.querySelectorAll('.hide_scroll');
 
 let startFlag = true;
 let qty = 0,
@@ -18,17 +18,17 @@ document.onload = () => {
 };
 
 const listSectionScroll = [
-  "노인들의 인지장애",
-  "노인들의 치매와\n사회적 비용",
-  "하안노인\n종합복지관",
-  "인생정원 MAP",
-  "입구",
-  "기억산책길",
-  "오감놀이터",
-  "정원 쉼터",
-  "마음숲",
-  "초록마루",
-  "인생정원\n해설사",
+  '노인들의 인지장애',
+  '노인들의 치매와\n사회적 비용',
+  '하안노인\n종합복지관',
+  '인생정원 MAP',
+  '입구',
+  '기억산책길',
+  '오감놀이터',
+  '정원 쉼터',
+  '마음숲',
+  '초록마루',
+  '인생정원\n해설사',
 ];
 
 let listSessionHeight = [];
@@ -50,11 +50,11 @@ Array(sectionsQty)
   });
 
 listSections.forEach((values, index) => {
-  values.setAttribute("id", `section_scroll${index + 1}`);
+  values.setAttribute('id', `section_scroll${index + 1}`);
 });
 
 listHideScrollSreens.forEach((values, index) => {
-  values.setAttribute("id", `hide_scroll${index + 1}`);
+  values.setAttribute('id', `hide_scroll${index + 1}`);
 });
 
 listSections.forEach((values, index) => {
@@ -62,7 +62,7 @@ listSections.forEach((values, index) => {
 });
 
 function goToSection(i) {
-  gsap.set("body", { overflowY: "hidden" });
+  gsap.set('body', { overflowY: 'hidden' });
 
   let scrolledSesssonHeight = 0;
   for (let index = 0; index < listHideScrollSreens.length; index++) {
@@ -79,7 +79,7 @@ function goToSection(i) {
     const sectionTextIDprevious = document.getElementById(
       `section_text${index}`
     );
-    const sectionScreen = document.getElementById(values.getAttribute("id"));
+    const sectionScreen = document.getElementById(values.getAttribute('id'));
 
     if (i * innerHeight - sectionScreen.offsetTop >= 0) {
       qty = index + 1;
@@ -88,12 +88,12 @@ function goToSection(i) {
       }
       for (let j = 0; j < listSections.length; j++) {
         const sectionTextIDRest = document.getElementById(`section${j + 1}`);
-        sectionTextIDRest.classList.remove("text_active");
+        sectionTextIDRest.classList.remove('text_active');
       }
-      sectionTextID.classList.add("text_active");
-      document.getElementById(`myBar${qty || 1}`).style.height = "100%";
+      sectionTextID.classList.add('text_active');
+      document.getElementById(`myBar${qty || 1}`).style.height = '100%';
       if (sectionTextIDprevious != null) {
-        sectionTextIDprevious.classList.remove("text_active");
+        sectionTextIDprevious.classList.remove('text_active');
       }
 
       var scrolled =
@@ -103,10 +103,10 @@ function goToSection(i) {
       // document.getElementById(`myBar${qty || 1}`).style.height = scrolled + "%";
       var previous = document.getElementById(`myBar${qty + 1}`);
       if (previous != null) {
-        previous.style.height = 0 + "%";
+        previous.style.height = 0 + '%';
       }
     } else {
-      sectionTextID.classList.remove("text_active");
+      sectionTextID.classList.remove('text_active');
     }
   });
 
@@ -122,23 +122,23 @@ function goToSection(i) {
 
   if (i > 12) {
     scrollY +=
-      document.getElementById("non1").offsetHeight +
-      document.getElementById("non2").offsetHeight +
+      document.getElementById('non1').offsetHeight +
+      document.getElementById('non2').offsetHeight +
       innerHeight -
       1;
   }
 
-  gsap.to("body", {
+  gsap.to('body', {
     scrollTo: { y: scrollY, autoKill: false },
-    duration: 1,
+    duration: 0.5,
     overwrite: true,
   });
   setTimeout(() => {
-    gsap.set("body", { overflowY: "auto" });
-  }, 990);
+    gsap.set('body', { overflowY: 'auto' });
+  }, 500);
 }
 
-gsap.utils.toArray(".fullscreen.scrollable").forEach((panel, i) => {
+gsap.utils.toArray('.fullscreen.scrollable').forEach((panel, i) => {
   ScrollTrigger.create({
     trigger: panel,
     onEnter: () => {
@@ -148,12 +148,12 @@ gsap.utils.toArray(".fullscreen.scrollable").forEach((panel, i) => {
 
   ScrollTrigger.create({
     trigger: panel,
-    start: "bottom bottom",
+    start: 'bottom bottom',
     onEnterBack: () => goToSection(i),
   });
 });
 
-document.getElementById("scrollOnclick").onclick = () => {
+document.getElementById('scrollOnclick').onclick = () => {
   // gsap.set("body", { overflowY: "hidden" });
   // gsap.to("body", {
   //   scrollTo: { y: innerHeight, autoKill: false },
@@ -166,28 +166,28 @@ document.getElementById("scrollOnclick").onclick = () => {
   goToSection(1);
 };
 
-gsap.utils.toArray(".hide_scroll").forEach((panel, i) => {
+gsap.utils.toArray('.hide_scroll').forEach((panel, i) => {
   ScrollTrigger.create({
     trigger: panel,
     onEnter: () => {
-      document.getElementById("section-scroll").style.opacity = 0;
+      document.getElementById('section-scroll').style.opacity = 0;
     },
     onLeave: () => {
-      document.getElementById("section-scroll").style.opacity = 1;
+      document.getElementById('section-scroll').style.opacity = 1;
     },
   });
 });
 
 ScrollTrigger.create({
-  trigger: "#section_scroll11",
+  trigger: '#section_scroll11',
   onEnter: () => {
     const sectionTextID = document.getElementById(`section_text11`);
-    sectionTextID.classList.add("text_active");
-    document.getElementById(`myBar11`).style.height = "100%";
+    sectionTextID.classList.add('text_active');
+    document.getElementById(`myBar11`).style.height = '100%';
   },
   onLeave: () => {
     const sectionTextID = document.getElementById(`section_text11`);
-    sectionTextID.classList.remove("text_active");
-    document.getElementById(`myBar11`).style.height = "0%";
+    sectionTextID.classList.remove('text_active');
+    document.getElementById(`myBar11`).style.height = '0%';
   },
 });
