@@ -16,13 +16,7 @@
   object-fit: fill;
 }
 
-.page02 .group_01 > div {
-  position: relative;
-}
-.page02 .group_02 > div {
-  position: relative;
-}
-.page02 .group_03 > div {
+.page02 .group_01 > div, .page02 .group_02 > div, .page02 .group_03 > div, .page02 .group_04 > div, .page02 .group_05 > div {
   position: relative;
 }
 
@@ -42,7 +36,7 @@
   line-height: normal;
 }
 
-.page02 .group_03 > div .section_title{
+.page02 .group_03 > div .section_title, .page02 .group_04 > div .section_title, .page02 .group_05 > div .section_title{
   font-size: 40px;
   line-height: normal;
 }
@@ -122,8 +116,27 @@
 .page02 div.page02_group01_section02 .section_title.section02-title {
   top: 80px;
   right: 100px;
+  transform: scale(0.94);
+  animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
+}
+.page02 div.page02_group01_section02 .section_title.section02-title span {
+  display: inline-block;
+  opacity: 0;
+  filter: blur(4px);
+}
+@keyframes fade-in {
+  100% {
+    opacity: 1;
+    filter: blur(0);
+  }
 }
 
+@keyframes scale {
+  
+  100% {
+    transform: scale(1);
+  }
+}
 
 /* ------------------------------ group 01 section 04 ------------------------------ */
 
@@ -311,7 +324,7 @@
 }
 
 
-/* ------------------------------ page02 group02------------------------------ */
+/* ------------------------------ page02 group03------------------------------ */
 
 
 /* ------------------------------ page02 section16------------------------------ */
@@ -415,6 +428,210 @@
 
 .page02 div.page02_group03_section24 .section_title.section24-title > div {
   padding: 20px;
+}
+
+
+
+/* ------------------------------ page02 group04------------------------------ */
+
+
+/* ------------------------------ group04 section16------------------------------ */
+
+
+.page02 div.page02_group04_section16 .section_title.section16-title {
+  bottom: 80px;
+  left: 100px;
+  text-align: left;
+  width: 80%;
+}
+
+.page02 div.page02_group04_section16 .section_title.section16-title > div {
+  padding: 0px ;
+}
+
+/* ------------------------------ group04 section17------------------------------ */
+
+
+.page02 div.page02_group04_section17 .video_background {
+  background-color: #ffffff;
+}
+
+/* ------------------------------ group04 section18------------------------------ */
+
+
+.page02 div.page02_group04_section18 .section_title.section18-title {
+  bottom: 80px;
+  left: 100px;
+  text-align: left;
+  width: 80%;
+}
+
+.page02 div.page02_group04_section18 .section_title.section18-title > div {
+  padding: 0px ;
+}
+
+/* ------------------------------ group04 section19------------------------------ */
+
+
+.page02 div.page02_group04_section19 .section_title.section19-title {
+  bottom: 50%;
+  left: 50%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+}
+
+.page02 div.page02_group04_section19 .section_title.section19-title > div {
+  padding: 0px ;
+}
+
+/* ------------------------------ group04 section20------------------------------ */
+
+
+.page02 .page02_group04_section20, .page02 .page02_group05_section25{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+}
+
+.page02 div.page02_group04_section20 > .column, .page02 div.page02_group05_section25 > .column{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.page02 div.page02_group04_section20 > .column > .profile, .page02 div.page02_group05_section25 > .column > .profile{
+  height: 400px;
+  width: 400px;
+}
+
+.page02 div.page02_group04_section20 > .column > .line1, .page02 div.page02_group05_section25 > .column > .line1{
+  height: 86px;
+  font-family: "Pretendard-Light";
+}
+
+.page02 div.page02_group04_section20 > .column > .quote, .page02 div.page02_group05_section25 > .column > .quote{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #c3bdaf;
+  font-size: 80px;
+  gap: 4.6875%;
+  width: 100vw;
+}
+.page02 div.page02_group04_section20 > .column > .quote > .text, .page02 div.page02_group05_section25 > .column > .quote > .text{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70%;
+}
+
+.page02 div.page02_group04_section20 .section_title.section20-title, .page02 div.page02_group05_section25 .section_title.section25-title{
+  bottom: 97px;
+  left: 42vw;
+  text-align: center;
+  margin: 0px;
+  position:static;
+}
+
+.page02 div.page02_group04_section20 .section_title.section20-title > div, .page02 div.page02_group05_section25 .section_title.section25-title > div {
+  padding: 0px;
+  color: #222222;
+}
+
+/* ------------------------------ group04 section21------------------------------ */
+
+
+.page02 div.page02_group04_section21 .section_title.section21-title {
+  bottom: 80px;
+  right: 150px;
+  text-align: right;
+  width: 80%;
+}
+
+.page02 div.page02_group04_section21 .section_title.section21-title > div {
+  padding: 0px;
+}
+
+/* ------------------------------ group04 section22------------------------------ */
+
+
+.page02 div.page02_group04_section22 .section_title.section22-title {
+  bottom: 80px;
+  left: 150px;
+  text-align: left;
+  width: 80%;
+}
+
+.page02 div.page02_group04_section22 .section_title.section22-title > div {
+  padding: 0px;
+}
+
+/* ------------------------------ group04 section23------------------------------ */
+.page02 div.page02_group04_section23 .video_background {
+  background-color: #ffffff;
+}
+
+
+/* ------------------------------ page02 group05------------------------------ */
+
+/* ------------------------------ group05 section26------------------------------ */
+
+
+.page02 div.page02_group05_section26 .section_title.section26-title {
+  bottom: 294px;
+  right: 212px;
+  text-align: right;
+}
+
+.page02 div.page02_group05_section26 .section_title.section26-title > div {
+  padding: 0px ;
+}
+
+
+/* ------------------------------ group05 section27------------------------------ */
+
+
+.page02 div.page02_group05_section27 .section_title.section27-title {
+  bottom: 80px;
+  left: 100px;
+  text-align: left;
+}
+
+.page02 div.page02_group05_section27 .section_title.section27-title > div {
+  padding: 0px ;
+}
+
+
+/* ------------------------------ group05 section28------------------------------ */
+
+
+.page02 div.page02_group05_section28 .section_title.section28-title {
+  bottom: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  background-color: rgb(70,183,188, 0.76);
+  text-align: center;
+}
+
+.page02 div.page02_group05_section28 .section_title.section28-title > div {
+  padding: 20px ;
+}
+
+/* ------------------------------ group05 section30------------------------------ */
+
+
+.page02 div.page02_group05_section30 .section_title.section30-title {
+  bottom: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  background-color: rgb(0, 0, 0, 0.5);
+}
+
+.page02 div.page02_group05_section30 .section_title.section30-title > div {
+  padding: 20px ;
 }
 
 /* ------------------------------ intro section ------------------------------ */
