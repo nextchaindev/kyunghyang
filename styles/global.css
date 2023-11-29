@@ -1,11 +1,11 @@
 /* variables and common */
-@import "font.css";
-@import "utilities.css";
+@import 'font.css';
+@import 'utilities.css';
 
 /* global components */
-@import "components/scroll-progress.css";
-@import "components/scroll-progress2.css";
-@import "components/layout.css";
+@import 'components/scroll-progress.css';
+@import 'components/scroll-progress2.css';
+@import 'components/layout.css';
 
 /* gloabal styles */
 * {
@@ -31,7 +31,7 @@ body::-webkit-scrollbar {
 }
 
 .fullscreen {
-  position: relative;
+  /* position: relative; */
   height: 100vh;
   width: 100vw;
 }
