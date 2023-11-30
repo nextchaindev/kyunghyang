@@ -52,9 +52,11 @@ listHideScrollSreens.forEach((values, index) => {
   values.setAttribute('id', `hide_scroll${index + 1}`);
 });
 
+listSessionHeight = [];
 listSections.forEach((values, index) => {
   listSessionHeight.push(values.offsetTop);
 });
+listSessionHeight.push(page01.scrollHeight);
 
 page01.addEventListener('scroll', (event) => {
   let scrolledSesssonHeight = 0;
@@ -67,40 +69,39 @@ page01.addEventListener('scroll', (event) => {
       sectionScroll.style.opacity = 1;
     }
   }
-  console.log(listSessionHeight);
+
   listSections.forEach((values, index) => {
     const sectionTextID = document.getElementById(`section_text${index + 1}`);
     const sectionTextIDprevious = document.getElementById(
       `section_text${index}`
     );
     const sectionScreen = document.getElementById(values.getAttribute('id'));
-
+    // console.log(scrolledSesssonHeight);
     if (page01.scrollTop - sectionScreen.offsetTop >= 0) {
       qty = index + 1;
-      for (let j = 0; j < qty - 1; j++) {
-        scrolledSesssonHeight += listSessionHeight[j];
-      }
+      scrolledSesssonHeight = listSessionHeight[index];
+      console.log(`listSessionHeight---${listSessionHeight}`);
+      console.log(`listSessionHeight[qty]---${listSessionHeight[qty]}`);
+      console.log(`scrolledSesssonHeight---${scrolledSesssonHeight}`);
+      console.log(`page01.scrollTop---${page01.scrollTop}`);
       for (let j = 0; j < listSections.length; j++) {
         const sectionTextIDRest = document.getElementById(`section${j + 1}`);
         sectionTextIDRest.classList.remove('text_active');
       }
       sectionTextID.classList.add('text_active');
+      // console.log(page01.scrollTop);
       if (sectionTextIDprevious != null) {
         sectionTextIDprevious.classList.remove('text_active');
       }
-
+      console.log(
+        page01.scrollTop - scrolledSesssonHeight + innerHeight,
+        listSessionHeight[qty] - scrolledSesssonHeight
+      );
       var scrolled =
-        ((page01.scrollTop + innerHeight - scrolledSesssonHeight) /
-          listSessionHeight[qty]) *
+        ((page01.scrollTop - scrolledSesssonHeight + innerHeight) /
+          (listSessionHeight[qty] - scrolledSesssonHeight)) *
         100;
-      // if (scrolled > 0) {
-      //   console.log(
-      //     'scrolled',
-      //     scrolled,
-      //     document.getElementById(`myBar${qty}`).style.height
-      //   );
-      //   // document.getElementById(`myBar${qty - 1}`).style.height = '100%';
-      // }
+      console.log(`----scrolled: ${scrolled}`);
       document.getElementById(`myBar${qty || 1}`).style.height = scrolled + '%';
       var previous = document.getElementById(`myBar${qty + 1}`);
       if (previous != null) {
