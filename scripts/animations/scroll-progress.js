@@ -80,10 +80,10 @@ page01.addEventListener('scroll', (event) => {
     if (page01.scrollTop - sectionScreen.offsetTop >= 0) {
       qty = index + 1;
       scrolledSesssonHeight = listSessionHeight[index];
-      console.log(`listSessionHeight---${listSessionHeight}`);
-      console.log(`listSessionHeight[qty]---${listSessionHeight[qty]}`);
-      console.log(`scrolledSesssonHeight---${scrolledSesssonHeight}`);
-      console.log(`page01.scrollTop---${page01.scrollTop}`);
+      // console.log(`listSessionHeight---${listSessionHeight}`);
+      // console.log(`listSessionHeight[qty]---${listSessionHeight[qty]}`);
+      // console.log(`scrolledSesssonHeight---${scrolledSesssonHeight}`);
+      // console.log(`page01.scrollTop---${page01.scrollTop}`);
       for (let j = 0; j < listSections.length; j++) {
         const sectionTextIDRest = document.getElementById(`section${j + 1}`);
         sectionTextIDRest.classList.remove('text_active');
@@ -93,15 +93,15 @@ page01.addEventListener('scroll', (event) => {
       if (sectionTextIDprevious != null) {
         sectionTextIDprevious.classList.remove('text_active');
       }
-      console.log(
-        page01.scrollTop - scrolledSesssonHeight + innerHeight,
-        listSessionHeight[qty] - scrolledSesssonHeight
-      );
+      // console.log(
+      //   page01.scrollTop - scrolledSesssonHeight + innerHeight,
+      //   listSessionHeight[qty] - scrolledSesssonHeight
+      // );
       var scrolled =
         ((page01.scrollTop - scrolledSesssonHeight + innerHeight) /
           (listSessionHeight[qty] - scrolledSesssonHeight)) *
         100;
-      console.log(`----scrolled: ${scrolled}`);
+      // console.log(`----scrolled: ${scrolled}`);
       document.getElementById(`myBar${qty || 1}`).style.height = scrolled + '%';
       var previous = document.getElementById(`myBar${qty + 1}`);
       if (previous != null) {
