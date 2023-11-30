@@ -6,12 +6,13 @@
   top: 0;
   left: 0;
   pointer-events: none;
-  background: rgba(0, 0, 0, 0.3);
+  background: var(--dark);
   display: flex;
   justify-content: center;
   align-items: center;
   visibility: hidden;
   color: var(--white);
+  opacity: 0.3;
 }
 
 .circle-cursor > * {

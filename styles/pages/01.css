@@ -429,6 +429,18 @@
 
 .page01 div.centre-2d-map-info-3d {
   cursor: grab;
+  position: relative;
+}
+
+.page01 div.centre-2d-map-info-3d .notice-message {
+  background-color: var(--green);
+  padding: 12px;
+  font-size: 28px;
+  color: var(--dark);
+  position: absolute;
+  bottom: 100px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 /* ------------------------------ garden life guide section ------------------------------ */

@@ -1,13 +1,13 @@
 // should be placed after gsap scripts
+// window.addEventListener('resize', () => {
+//   document.body.scrollTo(0, 0);
+// });
 
-document.onload = () => {
-  document.body.scrollTop(0);
-};
-
-function goToSection(i) {
+function goToSection(i, mode) {
   gsap.set('body', { overflowY: 'hidden' });
 
   let spacesOfNoneFullscreenSections = 0;
+  // let duration = 0.6;
 
   // if (i > 62) {
   //   scrollY += document.getElementById("non4").offsetHeight + innerHeight;
@@ -23,6 +23,26 @@ function goToSection(i) {
       document.getElementById('non2').offsetHeight +
       innerHeight;
   }
+
+  if ((mode = 'enter' && i > 11)) {
+    document.getElementById('section_scroll4').style.height =
+      'calc(100vh + 1px)';
+    // spacesOfNoneFullscreenSections -= 2;
+  }
+
+  if ((mode = 'enterBack' && i > 11)) {
+    document.getElementById('section_scroll4').style.height =
+      'calc(100vh - 1px)';
+    // spacesOfNoneFullscreenSections += 6;
+  }
+
+  // if (i === 12) {
+  //   duration = 0.1;
+  // }
+
+  // if (i === 13 && mode === 'enter') {
+  //   duration = 0;
+  // }
 
   gsap.to('body', {
     scrollTo: {
@@ -45,7 +65,7 @@ gsap.utils.toArray('.fullscreen.scrollable').forEach((panel, i) => {
   ScrollTrigger.create({
     trigger: panel,
     onEnter: () => {
-      goToSection(i);
+      goToSection(i, 'enter');
     },
   });
 
@@ -53,7 +73,7 @@ gsap.utils.toArray('.fullscreen.scrollable').forEach((panel, i) => {
     trigger: panel,
     start: 'bottom bottom',
     onEnterBack: () => {
-      goToSection(i);
+      goToSection(i, 'enterBack');
     },
   });
 });
@@ -61,29 +81,3 @@ gsap.utils.toArray('.fullscreen.scrollable').forEach((panel, i) => {
 document.getElementById('scrollOnclick').onclick = () => {
   goToSection(1);
 };
-
-// gsap.utils.toArray('.hide_scroll').forEach((panel, i) => {
-//   ScrollTrigger.create({
-//     trigger: panel,
-//     onEnter: () => {
-//       document.getElementById('section-scroll').style.opacity = 0;
-//     },
-//     onLeave: () => {
-//       document.getElementById('section-scroll').style.opacity = 1;
-//     },
-//   });
-// });
-
-// ScrollTrigger.create({
-//   trigger: '#section_scroll11',
-//   onEnter: () => {
-//     const sectionTextID = document.getElementById(`section_text11`);
-//     sectionTextID.classList.add('text_active');
-//     document.getElementById(`myBar11`).style.height = '100%';
-//   },
-//   onLeave: () => {
-//     const sectionTextID = document.getElementById(`section_text11`);
-//     sectionTextID.classList.remove('text_active');
-//     document.getElementById(`myBar11`).style.height = '0%';
-//   },
-// });

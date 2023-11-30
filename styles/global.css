@@ -31,9 +31,16 @@ body::-webkit-scrollbar {
 }
 
 .fullscreen {
-  position: relative;
   height: 100vh;
   width: 100vw;
+}
+
+.fullscreen:nth-of-type(odd) {
+  border: 5px solid red;
+}
+
+.fullscreen:nth-of-type(even) {
+  border: 5px solid green;
 }
 
 .flex-center {
