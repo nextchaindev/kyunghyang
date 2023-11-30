@@ -1,5 +1,3 @@
-// should be placed after gsap scripts
-
 const TIME_OUT = 600; // It should be the same transition time of the sections
 const body = document.querySelector('body');
 const listSections = document.querySelectorAll('.section_scroll');
@@ -13,10 +11,6 @@ let startFlag = true;
 let qty = 0,
   main = null,
   next = null;
-
-document.onload = () => {
-  document.body.scrollTop(0);
-};
 
 const listSectionScroll = [
   '노인들의 인지장애',
@@ -62,20 +56,7 @@ listSections.forEach((values, index) => {
   listSessionHeight.push(values.offsetTop);
 });
 
-function goToSection(i) {
-  gsap.set('body', { overflowY: 'hidden' });
-  gsap.to('body', {
-    scrollTo: { y: i * innerHeight, autoKill: false },
-    duration: 0.6,
-    overwrite: true,
-    onComplete: () => {
-      gsap.set('body', { overflowY: 'auto' });
-    },
-  });
-}
-
 page01.addEventListener('scroll', (event) => {
-  console.log(page01.scrollTop);
   let scrolledSesssonHeight = 0;
   for (let index = 0; index < listHideScrollSreens.length; index++) {
     const hideScrollScreen = document.getElementById(`hide_scroll${index + 1}`);
@@ -86,6 +67,7 @@ page01.addEventListener('scroll', (event) => {
       sectionScroll.style.opacity = 1;
     }
   }
+  console.log(listSessionHeight);
   listSections.forEach((values, index) => {
     const sectionTextID = document.getElementById(`section_text${index + 1}`);
     const sectionTextIDprevious = document.getElementById(
@@ -111,6 +93,14 @@ page01.addEventListener('scroll', (event) => {
         ((page01.scrollTop + innerHeight - scrolledSesssonHeight) /
           listSessionHeight[qty]) *
         100;
+      // if (scrolled > 0) {
+      //   console.log(
+      //     'scrolled',
+      //     scrolled,
+      //     document.getElementById(`myBar${qty}`).style.height
+      //   );
+      //   // document.getElementById(`myBar${qty - 1}`).style.height = '100%';
+      // }
       document.getElementById(`myBar${qty || 1}`).style.height = scrolled + '%';
       var previous = document.getElementById(`myBar${qty + 1}`);
       if (previous != null) {
@@ -120,49 +110,4 @@ page01.addEventListener('scroll', (event) => {
       sectionTextID.classList.remove('text_active');
     }
   });
-});
-
-gsap.utils.toArray('.fullscreen.scrollable').forEach((panel, i) => {
-  ScrollTrigger.create({
-    trigger: panel,
-    onEnter: () => {
-      goToSection(i);
-    },
-  });
-
-  ScrollTrigger.create({
-    trigger: panel,
-    start: 'bottom bottom',
-    onEnterBack: () => goToSection(i),
-  });
-});
-
-document.getElementById('scrollOnclick').onclick = () => {
-  goToSection(1);
-};
-
-gsap.utils.toArray('.hide_scroll').forEach((panel, i) => {
-  ScrollTrigger.create({
-    trigger: panel,
-    onEnter: () => {
-      document.getElementById('section-scroll').style.opacity = 0;
-    },
-    onLeave: () => {
-      document.getElementById('section-scroll').style.opacity = 1;
-    },
-  });
-});
-
-ScrollTrigger.create({
-  trigger: '#section_scroll11',
-  onEnter: () => {
-    const sectionTextID = document.getElementById(`section_text11`);
-    sectionTextID.classList.add('text_active');
-    document.getElementById(`myBar11`).style.height = '100%';
-  },
-  onLeave: () => {
-    const sectionTextID = document.getElementById(`section_text11`);
-    sectionTextID.classList.remove('text_active');
-    document.getElementById(`myBar11`).style.height = '0%';
-  },
 });
