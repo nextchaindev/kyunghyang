@@ -1,0 +1,19 @@
+.fixed-attachment {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.trigger-none-attachment {
+  width: 100%;
+  height: 100%;
+  background-image: url(/assets/images/01/2d-map/15map_img.png),
+    url(/assets/images/01/map/bg.png);
+  background-size: 80%, cover;
+  background-position: center, center;
+  background-repeat: no-repeat, no-repeat;
+}
+
+.trigger-fixed-attachment {
+  background-attachment: fixed, fixed;
+}
