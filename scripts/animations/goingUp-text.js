@@ -14,7 +14,7 @@ goingUpTexts.forEach((elem) => {
           elem,
           { y: 100, autoAlpha: 0 },
           {
-            duration: 1.6,
+            duration: 1.25,
             y: 0,
             autoAlpha: 1,
             ease: "back",
@@ -25,7 +25,7 @@ goingUpTexts.forEach((elem) => {
           elem,
           { y: 100, autoAlpha: 0 },
           {
-            duration: 1.6,
+            duration: 1.25,
             y: 0,
             autoAlpha: 1,
             ease: "back",
@@ -42,7 +42,7 @@ goingUpTexts.forEach((elem) => {
         elem,
         { y: -100, autoAlpha: 0 },
         {
-          duration: 1.6,
+          duration: 1.25,
           y: 0,
           autoAlpha: 1,
           ease: "back",

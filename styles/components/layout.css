@@ -22,9 +22,6 @@ video.attached-video-bg {
   background-size: cover;
 }
 
-.parallax.bottom {
-}
-
 footer.kyunghyang-footer {
   background-color: var(--primary);
   color: var(--white);

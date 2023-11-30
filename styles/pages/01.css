@@ -1,7 +1,7 @@
-@import "../components/media.css";
-@import "../components/tag.css";
-@import "../components/gallery.css";
-@import "../components/circle-cursor.css";
+@import '../components/media.css';
+@import '../components/tag.css';
+@import '../components/gallery.css';
+@import '../components/circle-cursor.css';
 
 .page01_hero {
   position: relative;
@@ -163,8 +163,6 @@
 .page01 div.page01_map {
   position: relative;
 }
-
-
 
 /* .zoom1-scrollable {
   position: relative;
@@ -367,10 +365,10 @@ h1 {
 }
 
 /* ------------------------------ centre-2d-map section ------------------------------ */
-.page01 .page01-main-minimap {
-  display: none;
-}
 
+/* .page01 .page01-main-minimap {
+  display: none;
+} */
 
 .page01 div.page01_centre-2d-map {
   position: relative;
@@ -402,8 +400,8 @@ h1 {
   background-position: center;
 } */
 .page01 div.page01_centre-2d-map-1 {
-width: 100%;
-height: 100vh;
+  width: 100%;
+  height: 100vh;
 }
 
 /* .page01 div.page01_centre-2d-map-2 {
@@ -479,12 +477,18 @@ height: 100vh;
   background-position: center;
 } */
 
-.page01 div.page01_centre-2d-map .top-fixed-2d-map {
+.page01 .top-fixed-2d-map {
   position: absolute;
   top: 50px;
   left: 50px;
   width: 500px;
   height: auto;
+  opacity: 0;
+  transition: 1s all;
+}
+
+.page01 .top-fixed-2d-map.active {
+  opacity: 1;
 }
 
 .page01 div.centre-2d-map-info {
@@ -520,6 +524,7 @@ height: 100vh;
   background-color: rgb(0, 0, 0, 0.4);
   padding: 32px 20px;
   width: max-content;
+  max-width: calc(100vw - 100px * 2);
 }
 
 .page01 div.centre-2d-map-info .info-content.left {
