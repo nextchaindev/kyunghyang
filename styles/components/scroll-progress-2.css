@@ -52,10 +52,10 @@
   background-color: var(--grey);
   width: 4px;
   max-height: 100%;
-  /* -webkit-transition: height 0.5s ease-in-out;
-  -moz-transition: height 0.5s ease-in-out;
-  -o-transition: height 0.5s ease-in-out;
-  transition: height 0.5s ease-in-out; */
+  -webkit-transition: height 0.1s ease-in-out;
+  -moz-transition: height 0.1s ease-in-out;
+  -o-transition: height 0.1s ease-in-out;
+  transition: height 0.1s ease-in-out;
 }
 
 .page01 .section-stick .section-wrap .active {
