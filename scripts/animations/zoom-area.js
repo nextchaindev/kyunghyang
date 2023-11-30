@@ -70,30 +70,35 @@ function triggerZoom2dMap() {
     { scale: 3, origin: [0.1, 0.5] },
     { scale: 3, origin: [0.1, 0.5] },
     { scale: 3, origin: [0.1, 0.5] },
-    { scale: 3, origin: [0.1, 0.5] },
+    { scale: 1, origin: [0.5, 0.5] },
+    { scale: 1, origin: [0.5, 0.5] },
     // 4
     { scale: 3, origin: [0.4, 0.5] },
     { scale: 3, origin: [0.4, 0.5] },
     { scale: 3, origin: [0.4, 0.5] },
     { scale: 3, origin: [0.4, 0.5] },
-    { scale: 3, origin: [0.4, 0.5] },
+    { scale: 1, origin: [0.5, 0.5] },
+    { scale: 1, origin: [0.5, 0.5] },
     // 5
     { scale: 3, origin: [0.72, 0.5] },
     { scale: 3, origin: [0.72, 0.5] },
     { scale: 3, origin: [0.72, 0.5] },
-    { scale: 3, origin: [0.72, 0.5] },
+    { scale: 1, origin: [0.5, 0.5] },
+    { scale: 1, origin: [0.5, 0.5] },
     // 6
     { scale: 3.2, origin: [0.85, 0.5] },
     { scale: 3.2, origin: [0.85, 0.5] },
     { scale: 3.2, origin: [0.85, 0.5] },
     { scale: 3.2, origin: [0.85, 0.5] },
-    { scale: 3.2, origin: [0.85, 0.5] },
+    { scale: 1, origin: [0.5, 0.5] },
+    { scale: 1, origin: [0.5, 0.5] },
     // 7
     { scale: 3.2, origin: [0.8, 0.35] },
     { scale: 3.2, origin: [0.8, 0.35] },
     { scale: 3.2, origin: [0.8, 0.35] },
     { scale: 3.2, origin: [0.8, 0.35] },
-    { scale: 3.2, origin: [0.8, 0.35] },
+    { scale: 1, origin: [0.5, 0.5] },
+    { scale: 1, origin: [0.5, 0.5] },
     // 8
     { scale: 3, origin: [0.68, 0.35] },
     { scale: 3, origin: [0.68, 0.35] },
@@ -127,19 +132,19 @@ function triggerZoom2dMap() {
           if (index === 1) {
             miniMaps[0].classList.add('active');
           }
-          if (index === 6) {
+          if (index === 7) {
             miniMaps[1].classList.add('active');
           }
-          if (index === 11) {
+          if (index === 13) {
             miniMaps[2].classList.add('active');
           }
-          if (index === 15) {
+          if (index === 18) {
             miniMaps[3].classList.add('active');
           }
-          if (index === 20) {
+          if (index === 24) {
             miniMaps[4].classList.add('active');
           }
-          if (index === 25) {
+          if (index === 30) {
             miniMaps[5].classList.add('active');
           }
         },
@@ -152,19 +157,19 @@ function triggerZoom2dMap() {
           if (index === 1) {
             miniMaps[0].classList.remove('active');
           }
-          if (index === 6) {
+          if (index === 7) {
             miniMaps[1].classList.remove('active');
           }
-          if (index === 11) {
+          if (index === 13) {
             miniMaps[2].classList.remove('active');
           }
-          if (index === 15) {
+          if (index === 18) {
             miniMaps[3].classList.remove('active');
           }
-          if (index === 20) {
+          if (index === 24) {
             miniMaps[4].classList.remove('active');
           }
-          if (index === 25) {
+          if (index === 30) {
             miniMaps[5].classList.remove('active');
           }
         },
@@ -177,19 +182,19 @@ function triggerZoom2dMap() {
           if (index === 1) {
             miniMaps[0].classList.add('active');
           }
-          if (index === 6) {
+          if (index === 7) {
             miniMaps[1].classList.add('active');
           }
-          if (index === 11) {
+          if (index === 13) {
             miniMaps[2].classList.add('active');
           }
-          if (index === 15) {
+          if (index === 18) {
             miniMaps[3].classList.add('active');
           }
-          if (index === 20) {
+          if (index === 24) {
             miniMaps[4].classList.add('active');
           }
-          if (index === 25) {
+          if (index === 30) {
             miniMaps[5].classList.add('active');
           }
         },
@@ -202,19 +207,19 @@ function triggerZoom2dMap() {
           if (index === 1) {
             miniMaps[0].classList.remove('active');
           }
-          if (index === 6) {
+          if (index === 7) {
             miniMaps[1].classList.remove('active');
           }
-          if (index === 11) {
+          if (index === 13) {
             miniMaps[2].classList.remove('active');
           }
-          if (index === 15) {
+          if (index === 18) {
             miniMaps[3].classList.remove('active');
           }
-          if (index === 20) {
+          if (index === 24) {
             miniMaps[4].classList.remove('active');
           }
-          if (index === 25) {
+          if (index === 30) {
             miniMaps[5].classList.remove('active');
           }
         },
