@@ -3,7 +3,7 @@
 //   document.body.scrollTo(0, 0);
 // });
 
-function goToSection(i) {
+function goToSection(i, mode) {
   gsap.set('body', { overflowY: 'hidden' });
 
   let spacesOfNoneFullscreenSections = 0;
@@ -21,6 +21,14 @@ function goToSection(i) {
       document.getElementById('non1').offsetHeight +
       document.getElementById('non2').offsetHeight +
       innerHeight;
+  }
+
+  if ((mode = 'enter' && i > 11)) {
+    spacesOfNoneFullscreenSections -= 2;
+  }
+
+  if ((mode = 'enterBack' && i > 11)) {
+    spacesOfNoneFullscreenSections += 3;
   }
 
   gsap.to('body', {
@@ -44,7 +52,7 @@ gsap.utils.toArray('.fullscreen.scrollable').forEach((panel, i) => {
   ScrollTrigger.create({
     trigger: panel,
     onEnter: () => {
-      goToSection(i);
+      goToSection(i, 'enter');
     },
   });
 
@@ -52,7 +60,7 @@ gsap.utils.toArray('.fullscreen.scrollable').forEach((panel, i) => {
     trigger: panel,
     start: 'bottom bottom',
     onEnterBack: () => {
-      goToSection(i);
+      goToSection(i, 'enterBack');
     },
   });
 });
