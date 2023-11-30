@@ -1,7 +1,7 @@
-import './fading-text.js';
+import './fading-text-page02.js';
 import './goingUp-text.js';
 import './fading-image.js';
-import './fullscreen-scroll-2.js';
+import './fullscreen-scroll.js';
 import './statistics-chart.js';
 import './circle-cursor.js';
 import './2dmap-zoom-and-moving.js';

@@ -16,7 +16,7 @@
   transition: opacity 0.5s ease-in-out;
 }
 
-.page01 .section-stick .section-wrap{
+.page01 .section-stick .section-wrap {
   mix-blend-mode: difference;
   position: relative;
   display: flex;
@@ -27,7 +27,7 @@
   gap: 11px;
 }
 
-.page01 .section-stick .section-wrap .section-name{
+.page01 .section-stick .section-wrap .section-name {
   color: var(--primary);
 }
 
@@ -52,10 +52,10 @@
   background-color: var(--grey);
   width: 4px;
   max-height: 100%;
-  -webkit-transition: height 0.5s ease-in-out;
+  /* -webkit-transition: height 0.5s ease-in-out;
   -moz-transition: height 0.5s ease-in-out;
   -o-transition: height 0.5s ease-in-out;
-  transition: height 0.5s ease-in-out;
+  transition: height 0.5s ease-in-out; */
 }
 
 .page01 .section-stick .section-wrap .active {
