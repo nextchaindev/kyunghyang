@@ -164,35 +164,9 @@
   position: relative;
 }
 
-/* .zoom1-scrollable {
-  position: relative;
-  border-bottom: 1px solid #636363;
-}
-h1 {
-  color: #fff;
-}
-.zoom1 {
-  width: 100%;
-  position: fixed;
-  right: 0;
-  top: 0;
-  background: #333;
-  height: 100vh;
-  overflow: hidden;
-}
-.zoom1-photo {
-  width: 100%;
-  height: 100%;
-  background-image: url(https://www.voicesofyouth.org/sites/voy/files/images/2020-08/finding-sunshine.jpg);
-  background-size: cover;
-  background-position: center;
-} */
-
 .page01 div.page01_map .map-popup-content {
   position: absolute;
-  top: 55%;
-  left: 66%;
-  transform: translate(-50%, -95%);
+  transform: translate(-50%, -88%);
   background-color: rgb(0, 0, 0, 0.5);
   padding: 56px 64px;
   color: var(--white);
@@ -200,17 +174,15 @@ h1 {
   width: max-content;
 }
 
-/* .page01 div.page01_map .map-popup-content {
-  position: absolute;
-  top: 54%;
-  left: 72%;
-  transform: translate(-50%, -95%);
-  background-color: rgb(0, 0, 0, 0.5);
-  padding: 56px 64px;
-  color: var(--white);
-  text-align: center;
-  width: max-content;
-} */
+.page01 div.page01_map .map-popup-content.point1 {
+  top: 53%;
+  left: 65%;
+}
+
+.page01 div.page01_map .map-popup-content.point2 {
+  top: 42%;
+  left: 58%;
+}
 
 .parallax-page01_map {
   background-attachment: fixed;
@@ -224,113 +196,31 @@ h1 {
 
 .page01 div.page01_map .circle-yellow {
   position: absolute;
-  height: 14px;
-  width: 14px;
-  background-color: #d6c961;
-  border-radius: 27px;
-  font-size: 16px;
-}
-
-.page01 div.page01_map .circle-yellow > div {
-  transform: translate(-40%, 90%);
-  background-color: var(--primary);
-  color: white;
-  width: max-content;
-  padding: 3px 8px 2.6px;
-  border-radius: 13px;
+  top: 53%;
+  left: 65%;
+  height: 50px;
+  width: 50px;
+  padding: 16px;
+  background-color: #d6c96166;
+  border-radius: 25px;
 }
 
 .page01 div.page01_map .circle-yellow.point1 {
-  top: 72%;
-  left: 47%;
-}
-
-.page01 div.page01_map .circle-yellow.point1 > div {
-  background-color: black;
+  top: 53%;
+  left: 65%;
 }
 
 .page01 div.page01_map .circle-yellow.point2 {
-  top: 64%;
-  left: 57%;
-}
-
-.page01 div.page01_map .circle-yellow.point2 > div {
-  background-color: black;
-}
-
-.page01 div.page01_map .circle-yellow.point3 {
-  top: 60%;
-  left: 61%;
-}
-
-.page01 div.page01_map .circle-yellow.point3 > div {
-  background-color: black;
-}
-
-.page01 div.page01_map .circle-yellow.point4 {
-  top: 55%;
-  left: 66%;
-}
-
-.page01 div.page01_map .circle-yellow.point4 > div {
-  background-color: var(--primary);
-}
-
-/*
-
-.page01 div.page01_map .circle-yellow {
-  position: absolute;
-  height: 27px;
-  width: 27px;
-  background-color: #d6c961;
-  border-radius: 27px;
-  font-size: 32px;
-}
-
-.page01 div.page01_map .circle-yellow > div {
-  transform: translate(-40%, 90%);
-  background-color: var(--primary);
-  color: white;
-  width: max-content;
-  padding: 3px 8px 2.6px;
-  border-radius: 13px;
-}
-
-.page01 div.page01_map .circle-yellow.point1 {
-  top: 75%;
-  left: 45%;
-}
-
-.page01 div.page01_map .circle-yellow.point1 > div {
-  background-color: black;
-}
-
-.page01 div.page01_map .circle-yellow.point2 {
-  top: 66%;
+  top: 42%;
   left: 58%;
 }
 
-.page01 div.page01_map .circle-yellow.point2 > div {
-  background-color: black;
+.page01 div.page01_map .circle-yellow > div {
+  height: 18px;
+  width: 18px;
+  background-color: #d6c961;
+  border-radius: 27px;
 }
-
-.page01 div.page01_map .circle-yellow.point3 {
-  top: 61%;
-  left: 63%;
-}
-
-.page01 div.page01_map .circle-yellow.point3 > div {
-  background-color: black;
-}
-
-.page01 div.page01_map .circle-yellow.point4 {
-  top: 54%;
-  left: 72%;
-}
-
-.page01 div.page01_map .circle-yellow.point4 > div {
-  background-color: var(--primary);
-} */
 
 .page01 div.focused-place {
   /* position: absolute;

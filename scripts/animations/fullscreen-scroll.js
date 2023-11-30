@@ -120,13 +120,14 @@ function goToSection(i) {
   //   scrollY += document.getElementById("non3").offsetHeight + innerHeight + 1;
   // }
 
-  if (i > 12) {
+  if (i > 11) {
     spacesOfNoneFullscreenSections +=
       document.getElementById('non1').offsetHeight +
       document.getElementById('non2').offsetHeight +
-      innerHeight -
-      1;
+      innerHeight;
   }
+
+  console.log(i);
 
   gsap.to('body', {
     scrollTo: {
