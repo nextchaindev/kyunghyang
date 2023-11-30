@@ -67,7 +67,7 @@ page01.addEventListener('scroll', (event) => {
       sectionScroll.style.opacity = 1;
     }
   }
-  console.log(listSessionHeight);
+  // console.log(listSessionHeight);
   listSections.forEach((values, index) => {
     const sectionTextID = document.getElementById(`section_text${index + 1}`);
     const sectionTextIDprevious = document.getElementById(
