@@ -1,3 +1,5 @@
-@import "./01/fading-text.css";
-@import "./01/goingUp-text.css";
-@import "./01/fading-image.css";
+@import './01/fading-text.css';
+@import './01/goingUp-text.css';
+@import './01/fading-image.css';
+@import './01/fixed-attachment.css';
+@import './01/zoom-area.css';
