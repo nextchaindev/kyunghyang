@@ -17,23 +17,20 @@ function goToSection(i, mode) {
   //   scrollY += document.getElementById("non3").offsetHeight + innerHeight + 1;
   // }
 
+  if (mode === 'enter') {
+    // spacesOfNoneFullscreenSections -= 2;
+  }
+
+  if (mode === 'enterBack') {
+    // spacesOfNoneFullscreenSections += 6;
+  }
+
   if (i > 11) {
     spacesOfNoneFullscreenSections +=
       document.getElementById('non1').offsetHeight +
       document.getElementById('non2').offsetHeight +
-      innerHeight;
-  }
-
-  if ((mode = 'enter' && i > 11)) {
-    document.getElementById('section_scroll4').style.height =
-      'calc(100vh + 1px)';
-    // spacesOfNoneFullscreenSections -= 2;
-  }
-
-  if ((mode = 'enterBack' && i > 11)) {
-    document.getElementById('section_scroll4').style.height =
-      'calc(100vh - 1px)';
-    // spacesOfNoneFullscreenSections += 6;
+      innerHeight +
+      (mode === 'enter' ? -1 : i === 12 ? -1 : 0);
   }
 
   // if (i === 12) {
