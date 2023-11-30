@@ -1,8 +1,7 @@
 // should be placed after gsap scripts
-
-document.onload = () => {
-  document.body.scrollTop(0);
-};
+// window.addEventListener('resize', () => {
+//   document.body.scrollTo(0, 0);
+// });
 
 function goToSection(i) {
   gsap.set('body', { overflowY: 'hidden' });
