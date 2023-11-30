@@ -7,6 +7,7 @@ function goToSection(i, mode) {
   gsap.set('body', { overflowY: 'hidden' });
 
   let spacesOfNoneFullscreenSections = 0;
+  // let duration = 0.6;
 
   // if (i > 62) {
   //   scrollY += document.getElementById("non4").offsetHeight + innerHeight;
@@ -24,12 +25,24 @@ function goToSection(i, mode) {
   }
 
   if ((mode = 'enter' && i > 11)) {
-    spacesOfNoneFullscreenSections -= 2;
+    document.getElementById('section_scroll4').style.height =
+      'calc(100vh + 1px)';
+    // spacesOfNoneFullscreenSections -= 2;
   }
 
   if ((mode = 'enterBack' && i > 11)) {
-    spacesOfNoneFullscreenSections += 3;
+    document.getElementById('section_scroll4').style.height =
+      'calc(100vh - 1px)';
+    // spacesOfNoneFullscreenSections += 6;
   }
+
+  // if (i === 12) {
+  //   duration = 0.1;
+  // }
+
+  // if (i === 13 && mode === 'enter') {
+  //   duration = 0;
+  // }
 
   gsap.to('body', {
     scrollTo: {
