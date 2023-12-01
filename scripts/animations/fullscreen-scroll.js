@@ -2,51 +2,37 @@
 // window.addEventListener('resize', () => {
 //   document.body.scrollTo(0, 0);
 // });
+ScrollTrigger.defaults({
+  toggleActions: 'restart pause resume pause',
+});
 
 function goToSection(i, mode) {
   gsap.set('body', { overflowY: 'hidden' });
 
   let spacesOfNoneFullscreenSections = 0;
-  // let duration = 0.6;
 
-  // if (i > 62) {
-  //   scrollY += document.getElementById("non4").offsetHeight + innerHeight;
-  // }
-
-  // if (i > 59) {
-  //   scrollY += document.getElementById("non3").offsetHeight + innerHeight + 1;
-  // }
-
-  if (mode === 'enter') {
-    // spacesOfNoneFullscreenSections -= 2;
-  }
-
-  if (mode === 'enterBack') {
-    // spacesOfNoneFullscreenSections += 6;
-  }
-
-  if (i > 11) {
-    spacesOfNoneFullscreenSections +=
+  if (i > 12) {
+    const total =
       document.getElementById('non1').offsetHeight +
-      document.getElementById('non2').offsetHeight +
-      innerHeight +
-      (mode === 'enter' ? -1 : i === 12 ? -1 : 0);
+      document.getElementById('non2').offsetHeight;
+    spacesOfNoneFullscreenSections -= innerHeight * 2 - total;
   }
 
-  // if (i === 12) {
-  //   duration = 0.1;
+  // if (i === 13 && mode === 'enterBack') {
+  //   document
   // }
 
-  // if (i === 13 && mode === 'enter') {
-  //   duration = 0;
-  // }
+  if (i > 12) {
+    spacesOfNoneFullscreenSections += mode === 'enter' ? -1 : i < 16 ? -1 : 0;
+  }
 
   gsap.to('body', {
     scrollTo: {
       y: i * innerHeight + spacesOfNoneFullscreenSections,
       autoKill: false,
     },
-    duration: i === 12 ? 0 : 0.6,
+    // duration: i === 15 && mode === 'enter' ? 0 : 0.6,
+    duration: 0.6,
     overwrite: true,
     onComplete() {
       gsap.set('body', { overflowY: 'auto' });
@@ -54,14 +40,18 @@ function goToSection(i, mode) {
   });
 }
 
-ScrollTrigger.defaults({
-  toggleActions: 'restart pause resume pause',
-});
-
-gsap.utils.toArray('.fullscreen.scrollable').forEach((panel, i) => {
+gsap.utils.toArray('.scrollable').forEach((panel, i) => {
   ScrollTrigger.create({
     trigger: panel,
     onEnter: () => {
+      document.getElementsByClassName('scrollable')[12].classList.add('enter1');
+      document.getElementsByClassName('scrollable')[13].classList.add('enter2');
+      document
+        .getElementsByClassName('scrollable')[12]
+        .classList.remove('enterBack1');
+      document
+        .getElementsByClassName('scrollable')[13]
+        .classList.remove('enterBack2');
       goToSection(i, 'enter');
     },
   });
@@ -70,6 +60,18 @@ gsap.utils.toArray('.fullscreen.scrollable').forEach((panel, i) => {
     trigger: panel,
     start: 'bottom bottom',
     onEnterBack: () => {
+      document
+        .getElementsByClassName('scrollable')[12]
+        .classList.add('enterBack1');
+      document
+        .getElementsByClassName('scrollable')[13]
+        .classList.add('enterBack2');
+      document
+        .getElementsByClassName('scrollable')[12]
+        .classList.remove('enter1');
+      document
+        .getElementsByClassName('scrollable')[13]
+        .classList.remove('enter2');
       goToSection(i, 'enterBack');
     },
   });
@@ -78,3 +80,54 @@ gsap.utils.toArray('.fullscreen.scrollable').forEach((panel, i) => {
 document.getElementById('scrollOnclick').onclick = () => {
   goToSection(1);
 };
+
+//
+
+// function goToTopSection(i) {
+//   gsap.set('body', { overflowY: 'hidden' });
+//   let scrollValue = 0;
+//   gsap.to('body', {
+//     scrollTo: {
+//       y: scrollValue,
+//       autoKill: false,
+//     },
+//     duration: i === 12 ? 0 : 0.6,
+//     overwrite: true,
+//     onComplete() {
+//       gsap.set('body', { overflowY: 'auto' });
+//     },
+//   });
+// }
+
+// function goToBottomSection(i) {
+//   gsap.set('body', { overflowY: 'hidden' });
+//   let scrollValue = 0;
+//   gsap.to('body', {
+//     scrollTo: {
+//       y: scrollValue,
+//       autoKill: false,
+//     },
+//     duration: i === 12 ? 0 : 0.6,
+//     overwrite: true,
+//     onComplete() {
+//       gsap.set('body', { overflowY: 'auto' });
+//     },
+//   });
+// }
+
+// gsap.utils.toArray('.free.scrollable').forEach((panel, i) => {
+//   ScrollTrigger.create({
+//     trigger: panel,
+//     onEnter: () => {
+//       goToTopSection(i);
+//     },
+//   });
+
+//   ScrollTrigger.create({
+//     trigger: panel,
+//     start: 'bottom bottom',
+//     onEnterBack: () => {
+//       goToBottomSection(i);
+//     },
+//   });
+// });

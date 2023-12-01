@@ -1,0 +1,29 @@
+.scrollable:nth-of-type(odd) {
+  border: 5px solid red;
+  width: 100vw;
+}
+
+.scrollable:nth-of-type(even) {
+  border: 5px solid green;
+  width: 100vw;
+}
+
+.enter1 {
+  top: 0;
+  left: 0;
+}
+
+.enter2 {
+  top: 100vh;
+  left: 0;
+}
+
+.enterBack1 {
+  bottom: 100vh;
+  left: 0;
+}
+
+.enterBack2 {
+  bottom: 0;
+  left: 0;
+}
