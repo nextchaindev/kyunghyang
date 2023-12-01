@@ -566,3 +566,8 @@
   font-size: 36px;
   width: max-content;
 }
+
+.page01 div.footer-wrapper {
+  display: flex;
+  align-items: flex-end;
+}

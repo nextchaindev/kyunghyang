@@ -1,4 +1,4 @@
-.scrollable:nth-of-type(odd) {
+/* .scrollable:nth-of-type(odd) {
   border: 5px solid red;
   width: 100vw;
 }
@@ -6,7 +6,7 @@
 .scrollable:nth-of-type(even) {
   border: 5px solid green;
   width: 100vw;
-}
+} */
 
 .enter1 {
   top: 0;
@@ -18,6 +18,21 @@
   left: 0;
 }
 
+/* .enter3 {
+  top: 0;
+  left: 0;
+}
+
+.enter4 {
+  top: 0;
+  left: 0;
+}
+
+.enter5 {
+  top: 0;
+  left: 0;
+} */
+
 .enterBack1 {
   bottom: 100vh;
   left: 0;
@@ -27,3 +42,18 @@
   bottom: 0;
   left: 0;
 }
+
+/* .enterBack3 {
+  bottom: 0;
+  left: 0;
+}
+
+.enterBack4 {
+  bottom: 0;
+  left: 0;
+}
+
+.enterBack5 {
+  bottom: 0;
+  left: 0;
+} */
