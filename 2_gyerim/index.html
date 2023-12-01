@@ -1,0 +1,1472 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="재개발 되는 지역에서 어린이 통학로 안전은 우선순위에 놓이지 않은 경우가 많아요. 신도시와는 다른 환경이어서 통학로 안전은 더 미흡하죠. 재개발 지역의 통학로는 어떤 모습이어야 할까요?"
+    />
+    <meta
+      name="keywords"
+      content="재개발, 어린이 통학로 안전, 고원식 횡단보도, 바닥형 LED 점멸신호등, 한국공예·디자인문화진흥원, 공공디자인, 스토리텔링, storytelling, 광주광역시, 다정한 도시"
+    />
+    <title>개발되는 옛 도심, 통학로도 새단장. 광주광역시편</title>
+    <link
+      rel="shortcut icon"
+      href="https://img.khan.co.kr/spko/icon/favicon.ico"
+      type="image/x-icon"
+    />
+    <link
+      rel="apple-touch-icon-precomposed"
+      href="https://img.khan.co.kr/spko/icon/apple-touch-icon-precomposed-web.png"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@200;300&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="fullpage" class="relative">
+      <!-- first page video -->
+      <section id="intro-video-section" class="section active">
+        <video data-keepplaying autoplay muted loop id="introVideo">
+          <source data-src="public/videos/인트로 영상1.mp4" type="video/mp4" />
+        </video>
+
+        <div class="opacity-3 full-child z-minus"></div>
+
+        <div class="center text-center revealUp">
+          <span class="text-white-large">
+            개발되는 옛 도심, <span class="font-bold">통학로도 새단장</span>
+          </span>
+
+          <div class="text-white-normal mt-48 flex-center gap-x-12">
+            <span class="font-bold">다정한 도시</span>
+            <div class="rounded border-white-1 flex-center">
+              <span class="text-white-normal">2</span>
+            </div>
+            광주광역시 <span class="font-bold">계림도담길</span>
+          </div>
+        </div>
+
+        <div class="flex-col justify-between">
+          <span class="text-box normal-dark-text"
+            >공공디자인으로 행복한 공간 만들기</span
+          >
+          <div onclick="onClickScrollDown()" class="flex-col gap-y-20 pointer">
+            <span class="small-white-text">Scroll Down</span>
+            <button id="scrollbutton">
+              <img
+                class="scroll-icon"
+                data-src="public/icons/icon_down-arrow.png"
+                loading="lazy"
+              />
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- children 1 -->
+      <section
+        data-anchor="children-1"
+        class="section title-section section-2 parallax"
+      >
+        <h1 data-inviewport class="fly-text fly–top-right">
+          <span data-inviewport class="font-bold">어린이는</span>
+          <span data-inviewport class="font-bold">성인보다</span>
+          <span data-inviewport class="font-bold">시야가</span>
+          <span data-inviewport class="font-bold">좁아요.</span>
+          <br class="high-break-up" />
+          <span data-inviewport class="font-bold">어디서</span>
+          <span data-inviewport class="font-bold">소리가</span>
+          <span data-inviewport class="font-bold">나는지</span>
+          <span data-inviewport class="font-bold">금방</span>
+          <span data-inviewport class="font-bold">알아채지</span>
+          <span data-inviewport class="font-bold">못하고</span>
+          <br class="high-break-up" />
+          <span data-inviewport class="font-bold">한</span>
+          <span data-inviewport class="font-bold">가지</span>
+          <span data-inviewport class="font-bold">일에</span>
+          <span data-inviewport class="font-bold">집중하면</span>
+          <span data-inviewport class="font-bold">주변</span>
+          <span data-inviewport class="font-bold">환경엔</span>
+          <span data-inviewport class="font-bold">둔감해져요.</span>
+        </h1>
+      </section>
+
+      <!-- children 2 with car -->
+      <section
+        data-anchor="children-2"
+        class="section title-section parallax section-3"
+      >
+        <h1 data-inviewport class="fly-text fly–top-right">
+          <span data-inviewport class="font-bold">차량</span>
+          <span data-inviewport class="font-bold">속도를</span>
+          <span data-inviewport class="font-bold">쉽게</span>
+          <span data-inviewport class="font-bold">추정하지</span>
+          <span data-inviewport class="font-bold">못하고</span>
+          <br class="high-break-up" />
+          <span data-inviewport class="font-bold">운전자가</span>
+          <span data-inviewport class="font-bold">자신을</span>
+          <span data-inviewport class="font-bold">보고</span>
+          <span data-inviewport class="font-bold">알아서</span>
+          <span data-inviewport class="font-bold">멈출거라</span>
+          <span data-inviewport class="font-bold">생각하기도</span>
+          <span data-inviewport class="font-bold">해요.</span>
+          <br class="high-break-up" />
+          <span data-inviewport class="font-bold">교통</span>
+          <span data-inviewport class="font-bold">약자인</span>
+          <span data-inviewport class="font-bold">어린이에게</span>
+          <span data-inviewport class="font-bold">안전한</span>
+          <span data-inviewport class="font-bold">환경이</span>
+          <span data-inviewport class="font-bold">요구되는</span>
+          <span data-inviewport class="font-bold">이유죠.</span>
+        </h1>
+      </section>
+
+      <!-- bus on the right -->
+      <section class="section title-section parallax section-4">
+        <h1 data-inviewport class="fly-text center-left">
+          <span data-inviewport class="font-bold">어린이</span>
+          <span data-inviewport class="font-bold">교통안전은</span>
+          <span data-inviewport class="font-bold">도시개발과도</span>
+          <span data-inviewport class="font-bold">관련돼</span>
+          <span data-inviewport class="font-bold">있습니다.</span>
+          <br class="high-break-up" />
+          <span data-inviewport class="font-bold">최근</span>
+          <span data-inviewport class="font-bold">계획·조성된</span>
+          <span data-inviewport class="font-bold">도시는</span>
+          <span data-inviewport class="font-bold">아이들이</span>
+          <span data-inviewport class="font-bold">다니는</span>
+          <span data-inviewport class="font-bold">길과</span>
+          <br class="high-break-down" />
+          <span data-inviewport class="font-bold">차량이</span>
+          <span data-inviewport class="font-bold">다니는</span>
+          <span data-inviewport class="font-bold">길을</span>
+          <span data-inviewport class="font-bold">분리하죠.</span>
+        </h1>
+      </section>
+
+      <!-- top view of houses -->
+      <section
+        data-anchor="houses-top-view"
+        class="section title-section parallax section-5"
+      >
+        <h1 data-inviewport class="fly-text bg-cyan">
+          <span data-inviewport class="font-bold">하지만</span>
+          <span data-inviewport class="font-bold">낡은</span>
+          <span data-inviewport class="font-bold">주택단지를</span>
+          <span data-inviewport class="font-bold">재개발하는</span>
+          <span data-inviewport class="font-bold">경우는</span>
+          <span data-inviewport class="font-bold">어떨까요.</span>
+        </h1>
+      </section>
+
+      <!-- buildings with stadium -->
+      <section
+        data-anchor="buildings-with-stadium"
+        class="section title-section parallax section-6"
+      >
+        <h1
+          data-inviewport
+          id="buildings-text"
+          class="fly-text bg-dark center-left-2-line"
+        >
+          <span data-inviewport class="font-bold">광주광역시</span>
+          <span data-inviewport class="font-bold">계림초등학교</span>
+          <span data-inviewport class="font-bold">통학로의</span>
+          <span data-inviewport class="font-bold">이야기를</span>
+          <br class="high-break-up" />
+          <span data-inviewport class="font-bold">살펴보면서</span>
+          <span data-inviewport class="font-bold">함께</span>
+          <span data-inviewport class="font-bold">생각해</span>
+          <span data-inviewport class="font-bold">보아요.</span>
+        </h1>
+      </section>
+
+      <!-- black white and 1989 -->
+      <section data-anchor="1989" class="section title-section flex">
+        <div class="full-child flex">
+          <div class="parallax section-7 half scale-1">
+            <h1 class="bottom-bg-black-text">1965년 계림초 인근</h1>
+          </div>
+          <div class="parallax section-8 half scale-1">
+            <h1 class="bottom-bg-black-text">1989년 계림초 인근</h1>
+          </div>
+        </div>
+      </section>
+
+      <!-- satellite map -->
+      <section
+        data-anchor="satellite"
+        class="section title-section flex-center"
+      >
+        <div id="satellite-zoom" class="full-child">
+          <img
+            class="no-object-fit"
+            data-src="public/images/09-bg.png"
+            loading="lazy"
+          />
+          <div class="satellite-main-point flex-col">
+            <p class="main-point-title">계림초등학교</p>
+            <div class="main-point"></div>
+          </div>
+
+          <!-- yellow zone (have zoom) -->
+          <div id="sat-yellow-zone" class="flex-col gap-y-8 justify-center">
+            <p class="sat-yellow-zone-text font-bold">
+              재개발 해제 지역형
+              <br />
+              (원도심 주택지역)
+            </p>
+          </div>
+
+          <!-- zed zone (have zoom) -->
+          <img
+            id="sat-red-zone"
+            class="small-image"
+            data-src="public/images/red_zone.png"
+            loading="lazy"
+          />
+
+          <!-- 1st grey point -->
+          <div class="flex-col gap-y-8 first-normal-point">
+            <div class="sat-point"></div>
+            <p class="point-title">광주고등학교</p>
+          </div>
+
+          <!-- 2nd grey point (have zoom and num1) -->
+          <div id="second-normal-point" class="flex gap-x-8">
+            <p class="point-title">두산위브 1차</p>
+            <div class="sat-point"></div>
+          </div>
+
+          <!-- 3nd grey point (have zoom and num3) -->
+          <div id="third-normal-point" class="flex-col gap-y-8">
+            <div class="sat-point"></div>
+            <p class="point-title">두산위브 3차</p>
+          </div>
+
+          <!-- 4th grey point (have zoom) -->
+          <div id="fourth-normal-point" class="flex-col gap-y-8">
+            <div class="sat-point"></div>
+            <p class="point-title">현대아이파크</p>
+          </div>
+
+          <!-- 5th grey point (have zoom, no dot) -->
+          <div id="fifth-normal-point">
+            <p class="point-title">호남직업전문학교</p>
+          </div>
+        </div>
+
+        <div
+          id="satellite-title-1"
+          class="opacity-box bg-opacity-5 center-top text-center"
+        >
+          <span class="text-white-big"
+            ><span class="one-line"
+              >계림동은 과거 광주의 중심지였어요. 계림초는 1948년부터 이곳을
+              지키고 있죠.</span
+            ><br />
+            <span class="one-line"
+              >하지만 1990년대 도시 외곽이 개발되면서 옛 도심인 계림동은
+              쇠퇴해갔어요.</span
+            >
+            <br />
+            <span class="one-line">계림초에 다니는 학생 수도 줄었어요.</span>
+          </span>
+        </div>
+
+        <div
+          id="satellite-title-2"
+          class="opacity-box bg-opacity-5 center-top text-center"
+        >
+          <span class="text-white-big"
+            ><span class="one-line"
+              >2018년 전후로 계림초 주변에 재개발 아파트 단지가
+              들어섰어요.</span
+            ><br />
+            <span class="one-line"
+              >이 때문에 학생 수가 몇 년 사이 두 배 가까이 늘었어요.
+            </span>
+          </span>
+        </div>
+      </section>
+
+      <!-- child running -->
+      <section
+        data-anchor="child-running"
+        class="section title-section parallax section-10"
+      >
+        <img class="chart" data-src="public/images/chart.png" loading="lazy" />
+        <h1 data-inviewport class="fly-text fly–btm-right text-left font-bold">
+          <span data-inviewport>학생 수는</span>
+          <span data-inviewport>늘었지만,</span>
+          <br />
+          <span data-inviewport>등·하굣길은</span>
+          <span data-inviewport>옛 도심의</span>
+          <span data-inviewport>모습처럼</span>
+          <span data-inviewport>낡아</span>
+          <span data-inviewport>있었어요.</span>
+          <br class="high-break-down" />
+          <span data-inviewport>이곳 학생</span>
+          <span data-inviewport>10명 중</span>
+          <span data-inviewport>8명은</span>
+          <span data-inviewport>걸어서</span>
+          <span data-inviewport>학교에</span>
+          <span data-inviewport>오가고</span>
+          <br />
+          <span data-inviewport>10명 중</span>
+          <span data-inviewport>7명은</span>
+          <span data-inviewport>보호자</span>
+          <span data-inviewport>없이 혼자</span>
+          <span data-inviewport>등·하교를</span>
+          <span data-inviewport>해요</span>
+          <br />
+          <span data-inviewport>자연히</span>
+          <span data-inviewport>통학로가</span>
+          <span data-inviewport>더 안전해지길</span>
+          <span data-inviewport>바라는</span>
+          <span data-inviewport>목소리가</span>
+          <span data-inviewport>높아졌죠.</span>
+        </h1>
+      </section>
+
+      <!-- the orange guy -->
+      <section
+        data-anchor="orange-guy"
+        class="section title-section parallax section-11"
+      >
+        <div
+          class="flex-col m-auto h-screen py-100 flex-center justify-between"
+        >
+          <h1 class="text-dark-big revealUp">
+            이영희 광주 동구청 계장은 말합니다.
+          </h1>
+          <img
+            class="portrait"
+            data-src="public/images/12_profile.png"
+            loading="lazy"
+          />
+          <div class="flex">
+            <p class="brown-big-text">“</p>
+            <h1 data-inviewport class="fly-text fly-no-bg text-center mx-80">
+              <span data-inviewport>구도심에</span>
+              <span data-inviewport>위치한</span>
+              <span data-inviewport>계림초는</span>
+              <span data-inviewport>재개발</span>
+              <span data-inviewport>사업으로</span>
+              <span data-inviewport>인해</span>
+              <br />
+              <span data-inviewport>학생</span>
+              <span data-inviewport>수와 함께</span>
+              <span data-inviewport>차량</span>
+              <span data-inviewport>통행량도</span>
+              <span data-inviewport>많이</span>
+              <span data-inviewport>증가했어요.</span>
+              <br class="very-high-break-down" />
+              <span data-inviewport class="font-bold">그래서</span>
+              <span data-inviewport class="font-bold">안심할</span>
+              <span data-inviewport class="font-bold">수 있는,</span>
+              <span data-inviewport class="font-bold">통학로</span>
+              <span data-inviewport class="font-bold">변화가</span>
+              <span data-inviewport class="font-bold">필요했습니다.</span>
+            </h1>
+            <p class="brown-big-text">”</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- the map -->
+      <section
+        data-anchor="the-map"
+        class="section title-section parallax section-11"
+      >
+        <img
+          id="mini-map"
+          class="ease-in-out mini-map"
+          data-src="public/images/14pip.png"
+          loading="lazy"
+        />
+        <div id="map-section" class="full-child ease-in-out">
+          <img
+            class="no-object-fit"
+            data-src="public/images/13_img.png"
+            loading="lazy"
+          />
+          <div id="blue-point-container-1" class="flex-col gap-y-8">
+            <div class="blue-point"></div>
+            <p class="blue-point-title">후문통학로</p>
+          </div>
+          <div id="blue-point-container-2" class="flex-col gap-y-8">
+            <div class="blue-point"></div>
+            <p class="blue-point-title">계림초등학교</p>
+          </div>
+          <div id="blue-point-container-3" class="flex-col gap-y-8 revealUp">
+            <div class="blue-point"></div>
+            <p class="blue-point-title">정문통학로</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- the wall and pavement -->
+      <section
+        data-anchor="wall-and-pavement"
+        class="section title-section parallax section-12"
+      >
+        <div class="opacity-39 full-child"></div>
+        <h1
+          data-inviewport
+          class="fly-text fly-btm-left text-left text-normal text-shadow"
+        >
+          <span data-inviewport class="font-bold">학교</span>
+          <span data-inviewport class="font-bold">정문으로</span>
+          <span data-inviewport class="font-bold">가는</span>
+          <span data-inviewport><b>통학로</b>는</span>
+          <br />
+          <span data-inviewport>4차선</span>
+          <span data-inviewport>간선도로와</span>
+          <span data-inviewport>석벽</span>
+          <span data-inviewport>사이에</span>
+          <span data-inviewport>있어요.</span>
+          <br class="very-high-break-down" />
+          <span data-inviewport>이 통학로에</span>
+          <span data-inviewport><b>‘계림도담길’</b>이라는</span>
+          <span data-inviewport>이름을</span>
+          <span data-inviewport>지어줬어요.</span>
+          <br />
+          <span data-inviewport>아이들에게</span>
+          <span data-inviewport>거대한</span>
+          <span data-inviewport>이미지로</span>
+          <span data-inviewport>인식되는</span>
+          <span data-inviewport>석벽을</span>
+          <span data-inviewport>친근하게</span>
+          <span data-inviewport>느낄</span>
+          <span data-inviewport>수</span>
+          <span data-inviewport>있도록요.</span>
+        </h1>
+      </section>
+
+      <!-- the wooden chair -->
+      <section
+        data-anchor="wooden-chair"
+        class="section title-section parallax section-13"
+      >
+        <div class="opacity-39 full-child"></div>
+        <h1
+          data-inviewport
+          class="fly-text fly-btm-left text-left text-normal text-shadow"
+        >
+          <span data-inviewport><b>도담</b>은</span>
+          <span data-inviewport class="font-bold">야무지고</span>
+          <span data-inviewport class="font-bold">복스럽다는</span>
+          <span data-inviewport><b>우리말</b>로,</span>
+          <br />
+          <span data-inviewport class="font-bold">아이들이</span>
+          <span data-inviewport class="font-bold">안전하게</span>
+          <span data-inviewport class="font-bold">자라야</span>
+          <span data-inviewport><b>할 길</b>이라는</span>
+          <span data-inviewport>의미를</span>
+          <span data-inviewport>담았어요.</span>
+          <br class="very-high-break-down" />
+          <span data-inviewport>계림도담길에</span>
+          <span data-inviewport>설치한</span>
+          <span data-inviewport>쉼터는</span>
+          <span data-inviewport>태양열을</span>
+          <span data-inviewport>이용해</span>
+          <span data-inviewport>밤에</span>
+          <span data-inviewport>빛을</span>
+          <span data-inviewport>비추고</span>
+          <br />
+          <span data-inviewport class="font-bold">밖에서도</span>
+          <span data-inviewport class="font-bold">쉼터 안이</span>
+          <span data-inviewport class="font-bold">보이도록</span>
+          <span data-inviewport>만들었죠.</span>
+          <br />
+          <span data-inviewport>청소년</span>
+          <span data-inviewport>범죄에</span>
+          <span data-inviewport>악용되지</span>
+          <span data-inviewport>않도록요.</span>
+        </h1>
+      </section>
+
+      <!-- the white bear -->
+      <section
+        data-anchor="white-bear"
+        class="section title-section parallax section-14"
+      >
+        <div class="opacity-39 full-child"></div>
+        <h1 data-inviewport class="fly-text fly–btm-right text-left">
+          <span data-inviewport>아이들이</span>
+          <span data-inviewport>좋아할만한</span>
+          <span data-inviewport>캐릭터</span>
+          <span data-inviewport>조형물도</span>
+          <span data-inviewport>밤에</span>
+          <span data-inviewport>빛을</span>
+          <span data-inviewport>비춥니다.</span>
+        </h1>
+      </section>
+
+      <!-- the traffic light -->
+      <section
+        data-anchor="traffic-light"
+        class="section title-section parallax section-15"
+      >
+        <div class="opacity-39 full-child"></div>
+        <img
+          id="square-light"
+          data-src="public/images/square-light.png"
+          loading="lazy"
+        />
+        <h1
+          data-inviewport
+          class="fly-text fly–btm-left text-left text-normal text-shadow"
+        >
+          <span data-inviewport>계림도담길이</span>
+          <span data-inviewport>시작되는</span>
+          <span data-inviewport>도로에는</span>
+          <br />
+          <span data-inviewport class="font-bold">차량현재속도</span>
+          <span data-inviewport class="font-bold">표시장치와</span>
+          <span data-inviewport class="font-bold">과속방지턱을</span>
+          <span data-inviewport class="font-bold">새로</span>
+          <span data-inviewport><b>설치</b>했어요</span>
+        </h1>
+      </section>
+
+      <!-- the talking guy -->
+      <section data-anchor="talking-guy" class="section parallax title-section">
+        <div class="full-child flex-col">
+          <div class="h-three">
+            <h1 class="text-dark-big fly-btm-left-near revealUp font-bold">
+              계림초 통학로를 디자인한 정성구 총감독은 말해요.
+            </h1>
+          </div>
+          <div class="section-16 parallax-70">
+            <div class="flex fly-btm-center-with-quote text-center">
+              <p class="brown-big-text">“</p>
+              <h1
+                data-inviewport
+                class="fly-text text-center text-normal mx-80 bg-unset"
+              >
+                <span data-inviewport>구도심이다</span>
+                <span data-inviewport>보니</span>
+                <span data-inviewport>통학로와</span>
+                <span data-inviewport>차도를</span>
+                <span data-inviewport>완전하게</span>
+                <span data-inviewport>분리하긴</span>
+                <span data-inviewport>어려웠어요.</span>
+                <br />
+                <span data-inviewport>대신 차량</span>
+                <span data-inviewport>운전자가</span>
+                <span data-inviewport>‘내가 속도를</span>
+                <span data-inviewport>줄여야 구역에</span>
+                <span data-inviewport>진입했구나’</span>
+                <br />
+                <span data-inviewport>라고 쉽게</span>
+                <span data-inviewport>인지할 수</span>
+                <span data-inviewport>있도록</span>
+                <span data-inviewport>하는 데</span>
+                <span data-inviewport>초점을</span>
+                <span data-inviewport>맞췄습니다.</span>
+              </h1>
+              <p class="brown-big-text">”</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- the map with no zoom -->
+      <section
+        data-anchor="map-no-zoom"
+        class="section title-section parallax section-17"
+      >
+        <img
+          class="mini-map opacity-1"
+          data-src="public/images/15pip.png"
+          loading="lazy"
+        />
+        <div id="blue-point-container-4" class="flex-col gap-y-8">
+          <div class="blue-point"></div>
+          <p class="blue-point-title">후문통학로</p>
+        </div>
+      </section>
+
+      <!-- the back of the walking kid -->
+      <section
+        data-anchor="back-of-walking-kid"
+        class="section title-section parallax section-18"
+      >
+        <h1
+          data-inviewport
+          class="fly-text text-center bg-dark text-normal text-shadow"
+        >
+          <span data-inviewport>학교 후문</span>
+          <span data-inviewport>주변에</span>
+          <span data-inviewport>아파트</span>
+          <span data-inviewport>단지가</span>
+          <span data-inviewport>들어서면서</span>
+          <br />
+          <span data-inviewport class="font-bold">정문보다</span>
+          <span data-inviewport class="font-bold">후문으로</span>
+          <span data-inviewport class="font-bold">통학하는</span>
+          <span data-inviewport><b>학생들</b>이</span>
+          <span data-inviewport>더 많아졌어요.</span>
+        </h1>
+      </section>
+
+      <!-- the truck -->
+      <section
+        data-anchor="the-truck"
+        class="section title-section parallax section-19"
+      >
+        <h1
+          data-inviewport
+          class="fly-text fly-btm-left text-left text-normal text-shadow"
+        >
+          <span data-inviewport>후문으로</span>
+          <span data-inviewport>가는</span>
+          <span data-inviewport>통학로</span>
+          <span data-inviewport>옆 3차선</span>
+          <span data-inviewport>도로는</span>
+          <span data-inviewport class="font-bold">지형이</span>
+          <span data-inviewport class="font-bold">기울어져</span>
+          <span data-inviewport class="font-bold">있어</span>
+          <span data-inviewport class="font-bold">차량이</span>
+          <span data-inviewport class="font-bold">과속하기</span>
+          <span data-inviewport class="font-bold">쉬워요.</span>
+          <br />
+          <span data-inviewport class="font-bold">맞은</span>
+          <span data-inviewport class="font-bold">편에 또</span>
+          <span data-inviewport class="font-bold">다른 아파트</span>
+          <span data-inviewport class="font-bold">단지를</span>
+          <span data-inviewport class="font-bold">짓고 있어서</span>
+          <span data-inviewport class="font-bold">공사</span>
+          <span data-inviewport class="font-bold">차량도</span>
+          <span data-inviewport class="font-bold">많이</span>
+          <span data-inviewport class="font-bold">다녀요.</span>
+        </h1>
+      </section>
+
+      <!-- the clip with car -->
+      <section data-anchor="car-clip" class="section title-section">
+        <div class="video-container">
+          <video id="car-video" class="video" width="320" height="240" controls>
+            <source src="public/videos/car-clip.mp4" type="video/mp4" />
+          </video>
+          <img
+            id="car-video-play"
+            class="center size-170 play-button"
+            data-src="public/icons/play_icon.png"
+            loading="lazy"
+          />
+        </div>
+      </section>
+
+      <!-- the 3 cars -->
+      <section
+        data-anchor="3-cars"
+        class="section title-section parallax section-20"
+      >
+        <h1
+          data-inviewport
+          class="fly-text fly-btm-left-lower text-left text-normal text-shadow"
+        >
+          <span data-inviewport>후문 옆</span>
+          <span data-inviewport>차도에</span>
+          <span data-inviewport class="font-bold">지면에서</span>
+          <span data-inviewport class="font-bold">10cm가량</span>
+          <span data-inviewport class="font-bold">높은 고원식</span>
+          <span data-inviewport><b>횡단보도</b>를</span>
+          <span data-inviewport class="font-bold">3개</span>
+          <span data-inviewport><b>설치</b>했어요.</span>
+          <br />
+          <span data-inviewport>기존에</span>
+          <span data-inviewport>있던</span>
+          <span data-inviewport>과속방지턱까지</span>
+          <span data-inviewport>더해</span>
+          <span data-inviewport>차량이 이</span>
+          <span data-inviewport>구간에서</span>
+          <span data-inviewport>속도를</span>
+          <span data-inviewport>낼 수</span>
+          <span data-inviewport>없게 한</span>
+          <span data-inviewport>것이죠.</span>
+        </h1>
+      </section>
+
+      <!-- the white wall -->
+      <section
+        data-anchor="white-wall"
+        class="section title-section parallax section-21"
+      >
+        <h1 data-inviewport class="fly-text fly-no-bg text-center text-normal">
+          <span data-inviewport>횡단보도와</span>
+          <span data-inviewport>보행로</span>
+          <span data-inviewport>주변에는</span>
+          <br />
+          <span data-inviewport class="font-bold">볼라드와</span>
+          <span data-inviewport class="font-bold">안전펜스를</span>
+          <span data-inviewport><b>설치</b>했어요.</span>
+        </h1>
+      </section>
+
+      <!-- the short hair woman -->
+      <section
+        data-anchor="short-hair-woman"
+        class="section title-section parallax section-11"
+      >
+        <div class="flex-col m-auto h-screen py-100 flex-center">
+          <h1 class="text-dark-big revealUp">
+            인근에서 아이를 키우는 한선영씨는 말합니다.
+          </h1>
+          <img
+            class="portrait my-100"
+            data-src="public/images/woman.png"
+            loading="lazy"
+          />
+          <div class="flex">
+            <p class="brown-big-text">“</p>
+            <h1 data-inviewport class="fly-text fly-no-bg text-center mx-80">
+              <span data-inviewport>후문</span>
+              <span data-inviewport>통학로</span>
+              <span data-inviewport>옆 도로는</span>
+              <span data-inviewport>내리막길인데다,</span>
+              <br />
+              <span data-inviewport>후문 맞은</span>
+              <span data-inviewport>편에 있는</span>
+              <span data-inviewport>공사장을</span>
+              <span data-inviewport>오가는</span>
+              <span data-inviewport>대형</span>
+              <span data-inviewport>차량들이</span>
+              <span data-inviewport>많아 걱정이</span>
+              <span data-inviewport>많이 됐었죠.</span>
+              <br />
+              <span data-inviewport>하지만</span>
+              <span data-inviewport>예전보다</span>
+              <span data-inviewport>확실히</span>
+              <span data-inviewport>차량</span>
+              <span data-inviewport>속도가</span>
+              <span data-inviewport>줄어든</span>
+              <span data-inviewport>것 같아요.</span>
+            </h1>
+            <p class="brown-big-text">”</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- the sits on the pavement -->
+      <section
+        data-anchor="pavement-sits"
+        class="section title-section parallax section-22"
+      >
+        <h1
+          data-inviewport
+          class="fly-text fly–btm-right text-center text-normal text-shadow"
+        >
+          <span data-inviewport>통학로</span>
+          <span data-inviewport>옆 낡은</span>
+          <span data-inviewport>건물</span>
+          <span data-inviewport>벽면을</span>
+          <span data-inviewport>꾸며 밝은</span>
+          <span data-inviewport>분위기를</span>
+          <span data-inviewport>내게 했고,</span>
+          <br />
+          <span data-inviewport class="font-bold">아이들을</span>
+          <span data-inviewport class="font-bold">기다리는</span>
+          <span data-inviewport class="font-bold">부모들이</span>
+          <span data-inviewport class="font-bold">쉴 수</span>
+          <span data-inviewport class="font-bold">있는 벤치도</span>
+          <span data-inviewport class="font-bold">마련했어요.</span>
+        </h1>
+      </section>
+
+      <!-- the orange pavement -->
+      <section
+        data-anchor="orange-pavement"
+        class="section title-section parallax section-23"
+      >
+        <h1
+          data-inviewport
+          class="fly-text fly–btm-left text-left text-normal text-shadow"
+        >
+          <span data-inviewport>횡단보도에</span>
+          <span data-inviewport>설치한</span>
+          <span data-inviewport class="font-bold">‘바닥형 LED</span>
+          <span data-inviewport><b>점멸신호등’</b>이</span>
+          <span data-inviewport>아이들의</span>
+          <span data-inviewport>눈길을</span>
+          <span data-inviewport>사로 잡아요.</span>
+          <br class="very-high-break-down" />
+          <span data-inviewport>등하교 시간에</span>
+          <span data-inviewport>후문 통학로</span>
+          <span data-inviewport>옆 차도는</span>
+          <span data-inviewport>꽉 막히는데,</span>
+          <br />
+          <span data-inviewport>아이들은</span>
+          <span data-inviewport>꼬리를</span>
+          <span data-inviewport>물고 서 있는</span>
+          <span data-inviewport>차량에</span>
+          <span data-inviewport>시야가</span>
+          <span data-inviewport>막혀 이따금씩</span>
+          <span data-inviewport>신호등을</span>
+          <span data-inviewport>잘 보지</span>
+          <span data-inviewport>못해요.</span>
+          <br class="very-high-break-up" />
+          <span data-inviewport>바닥 LED</span>
+          <span data-inviewport>점멸 신호등은</span>
+          <span data-inviewport>이런</span>
+          <span data-inviewport>아이들에게</span>
+          <span data-inviewport>도움을 주죠.</span>
+        </h1>
+      </section>
+
+      <!-- the clip with the girl -->
+      <section data-anchor="girt-clip" class="section title-section">
+        <div class="video-container">
+          <video
+            id="girl-video"
+            class="video"
+            width="320"
+            height="240"
+            controls
+          >
+            <source src="public/videos/점멸신호등.mp4" type="video/mp4" />
+          </video>
+          <img
+            id="girl-video-play"
+            class="center size-170 play-button"
+            data-src="public/icons/play_icon.png"
+            loading="lazy"
+          />
+        </div>
+      </section>
+
+      <!-- the child girl talking -->
+      <section
+        data-anchor="talking-child"
+        class="section title-section parallax section-11"
+      >
+        <div class="flex-col m-auto h-screen py-100 flex-center">
+          <h1 class="text-dark-big revealUp">
+            어머니와 함께 등교한 계림초 2학년 김주아양은 말해요.
+          </h1>
+          <img
+            class="portrait my-100"
+            data-src="public/images/25_profile.png"
+            loading="lazy"
+          />
+          <div class="flex">
+            <p class="brown-big-text">“</p>
+            <h1 data-inviewport class="fly-text fly-no-bg text-center mx-80">
+              <span data-inviewport class="font-bold">아래에서</span>
+              <span data-inviewport class="font-bold">불이</span>
+              <span data-inviewport class="font-bold">들어오니까</span>
+              <span data-inviewport class="font-bold">신호등이</span>
+              <span data-inviewport class="font-bold">초록색인지</span>
+              <span data-inviewport class="font-bold">빨간색인지</span>
+              <span data-inviewport class="font-bold">알 수 있을</span>
+              <span data-inviewport class="font-bold">것 같아요.</span>
+              <br />
+              <span data-inviewport>신기하기도</span>
+              <span data-inviewport>하고,</span>
+              <span data-inviewport>학교가는</span>
+              <span data-inviewport>길이 더</span>
+              <span data-inviewport>재미있을</span>
+              <span data-inviewport>거 같아요.</span>
+            </h1>
+            <p class="brown-big-text">”</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- the pavement pole -->
+      <section
+        data-anchor="pavement-pole"
+        class="section title-section parallax section-24"
+      >
+        <h1
+          data-inviewport
+          class="fly-text fly-center-right text-left text-normal text-shadow"
+        >
+          <span data-inviewport class="font-bold">횡단보도</span>
+          <span data-inviewport class="font-bold">앞 옐로우</span>
+          <span data-inviewport class="font-bold">존과 공룡</span>
+          <span data-inviewport class="font-bold">모양의</span>
+          <span data-inviewport><b>노랑발자국</b>도</span>
+          <br />
+          <span data-inviewport>운전자들이</span>
+          <span data-inviewport>아이들을</span>
+          <span data-inviewport>쉽게</span>
+          <span data-inviewport>인지하는</span>
+          <span data-inviewport>데 도움을</span>
+          <span data-inviewport>줍니다.</span>
+        </h1>
+      </section>
+
+      <!-- the car's rear -->
+      <section
+        data-anchor="car-rear"
+        class="section title-section parallax section-25"
+      >
+        <h1 data-inviewport class="fly-text fly-btm-left text-left text-normal">
+          <span data-inviewport>앞으로</span>
+          <span data-inviewport>해야 할</span>
+          <span data-inviewport>일이 더</span>
+          <span data-inviewport>있어요.</span>
+          <br />
+          <span data-inviewport>아이들을</span>
+          <span data-inviewport>차로 태우고</span>
+          <span data-inviewport>내릴</span>
+          <span data-inviewport>구역을</span>
+          <span data-inviewport>도로에</span>
+          <span data-inviewport>만들면</span>
+          <span data-inviewport>교통혼잡이</span>
+          <span data-inviewport>심해진다는</span>
+          <span data-inviewport>우려가</span>
+          <span data-inviewport>있었어요.</span>
+          <br />
+          <span data-inviewport>대신,</span>
+          <span data-inviewport class="font-bold">학교 내부</span>
+          <span data-inviewport class="font-bold">등 차량이</span>
+          <span data-inviewport class="font-bold">다니지</span>
+          <span data-inviewport class="font-bold">않는 공간에</span>
+          <span data-inviewport class="font-bold">승하차</span>
+          <span data-inviewport class="font-bold">구역을</span>
+          <span data-inviewport class="font-bold">만드는</span>
+          <span data-inviewport class="font-bold">대안을</span>
+          <span data-inviewport><b>모색</b>하고</span>
+          <span data-inviewport>있어요.</span>
+        </h1>
+      </section>
+
+      <!-- the pavement with blue bg text -->
+      <section
+        data-anchor="pavement-cyan-bg-text"
+        class="section title-section parallax section-26"
+      >
+        <h1 data-inviewport class="fly-text bg-cyan text-normal">
+          <span data-inviewport>아이들</span>
+          <span data-inviewport>눈높이에</span>
+          <span data-inviewport>맞는</span>
+          <span data-inviewport class="font-bold">바닥 LED</span>
+          <span data-inviewport class="font-bold">점멸신호등을</span>
+          <span data-inviewport class="font-bold">추가로</span>
+          <span data-inviewport><b>설치</b>하면,</span>
+          <span data-inviewport>아이들이</span>
+          <span data-inviewport>보다</span>
+          <span data-inviewport>안전해지겠죠.</span>
+        </h1>
+      </section>
+
+      <!-- walking people -->
+      <section
+        data-anchor="walking-people"
+        class="section last-section scale-1"
+      >
+        <div class="parallax section-27 full-size">
+          <h1
+            data-inviewport
+            class="fly-text fly-btm-center fly-last-page text-normal"
+          >
+            <span data-inviewport>낡은 도시가</span>
+            <span data-inviewport>새로운</span>
+            <span data-inviewport>모습으로</span>
+            <span data-inviewport>단장할 때,</span>
+            <br />
+            <span data-inviewport class="font-bold">광주</span>
+            <span data-inviewport class="font-bold">계림도담길처럼</span>
+            <span data-inviewport class="font-bold">통학로</span>
+            <span data-inviewport class="font-bold">안전을</span>
+            <span data-inviewport class="font-bold">챙기는</span>
+            <span data-inviewport class="font-bold">모습이</span>
+            <span data-inviewport class="font-bold">전국 곳곳에</span>
+            <span data-inviewport class="font-bold">늘어나기를</span>
+            <span data-inviewport class="font-bold">희망해요.</span>
+          </h1>
+        </div>
+
+        <div id="footer" class="flex-col justify-center gap-y-60">
+          <div data-inviewport class="text-normal text-center text-white-small">
+            <span
+              >공공디자인으로 행복한 공간 만들기 프로젝트
+              <b>광주광역시 계림도담길편</b></span
+            >
+            <br />
+            <span><b>취재·제작</b> 경향신문 곽희양기자·최유진PD·백준서PD</span>
+            <br />
+            <span><b>사업주관</b> 한국공예·디자인문화진흥원</span>
+            <br />
+            <span><b>협력</b> 광주광역시</span>
+          </div>
+          <div class="flex gap-x-80 footer-middle-block">
+            <img
+              id="logo-1"
+              data-src="public/images/31_logo1.png"
+              loading="lazy"
+            />
+            <img
+              id="logo-2"
+              data-src="public/images/31_logo2.png"
+              loading="lazy"
+            />
+          </div>
+          <div>
+            <span class="text-white-small"
+              >CopyrightⓒThe Kyunghyang Shinmun, All rights reserved</span
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- the scroll bar -->
+      <div id="scrollbar">
+        <div id="scrollbar-text-zone">
+          <div class="scroll-station text-right justify-center">
+            <span
+              id="1989-progress-text"
+              class="station-text one-line"
+              onclick="onClickProgressText('1989')"
+              >계림초의 과거 모습</span
+            >
+          </div>
+          <div class="scroll-station text-right justify-center">
+            <span
+              id="child-running-progress-text"
+              class="station-text one-line"
+              onclick="onClickProgressText('child-running')"
+              >안전한 등하교길</span
+            >
+          </div>
+          <div class="scroll-station text-right justify-center">
+            <span
+              id="the-map-progress-text"
+              class="station-text"
+              onclick="onClickProgressText('the-map')"
+              >계림초등학교의<br />
+              등하교길</span
+            >
+          </div>
+          <div class="scroll-station text-right justify-center">
+            <span
+              id="the-map-zoomed-progress-text"
+              class="station-text one-line"
+              onclick="onClickProgressText('the-map')"
+              >정문 통학로</span
+            >
+          </div>
+          <div class="scroll-station text-right justify-center">
+            <span
+              id="the-map-no-zoom-progress-text"
+              class="station-text one-line"
+              onclick="onClickProgressText('map-no-zoom')"
+              >후문 통학로</span
+            >
+          </div>
+          <div class="scroll-station text-right justify-center">
+            <span
+              id="car-rear-progress-text"
+              class="station-text one-line"
+              onclick="onClickProgressText('car-rear')"
+              >앞으로 해야 할 일</span
+            >
+          </div>
+        </div>
+
+        <!-- the bar -->
+        <div id="the-bar">
+          <div id="the-bar-progress">
+            <div class="bar-break" id="bar-break-1"></div>
+            <div class="bar-break" id="bar-break-2"></div>
+            <div class="bar-break" id="bar-break-3"></div>
+            <div class="bar-break" id="bar-break-4"></div>
+            <div class="bar-break" id="bar-break-5"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- scripts -->
+    <!-- init fullPageJS -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.20/fullpage.min.js"
+      integrity="sha512-LGiXf+jHGTHcIybSsOWO3I/in+OObCkcEsWIZ7IyhzfD6RzD5qDUw2CK+JveuI7zTSEcDG//bIOvOpAJW2BWsg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script type="text/javascript">
+      let forceLeave = false;
+      let canLeaveSatellite = false;
+      let canLeaveMap = false;
+      // satellite scroll value
+      let scrollValue = 1;
+      const MIN = 1;
+      const MAX = 1.4;
+      const ZOOM_SPEED = 0.4;
+      const zoomToNext = MAX + 0.1;
+      const zoomToPrev = MIN - 0.1;
+      let satelliteScrollEventAdded = false;
+
+      // map scroll value
+      let mapScrollValue = 1;
+      const MAP_MIN = 1;
+      const MAP_MAX = 1.4;
+      const MAP_ZOOM_SPEED = 0.4;
+      const mapZoomToNext = MAP_MAX + 0.1;
+      const mapZoomToPrev = MIN - 0.1;
+      let mapScrollEventAdded = false;
+
+      // init
+      let myFullpage = new fullpage("#fullpage", {
+        scrollBar: true,
+        normalScrollElements: ".last-section",
+        scrollOverflowOptions: {
+          disablePointer: false,
+          preventDefault: false,
+        },
+        afterLoad: function (origin, destination, direction, trigger) {
+          // scroll bar vars
+          const scrollbar = document.getElementById("scrollbar");
+          const showScrollBar = function () {
+            scrollbar.style.right = "44px";
+          };
+          const hideScrollBar = function () {
+            scrollbar.style.right = "-155px";
+          };
+          const setTextColor = function (color) {
+            const stationTexts = document.querySelectorAll(".station-text");
+            for (let i = 0; i < stationTexts.length; ++i) {
+              stationTexts[i].style.color = color;
+            }
+          };
+          const setTextOpacity = function (textId) {
+            const stationTexts = document.querySelectorAll(".station-text");
+            for (let i = 0; i < stationTexts.length; ++i) {
+              stationTexts[i].style.opacity = 0.5;
+            }
+            const text = document.getElementById(textId);
+            if (text) {
+              text.style.opacity = 1;
+              text.style.fontWeight = 700;
+            }
+          };
+          const scrollProgress = document.getElementById("the-bar-progress");
+
+          // satellite zoom
+          if (destination.anchor === "satellite") {
+            if (origin.anchor === "child-running") {
+              scrollValue = MAX;
+            } else {
+              scrollValue = MIN;
+            }
+            forceLeave = false;
+            canLeaveSatellite = false;
+            if (!satelliteScrollEventAdded) {
+              const sectionEle = document.querySelector("#satellite-zoom");
+
+              const firstTitle = document.querySelector("#satellite-title-1");
+              const secondTitle = document.querySelector("#satellite-title-2");
+              const secondNormalPoint = document.querySelector(
+                "#second-normal-point"
+              );
+              const thirdNormalPoint = document.querySelector(
+                "#third-normal-point"
+              );
+              const fourthNormalPoint = document.querySelector(
+                "#fourth-normal-point"
+              );
+              const fifthNormalPoint = document.querySelector(
+                "#fifth-normal-point"
+              );
+              const yellowZone = document.querySelector("#sat-yellow-zone");
+              const redZone = document.querySelector("#sat-red-zone");
+
+              sectionEle.addEventListener("wheel", function (e) {
+                if (e.deltaY > 0) {
+                  scrollValue += ZOOM_SPEED;
+                  scrollValue = Math.min(scrollValue, zoomToNext);
+                } else {
+                  scrollValue -= ZOOM_SPEED;
+                  scrollValue = Math.max(zoomToPrev, scrollValue);
+                }
+                const zoom =
+                  scrollValue < MIN ? 1 : scrollValue > MAX ? MAX : scrollValue;
+                if (zoom === MIN) {
+                  sectionEle.style.transform = "scale(1)";
+                  firstTitle.style.opacity = 1;
+                  secondTitle.style.opacity = 0;
+                  secondNormalPoint.style.opacity = 0;
+                  thirdNormalPoint.style.opacity = 0;
+                  fourthNormalPoint.style.opacity = 0;
+                  fifthNormalPoint.style.opacity = 0;
+                  yellowZone.style.opacity = 0;
+                  redZone.style.opacity = 0;
+                  canLeaveSatellite = true;
+                } else if (zoom === MAX) {
+                  sectionEle.style.transform = "scale(1.4)";
+                  firstTitle.style.opacity = 0;
+                  secondTitle.style.opacity = 1;
+                  secondNormalPoint.style.opacity = 1;
+                  thirdNormalPoint.style.opacity = 1;
+                  fourthNormalPoint.style.opacity = 1;
+                  fifthNormalPoint.style.opacity = 1;
+                  yellowZone.style.opacity = 1;
+                  redZone.style.opacity = 1;
+                  canLeaveSatellite = true;
+                }
+              });
+              satelliteScrollEventAdded = true;
+            }
+          }
+          // the map
+          if (destination.anchor === "the-map") {
+            if (origin.anchor === "wall-and-pavement") {
+              mapScrollValue = MAP_MAX;
+            } else {
+              mapScrollValue = MAP_MIN;
+            }
+
+            showScrollBar();
+            canLeaveMap = false;
+
+            const mapSection = document.querySelector("#map-section");
+            const miniMap = document.querySelector("#mini-map");
+
+            if (!mapScrollEventAdded) {
+              mapSection.addEventListener("wheel", function (e) {
+                if (e.deltaY > 0) {
+                  mapScrollValue += MAP_ZOOM_SPEED;
+                  mapScrollValue = Math.min(mapScrollValue, mapZoomToNext);
+                } else {
+                  mapScrollValue -= MAP_ZOOM_SPEED;
+                  mapScrollValue = Math.max(mapZoomToPrev, mapScrollValue);
+                }
+                const zoom =
+                  mapScrollValue < MIN
+                    ? 1
+                    : mapScrollValue > MAX
+                    ? MAX
+                    : mapScrollValue;
+                if (zoom === MIN) {
+                  mapSection.style.transform = "scale(1) translate(0, 0)";
+                  miniMap.style.opacity = 0;
+                  setTextOpacity("the-map-progress-text");
+                  scrollProgress.style.height = `${(5 / 12) * 100}%`;
+                  canLeaveMap = true;
+                } else if (zoom === MAX) {
+                  mapSection.style.transform =
+                    "scale(2.5) translate(30%, -150px)";
+                  setTextOpacity("the-map-zoomed-progress-text");
+                  miniMap.style.opacity = 1;
+                  scrollProgress.style.height = `${(7 / 12) * 100}%`;
+                  setTextColor("black");
+                  canLeaveMap = true;
+                }
+              });
+            }
+
+            mapScrollEventAdded = true;
+          }
+          // handle scroll bar
+          if (["1989", "satellite"].includes(destination.anchor)) {
+            showScrollBar();
+            setTextOpacity("1989-progress-text");
+            scrollProgress.style.height = `${(1 / 12) * 100}%`;
+            setTextColor("rgb(255, 255, 255)");
+          }
+          if (destination.anchor === "child-running") {
+            showScrollBar();
+            setTextOpacity("child-running-progress-text");
+            scrollProgress.style.height = `${(3 / 12) * 100}%`;
+            setTextColor("rgb(255, 255, 255)");
+          }
+          if (
+            ["wall-and-pavement", "white-bear", "traffic-light"].includes(
+              destination.anchor
+            )
+          ) {
+            showScrollBar();
+            setTextOpacity("the-map-zoomed-progress-text");
+            scrollProgress.style.height = `${(7 / 12) * 100}%`;
+            setTextColor("rgb(255, 255, 255)");
+          }
+          if (destination.anchor === "wooden-chair") {
+            showScrollBar();
+            setTextOpacity("the-map-zoomed-progress-text");
+            scrollProgress.style.height = `${(7 / 12) * 100}%`;
+            setTextColor("black");
+          }
+          if (
+            [
+              "back-of-walking-kid",
+              "map-no-zoom",
+              "the-truck",
+              "3-cars",
+              "pavement-sits",
+              "orange-pavement",
+            ].includes(destination.anchor)
+          ) {
+            showScrollBar();
+            setTextOpacity("the-map-no-zoom-progress-text");
+            scrollProgress.style.height = `${(9 / 12) * 100}%`;
+            setTextColor("rgb(255, 255, 255)");
+          }
+          if (
+            [
+              "short-hair-woman",
+              "white-wall",
+              "talking-child",
+              "pavement-pole",
+            ].includes(destination.anchor)
+          ) {
+            showScrollBar();
+            setTextColor("black");
+            setTextOpacity("the-map-no-zoom-progress-text");
+            scrollProgress.style.height = `${(9 / 12) * 100}%`;
+            setTextColor("black");
+          }
+          if (["car-rear", "walking-people"].includes(destination.anchor)) {
+            showScrollBar();
+            setTextOpacity("car-rear-progress-text");
+            scrollProgress.style.height = `${(11 / 12) * 100}%`;
+            setTextColor("rgb(255, 255, 255)");
+          }
+          if (destination.anchor === "children-1") {
+            const introVideo = document.querySelector("#introVideo");
+            introVideo.pause();
+          }
+          //hide
+          if (
+            [
+              "children-2",
+              "orange-guy",
+              "talking-guy",
+              "car-clip",
+              "girl-clip",
+              "pavement-cyan-bg-text",
+            ].includes(destination.anchor)
+          ) {
+            hideScrollBar();
+          }
+        },
+        beforeLeave: function (origin, destination, direction, trigger) {
+          const setTextColor = function (color) {
+            const stationTexts = document.querySelectorAll(".station-text");
+            for (let i = 0; i < stationTexts.length; ++i) {
+              stationTexts[i].style.color = color;
+            }
+          };
+          if (origin.anchor === "satellite") {
+            if (
+              ((scrollValue === zoomToPrev || scrollValue === zoomToNext) &&
+                canLeaveSatellite) ||
+              forceLeave
+            ) {
+              return true;
+            }
+            return false;
+          }
+          if (origin.anchor === "the-map") {
+            if (
+              (mapScrollValue === mapZoomToNext ||
+                mapScrollValue === mapZoomToPrev) &&
+              canLeaveMap
+            ) {
+              return true;
+            }
+            return false;
+          }
+          if (
+            origin.anchor === "buildings-with-stadium" &&
+            destination.anchor === "1989"
+          ) {
+            const text = document.querySelector("#buildings-text");
+            text.style.opacity = 0;
+          }
+          if (
+            origin.anchor === "1989" &&
+            destination.anchor === "buildings-with-stadium"
+          ) {
+            const text = document.querySelector("#buildings-text");
+            text.style.opacity = 1;
+          }
+          if (origin.anchor === "children-1") {
+            const introVideo = document.querySelector("#introVideo");
+            introVideo.play();
+          }
+        },
+      });
+
+      // scroll down button
+      function onClickScrollDown() {
+        myFullpage.moveTo("children-1");
+      }
+
+      // onclick progress text
+      function onClickProgressText(anchor) {
+        forceLeave = true;
+        myFullpage.moveTo(anchor);
+      }
+    </script>
+    <!-- text title animation -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script type="text/javascript">
+      gsap.registerPlugin(ScrollTrigger);
+      // REVEAL //
+      gsap.utils.toArray(".revealUp").forEach(function (elem) {
+        ScrollTrigger.create({
+          trigger: elem,
+          start: "top 100%",
+          end: "bottom 0%",
+          onEnter: function () {
+            gsap.fromTo(
+              elem,
+              { y: 100, autoAlpha: 0 },
+              {
+                duration: 1.5,
+                y: 0,
+                autoAlpha: 1,
+                ease: "back",
+                overwrite: "auto",
+              }
+            );
+          },
+          onLeave: function () {
+            gsap.fromTo(
+              elem,
+              { autoAlpha: 1 },
+              { autoAlpha: 0, overwrite: "auto" }
+            );
+          },
+          onEnterBack: function () {
+            gsap.fromTo(
+              elem,
+              { y: -100, autoAlpha: 0 },
+              {
+                duration: 1.5,
+                y: 0,
+                autoAlpha: 1,
+                ease: "back",
+                overwrite: "auto",
+              }
+            );
+          },
+          onLeaveBack: function () {
+            gsap.fromTo(
+              elem,
+              { autoAlpha: 1 },
+              { autoAlpha: 0, overwrite: "auto" }
+            );
+          },
+        });
+      });
+    </script>
+    <!-- the js file -->
+    <script type="text/javascript" src="index.js"></script>
+  </body>
+</html>
