@@ -1,5 +1,4 @@
 body.kyunghyang-news {
-  font-family: Pretendard-Regular;
   color: var(--dark);
 }
 
@@ -13,13 +12,6 @@ video.attached-video-bg {
   height: auto;
   object-fit: cover;
   z-index: -20;
-}
-
-.parallax {
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 footer.kyunghyang-footer {

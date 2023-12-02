@@ -18,7 +18,7 @@ function triggerZoomPointsMap() {
   const zoomData = [
     { scale: 1, origin: [0.5, 0.5] },
     { scale: 1.6, origin: [0.6, 0.6] },
-    { scale: 6, origin: [0.5, 0.5] },
+    { scale: 4, origin: [0.2, 0.5] },
     { scale: 1, origin: [0.5, 0.5] },
   ];
 

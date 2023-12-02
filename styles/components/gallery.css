@@ -37,14 +37,17 @@
   .image-gallery {
     margin-top: 40px;
   }
-  /* .image-gallery .image-gallery-cell {
-    width: 30% !important;
-  } */
 }
 
 @media only screen and (max-width: 1279px) {
   .image-gallery .image-gallery-cell {
-    width: 30% !important;
+    width: 46% !important;
+  }
+  .image-gallery .flickity-button.previous {
+    left: 5%;
+  }
+  .image-gallery .flickity-button.next {
+    right: 5%;
   }
 }
 
