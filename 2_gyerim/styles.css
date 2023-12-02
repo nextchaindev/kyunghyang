@@ -170,10 +170,6 @@ button {
   padding-right: 40px;
 }
 
-.fp-watermark {
-  display: none;
-}
-
 .revealUp {
   opacity: 0;
   visibility: hidden;
