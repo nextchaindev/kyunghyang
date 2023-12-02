@@ -1,52 +1,79 @@
 const fadingTexts = gsap.utils.toArray('.body_text_effect');
 
-let listTextDefault = '';
-
-ScrollTrigger.create({
-  trigger: fadingTexts[0],
-  start: 'top 90%',
-  end: 'bottom 10%',
-  // markers: window.location.hostname === "127.0.0.1",
-  onEnter: () => {
-    onBodyTextEffect();
-  },
-  onEnterBack() {
-    onBodyTextEffect();
-  },
-  onLeaveBack: function () {
-    console.log(`listTextDefault----${listTextDefault}`);
-    fadingTexts[0].innerHTML = listTextDefault;
-    listTextDefault = '';
-  },
-  onLeave: function () {
-    console.log(`listTextDefault----${listTextDefault}`);
-    fadingTexts[0].innerHTML = listTextDefault;
-    listTextDefault = '';
-  },
+let listTextDefault = [];
+fadingTexts.forEach((fadingText) => {
+  listTextDefault.push(fadingText.innerHTML.toString());
 });
 
-function onBodyTextEffect() {
-  listTextDefault = fadingTexts[0].innerHTML.toString();
-  let listTextLine = fadingTexts[0].innerHTML.toString().trim().split('<br>');
+fadingTexts.forEach((fadingText, index) => {
+  let textDefault = listTextDefault[index];
+  ScrollTrigger.create({
+    trigger: fadingText,
+    start: 'top 90%',
+    end: 'bottom 10%',
+    // markers: window.location.hostname === "127.0.0.1",
+    onEnter: () => {
+      onBodyTextEffect(fadingText);
+    },
+    onEnterBack() {
+      onBodyTextEffect(fadingText);
+    },
+    onLeaveBack: function () {
+      console.log(`textDefault----${textDefault}`);
+      fadingText.innerHTML = textDefault;
+    },
+    onLeave: function () {
+      console.log(`textDefault----${textDefault}`);
+      fadingText.innerHTML = textDefault;
+    },
+  });
+});
+
+function onBodyTextEffect(fadingText, textDefault) {
+  let listTextLine = fadingText.innerHTML.toString().trim().split('<br>');
   let newText = '';
 
   listTextLine.forEach((text, index) => {
-    newText += text.replace(/\n/g, '').trim() + ' ' + '<br/>' + ' ';
+    newText +=
+      text
+        .replace(/\n/g, '')
+        .replace(/\s+/g, ' ')
+        .trim()
+        .replace('<span class="text-strong">', ' strongStart ')
+        .replace('</span>', ' strongEnd ') +
+      ' ' +
+      '<br/>' +
+      ' ';
   });
-
+  console.log(`newText------${newText}`);
   let listNewText = newText.split(' ');
-  fadingTexts[0].innerText = null;
-  listNewText.forEach((text, index) => {
-    console.log(text, text.includes('<br/>'));
-    if (text.includes('<br/>') == true) {
-      fadingTexts[0].innerHTML = fadingTexts[0].innerHTML + '<br/>';
-    } else {
-      fadingTexts[0].innerHTML =
-        fadingTexts[0].innerHTML +
+  fadingText.innerText = null;
+  let newInnerText = '';
+  for (let i = 0; i < listNewText.length; i++) {
+    newInnerText = newInnerText + '<div>';
+    for (let j = i; j < listNewText.length; j++) {
+      if (listNewText[j].includes('<br/>')) {
+        newInnerText = newInnerText + '</div>';
+        i = j + 1;
+        break;
+      } else if (listNewText[j].includes('strongStart')) {
+        newInnerText =
+          newInnerText +
+          '<span style = "font-family: Pretendard-Bold; opacity: 1; filter: unset">';
+        continue;
+      } else if (listNewText[j].includes('strongEnd')) {
+        newInnerText += '</span>';
+        continue;
+      }
+      newInnerText =
+        newInnerText +
         `<span style="animation: fade-in 0.8s ${
-          (index + 1) / 10
-        }s forwards cubic-bezier(0.11, 0, 0.5, 0)">${text}&nbsp</span>`;
+          (j + 1) / 10
+        }s forwards cubic-bezier(0.11, 0, 0.5, 0)">${
+          listNewText[j]
+        }&nbsp</span>`;
     }
-  });
-  console.log(fadingTexts[0].innerHTML);
+  }
+  fadingText.innerHTML = newInnerText.replace('<div></div>', '<br/>');
+  // console.log(fadingText.innerHTML);
 }

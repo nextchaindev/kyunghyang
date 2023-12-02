@@ -25,7 +25,7 @@
 .page02 > div .section_title {
   position: absolute;
   width: max-content;
-  text-align: right;
+  text-align: center;
   color: var(--secondary);
   font-size: 50px;
   display: flex;
@@ -113,6 +113,7 @@
 .page02 div.page02_group01_section02 .section_title.section02-title {
   top: 80px;
   right: 100px;
+  text-align: right;
 }
 
 /* ------------------------------ group 01 section 04 ------------------------------ */
@@ -121,6 +122,7 @@
   left: 100px;
   top: 50%;
   transform: translateY(-50%);
+  text-align: left;
 }
 
 /* ------------------------------ group 01 section 05 ------------------------------ */
@@ -129,6 +131,10 @@
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+  background-color: rgb(71, 183, 188, 0.8);
+}
+.page02 div.page02_group01_section05 .section_title.section05-title > div {
+  padding: 20px;
 }
 
 /* ------------------------------ group 01 section 06 ------------------------------ */
@@ -137,6 +143,11 @@
   left: 100px;
   top: 50%;
   transform: translateY(-50%);
+  text-align: left;
+  background-color: rgb(0, 0, 0, 0.6);
+}
+.page02 div.page02_group01_section06 .section_title.section06-title > div {
+  padding: 20px;
 }
 
 /* ------------------------------ group 01 section 07 ------------------------------ */
