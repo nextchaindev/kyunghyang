@@ -1386,10 +1386,12 @@
               if (isSectionBefore) {
                 mapScrollValue = MAP_MIN;
                 zoomOutMap();
+                handleBarProgress('the-map-zoom-out');
                 handleSingleBarSection('the-map-zoom-out', 'the-map-zoom-out');
               } else {
                 mapScrollValue = MAP_MAX;
                 zoomInMap();
+                handleBarProgress('the-map-zoom-in');
                 handleSingleBarSection('the-map-zoom-in', 'the-map-zoom-in');
               }
             }
@@ -1415,12 +1417,14 @@
                       : mapScrollValue;
                   if (zoom === MAP_MIN) {
                     zoomOutMap();
+                    handleBarProgress('the-map-zoom-out');
                     handleSingleBarSection(
                       'the-map-zoom-out',
                       'the-map-zoom-out'
                     );
                   } else if (zoom === MAP_MAX) {
                     zoomInMap();
+                    handleBarProgress('the-map-zoom-in');
                     handleSingleBarSection(
                       'the-map-zoom-in',
                       'the-map-zoom-in'
