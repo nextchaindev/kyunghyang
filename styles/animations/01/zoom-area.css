@@ -35,3 +35,19 @@
   background-attachment: fixed, fixed;
   background-repeat: no-repeat, no-repeat;
 }
+
+@media only screen and (max-width: 1919px) {
+}
+
+@media only screen and (max-width: 1279px) {
+  .fixed-background .trigger-photo,
+  .trigger-photo-shadow {
+    background-size: 90%, cover;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+}
+
+@media only screen and (max-width: 399px) {
+}

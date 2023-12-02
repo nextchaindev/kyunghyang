@@ -42,9 +42,9 @@
   } */
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 1279px) {
   .image-gallery .image-gallery-cell {
-    width: 34.3333% !important;
+    width: 30% !important;
   }
 }
 
