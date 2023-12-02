@@ -32,17 +32,17 @@ function goToSection(i, mode) {
       y: i * innerHeight + spacesOfNoneFullscreenSections,
       autoKill: false,
     },
-    // duration: i === 15 && mode === 'enter' ? 0 : 0.6,
-    duration: 0.6,
+    duration: i === 15 && mode === 'enter' ? 0 : 0.6,
+    // duration: 0.6,
     overwrite: true,
     onComplete() {
       gsap.set('body', { overflowY: 'auto' });
 
-      console.log(
-        i,
-        document.body.scrollTop,
-        i * innerHeight + spacesOfNoneFullscreenSections
-      );
+      // console.log(
+      //   i,
+      //   document.body.scrollTop,
+      //   i * innerHeight + spacesOfNoneFullscreenSections
+      // );
     },
   });
 }

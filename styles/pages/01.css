@@ -2,6 +2,7 @@
 @import '../components/tag.css';
 @import '../components/gallery.css';
 @import '../components/circle-cursor.css';
+@import '../components/scroll-progress-2.css';
 
 .page01_hero {
   position: relative;

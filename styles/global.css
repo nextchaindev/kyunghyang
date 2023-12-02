@@ -4,7 +4,6 @@
 
 /* global components */
 @import 'components/scroll-progress.css';
-@import 'components/scroll-progress2.css';
 @import 'components/layout.css';
 
 /* gloabal styles */
@@ -19,13 +18,13 @@ body {
   height: 100%;
   overflow-x: hidden;
   overflow-y: hidden;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
+  /* -ms-overflow-style: none;
+  scrollbar-width: none; */
   line-height: 1.3;
 }
-body::-webkit-scrollbar {
+/* body::-webkit-scrollbar {
   display: none;
-}
+} */
 
 .container {
 }
