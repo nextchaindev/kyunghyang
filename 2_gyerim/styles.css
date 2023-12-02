@@ -6,20 +6,20 @@
 }
 
 @font-face {
-  font-family: "Pretendard";
-  src: url("public/font/Pretendard-Light.woff") format("woff");
+  font-family: 'Pretendard';
+  src: url('public/font/Pretendard-Light.woff') format('woff');
   font-weight: 300;
   font-display: swap;
 }
 @font-face {
-  font-family: "Pretendard";
-  src: url("public/font/Pretendard-Bold.woff") format("woff");
+  font-family: 'Pretendard';
+  src: url('public/font/Pretendard-Bold.woff') format('woff');
   font-weight: 700;
   font-display: swap;
 }
 
 html {
-  font-family: "Pretendard";
+  font-family: 'Pretendard';
 }
 
 body::-webkit-scrollbar {
@@ -131,7 +131,7 @@ button {
   font-size: 110px;
   font-weight: 600;
   color: #c3bdaf;
-  font-family: "Noto Sans KR", sans-serif;
+  font-family: 'Noto Sans KR', sans-serif;
 }
 
 .dark-title {
@@ -370,13 +370,13 @@ button {
 
 .high-break-up {
   display: block; /* makes it have a width */
-  content: ""; /* clears default height */
+  content: ''; /* clears default height */
   margin-top: 10px; /* change this to whatever height you want it */
 }
 
 .high-break-down {
   display: block; /* makes it have a width */
-  content: ""; /* clears default height */
+  content: ''; /* clears default height */
   margin-bottom: 10px; /* change this to whatever height you want it */
 }
 
@@ -393,7 +393,6 @@ h1.fly-text[data-inviewport].is-inViewport {
 }
 
 h1.fly-text span[data-inviewport].is-inViewport {
-  display: inline-block;
   opacity: 0;
   filter: blur(4px);
   color: #fff;
@@ -732,67 +731,67 @@ h1.fly-text span:nth-child(31)[data-inviewport].is-inViewport {
 }
 
 .section-2 {
-  background-image: url("public/images/02_img.png");
+  background-image: url('public/images/02_img.png');
 }
 
 .section-3 {
-  background-image: url("public/images/03_img.png");
+  background-image: url('public/images/03_img.png');
 }
 
 .section-4 {
-  background-image: url("public/images/street_1.png");
+  background-image: url('public/images/street_1.png');
 }
 
 .section-5 {
-  background-image: url("public/images/street_2.png");
+  background-image: url('public/images/street_2.png');
 }
 
 .section-6 {
-  background-image: url("public/images/building_with_stadium.png");
+  background-image: url('public/images/building_with_stadium.png');
 }
 
 .section-7 {
-  background-image: url("public/images/black_white.png");
+  background-image: url('public/images/black_white.png');
 }
 
 .section-8 {
-  background-image: url("public/images/1989.png");
+  background-image: url('public/images/1989.png');
 }
 
 .section-10 {
-  background-image: url("public/images/11_img.png");
+  background-image: url('public/images/11_img.png');
 }
 
 .section-20 {
-  background-image: url("public/images/3_cars.png");
+  background-image: url('public/images/3_cars.png');
 }
 
 .section-21 {
-  background-image: url("public/images/white_wall.png");
+  background-image: url('public/images/white_wall.png');
 }
 
 .section-22 {
-  background-image: url("public/images/sit_on_pavement.png");
+  background-image: url('public/images/sit_on_pavement.png');
 }
 
 .section-23 {
-  background-image: url("public/images/orange_pavement.png");
+  background-image: url('public/images/orange_pavement.png');
 }
 
 .section-24 {
-  background-image: url("public/images/26_img1.png");
+  background-image: url('public/images/26_img1.png');
 }
 
 .section-25 {
-  background-image: url("public/images/27_img.png");
+  background-image: url('public/images/27_img.png');
 }
 
 .section-26 {
-  background-image: url("public/images/28_img.png");
+  background-image: url('public/images/28_img.png');
 }
 
 .section-27 {
-  background-image: url("public/images/30_img.png");
+  background-image: url('public/images/30_img.png');
 }
 
 .text-left {
@@ -838,7 +837,8 @@ h1.fly-text span:nth-child(31)[data-inviewport].is-inViewport {
   background: rgba(33, 141, 145, 0.8);
 }
 
-#blue-point-container-1 {
+#blue-point-container-1,
+#second-map-blue-point-container-1 {
   position: absolute;
   top: 16.5%;
   left: 48.5%;
@@ -851,23 +851,18 @@ h1.fly-text span:nth-child(31)[data-inviewport].is-inViewport {
   border-radius: 100%;
 }
 
-#blue-point-container-2 {
+#blue-point-container-2,
+#second-map-blue-point-container-2 {
   position: absolute;
   top: 50.5%;
   left: 47.5%;
 }
 
-#blue-point-container-3 {
+#blue-point-container-3,
+#second-map-blue-point-container-3 {
   position: absolute;
   top: 60.5%;
   left: 18.5%;
-}
-
-#blue-point-container-4 {
-  position: absolute;
-  top: 45.5%;
-  left: 42.5%;
-  transform: scale(2);
 }
 
 .ease-in-out {
@@ -884,24 +879,34 @@ h1.fly-text span:nth-child(31)[data-inviewport].is-inViewport {
   z-index: 1;
 }
 
+#second-mini-map {
+  width: 487px;
+  height: 274px;
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  opacity: 0;
+  z-index: 1;
+}
+
 .section-12 {
-  background-image: url("public/images/15_img.png");
+  background-image: url('public/images/15_img.png');
 }
 
 .section-13 {
-  background-image: url("public/images/16_img.png");
+  background-image: url('public/images/16_img.png');
 }
 
 .section-14 {
-  background-image: url("public/images/17_img.png");
+  background-image: url('public/images/17_img.png');
 }
 
 .section-15 {
-  background-image: url("public/images/18_img.png");
+  background-image: url('public/images/18_img.png');
 }
 
 .section-16 {
-  background-image: url("public/images/22_img.png");
+  background-image: url('public/images/22_img.png');
   height: 70vh;
   width: 100vw;
   position: absolute;
@@ -933,13 +938,13 @@ h1.fly-text span:nth-child(31)[data-inviewport].is-inViewport {
 
 .very-high-break-down {
   display: block; /* makes it have a width */
-  content: "";
+  content: '';
   margin-bottom: 1vw;
 }
 
 .very-high-break-up {
   display: block; /* makes it have a width */
-  content: "";
+  content: '';
   margin-top: 1vw;
 }
 
@@ -996,20 +1001,16 @@ h1.fly-text span:nth-child(31)[data-inviewport].is-inViewport {
   background-color: unset;
 }
 
-.section-17 {
-  background-image: url("public/images/133_img.png");
-}
-
 .opacity-1 {
   opacity: 1;
 }
 
 .section-18 {
-  background-image: url("public/images/20_img.png");
+  background-image: url('public/images/20_img.png');
 }
 
 .section-19 {
-  background-image: url("public/images/21_img.png");
+  background-image: url('public/images/21_img.png');
 }
 
 .fly-btm-right {

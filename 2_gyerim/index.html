@@ -581,19 +581,38 @@
         </div>
       </section>
 
-      <!-- the map with no zoom -->
+      <!-- the second map -->
       <section
         data-anchor="map-no-zoom"
-        class="section title-section parallax section-17"
+        class="section title-section parallax section-11"
       >
         <img
-          class="mini-map opacity-1"
+          id="second-mini-map"
+          class="mini-map ease-in-out"
           data-src="public/images/15pip.png"
           loading="lazy"
         />
-        <div id="blue-point-container-4" class="flex-col gap-y-8">
-          <div class="blue-point"></div>
-          <p class="blue-point-title">후문통학로</p>
+        <div id="second-map-section" class="full-child ease-in-out">
+          <img
+            class="no-object-fit"
+            data-src="public/images/13_img.png"
+            loading="lazy"
+          />
+          <div
+            id="second-map-blue-point-container-1"
+            class="flex-col gap-y-8 revealUp"
+          >
+            <div class="blue-point"></div>
+            <p class="blue-point-title">후문통학로</p>
+          </div>
+          <div id="second-map-blue-point-container-2" class="flex-col gap-y-8">
+            <div class="blue-point"></div>
+            <p class="blue-point-title">계림초등학교</p>
+          </div>
+          <div id="second-map-blue-point-container-3" class="flex-col gap-y-8">
+            <div class="blue-point"></div>
+            <p class="blue-point-title">정문통학로</p>
+          </div>
         </div>
       </section>
 
@@ -1046,7 +1065,7 @@
             <span
               id="the-map-progress-text"
               class="station-text"
-              onclick="onClickProgressText('the-map')"
+              onclick="onClickProgressText('the-map-zoom-out')"
               >계림초등학교의<br />
               등하교길</span
             >
@@ -1055,7 +1074,7 @@
             <span
               id="the-map-zoomed-progress-text"
               class="station-text one-line"
-              onclick="onClickProgressText('the-map')"
+              onclick="onClickProgressText('the-map-zoom-in')"
               >정문 통학로</span
             >
           </div>
@@ -1099,9 +1118,14 @@
       referrerpolicy="no-referrer"
     ></script>
     <script type="text/javascript">
+      // the cyan progress
+      const scrollProgress = document.getElementById('the-bar-progress');
+      // this var = true: allow to leave section by click on progress bar
       let forceLeave = false;
+      // these vars = true: allow to leave section on scroll
       let canLeaveSatellite = false;
       let canLeaveMap = false;
+      let canLeaveSecondMap = false;
       // satellite scroll value
       let scrollValue = 1;
       const MIN = 1;
@@ -1120,45 +1144,75 @@
       const mapZoomToPrev = MIN - 0.1;
       let mapScrollEventAdded = false;
 
+      // 2nd map scroll value
+      let secondMapScrollValue = 1;
+      const SECOND_MAP_MIN = 1;
+      const SECOND_MAP_MAX = 1.4;
+      const SECOND_MAP_ZOOM_SPEED = 0.4;
+      const secondMapZoomToNext = SECOND_MAP_MAX + 0.1;
+      const secondMapZoomToPrev = SECOND_MAP_MIN - 0.1;
+      let secondMapScrollEventAdded = false;
+
+      // common functions
+      const setTextOpacity = function (textId) {
+        const stationTexts = document.querySelectorAll('.station-text');
+        for (let i = 0; i < stationTexts.length; ++i) {
+          stationTexts[i].style.opacity = 0.5;
+        }
+        const text = document.getElementById(textId);
+        if (text) {
+          text.style.opacity = 1;
+          text.style.fontWeight = 700;
+        }
+      };
+      const setTextColor = function (color) {
+        const stationTexts = document.querySelectorAll('.station-text');
+        for (let i = 0; i < stationTexts.length; ++i) {
+          stationTexts[i].style.color = color;
+        }
+      };
+      // functions for the map
+      const mapSection = document.querySelector('#map-section');
+      const miniMap = document.querySelector('#mini-map');
+
+      const zoomOutMap = function () {
+        mapSection.style.transform = 'scale(1) translate(0, 0)';
+        miniMap.style.opacity = 0;
+        setTextOpacity('the-map-progress-text');
+        scrollProgress.style.height = `${(5 / 12) * 100}%`;
+        canLeaveMap = true;
+      };
+
+      const zoomInMap = function () {
+        mapSection.style.transform = 'scale(2.5) translate(30%, -150px)';
+        setTextOpacity('the-map-zoomed-progress-text');
+        miniMap.style.opacity = 1;
+        scrollProgress.style.height = `${(7 / 12) * 100}%`;
+        setTextColor('black');
+        canLeaveMap = true;
+      };
+
       // init
-      let myFullpage = new fullpage("#fullpage", {
+      let myFullpage = new fullpage('#fullpage', {
         scrollBar: true,
-        normalScrollElements: ".last-section",
+        normalScrollElements: '.last-section',
         scrollOverflowOptions: {
           disablePointer: false,
           preventDefault: false,
         },
         afterLoad: function (origin, destination, direction, trigger) {
           // scroll bar vars
-          const scrollbar = document.getElementById("scrollbar");
+          const scrollbar = document.getElementById('scrollbar');
           const showScrollBar = function () {
-            scrollbar.style.right = "44px";
+            scrollbar.style.right = '44px';
           };
           const hideScrollBar = function () {
-            scrollbar.style.right = "-155px";
+            scrollbar.style.right = '-155px';
           };
-          const setTextColor = function (color) {
-            const stationTexts = document.querySelectorAll(".station-text");
-            for (let i = 0; i < stationTexts.length; ++i) {
-              stationTexts[i].style.color = color;
-            }
-          };
-          const setTextOpacity = function (textId) {
-            const stationTexts = document.querySelectorAll(".station-text");
-            for (let i = 0; i < stationTexts.length; ++i) {
-              stationTexts[i].style.opacity = 0.5;
-            }
-            const text = document.getElementById(textId);
-            if (text) {
-              text.style.opacity = 1;
-              text.style.fontWeight = 700;
-            }
-          };
-          const scrollProgress = document.getElementById("the-bar-progress");
 
           // satellite zoom
-          if (destination.anchor === "satellite") {
-            if (origin.anchor === "child-running") {
+          if (destination.anchor === 'satellite') {
+            if (origin.anchor === 'child-running') {
               scrollValue = MAX;
             } else {
               scrollValue = MIN;
@@ -1166,26 +1220,26 @@
             forceLeave = false;
             canLeaveSatellite = false;
             if (!satelliteScrollEventAdded) {
-              const sectionEle = document.querySelector("#satellite-zoom");
+              const sectionEle = document.querySelector('#satellite-zoom');
 
-              const firstTitle = document.querySelector("#satellite-title-1");
-              const secondTitle = document.querySelector("#satellite-title-2");
+              const firstTitle = document.querySelector('#satellite-title-1');
+              const secondTitle = document.querySelector('#satellite-title-2');
               const secondNormalPoint = document.querySelector(
-                "#second-normal-point"
+                '#second-normal-point'
               );
               const thirdNormalPoint = document.querySelector(
-                "#third-normal-point"
+                '#third-normal-point'
               );
               const fourthNormalPoint = document.querySelector(
-                "#fourth-normal-point"
+                '#fourth-normal-point'
               );
               const fifthNormalPoint = document.querySelector(
-                "#fifth-normal-point"
+                '#fifth-normal-point'
               );
-              const yellowZone = document.querySelector("#sat-yellow-zone");
-              const redZone = document.querySelector("#sat-red-zone");
+              const yellowZone = document.querySelector('#sat-yellow-zone');
+              const redZone = document.querySelector('#sat-red-zone');
 
-              sectionEle.addEventListener("wheel", function (e) {
+              sectionEle.addEventListener('wheel', function (e) {
                 if (e.deltaY > 0) {
                   scrollValue += ZOOM_SPEED;
                   scrollValue = Math.min(scrollValue, zoomToNext);
@@ -1196,7 +1250,7 @@
                 const zoom =
                   scrollValue < MIN ? 1 : scrollValue > MAX ? MAX : scrollValue;
                 if (zoom === MIN) {
-                  sectionEle.style.transform = "scale(1)";
+                  sectionEle.style.transform = 'scale(1)';
                   firstTitle.style.opacity = 1;
                   secondTitle.style.opacity = 0;
                   secondNormalPoint.style.opacity = 0;
@@ -1207,7 +1261,7 @@
                   redZone.style.opacity = 0;
                   canLeaveSatellite = true;
                 } else if (zoom === MAX) {
-                  sectionEle.style.transform = "scale(1.4)";
+                  sectionEle.style.transform = 'scale(1.4)';
                   firstTitle.style.opacity = 0;
                   secondTitle.style.opacity = 1;
                   secondNormalPoint.style.opacity = 1;
@@ -1223,21 +1277,23 @@
             }
           }
           // the map
-          if (destination.anchor === "the-map") {
-            if (origin.anchor === "wall-and-pavement") {
-              mapScrollValue = MAP_MAX;
-            } else {
-              mapScrollValue = MAP_MIN;
+          if (destination.anchor === 'the-map') {
+            if (!forceLeave) {
+              const isSectionBefore = origin.index < destination.index;
+              if (isSectionBefore) {
+                mapScrollValue = MAP_MIN;
+                zoomOutMap();
+              } else {
+                mapScrollValue = MAP_MAX;
+                zoomInMap();
+              }
             }
 
             showScrollBar();
             canLeaveMap = false;
 
-            const mapSection = document.querySelector("#map-section");
-            const miniMap = document.querySelector("#mini-map");
-
             if (!mapScrollEventAdded) {
-              mapSection.addEventListener("wheel", function (e) {
+              mapSection.addEventListener('wheel', function (e) {
                 if (e.deltaY > 0) {
                   mapScrollValue += MAP_ZOOM_SPEED;
                   mapScrollValue = Math.min(mapScrollValue, mapZoomToNext);
@@ -1251,103 +1307,160 @@
                     : mapScrollValue > MAX
                     ? MAX
                     : mapScrollValue;
-                if (zoom === MIN) {
-                  mapSection.style.transform = "scale(1) translate(0, 0)";
-                  miniMap.style.opacity = 0;
-                  setTextOpacity("the-map-progress-text");
-                  scrollProgress.style.height = `${(5 / 12) * 100}%`;
-                  canLeaveMap = true;
-                } else if (zoom === MAX) {
-                  mapSection.style.transform =
-                    "scale(2.5) translate(30%, -150px)";
-                  setTextOpacity("the-map-zoomed-progress-text");
-                  miniMap.style.opacity = 1;
-                  scrollProgress.style.height = `${(7 / 12) * 100}%`;
-                  setTextColor("black");
-                  canLeaveMap = true;
+                if (zoom === MAP_MIN) {
+                  zoomOutMap();
+                } else if (zoom === MAP_MAX) {
+                  zoomInMap();
                 }
               });
             }
-
+            forceLeave = false;
             mapScrollEventAdded = true;
           }
-          // handle scroll bar
-          if (["1989", "satellite"].includes(destination.anchor)) {
+
+          // the second map
+          if (destination.anchor === 'map-no-zoom') {
+            const secondMapSection = document.querySelector(
+              '#second-map-section'
+            );
+            const secondMiniMap = document.querySelector('#second-mini-map');
+            const secondMapZoomOut = function () {
+              secondMapSection.style.transform = 'scale(1) translate(0, 0)';
+              secondMiniMap.style.opacity = 0;
+              canLeaveSecondMap = true;
+            };
+
+            const secondMapZoomIn = function () {
+              secondMapSection.style.transform =
+                'scale(2) translate(-2%, 300px)';
+              secondMiniMap.style.opacity = 1;
+              canLeaveSecondMap = true;
+            };
+            if (forceLeave) {
+              secondMapZoomOut();
+            } else {
+              const isSectionBefore = origin.index < destination.index;
+              if (isSectionBefore) {
+                secondMapScrollValue = SECOND_MAP_MIN;
+                secondMapZoomOut();
+              } else {
+                secondMapScrollValue = SECOND_MAP_MAX;
+                secondMapZoomIn();
+              }
+            }
+
             showScrollBar();
-            setTextOpacity("1989-progress-text");
-            scrollProgress.style.height = `${(1 / 12) * 100}%`;
-            setTextColor("rgb(255, 255, 255)");
+            canLeaveSecondMap = false;
+
+            if (!secondMapScrollEventAdded) {
+              secondMapSection.addEventListener('wheel', function (e) {
+                if (e.deltaY > 0) {
+                  secondMapScrollValue += SECOND_MAP_ZOOM_SPEED;
+                  secondMapScrollValue = Math.min(
+                    secondMapScrollValue,
+                    secondMapZoomToNext
+                  );
+                } else {
+                  secondMapScrollValue -= SECOND_MAP_ZOOM_SPEED;
+                  secondMapScrollValue = Math.max(
+                    secondMapZoomToPrev,
+                    secondMapScrollValue
+                  );
+                }
+                const zoom =
+                  secondMapScrollValue < MIN
+                    ? 1
+                    : secondMapScrollValue > MAX
+                    ? MAX
+                    : secondMapScrollValue;
+                if (zoom === SECOND_MAP_MIN) {
+                  secondMapZoomOut();
+                } else if (zoom === SECOND_MAP_MAX) {
+                  secondMapZoomIn();
+                }
+              });
+            }
+            secondMapScrollEventAdded = true;
+            forceLeave = false;
           }
-          if (destination.anchor === "child-running") {
+
+          // handle scroll bar
+          if (['1989', 'satellite'].includes(destination.anchor)) {
             showScrollBar();
-            setTextOpacity("child-running-progress-text");
+            setTextOpacity('1989-progress-text');
+            scrollProgress.style.height = `${(1 / 12) * 100}%`;
+            setTextColor('rgb(255, 255, 255)');
+          }
+          if (destination.anchor === 'child-running') {
+            showScrollBar();
+            setTextOpacity('child-running-progress-text');
             scrollProgress.style.height = `${(3 / 12) * 100}%`;
-            setTextColor("rgb(255, 255, 255)");
+            setTextColor('rgb(255, 255, 255)');
           }
           if (
-            ["wall-and-pavement", "white-bear", "traffic-light"].includes(
+            ['wall-and-pavement', 'white-bear', 'traffic-light'].includes(
               destination.anchor
             )
           ) {
             showScrollBar();
-            setTextOpacity("the-map-zoomed-progress-text");
+            setTextOpacity('the-map-zoomed-progress-text');
             scrollProgress.style.height = `${(7 / 12) * 100}%`;
-            setTextColor("rgb(255, 255, 255)");
+            setTextColor('rgb(255, 255, 255)');
           }
-          if (destination.anchor === "wooden-chair") {
+          if (destination.anchor === 'wooden-chair') {
             showScrollBar();
-            setTextOpacity("the-map-zoomed-progress-text");
+            setTextOpacity('the-map-zoomed-progress-text');
             scrollProgress.style.height = `${(7 / 12) * 100}%`;
-            setTextColor("black");
+            setTextColor('black');
           }
           if (
             [
-              "back-of-walking-kid",
-              "map-no-zoom",
-              "the-truck",
-              "3-cars",
-              "pavement-sits",
-              "orange-pavement",
+              'back-of-walking-kid',
+              'map-no-zoom',
+              'the-truck',
+              '3-cars',
+              'pavement-sits',
+              'orange-pavement',
             ].includes(destination.anchor)
           ) {
             showScrollBar();
-            setTextOpacity("the-map-no-zoom-progress-text");
+            setTextOpacity('the-map-no-zoom-progress-text');
             scrollProgress.style.height = `${(9 / 12) * 100}%`;
-            setTextColor("rgb(255, 255, 255)");
+            setTextColor('rgb(255, 255, 255)');
           }
           if (
             [
-              "short-hair-woman",
-              "white-wall",
-              "talking-child",
-              "pavement-pole",
+              'short-hair-woman',
+              'white-wall',
+              'talking-child',
+              'pavement-pole',
             ].includes(destination.anchor)
           ) {
             showScrollBar();
-            setTextColor("black");
-            setTextOpacity("the-map-no-zoom-progress-text");
+            setTextColor('black');
+            setTextOpacity('the-map-no-zoom-progress-text');
             scrollProgress.style.height = `${(9 / 12) * 100}%`;
-            setTextColor("black");
+            setTextColor('black');
           }
-          if (["car-rear", "walking-people"].includes(destination.anchor)) {
+          if (['car-rear', 'walking-people'].includes(destination.anchor)) {
             showScrollBar();
-            setTextOpacity("car-rear-progress-text");
+            setTextOpacity('car-rear-progress-text');
             scrollProgress.style.height = `${(11 / 12) * 100}%`;
-            setTextColor("rgb(255, 255, 255)");
+            setTextColor('rgb(255, 255, 255)');
           }
-          if (destination.anchor === "children-1") {
-            const introVideo = document.querySelector("#introVideo");
+          if (destination.anchor === 'children-1') {
+            const introVideo = document.querySelector('#introVideo');
             introVideo.pause();
           }
           //hide
           if (
             [
-              "children-2",
-              "orange-guy",
-              "talking-guy",
-              "car-clip",
-              "girl-clip",
-              "pavement-cyan-bg-text",
+              'children-2',
+              'orange-guy',
+              'talking-guy',
+              'car-clip',
+              'girl-clip',
+              'pavement-cyan-bg-text',
             ].includes(destination.anchor)
           ) {
             hideScrollBar();
@@ -1355,12 +1468,12 @@
         },
         beforeLeave: function (origin, destination, direction, trigger) {
           const setTextColor = function (color) {
-            const stationTexts = document.querySelectorAll(".station-text");
+            const stationTexts = document.querySelectorAll('.station-text');
             for (let i = 0; i < stationTexts.length; ++i) {
               stationTexts[i].style.color = color;
             }
           };
-          if (origin.anchor === "satellite") {
+          if (origin.anchor === 'satellite') {
             if (
               ((scrollValue === zoomToPrev || scrollValue === zoomToNext) &&
                 canLeaveSatellite) ||
@@ -1370,32 +1483,44 @@
             }
             return false;
           }
-          if (origin.anchor === "the-map") {
+          if (origin.anchor === 'the-map') {
             if (
-              (mapScrollValue === mapZoomToNext ||
+              ((mapScrollValue === mapZoomToNext ||
                 mapScrollValue === mapZoomToPrev) &&
-              canLeaveMap
+                canLeaveMap) ||
+              forceLeave
+            ) {
+              return true;
+            }
+            return false;
+          }
+          if (origin.anchor === 'map-no-zoom') {
+            if (
+              ((secondMapScrollValue === secondMapZoomToNext ||
+                secondMapScrollValue === secondMapZoomToPrev) &&
+                canLeaveSecondMap) ||
+              forceLeave
             ) {
               return true;
             }
             return false;
           }
           if (
-            origin.anchor === "buildings-with-stadium" &&
-            destination.anchor === "1989"
+            origin.anchor === 'buildings-with-stadium' &&
+            destination.anchor === '1989'
           ) {
-            const text = document.querySelector("#buildings-text");
+            const text = document.querySelector('#buildings-text');
             text.style.opacity = 0;
           }
           if (
-            origin.anchor === "1989" &&
-            destination.anchor === "buildings-with-stadium"
+            origin.anchor === '1989' &&
+            destination.anchor === 'buildings-with-stadium'
           ) {
-            const text = document.querySelector("#buildings-text");
+            const text = document.querySelector('#buildings-text');
             text.style.opacity = 1;
           }
-          if (origin.anchor === "children-1") {
-            const introVideo = document.querySelector("#introVideo");
+          if (origin.anchor === 'children-1') {
+            const introVideo = document.querySelector('#introVideo');
             introVideo.play();
           }
         },
@@ -1403,13 +1528,21 @@
 
       // scroll down button
       function onClickScrollDown() {
-        myFullpage.moveTo("children-1");
+        myFullpage.moveTo('children-1');
       }
 
       // onclick progress text
       function onClickProgressText(anchor) {
         forceLeave = true;
-        myFullpage.moveTo(anchor);
+        if (anchor === 'the-map-zoom-out') {
+          myFullpage.moveTo('the-map');
+          zoomOutMap();
+        } else if (anchor === 'the-map-zoom-in') {
+          myFullpage.moveTo('the-map');
+          zoomInMap();
+        } else {
+          myFullpage.moveTo(anchor);
+        }
       }
     </script>
     <!-- text title animation -->
@@ -1418,11 +1551,11 @@
     <script type="text/javascript">
       gsap.registerPlugin(ScrollTrigger);
       // REVEAL //
-      gsap.utils.toArray(".revealUp").forEach(function (elem) {
+      gsap.utils.toArray('.revealUp').forEach(function (elem) {
         ScrollTrigger.create({
           trigger: elem,
-          start: "top 100%",
-          end: "bottom 0%",
+          start: 'top 100%',
+          end: 'bottom 0%',
           onEnter: function () {
             gsap.fromTo(
               elem,
@@ -1431,8 +1564,8 @@
                 duration: 1.5,
                 y: 0,
                 autoAlpha: 1,
-                ease: "back",
-                overwrite: "auto",
+                ease: 'back',
+                overwrite: 'auto',
               }
             );
           },
@@ -1440,7 +1573,7 @@
             gsap.fromTo(
               elem,
               { autoAlpha: 1 },
-              { autoAlpha: 0, overwrite: "auto" }
+              { autoAlpha: 0, overwrite: 'auto' }
             );
           },
           onEnterBack: function () {
@@ -1451,8 +1584,8 @@
                 duration: 1.5,
                 y: 0,
                 autoAlpha: 1,
-                ease: "back",
-                overwrite: "auto",
+                ease: 'back',
+                overwrite: 'auto',
               }
             );
           },
@@ -1460,7 +1593,7 @@
             gsap.fromTo(
               elem,
               { autoAlpha: 1 },
-              { autoAlpha: 0, overwrite: "auto" }
+              { autoAlpha: 0, overwrite: 'auto' }
             );
           },
         });
