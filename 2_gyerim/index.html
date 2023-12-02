@@ -1111,11 +1111,14 @@
 
     <!-- scripts -->
     <!-- init fullPageJS -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./../libs//fullPage.js/dist/fullpage.min.css"
+    />
     <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.20/fullpage.min.js"
-      integrity="sha512-LGiXf+jHGTHcIybSsOWO3I/in+OObCkcEsWIZ7IyhzfD6RzD5qDUw2CK+JveuI7zTSEcDG//bIOvOpAJW2BWsg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
+      type="text/javascript"
+      src="./../libs/fullPage.js/dist/fullpage.min.js"
     ></script>
     <script type="text/javascript">
       // the cyan progress
@@ -1175,25 +1178,32 @@
       const mapSection = document.querySelector('#map-section');
       const miniMap = document.querySelector('#mini-map');
 
-      const zoomOutMap = function () {
+      const zoomOutMap = function (isForcedLeave) {
         mapSection.style.transform = 'scale(1) translate(0, 0)';
         miniMap.style.opacity = 0;
         setTextOpacity('the-map-progress-text');
         scrollProgress.style.height = `${(5 / 12) * 100}%`;
         canLeaveMap = true;
+        if (isForcedLeave) {
+          mapScrollValue = MAP_MIN;
+        }
       };
 
-      const zoomInMap = function () {
+      const zoomInMap = function (isForcedLeave) {
         mapSection.style.transform = 'scale(2.5) translate(30%, -150px)';
         setTextOpacity('the-map-zoomed-progress-text');
         miniMap.style.opacity = 1;
         scrollProgress.style.height = `${(7 / 12) * 100}%`;
         setTextColor('black');
         canLeaveMap = true;
+        if (isForcedLeave) {
+          mapScrollValue = MAP_MAX;
+        }
       };
 
       // init
       let myFullpage = new fullpage('#fullpage', {
+        licenseKey: 'Y8LPJ-LT5QI-3KV97-JFVJK-IZBZL',
         scrollBar: true,
         normalScrollElements: '.last-section',
         scrollOverflowOptions: {
@@ -1288,7 +1298,6 @@
                 zoomInMap();
               }
             }
-
             showScrollBar();
             canLeaveMap = false;
 
@@ -1536,18 +1545,24 @@
         forceLeave = true;
         if (anchor === 'the-map-zoom-out') {
           myFullpage.moveTo('the-map');
-          zoomOutMap();
+          zoomOutMap(forceLeave);
         } else if (anchor === 'the-map-zoom-in') {
           myFullpage.moveTo('the-map');
-          zoomInMap();
+          zoomInMap(forceLeave);
         } else {
           myFullpage.moveTo(anchor);
         }
       }
     </script>
     <!-- text title animation -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script
+      type="text/javascript"
+      src="./../libs/gsap/minified/gsap.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="./../libs/gsap/minified/ScrollTrigger.min.js"
+    ></script>
     <script type="text/javascript">
       gsap.registerPlugin(ScrollTrigger);
       // REVEAL //
