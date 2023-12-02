@@ -52,11 +52,6 @@
 }
 
 /* typography */
-.text-body {
-  font-size: 18px;
-  line-height: 38px;
-}
-
 .text-white {
   color: var(--white) !important;
 }
@@ -94,5 +89,9 @@
 }
 
 /* spacing */
+.my-80 {
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
 
 /* border */
