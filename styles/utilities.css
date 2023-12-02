@@ -52,11 +52,6 @@
 }
 
 /* typography */
-.text-body {
-  font-size: 18px;
-  line-height: 38px;
-}
-
 .text-white {
   color: var(--white) !important;
 }

@@ -79,16 +79,16 @@ video {
   border-width: 0px 0 0px 60px;
 }
 
-.video-playpause input[type="checkbox"] {
+.video-playpause input[type='checkbox'] {
   position: absolute;
   left: -9999px;
 }
 
-.video-playpause input[type="checkbox"]:checked + label {
+.video-playpause input[type='checkbox']:checked + label {
   border-style: solid;
   border-width: 37px 0 37px 60px;
 }
 
-.video-playpause input[type="checkbox"]:focus + label {
+.video-playpause input[type='checkbox']:focus + label {
   /* box-shadow: 0 0 5px lightblue; */
 }
