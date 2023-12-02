@@ -415,9 +415,8 @@
   transform: translateX(-50%);
 }
 
-.page01 div.page01_garden-life-feedback .feedback-content > div {
+.page01 div.page01_garden-life-feedback .feedback-content h3 {
   color: var(--white);
-  font-size: 36px;
 }
 
 /* ------------------------------ oganization content section ------------------------------ */
@@ -628,6 +627,27 @@
     padding: 12px;
     font-size: 28px;
     bottom: 50px;
+  }
+  /* ------------------------------ garden life feedback section ------------------------------ */
+  .page01 div.page01_garden-life-feedback .title {
+    bottom: calc(100% + 36px);
+    left: 0 !important;
+    right: 0 !important;
+    width: 100%;
+    text-align: center;
+  }
+  .page01 div.page01_garden-life-feedback .feedback-content {
+    gap: 40px;
+    font-size: 60px;
+    max-width: 95%;
+  }
+  .page01 div.page01_garden-life-feedback .feedback-content.bottom {
+    bottom: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .page01 div.page01_garden-life-feedback .feedback-content h3 {
+    /* font-size: 36px; */
   }
 }
 

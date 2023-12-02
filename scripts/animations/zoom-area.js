@@ -63,47 +63,90 @@ function triggerZoomPointsMap() {
 }
 
 function triggerZoom2dMap() {
-  const zoomData = [
-    { scale: 1, origin: [0.5, 0.5] },
-    // 3
-    { scale: 3, origin: [0.1, 0.5] },
-    { scale: 3, origin: [0.1, 0.5] },
-    { scale: 3, origin: [0.1, 0.5] },
-    { scale: 3, origin: [0.1, 0.5] },
-    { scale: 1, origin: [0.5, 0.5] },
-    { scale: 1, origin: [0.5, 0.5] },
-    // 4
-    { scale: 3, origin: [0.4, 0.5] },
-    { scale: 3, origin: [0.4, 0.5] },
-    { scale: 3, origin: [0.4, 0.5] },
-    { scale: 3, origin: [0.4, 0.5] },
-    { scale: 1, origin: [0.5, 0.5] },
-    { scale: 1, origin: [0.5, 0.5] },
-    // 5
-    { scale: 3, origin: [0.72, 0.5] },
-    { scale: 3, origin: [0.72, 0.5] },
-    { scale: 3, origin: [0.72, 0.5] },
-    { scale: 1, origin: [0.5, 0.5] },
-    { scale: 1, origin: [0.5, 0.5] },
-    // 6
-    { scale: 3.2, origin: [0.85, 0.5] },
-    { scale: 3.2, origin: [0.85, 0.5] },
-    { scale: 3.2, origin: [0.85, 0.5] },
-    { scale: 3.2, origin: [0.85, 0.5] },
-    { scale: 1, origin: [0.5, 0.5] },
-    { scale: 1, origin: [0.5, 0.5] },
-    // 7
-    { scale: 3.2, origin: [0.8, 0.35] },
-    { scale: 3.2, origin: [0.8, 0.35] },
-    { scale: 3.2, origin: [0.8, 0.35] },
-    { scale: 3.2, origin: [0.8, 0.35] },
-    { scale: 1, origin: [0.5, 0.5] },
-    { scale: 1, origin: [0.5, 0.5] },
-    // 8
-    { scale: 3, origin: [0.68, 0.35] },
-    { scale: 3, origin: [0.68, 0.35] },
-    { scale: 1, origin: [0.5, 0.5] },
-  ];
+  const zoomData =
+    innerWidth < 1280
+      ? [
+          { scale: 1, origin: [0.5, 0.5] },
+          // 3
+          { scale: 3, origin: [0.05, 0.5] },
+          { scale: 3, origin: [0.05, 0.5] },
+          { scale: 3, origin: [0.05, 0.5] },
+          { scale: 3, origin: [0.05, 0.5] },
+          { scale: 1, origin: [0.5, 0.5] },
+          { scale: 1, origin: [0.5, 0.5] },
+          // 4
+          { scale: 2.6, origin: [0.37, 0.5] },
+          { scale: 2.6, origin: [0.37, 0.5] },
+          { scale: 2.6, origin: [0.37, 0.5] },
+          { scale: 2.6, origin: [0.37, 0.5] },
+          { scale: 1, origin: [0.5, 0.5] },
+          { scale: 1, origin: [0.5, 0.5] },
+          // 5
+          { scale: 3.8, origin: [0.76, 0.5] },
+          { scale: 3.8, origin: [0.76, 0.5] },
+          { scale: 3.8, origin: [0.76, 0.5] },
+          { scale: 1, origin: [0.5, 0.5] },
+          { scale: 1, origin: [0.5, 0.5] },
+          // 6
+          { scale: 4, origin: [0.85, 0.5] },
+          { scale: 4, origin: [0.85, 0.5] },
+          { scale: 4, origin: [0.85, 0.5] },
+          { scale: 4, origin: [0.85, 0.5] },
+          { scale: 1, origin: [0.5, 0.5] },
+          { scale: 1, origin: [0.5, 0.5] },
+          // 7
+          { scale: 4, origin: [0.8, 0.46] },
+          { scale: 4, origin: [0.8, 0.46] },
+          { scale: 4, origin: [0.8, 0.46] },
+          { scale: 4, origin: [0.8, 0.46] },
+          { scale: 1, origin: [0.5, 0.5] },
+          { scale: 1, origin: [0.5, 0.5] },
+          // 8
+          { scale: 3, origin: [0.68, 0.46] },
+          { scale: 3, origin: [0.68, 0.46] },
+          { scale: 1, origin: [0.5, 0.46] },
+        ]
+      : [
+          { scale: 1, origin: [0.5, 0.5] },
+          // 3
+          { scale: 3, origin: [0.1, 0.5] },
+          { scale: 3, origin: [0.1, 0.5] },
+          { scale: 3, origin: [0.1, 0.5] },
+          { scale: 3, origin: [0.1, 0.5] },
+          { scale: 1, origin: [0.5, 0.5] },
+          { scale: 1, origin: [0.5, 0.5] },
+          // 4
+          { scale: 3, origin: [0.4, 0.5] },
+          { scale: 3, origin: [0.4, 0.5] },
+          { scale: 3, origin: [0.4, 0.5] },
+          { scale: 3, origin: [0.4, 0.5] },
+          { scale: 1, origin: [0.5, 0.5] },
+          { scale: 1, origin: [0.5, 0.5] },
+          // 5
+          { scale: 3, origin: [0.72, 0.5] },
+          { scale: 3, origin: [0.72, 0.5] },
+          { scale: 3, origin: [0.72, 0.5] },
+          { scale: 1, origin: [0.5, 0.5] },
+          { scale: 1, origin: [0.5, 0.5] },
+          // 6
+          { scale: 3.2, origin: [0.85, 0.5] },
+          { scale: 3.2, origin: [0.85, 0.5] },
+          { scale: 3.2, origin: [0.85, 0.5] },
+          { scale: 3.2, origin: [0.85, 0.5] },
+          { scale: 1, origin: [0.5, 0.5] },
+          { scale: 1, origin: [0.5, 0.5] },
+          // 7
+          { scale: 3.2, origin: [0.8, 0.35] },
+          { scale: 3.2, origin: [0.8, 0.35] },
+          { scale: 3.2, origin: [0.8, 0.35] },
+          { scale: 3.2, origin: [0.8, 0.35] },
+          { scale: 1, origin: [0.5, 0.5] },
+          { scale: 1, origin: [0.5, 0.5] },
+          // 8
+          { scale: 3, origin: [0.68, 0.35] },
+          { scale: 3, origin: [0.68, 0.35] },
+          { scale: 1, origin: [0.5, 0.5] },
+        ];
 
   function showHideMiniMap(index, mode) {
     const startOpacity = mode === 'enter' ? 0 : 1;
