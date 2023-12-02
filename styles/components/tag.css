@@ -7,3 +7,10 @@ div.section-title-tag {
   margin: auto;
   font-size: 36px;
 }
+
+@media only screen and (max-width: 1919px) {
+  div.section-title-tag {
+    font-size: 28px;
+    padding: 6px 26px;
+  }
+}

@@ -89,7 +89,7 @@
     </div>
     <div class="page01_quotes parallax fullscreen scrollable">
       <img
-        class="fullscreen fading-image"
+        class="fullscreen fading-image no1"
         src="/assets/images/01/young-girl-bg/04_img.png"
         srcset="
           /assets/images/01/young-girl-bg/04_img@2x.png 2x,
@@ -106,13 +106,12 @@
     </div>
     <div class="page01_quotes fullscreen scrollable">
       <img
-        class="fullscreen fading-image"
+        class="fullscreen fading-image no2"
         src="/assets/images/01/middle-woman-bg/05_img.png"
         srcset="
           /assets/images/01/middle-woman-bg/05_img@2x.png 2x,
           /assets/images/01/middle-woman-bg/05_img@3x.png 3x
         "
-        class="fading-image"
       />
       <h1 class="quotes-title text-strong-2">
         &ldquo;
@@ -122,20 +121,14 @@
         &rdquo;
       </h1>
     </div>
-    <div
-      class="page01_intro parallax fullscreen scrollable"
-      style="background-image: url(/assets/images/01/old-man-bg/06_img.png)"
-    >
+    <div class="page01_intro parallax no1 fullscreen scrollable">
       <h2 class="left text-strong-2 fading-text">
         <span id="splitText1"></span><br />
         <span id="splitText2"></span><br />
         <span id="splitText3"></span>
       </h2>
     </div>
-    <div
-      class="page01_intro parallax fullscreen scrollable"
-      style="background-image: url(/assets/images/01/old-woman-bg/07_img.png)"
-    >
+    <div class="page01_intro parallax no2 fullscreen scrollable">
       <h2 class="right text-strong-2 fading-text">
         <span id="splitText4"></span><br />
         <span id="splitText5"></span><br />
@@ -145,12 +138,12 @@
 
     <!-- 02 -->
     <div class="page01_statistics fullscreen scrollable section_scroll">
-      <div style="flex: 1">
+      <div class="page01_statistics-inner">
         <div class="section-title-tag">대한민국 치매 현황</div>
         <div class="statistics">
           <div class="statistics-chart">
             <canvas id="statistics-chart-canvas"></canvas>
-            <div class="flex-center" style="gap: 25px">
+            <div class="flex-center">
               <div class="flex-center">
                 <div class="primary"></div>
                 <h6 class="text-light">60세 이상 추정치매환자수</h6>
@@ -212,7 +205,7 @@
       <div class="circle-yellow point2"><div></div></div>
     </div>
     <div
-      class="focused-place fixed-map_scrollable-section fullscreen scrollable flex-center"
+      class="focused-place fixed-map_scrollable-section fullscreen scrollable"
     >
       <img
         src="/assets/images/01/map/11_img.png"
@@ -248,7 +241,7 @@
       class="centre-2d-map-info parallax fullscreen scrollable"
       style="background-image: url(/assets/images/01/map/map-f3.png)"
     >
-      <div class="info-content right">
+      <div class="info-content left">
         <h2 class="text-light">
           복지관 본관이 아닌 ‘별관’은 활용도가 낮았어요<br />
           공간의 성격이 모호하고,
@@ -262,10 +255,10 @@
       <div class="page01_gallery bg-grey-1 free" id="non1">
         <div class="section-title-tag">복지관 별관의 과거 모습</div>
         <div
-          class="gallery js-flickity"
-          data-flickity-options='{ "wrapAround": true, "pageDots": false, "arrowShape": "M92.5,42.5H25.6L37.8,30.3A7.5,7.5,0,1,0,27.2,19.7l-25,25a7.5,7.5,0,0,0,0,10.6l25,25a7.5,7.5,0,0,0,10.6,0,7.5,7.5,0,0,0,0-10.6L25.6,57.5H92.5a7.5,7.5,0,0,0,0-15Z" }'
+          class="image-gallery js-flickity"
+          data-flickity-options='{ "wrapAround": true, "pageDots": false }'
         >
-          <div class="gallery-cell">
+          <div class="image-gallery-cell">
             <img
               src="/assets/images/01/gallery/gallery-3.JPEG"
               width="100%"
@@ -273,7 +266,7 @@
               alt=""
             />
           </div>
-          <div class="gallery-cell">
+          <div class="image-gallery-cell">
             <img
               src="/assets/images/01/gallery/gallery-4.jpg"
               width="100%"
@@ -281,7 +274,7 @@
               alt=""
             />
           </div>
-          <div class="gallery-cell">
+          <div class="image-gallery-cell">
             <img
               src="/assets/images/01/gallery/gallery-5.jpg"
               width="100%"
@@ -289,7 +282,7 @@
               alt=""
             />
           </div>
-          <div class="gallery-cell">
+          <div class="image-gallery-cell">
             <img
               src="/assets/images/01/gallery/gallery-6.jpg"
               width="100%"
@@ -298,7 +291,7 @@
             />
           </div>
           <!-- doubled -->
-          <div class="gallery-cell">
+          <div class="image-gallery-cell">
             <img
               src="/assets/images/01/gallery/gallery-3.JPEG"
               width="100%"
@@ -306,7 +299,7 @@
               alt=""
             />
           </div>
-          <div class="gallery-cell">
+          <div class="image-gallery-cell">
             <img
               src="/assets/images/01/gallery/gallery-4.jpg"
               width="100%"
@@ -314,7 +307,7 @@
               alt=""
             />
           </div>
-          <div class="gallery-cell">
+          <div class="image-gallery-cell">
             <img
               src="/assets/images/01/gallery/gallery-5.jpg"
               width="100%"
@@ -322,7 +315,7 @@
               alt=""
             />
           </div>
-          <div class="gallery-cell">
+          <div class="image-gallery-cell">
             <img
               src="/assets/images/01/gallery/gallery-6.jpg"
               width="100%"
@@ -346,9 +339,9 @@
             /assets/images/01/organization-profile/14_profile@3x.png 3x
           "
         />
-        <h3 class="content text-strong-2">
+        <div class="content text-strong-2">
           &ldquo;
-          <div class="text-light goingUp-text">
+          <h3 class="text-light goingUp-text">
             어르신들이 가장 쉽게 접근할 수 있는 게 식물이죠<br />
             <span class="text-strong"
               >가꾼 식물이 자라나는 모습을 보면서, 성취감과 긍정적인 감각을
@@ -357,9 +350,9 @@
             이를 통해 어르신들의 지속적인 방문을 유도하고,<br />
             사회적인 교류를 할 수 있도록 하는 것을
             <span class="text-strong">‘인생정원’</span>의 목표로 삼았습니다
-          </div>
+          </h3>
           &rdquo;
-        </h3>
+        </div>
       </div>
       <div class="absolute scrollable"></div>
       <div class="absolute scrollable"></div>
@@ -528,14 +521,14 @@
             height="760px"
             alt=""
           />
-          <h3 class="feedback-content bottom text-strong-2">
+          <div class="feedback-content bottom text-strong-2">
             &ldquo;
-            <div class="text-light goingUp-text">
+            <h3 class="text-light goingUp-text">
               여기 들어오는 입구부터 꽃도 있고 파란 이파리도 있고<br />
               이런 걸 보면 마음이 너무 좋아요
-            </div>
+            </h3>
             &rdquo;
-          </h3>
+          </div>
         </div>
       </div>
     </div>
@@ -677,9 +670,9 @@
             height="760px"
             alt=""
           />
-          <h3 class="feedback-content bottom text-strong-2">
+          <div class="feedback-content bottom text-strong-2">
             &ldquo;
-            <div class="text-light goingUp-text">
+            <h3 class="text-light goingUp-text">
               비가 오거나 미세먼지가 심한 날은 실외활동을 못해요<br />
               그렇다고 실내 활동만 하면 답답하죠<br />
               <span class="text-strong"
@@ -688,9 +681,9 @@
               <span class="text-strong"
                 >언제든 실내외 활동을 할 수 있는 것이 특징</span
               >입니다
-            </div>
+            </h3>
             &rdquo;
-          </h3>
+          </div>
         </div>
       </div>
     </div>
@@ -704,7 +697,7 @@
       id="viewer1"
     >
       <div class="notice-message">
-        화면에서 마우스를 움직이면 360도 영상으로 볼 수 있어요
+        <h4>화면에서 마우스를 움직이면 360도 영상으로 볼 수 있어요</h4>
       </div>
     </div>
     <div
@@ -715,7 +708,8 @@
         <h2 class="text-strong">‘마음 숲’은 실내에 숲이 우거진 곳입니다</h2>
         <h2 class="text-light">
           통유리문 너머로 바깥을 볼 수 있어<br />
-          <span class="text-strong">바깥에서 활동하는 것 같은 기분</span>이 들어요
+          <span class="text-strong">바깥에서 활동하는 것 같은 기분</span>이
+          들어요
         </h2>
       </div>
     </div>
@@ -757,7 +751,7 @@
       id="viewer2"
     >
       <div class="notice-message">
-        화면에서 마우스를 움직이면 360도 영상으로 볼 수 있어요
+        <h4>화면에서 마우스를 움직이면 360도 영상으로 볼 수 있어요</h4>
       </div>
     </div>
     <div
@@ -849,8 +843,7 @@
       </div>
       <div class="block-content3">
         <h3 class="text-light goingUp-text">
-          인생정원을 가꾸고, 이곳을 찾는 이들에게 정원을 소개하는 일을
-          합니다
+          인생정원을 가꾸고, 이곳을 찾는 이들에게 정원을 소개하는 일을 합니다
         </h3>
         <br /><br />
         <h3 class="text-strong goingUp-text">
@@ -871,9 +864,9 @@
               /assets/images/01/home-garden-life-feedback/46_img1@3x.png 3x
             "
           />
-          <h3 class="feedback-content left text-strong-2">
+          <div class="feedback-content left text-strong-2">
             &ldquo;
-            <div class="text-light goingUp-text">
+            <h3 class="text-light goingUp-text">
               저는 가정주부였는데요<br />
               이렇게 나와서 일하니까 활력소가 생겨요<br />
               월급을 받을 때면
@@ -881,9 +874,9 @@
                 >‘나도 일할 수 있는 능력이 되는구나’</span
               ><br />
               라는 생각에 뿌듯해지고 자부심이 생겨요
-            </div>
+            </h3>
             &rdquo;
-          </h3>
+          </div>
         </div>
       </div>
       <div class="image-fullscreen-container fullscreen">
@@ -907,9 +900,9 @@
               /assets/images/01/home-garden-life-feedback/47_img1@3x.png 3x
             "
           />
-          <h3 class="feedback-content right text-strong-2">
+          <div class="feedback-content right text-strong-2">
             &ldquo;
-            <div class="text-light goingUp-text">
+            <h3 class="text-light goingUp-text">
               제가 복지관에 대한 편견이 있었어요<br />
               고령의 어르신들이 기초적인 교육을 받는 곳이라<br />
               생각했거든요. 제가 나이는 좀 있지만<br />
@@ -917,9 +910,9 @@
               <span class="text-strong"
                 >제 자신의 생활이 무의미한 것 같았어요</span
               ><br />
-            </div>
+            </h3>
             &rdquo;
-          </h3>
+          </div>
         </div>
       </div>
       <div class="image-fullscreen-container fullscreen">
@@ -931,16 +924,16 @@
               /assets/images/01/home-garden-life-feedback/47_img2@3x.png 3x
             "
           />
-          <h3 class="feedback-content bottom text-strong-2">
+          <div class="feedback-content bottom text-strong-2">
             &ldquo;
-            <div class="text-light goingUp-text">
+            <h3 class="text-light goingUp-text">
               <span class="text-strong">‘뭔가 찾아내야 되겠다’</span><br />
               그렇게 시작한 게 인생정원 해설사예요<br />
               해설사로 활동하니까 몸도 마음도 건강해지고,<br />
               거기다 수입도 있어 아주 좋네요
-            </div>
+            </h3>
             &rdquo;
-          </h3>
+          </div>
         </div>
       </div>
     </div>
@@ -955,22 +948,22 @@
           /assets/images/01/organization-profile/47_profile@3x.png 3x
         "
       />
-      <h3 class="content text-strong-2">
+      <div class="content text-strong-2">
         &ldquo;
-        <div class="text-light goingUp-text">
+        <h3 class="text-light goingUp-text">
           인지건강 프로그램과 일자리 제공에 이어,<br />인생정원에서 키운 꽃과
           나무를 판매하는 행사를 내년에 열 계획입니다<br /><br />
           <span class="text-strong"
             >어르신들이 건강을 챙기고, 사회 활동을 하면서<br />노년의 삶에서
             자부심을 느끼길 기대합니다</span
           >
-        </div>
+        </h3>
         &rdquo;
-      </h3>
+      </div>
     </div>
 
     <!-- 10 -->
-    <div class="video-fullscreen-container hide_scroll">
+    <div class="video-fullscreen-container embedded-video hide_scroll">
       <div class="video-container">
         <iframe
           width="100%"
@@ -1040,7 +1033,6 @@
 
     <!-- gallery -->
     <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
-    <script src="/scripts/gallery.js" type="module"></script>
 
     <!-- chart -->
     <script

@@ -32,7 +32,7 @@ function goToSection(i, mode) {
       y: i * innerHeight + spacesOfNoneFullscreenSections,
       autoKill: false,
     },
-    duration: i === 15 && mode === 'enter' ? 0 : 0.6,
+    duration: i === 15 && mode === 'enter' ? 0.05 : 0.6,
     // duration: 0.6,
     overwrite: true,
     onComplete() {
