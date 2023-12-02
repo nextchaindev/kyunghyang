@@ -1095,11 +1095,22 @@ h1.fly-text span:nth-child(31)[data-inviewport].is-inViewport {
   width: 4px;
   display: flex;
   flex-direction: column;
-  background-color: rgb(227, 227, 220);
   position: relative;
+  row-gap: 2px;
 }
 
-#the-bar-progress {
+.bar-section {
+  width: 100%;
+  border-radius: 2px;
+  flex: 1;
+  background-color: #e3e3dc;
+}
+
+.bar-section-cyan {
+  background-color: rgb(70, 183, 188) !important;
+}
+
+.the-bar-progress {
   width: 100%;
   border-radius: 2px;
   background-color: rgb(70, 183, 188);
