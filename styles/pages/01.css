@@ -2,6 +2,7 @@
 @import '../components/tag.css';
 @import '../components/gallery.css';
 @import '../components/circle-cursor.css';
+@import '../components/scroll-progress-2.css';
 
 .page01_hero {
   position: relative;
@@ -565,4 +566,9 @@
   color: var(--dark);
   font-size: 36px;
   width: max-content;
+}
+
+.page01 div.footer-wrapper {
+  display: flex;
+  align-items: flex-end;
 }
