@@ -39,3 +39,21 @@ footer.kyunghyang-footer div.footer-logos > div {
 footer.kyunghyang-footer div.footer-logos > div:first-of-type {
   justify-content: flex-end;
 }
+
+@media only screen and (max-width: 1919px) {
+}
+
+@media only screen and (max-width: 1279px) {
+  footer.kyunghyang-footer div.footer-logos {
+    gap: 40px;
+  }
+  footer.kyunghyang-footer div.footer-logos img {
+    max-width: 90%;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+}
+
+@media only screen and (max-width: 399px) {
+}

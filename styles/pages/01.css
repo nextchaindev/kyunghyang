@@ -641,13 +641,37 @@
     font-size: 60px;
     max-width: 95%;
   }
+  .page01 div.page01_garden-life-feedback .feedback-content.left,
+  .page01 div.page01_garden-life-feedback .feedback-content.right,
   .page01 div.page01_garden-life-feedback .feedback-content.bottom {
-    bottom: 60px;
-    left: 50%;
+    top: unset;
+    bottom: 60px !important;
+    left: 50% !important;
     transform: translateX(-50%);
   }
-  .page01 div.page01_garden-life-feedback .feedback-content h3 {
-    /* font-size: 36px; */
+  /* ------------------------------ garden life guide section ------------------------------ */
+  .page01 div.page01_garden-life-guide {
+    padding: 80px;
+  }
+  .page01 div.page01_garden-life-guide .block-content1 {
+    margin-top: 56px;
+    text-align: left;
+  }
+  .page01 div.page01_garden-life-guide .block-content2 {
+    margin-top: 36px;
+    text-align: left;
+  }
+  .page01 div.page01_garden-life-guide .video-container {
+    margin-top: 40px;
+  }
+  .page01 div.page01_garden-life-guide .block-content3 {
+    margin-top: 40px;
+    text-align: left;
+  }
+  /* video */
+  .page01 div.embedded-video {
+    height: auto;
+    padding: 80px 0 160px;
   }
 }
 
