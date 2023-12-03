@@ -81,8 +81,9 @@ gsap.utils.toArray('.scrollable').forEach((panel, i) => {
     },
   };
   if (innerWidth < 768) {
-    config.start = 'top 10%';
-    config.end = 'bottom 10%';
+    console.log(true);
+    config.start = 'top 30%';
+    config.end = 'bottom 70%';
   }
   ScrollTrigger.create(config);
 
