@@ -94,10 +94,10 @@
 
 /* ------------------------------ intro section ------------------------------ */
 .page01_intro.no1 {
-  background-image: url(/assets/images/01/old-man-bg/06_img.png);
+  background-image: url(/assets/images/01/old-man-bg/06_img.png) !important;
 }
 .page01_intro.no2 {
-  background-image: url(/assets/images/01/old-woman-bg/07_img.png);
+  background-image: url(/assets/images/01/old-woman-bg/07_img.png) !important;
 }
 
 .page01 div.page01_intro {
@@ -194,6 +194,10 @@
   width: max-content;
 }
 
+.page01 div.centre-2d-map-info.no1 {
+  background-image: url(/assets/images/01/map/map-f3.png) !important;
+}
+
 .page01 div.page01_map .map-popup-content.point1 {
   top: 53%;
   left: 65%;
@@ -238,6 +242,10 @@
   align-items: center;
   background-color: rgb(0, 0, 0, 0.7);
   gap: 90px;
+}
+
+.page01 div.focused-place.mobile {
+  background-color: var(--dark) !important;
 }
 
 .page01 div.focused-place > * {
@@ -318,6 +326,16 @@
   position: relative;
 }
 
+.page01 .mobile-3d1 {
+  cursor: auto;
+  background-image: url('/assets/images/01/2d-map-4th/36.1.JPG');
+}
+
+.page01 .mobile-3d2 {
+  cursor: auto;
+  background-image: url('/assets/images/01/2d-map-5th/41.1.JPG');
+}
+
 .page01 div.centre-2d-map-info-3d .notice-message {
   background-color: var(--green);
   padding: 12px;
@@ -333,8 +351,16 @@
 
 .page01 div.page01_garden-life-guide {
   background-color: var(--light);
-  padding: 90px 160px 180px;
   text-align: center;
+}
+.page01 div.page01_garden-life-guide:first-of-type {
+  padding: 90px 160px 0;
+}
+.page01 div.page01_garden-life-guide:nth-of-type(2) {
+  padding: 0 160px;
+}
+.page01 div.page01_garden-life-guide:nth-of-type(3) {
+  padding: 0 160px 180px;
 }
 
 .page01 div.page01_garden-life-guide .block-content1 {
@@ -517,13 +543,17 @@
   }
   .page01 .page01_statistics-inner {
     flex: 1;
-    max-height: 100vh;
+    height: 100vh;
+    max-height: var(--doc-height);
     width: 680px;
+    gap: 60px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 40px 0;
   }
   .page01 div.page01_statistics .statistics {
+    flex: 1;
     margin-top: 60px;
     flex-direction: column;
     align-items: center;
@@ -531,8 +561,8 @@
     width: 680px;
   }
   .page01 div.page01_statistics .statistics-chart {
+    flex: unset;
     width: 100%;
-    background-color: var(--white);
     padding: 16px 80px;
   }
   .page01 div.page01_statistics .statistics-chart > *:not(canvas) {
@@ -650,8 +680,14 @@
     transform: translateX(-50%);
   }
   /* ------------------------------ garden life guide section ------------------------------ */
-  .page01 div.page01_garden-life-guide {
-    padding: 80px;
+  .page01 div.page01_garden-life-guide:first-of-type {
+    padding: 80px 80px 0;
+  }
+  .page01 div.page01_garden-life-guide:nth-of-type(2) {
+    padding: 0 80px;
+  }
+  .page01 div.page01_garden-life-guide:nth-of-type(3) {
+    padding: 0 80px 80px;
   }
   .page01 div.page01_garden-life-guide .block-content1 {
     margin-top: 56px;
@@ -676,6 +712,177 @@
 }
 
 @media only screen and (max-width: 767px) {
+  .page01_hero .tag-title {
+    top: 50px;
+    font-size: 18px;
+    padding: 4px 12px;
+  }
+  .page01_hero .main-title h5 {
+    margin-top: 24px;
+  }
+  .page01_hero .main-title .rounded-number {
+    font-size: 16px;
+  }
+  .page01_hero .scroll-down {
+    bottom: 60px;
+    gap: 8px;
+    font-size: 16px;
+  }
+  .page01_hero .scroll-down img {
+    width: 22px;
+  }
+
+  /* ------------------------------ quote section ------------------------------ */
+  .page01 div.page01_quotes h1.quotes-title {
+    gap: 20px;
+    max-width: 90vw !important;
+    text-align: center;
+  }
+  .page01 div.page01_quotes h1.quotes-title > div {
+    padding: 20px 0 10px;
+  }
+  /* .fading-image.no1 {
+    width: 200vw;
+    transform: translateX(-50%);
+  }
+  .fading-image.no2 {
+    width: 130vw;
+  } */
+
+  /* ------------------------------ intro section ------------------------------ */
+  .page01 div.page01_intro h2 {
+    width: 90vw;
+    left: 50% !important;
+    transform: translateX(-50%);
+    text-align: left !important;
+  }
+
+  /* ------------------------------ statistics section ------------------------------ */
+  .page01 .page01_statistics-inner {
+    width: 100%;
+    gap: 40px;
+    padding: 40px 0;
+  }
+  .page01 div.page01_statistics .statistics {
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0;
+    width: 95vw;
+  }
+  .page01 div.page01_statistics .statistics-chart {
+    padding: 16px;
+    flex: unset;
+  }
+  .page01 div.page01_statistics .statistics-contents {
+    padding-left: 16px;
+    gap: 12px;
+  }
+
+  /* ------------------------------ map section ------------------------------ */
+  .page01 div.page01_map .map-popup-content {
+    padding: 20px 20px 24px;
+    width: 90vw;
+    transform: translate(-50%, -50%);
+  }
+  .page01 div.page01_map .map-popup-content.point1,
+  .page01 div.page01_map .circle-yellow.point1,
+  .page01 div.page01_map .map-popup-content.point2,
+  .page01 div.page01_map .circle-yellow.point2 {
+    top: 50%;
+    left: 50%;
+  }
+  .page01 div.page01_map .circle-yellow {
+    padding: 12px;
+    transform: translate(-50%, 100%);
+  }
+  .page01 div.focused-place > img,
+  .page01 div.focused-place > div {
+    width: 80vw;
+    text-align: left;
+  }
+  .page01 div.centre-2d-map-info.no1 {
+    background-image: url(/assets/images/01/map/map-f3.png),
+      url(/assets/images/01/map/bg.png) !important;
+    background-size: 190%, cover;
+    background-position: -47vw 20vh, center;
+  }
+  /* ------------------------------ centre-2d-map section ------------------------------ */
+
+  /* ------------------------------ garden life feedback section ------------------------------ */
+  .page01 div.page01_garden-life-feedback .feedback-comp {
+    max-width: 100%;
+    max-height: 100%;
+  }
+  /* .page01 .top-fixed-2d-map {
+    top: 5vw;
+    left: 5vw;
+    width: 80vw;
+  }
+  .page01 div.centre-2d-map-info .info-content {
+    bottom: 50px;
+    gap: 22px;
+    padding: 12px;
+    max-width: 90vw;
+  }
+  .page01 div.centre-2d-map-info-3d .notice-message {
+    background-color: var(--green);
+    padding: 12px;
+    font-size: 28px;
+    bottom: 50px;
+  } */
+
+  .page01 div.centre-2d-map-info .info-content {
+    gap: 24px;
+    padding: 12px;
+    max-width: 90vw;
+    text-align: left !important;
+  }
+  .page01 div.centre-2d-map-info:not(.no1),
+  .page01_garden-life-feedback {
+    background-size: cover;
+  }
+  .page01 div.centre-2d-map-info-3d .notice-message {
+    font-size: 20px;
+    width: 90vw;
+  }
+  /* ------------------------------ oganization content section ------------------------------ */
+  .page01 div.page01_oganization-content {
+    gap: 20px;
+  }
+  .page01 div.page01_oganization-content .content {
+    gap: 20px;
+    font-size: 40px;
+    max-width: 95vw;
+  }
+  .page01 div.page01_oganization-content img {
+    width: 250px;
+  }
+  /* ------------------------------ garden life guide section ------------------------------ */
+  .page01 div.page01_garden-life-guide:first-of-type {
+    padding: 40px 5vw 0;
+  }
+  .page01 div.page01_garden-life-guide:nth-of-type(2) {
+    padding: 0 5vw;
+  }
+  .page01 div.page01_garden-life-guide:nth-of-type(3) {
+    padding: 0 5vw 40px;
+  }
+  .page01 div.page01_garden-life-guide .block-content1 {
+    margin-top: 24px;
+  }
+  .page01 div.page01_garden-life-guide .block-content2 {
+    margin-top: 16px;
+  }
+  .page01 div.page01_garden-life-guide .video-container,
+  .page01 div.page01_garden-life-guide .block-content3 {
+    margin-top: 20px;
+  }
+  /* video */
+  .page01 div.embedded-video {
+    height: auto;
+    padding: 40px 0 80px;
+  }
 }
 
 @media only screen and (max-width: 399px) {

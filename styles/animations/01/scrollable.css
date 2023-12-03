@@ -14,7 +14,7 @@
 }
 
 .enter2 {
-  top: 100vh;
+  top: var(--doc-height);
   left: 0;
 }
 
@@ -34,7 +34,7 @@
 } */
 
 .enterBack1 {
-  bottom: 100vh;
+  bottom: var(--doc-height);
   left: 0;
 }
 

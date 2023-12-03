@@ -8,6 +8,7 @@ video.attached-video-bg {
   position: fixed;
   min-width: 100vw;
   min-height: 100vh;
+  min-height: var(--doc-height);
   width: auto;
   height: auto;
   object-fit: cover;

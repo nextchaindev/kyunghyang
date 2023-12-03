@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Kyunghyang News</title>
+    <!-- <link rel="icon" type="image/x-icon" href="/images/favicon.ico" /> -->
+    <meta name="keywords" content="Kyunghyang News" />
+    <meta name="description" content="Kyunghyang News" />
+    <meta name="author" content="Kyunghyang News" />
+
+    <link rel="stylesheet" href="/styles/color.css" />
+    <link rel="stylesheet" href="/styles/global.css" />
+    <link rel="stylesheet" href="/styles/pages/404.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/flickity@2/dist/flickity.min.css"
+    />
+    <style>
+      /* body {
+        overflow: auto;
+      } */
+      :root {
+        --doc-height: 100vh;
+      }
+
+      h2 {
+        color: white;
+        text-transform: uppercase;
+      }
+      .container {
+        overflow-y: scroll;
+        height: var(--doc-height);
+        scroll-snap-type: mandatory;
+        /* scroll-snap-points-y: repeat(100vh); */
+        scroll-snap-type: y mandatory;
+      }
+
+      .container .section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        scroll-snap-align: start;
+        position: relative;
+        border: 10px solid black;
+      }
+
+      .section-01 {
+        background-color: maroon;
+        height: var(--doc-height);
+      }
+
+      .section-01a {
+        background-color: palevioletred;
+        height: 120vh;
+      }
+      .section-02 {
+        background-color: navy;
+        height: var(--doc-height);
+      }
+      .section-03 {
+        background-color: gold;
+        height: var(--doc-height);
+      }
+      .section-010 {
+        height: 50vh;
+        background-color: aqua;
+      }
+      .section-011 {
+        height: 80vh;
+        background-color: black;
+      }
+    </style>
+  </head>
+  <body class="container">
+    <div class="section section-01"><h2>one</h2></div>
+    <div class="section section-02"><h2>two</h2></div>
+    <div class="section section-03"><h2>three</h2></div>
+    <div class="section section-010"><h2>50</h2></div>
+    <div class="section section-011"><h2>80</h2></div>
+    <div class="section section-03"><h2>three</h2></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
+  </body>
+</html>
