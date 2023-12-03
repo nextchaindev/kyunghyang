@@ -1049,6 +1049,19 @@
     </footer>
 
     <script type="module">
+      import { DeviceUtil } from '/scripts/common.util.js';
+
+      if (DeviceUtil.isIOS()) {
+        console.log('set done');
+        document.documentElement.style['overflow-x'] = 'unset';
+        document.getElementById('page01').style['overflow-x'] = 'unset';
+      } else {
+        const parallax = document.querySelectorAll('.parallax');
+        parallax.forEach((element) => {
+          element.classList.add('active');
+        });
+      }
+
       const documentHeight = () => {
         const doc = document.documentElement;
         doc.style.setProperty('--doc-height', `${window.innerHeight}px`);

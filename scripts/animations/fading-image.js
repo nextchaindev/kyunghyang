@@ -83,47 +83,47 @@ if (isNotPC) {
           );
         }, 1000);
       },
-      onLeave: function () {
-        gsap.fromTo(
-          elem,
-          { opacity: 1, autoAlpha: 0 },
-          {
-            duration: 5,
-            opacity: 0,
-            autoAlpha: 1,
-            ease: 'back',
-            overwrite: 'auto',
-          }
-        );
-      },
-      onEnterBack: function () {
-        setTimeout(() => {
-          gsap.fromTo(
-            elem,
-            { opacity: 0, autoAlpha: 0 },
-            {
-              duration: 5,
-              opacity: 1,
-              autoAlpha: 1,
-              ease: 'back',
-              overwrite: 'auto',
-            }
-          );
-        }, 1000);
-      },
-      onLeaveBack: function () {
-        gsap.fromTo(
-          elem,
-          { opacity: 1, autoAlpha: 0 },
-          {
-            duration: 5,
-            opacity: 0,
-            autoAlpha: 1,
-            ease: 'back',
-            overwrite: 'auto',
-          }
-        );
-      },
+      // onLeave: function () {
+      //   gsap.fromTo(
+      //     elem,
+      //     { opacity: 1, autoAlpha: 0 },
+      //     {
+      //       duration: 5,
+      //       opacity: 0,
+      //       autoAlpha: 1,
+      //       ease: 'back',
+      //       overwrite: 'auto',
+      //     }
+      //   );
+      // },
+      // onEnterBack: function () {
+      //   setTimeout(() => {
+      //     gsap.fromTo(
+      //       elem,
+      //       { opacity: 0, autoAlpha: 0 },
+      //       {
+      //         duration: 5,
+      //         opacity: 1,
+      //         autoAlpha: 1,
+      //         ease: 'back',
+      //         overwrite: 'auto',
+      //       }
+      //     );
+      //   }, 1000);
+      // },
+      // onLeaveBack: function () {
+      //   gsap.fromTo(
+      //     elem,
+      //     { opacity: 1, autoAlpha: 0 },
+      //     {
+      //       duration: 5,
+      //       opacity: 0,
+      //       autoAlpha: 1,
+      //       ease: 'back',
+      //       overwrite: 'auto',
+      //     }
+      //   );
+      // },
     });
   });
 }

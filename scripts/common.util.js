@@ -37,6 +37,22 @@ export const DeviceUtil = {
       );
     return isMobile || isTablet;
   },
+  isIOS() {
+    var isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+    return (
+      [
+        'iPad Simulator',
+        'iPhone Simulator',
+        'iPod Simulator',
+        'iPad',
+        'iPhone',
+        'iPod',
+      ].includes(navigator.platform) ||
+      // iPad on iOS 13 detection
+      (navigator.userAgent.includes('Mac') && 'ontouchend' in document) ||
+      isSafari
+    );
+  },
 };
 
 export const ElementUtil = {

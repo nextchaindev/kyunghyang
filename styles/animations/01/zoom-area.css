@@ -20,8 +20,12 @@
   height: 100%;
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
   background-repeat: no-repeat;
+}
+
+.fixed-map .trigger-map.active,
+.trigger-map-shadow.active {
+  background-attachment: fixed;
 }
 
 .fixed-map .trigger-map.pc,
@@ -43,8 +47,12 @@
   width: 100%;
   height: 100%;
   background-position: center, center;
-  background-attachment: fixed, fixed;
   background-repeat: no-repeat, no-repeat;
+}
+
+.fixed-background .trigger-photo.active,
+.trigger-photo-shadow {
+  background-attachment: fixed, fixed;
 }
 
 .fixed-background .trigger-photo.pc,

@@ -515,13 +515,13 @@
   .page01 div.page01_quotes h1.quotes-title > div {
     padding: 36px 0 20px;
   }
-  .fading-image.no1 {
+  /* .fading-image.no1 {
     width: 160vw;
     transform: translateX(-30%);
   }
   .fading-image.no2 {
     width: 120vw;
-  }
+  } */
 
   /* ------------------------------ intro section ------------------------------ */
   .page01_intro.no1 {
