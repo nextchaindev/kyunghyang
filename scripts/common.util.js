@@ -27,6 +27,18 @@ export const ScreenUtil = {
   },
 };
 
+export const DeviceUtil = {
+  isNotPC() {
+    const userAgent = navigator.userAgent.toLowerCase();
+    var isMobile = /iPhone|Android/i.test(navigator.userAgent);
+    const isTablet =
+      /(ipad|tablet|(android(?!.*mobile))|(windows(?!.*phone)(.*touch))|kindle|playbook|silk|(puffin(?!.*(IP|AP|WP))))/.test(
+        userAgent
+      );
+    return isMobile || isTablet;
+  },
+};
+
 export const ElementUtil = {
   isInViewport(element) {
     const rect = element.getBoundingClientRect();

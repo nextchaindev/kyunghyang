@@ -19,12 +19,6 @@ document.body.addEventListener('scroll', () => {
 
     const top = snapIndex * innerHeight + spacesOfNoneFullscreenSections;
 
-    textIndex === 4 &&
-      console.log(
-        snapIndex * innerHeight + spacesOfNoneFullscreenSections,
-        document.body.scrollTop
-      );
-
     if (top === document.body.scrollTop) {
       gsap.fromTo(
         goingUpTexts[textIndex],
