@@ -82,6 +82,15 @@ if (!isNotPC) {
       });
   }
 
+  const bg1a = document.querySelectorAll('.trigger-photo');
+  const bg2a = document.querySelectorAll('.trigger-photo-shadow');
+  bg1a.forEach((element) => {
+    element.classList.add('pc');
+  });
+  bg2a.forEach((element) => {
+    element.classList.add('pc');
+  });
+
   function triggerZoom2dMap() {
     const zoomData =
       innerWidth < 1280
@@ -273,6 +282,20 @@ if (!isNotPC) {
     element.classList.add('mobile');
   });
   bg3.forEach((element) => {
+    element.classList.add('mobile');
+    element.classList.add('parallax');
+  });
+
+  const bg1a = document.querySelectorAll('.trigger-photo');
+  const bg2a = document.querySelectorAll('.trigger-photo-shadow');
+  const bg3a = document.querySelectorAll('.fixed-bg_scrollable-section');
+  bg1a.forEach((element) => {
+    element.classList.add('mobile');
+  });
+  bg2a.forEach((element) => {
+    element.classList.add('mobile');
+  });
+  bg3a.forEach((element) => {
     element.classList.add('mobile');
     element.classList.add('parallax');
   });

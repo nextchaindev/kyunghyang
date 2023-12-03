@@ -157,42 +157,11 @@ h6 {
 
 @media only screen and (max-width: 767px) {
   h1 {
-    font-size: 32px;
+    font-size: 30px;
   }
 
   h2 {
-    font-size: 26px;
-  }
-
-  h3 {
     font-size: 24px;
-  }
-
-  h4 {
-    font-size: 20px;
-  }
-
-  h5 {
-    font-size: 18px;
-  }
-
-  h6 {
-    font-size: 15px;
-  }
-
-  .text-body {
-    font-size: 14px;
-    line-height: 26px;
-  }
-}
-
-@media only screen and (max-width: 399px) {
-  h1 {
-    font-size: 28px;
-  }
-
-  h2 {
-    font-size: 20px;
   }
 
   h3 {
@@ -214,5 +183,15 @@ h6 {
   .text-body {
     font-size: 13px;
     line-height: 22px;
+  }
+}
+
+@media only screen and (max-width: 399px) {
+  h1 {
+    font-size: 28px;
+  }
+
+  h2 {
+    font-size: 20px;
   }
 }

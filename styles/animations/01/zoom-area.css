@@ -42,12 +42,29 @@
 .trigger-photo-shadow {
   width: 100%;
   height: 100%;
-  background-image: url(/assets/images/01/2d-map/15map_img.png),
-    url(/assets/images/01/map/bg.png);
-  background-size: 80%, cover;
   background-position: center, center;
   background-attachment: fixed, fixed;
   background-repeat: no-repeat, no-repeat;
+}
+
+.fixed-background .trigger-photo.pc,
+.trigger-photo-shadow.pc {
+  background-image: url(/assets/images/01/2d-map/15map_img.png),
+    url(/assets/images/01/map/bg.png);
+  background-size: 80%, cover;
+}
+
+.fixed-background .trigger-photo.mobile,
+.trigger-photo-shadow.mobile {
+  background-image: url(/assets/images/01/2d-map/15map_img.png),
+    url(/assets/images/01/map/bg.png);
+  background-size: 75%, cover;
+}
+
+.fixed-bg_scrollable-section.no-bg.mobile {
+  background-image: url(/assets/images/01/2d-map/15map_img.png),
+    url(/assets/images/01/map/bg.png);
+  background-size: 75%, cover;
 }
 
 @media only screen and (max-width: 1919px) {

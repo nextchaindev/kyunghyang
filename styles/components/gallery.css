@@ -51,5 +51,11 @@
   }
 }
 
-@media only screen and (max-width: 399px) {
+@media only screen and (max-width: 767px) {
+  .image-gallery .image-gallery-cell {
+    width: 97% !important;
+  }
+  .image-gallery .flickity-button {
+    display: none !important;
+  }
 }

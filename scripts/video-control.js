@@ -1,14 +1,14 @@
-const playIcons = document.getElementsByClassName("video-playpause");
+const playIcons = document.getElementsByClassName('video-playpause');
 
-const video0 = document.getElementById("controlled-video1");
-video0.addEventListener("click", () => {
+const video0 = document.getElementById('controlled-video1');
+video0.addEventListener('click', () => {
   if (video0.paused) {
     video0.play();
   } else {
     video0.pause();
   }
 });
-playIcons[0].addEventListener("click", () => {
+playIcons[0].addEventListener('click', () => {
   if (video0.paused) {
     video0.play();
   } else {
@@ -22,15 +22,15 @@ video0.onpause = () => {
   playIcons[0].style.opacity = 1;
 };
 
-const video1 = document.getElementById("controlled-video2");
-video1.addEventListener("click", () => {
+const video1 = document.getElementById('controlled-video2');
+video1.addEventListener('click', () => {
   if (video1.paused) {
     video1.play();
   } else {
     video1.pause();
   }
 });
-playIcons[1].addEventListener("click", () => {
+playIcons[1].addEventListener('click', () => {
   if (video1.paused) {
     video1.play();
   } else {

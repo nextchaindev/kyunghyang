@@ -14,3 +14,10 @@ div.section-title-tag {
     padding: 6px 26px;
   }
 }
+
+@media only screen and (max-width: 767px) {
+  div.section-title-tag {
+    font-size: 20px;
+    padding: 4px 20px;
+  }
+}
