@@ -14,10 +14,6 @@
   box-sizing: border-box;
 }
 
-:root {
-  --doc-height: 100%;
-}
-
 html,
 body {
   height: 100%;
