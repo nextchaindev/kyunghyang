@@ -179,7 +179,7 @@
         </div>
       </div>
     </div>
-    <div class="fullscreen snap-item section_scroll">
+    <div class="fullscreen snap-item mobile-hidden section_scroll">
       <div class="trigger-map-shadow"></div>
     </div>
     <div class="mobile-hidden" id="fixed-map">
@@ -1050,11 +1050,21 @@
 
     <script type="module">
       import { DeviceUtil } from '/scripts/common.util.js';
+      document.documentElement.onscroll = function () {
+        document.documentElement.scrollLeft = 0;
+      };
+      document.body.addEventListener('scroll', function () {
+        document.body.scrollLeft = 0;
+      });
 
       if (DeviceUtil.isIOS()) {
         console.log('set done');
         document.documentElement.style['overflow-x'] = 'unset';
         document.getElementById('page01').style['overflow-x'] = 'unset';
+        // document.documentElement.style['overflow-y'] = 'scroll';
+        // document.getElementById('page01').style['overflow-y'] = 'scroll';
+        // document.documentElement.style['overflow-x'] = 'hidden';
+        // document.getElementById('page01').style['overflow-x'] = 'hidden';
       } else {
         const parallax = document.querySelectorAll('.parallax');
         parallax.forEach((element) => {
