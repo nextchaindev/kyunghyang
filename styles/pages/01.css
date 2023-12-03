@@ -517,7 +517,8 @@
   }
   .page01 .page01_statistics-inner {
     flex: 1;
-    max-height: 100vh;
+    height: 100vh;
+    max-height: var(--doc-height);
     width: 680px;
     display: flex;
     flex-direction: column;

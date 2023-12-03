@@ -347,6 +347,7 @@
   flex-direction: column;
   justify-content: flex-end;
   height: 100vh;
+  height: var(--doc-height);
 }
 .page02 div.page02_group03_section22 .half_background {
   height: 70vh;

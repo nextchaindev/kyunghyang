@@ -60,15 +60,20 @@
       href="https://unpkg.com/flickity@2/dist/flickity.min.css"
     />
   </head>
-  <body class="kyunghyang-news page01" id="page01">
+  <body class="kyunghyang-news page01 snap-container" id="page01">
     <video playsinline autoplay muted loop class="attached-video-bg">
       <source src="/assets/videos/home-banner-bg.mp4" type="video/mp4" />
       귀하의 브라우저는 HTML5 비디오를 지원하지 않습니다
     </video>
+    <!-- <div class="section snap-item section-01"><h2>one</h2></div>
+    <div class="section snap-item section-02"><h2>two</h2></div>
+    <div class="section snap-item section-03"><h2>three</h2></div>
+    <div class="section snap-item section-010"><h2>50</h2></div>
+    <div class="section snap-item section-011"><h2>80</h2></div> -->
 
     <!-- 01 -->
     <div
-      class="page01_hero bg-black-30 fullscreen scrollable section_scroll hide_scroll"
+      class="page01_hero bg-black-30 fullscreen snap-item section_scroll hide_scroll"
     >
       <div class="tag-title">공공디자인으로 행복한 공간 만들기</div>
       <div class="main-title">
@@ -87,7 +92,7 @@
         <img src="/assets/svgs/icon_down-arrow.svg" alt="scroll-down" />
       </div>
     </div>
-    <div class="page01_quotes parallax fullscreen scrollable">
+    <div class="page01_quotes parallax fullscreen snap-item">
       <img
         class="fullscreen fading-image no1"
         src="/assets/images/01/young-girl-bg/04_img.png"
@@ -104,7 +109,7 @@
         &rdquo;
       </h1>
     </div>
-    <div class="page01_quotes fullscreen scrollable">
+    <div class="page01_quotes fullscreen snap-item">
       <img
         class="fullscreen fading-image no2"
         src="/assets/images/01/middle-woman-bg/05_img.png"
@@ -121,14 +126,14 @@
         &rdquo;
       </h1>
     </div>
-    <div class="page01_intro parallax no1 fullscreen scrollable">
+    <div class="page01_intro parallax no1 fullscreen snap-item">
       <h2 class="left text-strong-2 fading-text">
         <span id="splitText1"></span><br />
         <span id="splitText2"></span><br />
         <span id="splitText3"></span>
       </h2>
     </div>
-    <div class="page01_intro parallax no2 fullscreen scrollable">
+    <div class="page01_intro parallax no2 fullscreen snap-item">
       <h2 class="right text-strong-2 fading-text">
         <span id="splitText4"></span><br />
         <span id="splitText5"></span><br />
@@ -137,7 +142,7 @@
     </div>
 
     <!-- 02 -->
-    <div class="page01_statistics fullscreen scrollable section_scroll">
+    <div class="page01_statistics fullscreen snap-item section_scroll">
       <div class="page01_statistics-inner">
         <div class="section-title-tag">대한민국 치매 현황</div>
         <div class="statistics">
@@ -180,13 +185,13 @@
         </div>
       </div>
     </div>
-    <div class="fullscreen scrollable section_scroll">
+    <div class="fullscreen snap-item section_scroll">
       <div class="trigger-map-shadow"></div>
     </div>
     <div id="fixed-map">
       <div class="trigger-map"></div>
     </div>
-    <div class="page01_map fixed-map_scrollable-section fullscreen scrollable">
+    <div class="page01_map fixed-map_scrollable-section fullscreen snap-item">
       <div class="map-popup-content point1">
         <h3 class="text-light">
           경기도 광명시 구도심에 있는 하안노인복지관은<br />어르신들의
@@ -195,7 +200,7 @@
       </div>
       <div class="circle-yellow point1"><div></div></div>
     </div>
-    <div class="page01_map fixed-map_scrollable-section fullscreen scrollable">
+    <div class="page01_map fixed-map_scrollable-section fullscreen snap-item">
       <div class="map-popup-content point2">
         <h3 class="text-light">
           2023년 기준 등록 어르신이<span class="text-strong"> 4,200여명</span
@@ -205,7 +210,7 @@
       <div class="circle-yellow point2"><div></div></div>
     </div>
     <div
-      class="focused-place fixed-map_scrollable-section fullscreen scrollable"
+      class="focused-place fixed-map_scrollable-section fullscreen snap-item"
     >
       <img
         src="/assets/images/01/map/11_img.png"
@@ -226,7 +231,7 @@
       </div>
     </div>
     <div
-      class="centre-2d-map-info fixed-map_scrollable-section parallax fullscreen scrollable"
+      class="centre-2d-map-info fixed-map_scrollable-section parallax fullscreen snap-item"
       style="background-image: url(/assets/images/01/map/12_img.png)"
     >
       <div class="info-content left">
@@ -238,7 +243,7 @@
       </div>
     </div>
     <div
-      class="centre-2d-map-info parallax fullscreen scrollable"
+      class="centre-2d-map-info parallax fullscreen snap-item"
       style="background-image: url(/assets/images/01/map/map-f3.png)"
     >
       <div class="info-content left">
@@ -251,117 +256,113 @@
         </h2>
       </div>
     </div>
-    <div class="relative">
-      <div class="page01_gallery bg-grey-1 free" id="non1">
-        <div class="section-title-tag">복지관 별관의 과거 모습</div>
-        <div
-          class="image-gallery js-flickity"
-          data-flickity-options='{ "wrapAround": true, "pageDots": false }'
-        >
-          <div class="image-gallery-cell">
-            <img
-              src="/assets/images/01/gallery/gallery-3.JPEG"
-              width="100%"
-              height="100%"
-              alt=""
-            />
-          </div>
-          <div class="image-gallery-cell">
-            <img
-              src="/assets/images/01/gallery/gallery-4.jpg"
-              width="100%"
-              height="100%"
-              alt=""
-            />
-          </div>
-          <div class="image-gallery-cell">
-            <img
-              src="/assets/images/01/gallery/gallery-5.jpg"
-              width="100%"
-              height="100%"
-              alt=""
-            />
-          </div>
-          <div class="image-gallery-cell">
-            <img
-              src="/assets/images/01/gallery/gallery-6.jpg"
-              width="100%"
-              height="100%"
-              alt=""
-            />
-          </div>
-          <!-- doubled -->
-          <div class="image-gallery-cell">
-            <img
-              src="/assets/images/01/gallery/gallery-3.JPEG"
-              width="100%"
-              height="100%"
-              alt=""
-            />
-          </div>
-          <div class="image-gallery-cell">
-            <img
-              src="/assets/images/01/gallery/gallery-4.jpg"
-              width="100%"
-              height="100%"
-              alt=""
-            />
-          </div>
-          <div class="image-gallery-cell">
-            <img
-              src="/assets/images/01/gallery/gallery-5.jpg"
-              width="100%"
-              height="100%"
-              alt=""
-            />
-          </div>
-          <div class="image-gallery-cell">
-            <img
-              src="/assets/images/01/gallery/gallery-6.jpg"
-              width="100%"
-              height="100%"
-              alt=""
-            />
-          </div>
-        </div>
-      </div>
+    <div class="page01_gallery bg-grey-1 snap-item" id="non1">
+      <div class="section-title-tag">복지관 별관의 과거 모습</div>
       <div
-        class="page01_oganization-content bg-grey-1 pt-90 pb-90 free"
-        id="non2"
+        class="image-gallery js-flickity"
+        data-flickity-options='{ "wrapAround": true, "pageDots": false }'
       >
-        <h3 class="text-light goingUp-text">
-          ‘인생정원’을 만든 김정욱 총감독은 말합니다
-        </h3>
-        <img
-          src="/assets/images/01/organization-profile/14_profile.png"
-          srcset="
-            /assets/images/01/organization-profile/14_profile@2x.png 2x,
-            /assets/images/01/organization-profile/14_profile@3x.png 3x
-          "
-        />
-        <div class="content text-strong-2">
-          &ldquo;
-          <h3 class="text-light goingUp-text">
-            어르신들이 가장 쉽게 접근할 수 있는 게 식물이죠<br />
-            <span class="text-strong"
-              >가꾼 식물이 자라나는 모습을 보면서, 성취감과 긍정적인 감각을
-              얻으십니다</span
-            ><br /><br />
-            이를 통해 어르신들의 지속적인 방문을 유도하고,<br />
-            사회적인 교류를 할 수 있도록 하는 것을
-            <span class="text-strong">‘인생정원’</span>의 목표로 삼았습니다
-          </h3>
-          &rdquo;
+        <div class="image-gallery-cell">
+          <img
+            src="/assets/images/01/gallery/gallery-3.JPEG"
+            width="100%"
+            height="100%"
+            alt=""
+          />
+        </div>
+        <div class="image-gallery-cell">
+          <img
+            src="/assets/images/01/gallery/gallery-4.jpg"
+            width="100%"
+            height="100%"
+            alt=""
+          />
+        </div>
+        <div class="image-gallery-cell">
+          <img
+            src="/assets/images/01/gallery/gallery-5.jpg"
+            width="100%"
+            height="100%"
+            alt=""
+          />
+        </div>
+        <div class="image-gallery-cell">
+          <img
+            src="/assets/images/01/gallery/gallery-6.jpg"
+            width="100%"
+            height="100%"
+            alt=""
+          />
+        </div>
+        <!-- doubled -->
+        <div class="image-gallery-cell">
+          <img
+            src="/assets/images/01/gallery/gallery-3.JPEG"
+            width="100%"
+            height="100%"
+            alt=""
+          />
+        </div>
+        <div class="image-gallery-cell">
+          <img
+            src="/assets/images/01/gallery/gallery-4.jpg"
+            width="100%"
+            height="100%"
+            alt=""
+          />
+        </div>
+        <div class="image-gallery-cell">
+          <img
+            src="/assets/images/01/gallery/gallery-5.jpg"
+            width="100%"
+            height="100%"
+            alt=""
+          />
+        </div>
+        <div class="image-gallery-cell">
+          <img
+            src="/assets/images/01/gallery/gallery-6.jpg"
+            width="100%"
+            height="100%"
+            alt=""
+          />
         </div>
       </div>
-      <div class="absolute scrollable"></div>
-      <div class="absolute scrollable"></div>
+    </div>
+    <div
+      class="page01_oganization-content bg-grey-1 pt-90 pb-90 snap-item"
+      id="non2"
+    >
+      <h3 class="text-light goingUp-text">
+        ‘인생정원’을 만든 김정욱 총감독은 말합니다
+      </h3>
+      <img
+        src="/assets/images/01/organization-profile/14_profile.png"
+        srcset="
+          /assets/images/01/organization-profile/14_profile@2x.png 2x,
+          /assets/images/01/organization-profile/14_profile@3x.png 3x
+        "
+      />
+      <div class="content text-strong-2">
+        &ldquo;
+        <h3 class="text-light goingUp-text">
+          어르신들이 가장 쉽게 접근할 수 있는 게 식물이죠<br />
+          <span class="text-strong"
+            >가꾼 식물이 자라나는 모습을 보면서, 성취감과 긍정적인 감각을
+            얻으십니다</span
+          ><br /><br />
+          이를 통해 어르신들의 지속적인 방문을 유도하고,<br />
+          사회적인 교류를 할 수 있도록 하는 것을
+          <span class="text-strong">‘인생정원’</span>의 목표로 삼았습니다
+        </h3>
+        &rdquo;
+      </div>
     </div>
 
-    <div class="section_scroll fullscreen scrollable">
+    <div class="section_scroll fullscreen snap-item">
       <div class="trigger-photo-shadow"></div>
     </div>
-    <div class="fullscreen scrollable">
+    <div class="fullscreen snap-item">
       <div class="trigger-photo-shadow"></div>
     </div>
     <div id="fixed-background">
@@ -447,12 +448,12 @@
     </div>
 
     <!-- 3 -->
-    <div class="fixed-bg_scrollable-section fullscreen scrollable"></div>
+    <div class="fixed-bg_scrollable-section fullscreen snap-item"></div>
     <div
-      class="fixed-bg_scrollable-section fullscreen scrollable section_scroll"
+      class="fixed-bg_scrollable-section fullscreen snap-item section_scroll"
     ></div>
     <div
-      class="centre-2d-map-info fullscreen scrollable parallax fixed-bg_scrollable-section"
+      class="centre-2d-map-info fullscreen snap-item parallax fixed-bg_scrollable-section"
       style="background-image: url(/assets/images/01/2d-map-1st/17_img.png)"
     >
       <div class="info-content left">
@@ -466,7 +467,7 @@
       </div>
     </div>
     <div
-      class="centre-2d-map-info fullscreen scrollable parallax fixed-bg_scrollable-section"
+      class="centre-2d-map-info fullscreen snap-item parallax fixed-bg_scrollable-section"
       style="background-image: url(/assets/images/01/2d-map-1st/18_img.png)"
     >
       <div class="info-content right">
@@ -477,7 +478,7 @@
       </div>
     </div>
     <div
-      class="centre-2d-map-info fullscreen scrollable parallax fixed-bg_scrollable-section"
+      class="centre-2d-map-info fullscreen snap-item parallax fixed-bg_scrollable-section"
       style="background-image: url(/assets/images/01/2d-map-1st/19_img.png)"
     >
       <div class="info-content right">
@@ -488,7 +489,7 @@
       </div>
     </div>
     <div
-      class="centre-2d-map-info fullscreen scrollable parallax fixed-bg_scrollable-section"
+      class="centre-2d-map-info fullscreen snap-item parallax fixed-bg_scrollable-section"
       style="background-image: url(/assets/images/01/2d-map-1st/20_img.png)"
     >
       <div class="info-content left">
@@ -498,14 +499,14 @@
         </h2>
       </div>
     </div>
-    <div class="fixed-bg_scrollable-section fullscreen scrollable"></div>
+    <div class="fixed-bg_scrollable-section fullscreen snap-item"></div>
     <!-- 4 -->
     <div
-      class="fixed-bg_scrollable-section fullscreen scrollable section_scroll"
+      class="fixed-bg_scrollable-section fullscreen snap-item section_scroll"
     ></div>
     <div class="page01_garden-life-feedback">
       <div
-        class="feedback-comp fixed-bg_scrollable-section fullscreen scrollable relative"
+        class="feedback-comp fixed-bg_scrollable-section fullscreen snap-item relative"
       >
         <div class="feedback-container">
           <h3 class="title left text-bold goingUp-text">
@@ -533,7 +534,7 @@
       </div>
     </div>
     <div
-      class="centre-2d-map-info fullscreen scrollable parallax fixed-bg_scrollable-section"
+      class="centre-2d-map-info fullscreen snap-item parallax fixed-bg_scrollable-section"
       style="background-image: url(/assets/images/01/2d-map-2nd/23_img.png)"
     >
       <div class="info-content right">
@@ -545,7 +546,7 @@
       </div>
     </div>
     <div
-      class="centre-2d-map-info fullscreen scrollable parallax fixed-bg_scrollable-section"
+      class="centre-2d-map-info fullscreen snap-item parallax fixed-bg_scrollable-section"
       style="background-image: url(/assets/images/01/2d-map-2nd/24_img.png)"
     >
       <div class="info-content left">
@@ -557,7 +558,7 @@
       </div>
     </div>
     <div
-      class="centre-2d-map-info fullscreen scrollable parallax fixed-bg_scrollable-section"
+      class="centre-2d-map-info fullscreen snap-item parallax fixed-bg_scrollable-section"
       style="background-image: url(/assets/images/01/2d-map-2nd/25_img.png)"
     >
       <div class="info-content right">
@@ -569,13 +570,13 @@
         </h2>
       </div>
     </div>
-    <div class="fixed-bg_scrollable-section fullscreen scrollable"></div>
+    <div class="fixed-bg_scrollable-section fullscreen snap-item"></div>
     <!-- 5a -->
     <div
-      class="fixed-bg_scrollable-section fullscreen scrollable section_scroll"
+      class="fixed-bg_scrollable-section fullscreen snap-item section_scroll"
     ></div>
     <div
-      class="centre-2d-map-info fullscreen scrollable parallax fixed-bg_scrollable-section"
+      class="centre-2d-map-info fullscreen snap-item parallax fixed-bg_scrollable-section"
       style="background-image: url(/assets/images/01/2d-map-3rd/27_img.png)"
     >
       <div class="info-content left">
@@ -586,7 +587,7 @@
       </div>
     </div>
     <div
-      class="centre-2d-map-info fullscreen scrollable parallax fixed-bg_scrollable-section"
+      class="centre-2d-map-info fullscreen snap-item parallax fixed-bg_scrollable-section"
       style="background-image: url(/assets/images/01/2d-map-3rd/28_img.png)"
     >
       <div class="info-content right">
@@ -597,7 +598,7 @@
       </div>
     </div>
     <div
-      class="centre-2d-map-info fullscreen scrollable parallax fixed-bg_scrollable-section"
+      class="centre-2d-map-info fullscreen snap-item parallax fixed-bg_scrollable-section"
       style="background-image: url(/assets/images/01/2d-map-3rd/29_img.png)"
     >
       <div class="info-content left">
@@ -607,13 +608,13 @@
         </h2>
       </div>
     </div>
-    <div class="fixed-bg_scrollable-section fullscreen scrollable"></div>
+    <div class="fixed-bg_scrollable-section fullscreen snap-item"></div>
     <!-- 5b -->
     <div
-      class="fixed-bg_scrollable-section fullscreen scrollable section_scroll"
+      class="fixed-bg_scrollable-section fullscreen snap-item section_scroll"
     ></div>
     <div
-      class="centre-2d-map-info fullscreen scrollable parallax fixed-bg_scrollable-section"
+      class="centre-2d-map-info fullscreen snap-item parallax fixed-bg_scrollable-section"
       style="background-image: url(/assets/images/01/2d-map-4th/31_img.png)"
     >
       <div class="info-content right">
@@ -625,7 +626,7 @@
       </div>
     </div>
     <div
-      class="centre-2d-map-info fullscreen scrollable arallax fixed-bg_scrollable-section"
+      class="centre-2d-map-info fullscreen snap-item arallax fixed-bg_scrollable-section"
       style="background-image: url(/assets/images/01/2d-map-4th/32_img.png)"
     >
       <div class="info-content left">
@@ -638,7 +639,7 @@
       </div>
     </div>
     <div
-      class="centre-2d-map-info fullscreen scrollable parallax fixed-bg_scrollable-section"
+      class="centre-2d-map-info fullscreen snap-item parallax fixed-bg_scrollable-section"
       style="background-image: url(/assets/images/01/2d-map-4th/33_img.png)"
     >
       <div class="info-content right">
@@ -655,7 +656,7 @@
     <div
       class="page01_garden-life-feedback hide_scroll fixed-bg_scrollable-section"
     >
-      <div class="feedback-comp fullscreen scrollable relative">
+      <div class="feedback-comp fullscreen snap-item relative">
         <div class="feedback-container">
           <h3 class="title left text-bold goingUp-text">
             박종연 광명시 도시계획과 주무관은 말합니다
@@ -687,13 +688,13 @@
         </div>
       </div>
     </div>
-    <div class="fixed-bg_scrollable-section fullscreen scrollable"></div>
+    <div class="fixed-bg_scrollable-section fullscreen snap-item"></div>
     <!-- 6 -->
     <div
-      class="fixed-bg_scrollable-section fullscreen scrollable section_scroll"
+      class="fixed-bg_scrollable-section fullscreen snap-item section_scroll"
     ></div>
     <div
-      class="centre-2d-map-info-3d fullscreen scrollable fixed-bg_scrollable-section"
+      class="centre-2d-map-info-3d fullscreen snap-item fixed-bg_scrollable-section"
       id="viewer1"
     >
       <div class="notice-message">
@@ -701,7 +702,7 @@
       </div>
     </div>
     <div
-      class="centre-2d-map-info fullscreen scrollable parallax fixed-bg_scrollable-section"
+      class="centre-2d-map-info fullscreen snap-item parallax fixed-bg_scrollable-section"
       style="background-image: url(/assets/images/01/2d-map-4th/37_img.png)"
     >
       <div class="info-content left">
@@ -714,7 +715,7 @@
       </div>
     </div>
     <div
-      class="centre-2d-map-info fullscreen scrollable parallax fixed-bg_scrollable-section"
+      class="centre-2d-map-info fullscreen snap-item parallax fixed-bg_scrollable-section"
       style="background-image: url(/assets/images/01/2d-map-4th/38_img.png)"
     >
       <div class="info-content right">
@@ -730,7 +731,7 @@
       </div>
     </div>
     <div
-      class="centre-2d-map-info fullscreen scrollable parallax fixed-bg_scrollable-section"
+      class="centre-2d-map-info fullscreen snap-item parallax fixed-bg_scrollable-section"
       style="background-image: url(/assets/images/01/2d-map-4th/39_img.png)"
     >
       <div class="info-content left">
@@ -741,13 +742,13 @@
         </h2>
       </div>
     </div>
-    <div class="fixed-bg_scrollable-section fullscreen scrollable"></div>
+    <div class="fixed-bg_scrollable-section fullscreen snap-item"></div>
     <!-- 7 -->
     <div
-      class="fixed-bg_scrollable-section fullscreen scrollable section_scroll"
+      class="fixed-bg_scrollable-section fullscreen snap-item section_scroll"
     ></div>
     <div
-      class="centre-2d-map-info-3d fixed-bg_scrollable-section fullscreen scrollable"
+      class="centre-2d-map-info-3d fixed-bg_scrollable-section fullscreen snap-item"
       id="viewer2"
     >
       <div class="notice-message">
@@ -755,7 +756,7 @@
       </div>
     </div>
     <div
-      class="centre-2d-map-info fixed-bg_scrollable-section fullscreen scrollable parallax"
+      class="centre-2d-map-info fixed-bg_scrollable-section fullscreen snap-item parallax"
       style="background-image: url(/assets/images/01/2d-map-5th/42_img.png)"
     >
       <div class="info-content right">
@@ -770,7 +771,7 @@
       </div>
     </div>
     <div
-      class="centre-2d-map-info fullscreen scrollable parallax"
+      class="centre-2d-map-info fullscreen snap-item parallax"
       style="background-image: url(/assets/images/01/2d-map-5th/43_img.png)"
     >
       <div class="info-content left">
@@ -783,7 +784,7 @@
       </div>
     </div>
     <div
-      class="centre-2d-map-info fullscreen scrollable parallax"
+      class="centre-2d-map-info fullscreen snap-item parallax"
       style="background-image: url(/assets/images/01/2d-map-5th/43.1.jpg)"
     >
       <div class="absolute-bg bg-shadow-right fullscreen relative"></div>
@@ -796,7 +797,7 @@
     </div>
 
     <!-- 08 -->
-    <div class="video-fullscreen-container scrollable hide_scroll">
+    <div class="video-fullscreen-container snap-item hide_scroll">
       <div class="video-container">
         <video playsinline id="controlled-video1">
           <source src="/assets/videos/home-edu-program.mp4" type="video/mp4" />
@@ -807,7 +808,7 @@
         </div>
       </div>
     </div>
-    <div class="page01_garden-life-guide scrollable section_scroll">
+    <div class="page01_garden-life-guide snap-item section_scroll">
       <div class="section-title-tag">인생정원 해설사</div>
       <div class="block-content1">
         <h3 class="text-light goingUp-text">
@@ -829,6 +830,8 @@
           한 달간 원예교육을 받은 어르신들은 인생정원 해설사가 될 수 있습니다
         </h3>
       </div>
+    </div>
+    <div class="page01_garden-life-guide snap-item">
       <div class="video-container">
         <video playsinline id="controlled-video2">
           <source
@@ -851,7 +854,7 @@
         </h3>
       </div>
     </div>
-    <div class="page01_garden-life-feedback hide_scroll">
+    <div class="page01_garden-life-feedback snap-item hide_scroll">
       <div class="feedback-comp fullscreen">
         <div class="feedback-container">
           <h3 class="title right goingUp-text">
@@ -879,6 +882,8 @@
           </div>
         </div>
       </div>
+    </div>
+    <div class="page01_garden-life-feedback snap-item hide_scroll">
       <div class="image-fullscreen-container fullscreen">
         <img
           src="/assets/images/01/home-garden-life-feedback/46_img2.png"
@@ -888,6 +893,8 @@
           "
         />
       </div>
+    </div>
+    <div class="page01_garden-life-feedback snap-item hide_scroll">
       <div class="feedback-comp fullscreen">
         <div class="feedback-container">
           <h3 class="title left goingUp-text">
@@ -915,6 +922,8 @@
           </div>
         </div>
       </div>
+    </div>
+    <div class="page01_garden-life-feedback snap-item hide_scroll">
       <div class="image-fullscreen-container fullscreen">
         <div class="img-container">
           <img
@@ -937,7 +946,10 @@
         </div>
       </div>
     </div>
-    <div class="page01_oganization-content pb-90 hide_scroll" id="non4">
+    <div
+      class="page01_oganization-content pb-90 snap-item hide_scroll"
+      id="non4"
+    >
       <h3 class="text-light goingUp-text">
         노형석 하안노인종합복지관 팀장은 말합니다
       </h3>
@@ -963,7 +975,9 @@
     </div>
 
     <!-- 10 -->
-    <div class="video-fullscreen-container embedded-video hide_scroll">
+    <div
+      class="video-fullscreen-container embedded-video snap-item hide_scroll"
+    >
       <div class="video-container">
         <iframe
           width="100%"
@@ -974,7 +988,7 @@
       </div>
     </div>
     <div
-      class="fullscreen parallax hide_scroll"
+      class="fullscreen snap-item parallax hide_scroll"
       style="background-image: url(/assets/images/01/outro/49_img.png)"
     ></div>
 
@@ -986,7 +1000,7 @@
       <span class="text-strong text-dark">360</span>
     </div> -->
 
-    <footer class="kyunghyang-footer hide_scroll">
+    <footer class="kyunghyang-footer snap-item hide_scroll">
       <div>
         <p class="text-body">
           공공디자인으로 행복한 공간 만들기 프로젝트 광명 인생정원편
@@ -1030,6 +1044,14 @@
         </p>
       </div>
     </footer>
+
+    <script type="module">
+      const documentHeight = () => {
+        const doc = document.documentElement;
+        doc.style.setProperty('--doc-height', `${window.innerHeight}px`);
+      };
+      window.addEventListener('resize', documentHeight);
+    </script>
 
     <!-- gallery -->
     <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>

@@ -2,6 +2,7 @@
 div.image-fullscreen-container {
   width: 100vw;
   height: 100vh;
+  height: var(--doc-height);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -36,6 +37,7 @@ img.fullscreen {
 div.video-fullscreen-container {
   width: 100vw;
   height: 100vh;
+  height: var(--doc-height);
   display: flex;
   justify-content: center;
   align-items: center;
