@@ -17,16 +17,6 @@
 html,
 body {
   height: 100%;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-  line-height: 1.3;
-  letter-spacing: 0.5px;
-  font-family: Pretendard-Regular;
-}
-
-html.snapp,
-body.snapp {
-  height: 100%;
   overflow-x: hidden;
   /* overflow-y: hidden; */
   -ms-overflow-style: none;
@@ -50,10 +40,13 @@ body::-webkit-scrollbar {
 }
 
 .parallax {
-  background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.parallax.active {
+  background-attachment: fixed;
 }
 
 .flex-center {

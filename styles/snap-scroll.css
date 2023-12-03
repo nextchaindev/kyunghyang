@@ -1,19 +1,11 @@
-/* .snap-container {
+.snap-container {
   width: 100vw;
   height: 100vh;
   height: var(--doc-height);
-  scroll-snap-points-y: repeat(var(--doc-height));
-  scroll-snap-type: y mandatory;
-} */
-
-.snapp.snap-container {
   overflow-x: hidden;
   overflow-y: scroll;
-  width: 100vw;
-  height: 100vh;
-  height: var(--doc-height);
   scroll-snap-type: mandatory;
-  scroll-snap-points-y: repeat(var(--doc-height));
+  /* scroll-snap-points-y: repeat(var(--doc-height)); */
   scroll-snap-type: y mandatory;
 }
 
