@@ -1,6 +1,11 @@
 // import { DeviceUtil } from '../common.util.js';
 
 // const isNotPC = DeviceUtil.isNotPC();
+window.addEventListener('beforeunload', (event) => {
+  event.preventDefault();
+  window.scrollTo(0, 0);
+  document.body.scrollTo(0, 0);
+});
 
 // if (isNotPC) {
 document.getElementById('scrollOnclick').onclick = () => {

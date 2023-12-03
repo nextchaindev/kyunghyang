@@ -1049,6 +1049,13 @@
     </footer>
 
     <script type="module">
+      import { DeviceUtil } from '/scripts/common.util.js';
+
+      if (!DeviceUtil.isIOS()) {
+        document.body.classList.add('snapp');
+        document.classList.add('snapp');
+      }
+
       const documentHeight = () => {
         const doc = document.documentElement;
         doc.style.setProperty('--doc-height', `${window.innerHeight}px`);
