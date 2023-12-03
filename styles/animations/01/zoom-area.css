@@ -34,7 +34,7 @@
   background-image: url(/assets/images/01/map/09-mobile-bg@2x.png);
 }
 
-.fixed-map_scrollable-section.mobile {
+.fixed-map_scrollable-section.mobile:not(.focused-place) {
   background-image: url(/assets/images/01/map/09-mobile-bg@2x.png);
 }
 
@@ -61,10 +61,58 @@
   background-size: 75%, cover;
 }
 
-.fixed-bg_scrollable-section.no-bg.mobile {
-  background-image: url(/assets/images/01/2d-map/15map_img.png),
+.fixed-bg_scrollable-section.mobile1 {
+  background-image: url(/assets/images/01/2d-map/map-1st.png),
     url(/assets/images/01/map/bg.png);
-  background-size: 75%, cover;
+  background-size: 100%, cover;
+  background-position: 0vw 36vh, center;
+}
+
+.fixed-bg_scrollable-section.mobile2 {
+  background-image: url(/assets/images/01/2d-map/map-2nd.png),
+    url(/assets/images/01/map/bg.png);
+  background-size: 100%, cover;
+  background-position: 0vw 36vh, center;
+}
+
+.fixed-bg_scrollable-section.mobile3 {
+  background-image: url(/assets/images/01/2d-map/map-3rd.png),
+    url(/assets/images/01/map/bg.png);
+  background-size: 100%, cover;
+  background-position: 0vw 36vh, center;
+}
+
+.fixed-bg_scrollable-section.mobile4 {
+  background-image: url(/assets/images/01/2d-map/map-4th.png),
+    url(/assets/images/01/map/bg.png);
+  background-size: 100%, cover;
+  background-position: 0vw 36vh, center;
+}
+
+.fixed-bg_scrollable-section.mobile5 {
+  background-image: url(/assets/images/01/2d-map/map-5th.png),
+    url(/assets/images/01/map/bg.png);
+  background-size: 100%, cover;
+  background-position: 0vw 36vh, center;
+}
+
+.fixed-bg_scrollable-section.mobile6 {
+  background-image: url(/assets/images/01/2d-map/map-6th.png),
+    url(/assets/images/01/map/bg.png);
+  background-size: 100%, cover;
+  background-position: 0vw 36vh, center;
+}
+
+.mobile-hidden.active {
+  display: none !important;
+}
+
+.pc-hidden.active {
+  display: none;
+}
+
+.mobile-show.active {
+  opacity: 1 !important;
 }
 
 @media only screen and (max-width: 1919px) {

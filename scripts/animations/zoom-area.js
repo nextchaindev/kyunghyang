@@ -2,8 +2,6 @@ import { DeviceUtil } from '../common.util.js';
 
 const isNotPC = DeviceUtil.isNotPC();
 
-console.log('isNotPC', isNotPC);
-
 if (!isNotPC) {
   gsap.registerEffect({
     name: 'zoom',
@@ -266,12 +264,10 @@ if (!isNotPC) {
 
   // 01 page layout 02
   triggerZoomPointsMap();
-
   // 01 page layout 03 -> 07
   triggerZoom2dMap();
 } else {
-  const zoomFixed = document.getElementById('fixed-map');
-
+  document.getElementById('fixed-background').classList.add('snap-item');
   const bg1 = document.querySelectorAll('.trigger-map');
   const bg2 = document.querySelectorAll('.trigger-map-shadow');
   const bg3 = document.querySelectorAll('.fixed-map_scrollable-section');
@@ -296,7 +292,23 @@ if (!isNotPC) {
     element.classList.add('mobile');
   });
   bg3a.forEach((element) => {
-    element.classList.add('mobile');
     element.classList.add('parallax');
+  });
+
+  bg3a[1].classList.add('mobile1');
+  bg3a[7].classList.add('mobile2');
+  bg3a[13].classList.add('mobile3');
+  bg3a[18].classList.add('mobile4');
+  bg3a[24].classList.add('mobile5');
+  bg3a[30].classList.add('mobile6');
+
+  const mobileHidden = document.querySelectorAll('.mobile-hidden');
+  mobileHidden.forEach((element) => {
+    element.classList.add('active');
+  });
+
+  const fc = document.querySelectorAll('.focused-place');
+  fc.forEach((element) => {
+    element.classList.add('mobile');
   });
 }

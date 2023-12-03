@@ -94,10 +94,10 @@
 
 /* ------------------------------ intro section ------------------------------ */
 .page01_intro.no1 {
-  background-image: url(/assets/images/01/old-man-bg/06_img.png);
+  background-image: url(/assets/images/01/old-man-bg/06_img.png) !important;
 }
 .page01_intro.no2 {
-  background-image: url(/assets/images/01/old-woman-bg/07_img.png);
+  background-image: url(/assets/images/01/old-woman-bg/07_img.png) !important;
 }
 
 .page01 div.page01_intro {
@@ -242,6 +242,10 @@
   align-items: center;
   background-color: rgb(0, 0, 0, 0.7);
   gap: 90px;
+}
+
+.page01 div.focused-place.mobile {
+  background-color: var(--dark) !important;
 }
 
 .page01 div.focused-place > * {
@@ -546,8 +550,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 40px 0;
   }
   .page01 div.page01_statistics .statistics {
+    flex: 1;
     margin-top: 60px;
     flex-direction: column;
     align-items: center;
@@ -555,7 +561,7 @@
     width: 680px;
   }
   .page01 div.page01_statistics .statistics-chart {
-    flex: 1;
+    flex: unset;
     width: 100%;
     padding: 16px 80px;
   }
@@ -799,7 +805,7 @@
     background-image: url(/assets/images/01/map/map-f3.png),
       url(/assets/images/01/map/bg.png) !important;
     background-size: 190%, cover;
-    background-position: center;
+    background-position: -47vw 20vh, center;
   }
   /* ------------------------------ centre-2d-map section ------------------------------ */
 

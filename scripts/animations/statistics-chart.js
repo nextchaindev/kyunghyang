@@ -3,12 +3,14 @@ import { DeviceUtil } from '../common.util.js';
 
 const isNotPC = DeviceUtil.isNotPC();
 
-const ctx = document.getElementById('statistics-chart-canvas').getContext('2d');
-
-const firstColor = ColorUtil.getComputedColor('--primary');
-const secondColor = ColorUtil.getComputedColor('--primary-light');
-
 if (isNotPC) {
+  const ctx = document
+    .getElementById('statistics-chart-canvas')
+    .getContext('2d');
+
+  const firstColor = ColorUtil.getComputedColor('--primary');
+  const secondColor = ColorUtil.getComputedColor('--primary-light');
+
   window.homeStatisticsChart = new Chart(ctx, {
     type: 'bar',
     data: {
@@ -41,6 +43,13 @@ if (isNotPC) {
     },
   });
 } else {
+  const ctx = document
+    .getElementById('statistics-chart-canvas')
+    .getContext('2d');
+
+  const firstColor = ColorUtil.getComputedColor('--primary');
+  const secondColor = ColorUtil.getComputedColor('--primary-light');
+
   ScrollTrigger.create({
     trigger: '.statistics-chart',
     start: 'top 90%',
