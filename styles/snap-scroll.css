@@ -14,7 +14,7 @@
   position: relative;
 }
 
-.snap-item:nth-of-type(odd) {
+/* .snap-item:nth-of-type(odd) {
   border: 5px solid red;
   width: 100vw;
 }
@@ -22,7 +22,7 @@
 .snap-item:nth-of-type(even) {
   border: 5px solid green;
   width: 100vw;
-}
+} */
 
 .snap-item.fullscreen {
   height: 100vh;
