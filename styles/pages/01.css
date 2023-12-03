@@ -94,10 +94,10 @@
 
 /* ------------------------------ intro section ------------------------------ */
 .page01_intro.no1 {
-  background-image: url(/assets/images/01/old-man-bg/06_img.png) !important;
+  background-image: url(../../assets/images/01/old-man-bg/06_img.png) !important;
 }
 .page01_intro.no2 {
-  background-image: url(/assets/images/01/old-woman-bg/07_img.png) !important;
+  background-image: url(../../assets/images/01/old-woman-bg/07_img.png) !important;
 }
 
 .page01 div.page01_intro {
@@ -195,7 +195,7 @@
 }
 
 .page01 div.centre-2d-map-info.no1 {
-  background-image: url(/assets/images/01/map/map-f3.png) !important;
+  background-image: url(../../assets/images/01/map/map-f3.png) !important;
 }
 
 .page01 div.page01_map .map-popup-content.point1 {
@@ -328,12 +328,12 @@
 
 .page01 .mobile-3d1 {
   cursor: auto;
-  background-image: url('/assets/images/01/2d-map-4th/36.1.JPG');
+  background-image: url('../../assets/images/01/2d-map-4th/36.1.JPG');
 }
 
 .page01 .mobile-3d2 {
   cursor: auto;
-  background-image: url('/assets/images/01/2d-map-5th/41.1.JPG');
+  background-image: url('../../assets/images/01/2d-map-5th/41.1.JPG');
 }
 
 .page01 div.centre-2d-map-info-3d .notice-message {
@@ -802,8 +802,8 @@
     text-align: left;
   }
   .page01 div.centre-2d-map-info.no1 {
-    background-image: url(/assets/images/01/map/map-f3.png),
-      url(/assets/images/01/map/bg.png) !important;
+    background-image: url(../../assets/images/01/map/map-f3.png),
+      url(../../assets/images/01/map/bg.png) !important;
     background-size: 190%, cover;
     background-position: -47vw 20vh, center;
   }

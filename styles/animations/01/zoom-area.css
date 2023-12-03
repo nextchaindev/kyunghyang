@@ -30,16 +30,16 @@
 
 .fixed-map .trigger-map.pc,
 .trigger-map-shadow.pc {
-  background-image: url(/assets/images/01/map/09-bg@2x.png);
+  background-image: url(../../../assets/images/01/map/09-bg@2x.png);
 }
 
 .fixed-map .trigger-map.mobile,
 .trigger-map-shadow.mobile {
-  background-image: url(/assets/images/01/map/09-mobile-bg@2x.png);
+  background-image: url(../../../assets/images/01/map/09-mobile-bg@2x.png);
 }
 
 .fixed-map_scrollable-section.mobile:not(.focused-place) {
-  background-image: url(/assets/images/01/map/09-mobile-bg@2x.png);
+  background-image: url(../../../assets/images/01/map/09-mobile-bg@2x.png);
 }
 
 .fixed-background .trigger-photo,
@@ -57,56 +57,56 @@
 
 .fixed-background .trigger-photo.pc,
 .trigger-photo-shadow.pc {
-  background-image: url(/assets/images/01/2d-map/15map_img.png),
-    url(/assets/images/01/map/bg.png);
+  background-image: url(../../../assets/images/01/2d-map/15map_img.png),
+    url(../../../assets/images/01/map/bg.png);
   background-size: 80%, cover;
 }
 
 .fixed-background .trigger-photo.mobile,
 .trigger-photo-shadow.mobile {
-  background-image: url(/assets/images/01/2d-map/15map_img.png),
-    url(/assets/images/01/map/bg.png);
+  background-image: url(../../../assets/images/01/2d-map/15map_img.png),
+    url(../../../assets/images/01/map/bg.png);
   background-size: 75%, cover;
 }
 
 .fixed-bg_scrollable-section.mobile1 {
-  background-image: url(/assets/images/01/2d-map/map-1st.png),
-    url(/assets/images/01/map/bg.png);
+  background-image: url(../../../assets/images/01/2d-map/map-1st.png),
+    url(../../../assets/images/01/map/bg.png);
   background-size: 100%, cover;
   background-position: 0vw 36vh, center;
 }
 
 .fixed-bg_scrollable-section.mobile2 {
-  background-image: url(/assets/images/01/2d-map/map-2nd.png),
-    url(/assets/images/01/map/bg.png);
+  background-image: url(../../../assets/images/01/2d-map/map-2nd.png),
+    url(../../../assets/images/01/map/bg.png);
   background-size: 100%, cover;
   background-position: 0vw 36vh, center;
 }
 
 .fixed-bg_scrollable-section.mobile3 {
-  background-image: url(/assets/images/01/2d-map/map-3rd.png),
-    url(/assets/images/01/map/bg.png);
+  background-image: url(../../../assets/images/01/2d-map/map-3rd.png),
+    url(../../../assets/images/01/map/bg.png);
   background-size: 100%, cover;
   background-position: 0vw 36vh, center;
 }
 
 .fixed-bg_scrollable-section.mobile4 {
-  background-image: url(/assets/images/01/2d-map/map-4th.png),
-    url(/assets/images/01/map/bg.png);
+  background-image: url(../../../assets/images/01/2d-map/map-4th.png),
+    url(../../../assets/images/01/map/bg.png);
   background-size: 100%, cover;
   background-position: 0vw 36vh, center;
 }
 
 .fixed-bg_scrollable-section.mobile5 {
-  background-image: url(/assets/images/01/2d-map/map-5th.png),
-    url(/assets/images/01/map/bg.png);
+  background-image: url(../../../assets/images/01/2d-map/map-5th.png),
+    url(../../../assets/images/01/map/bg.png);
   background-size: 100%, cover;
   background-position: 0vw 36vh, center;
 }
 
 .fixed-bg_scrollable-section.mobile6 {
-  background-image: url(/assets/images/01/2d-map/map-6th.png),
-    url(/assets/images/01/map/bg.png);
+  background-image: url(../../../assets/images/01/2d-map/map-6th.png),
+    url(../../../assets/images/01/map/bg.png);
   background-size: 100%, cover;
   background-position: 0vw 36vh, center;
 }

@@ -1,5 +1,6 @@
 body.kyunghyang-news {
   color: var(--dark);
+  max-width: 100vw;
 }
 
 video.attached-video-bg {
