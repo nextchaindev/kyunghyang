@@ -45,7 +45,7 @@
 }
 
 .bg-grey-img {
-  background-image: url(/assets/images/01/map/bg.png);
+  background-image: url(../assets/images/01/map/bg.png);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
