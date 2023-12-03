@@ -5,6 +5,6 @@ import './fullscreen-scroll.js';
 import './fixed-attachment.js';
 import './zoom-area.js';
 import './statistics-chart.js';
-import './circle-cursor.js';
-import './2dmap-zoom-and-moving.js';
+// import './circle-cursor.js';
+// import './2dmap-zoom-and-moving.js';
 import './scroll-progress.js';

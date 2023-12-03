@@ -18,7 +18,7 @@ function triggerZoomPointsMap() {
   const zoomData = [
     { scale: 1, origin: [0.5, 0.5] },
     { scale: 1.6, origin: [0.6, 0.6] },
-    { scale: 6, origin: [0.5, 0.5] },
+    { scale: 4, origin: [0.2, 0.5] },
     { scale: 1, origin: [0.5, 0.5] },
   ];
 
@@ -63,49 +63,109 @@ function triggerZoomPointsMap() {
 }
 
 function triggerZoom2dMap() {
-  const zoomData = [
-    { scale: 1, origin: [0.5, 0.5] },
-    // 3
-    { scale: 3, origin: [0.1, 0.5] },
-    { scale: 3, origin: [0.1, 0.5] },
-    { scale: 3, origin: [0.1, 0.5] },
-    { scale: 3, origin: [0.1, 0.5] },
-    { scale: 1, origin: [0.5, 0.5] },
-    { scale: 1, origin: [0.5, 0.5] },
-    // 4
-    { scale: 3, origin: [0.4, 0.5] },
-    { scale: 3, origin: [0.4, 0.5] },
-    { scale: 3, origin: [0.4, 0.5] },
-    { scale: 3, origin: [0.4, 0.5] },
-    { scale: 1, origin: [0.5, 0.5] },
-    { scale: 1, origin: [0.5, 0.5] },
-    // 5
-    { scale: 3, origin: [0.72, 0.5] },
-    { scale: 3, origin: [0.72, 0.5] },
-    { scale: 3, origin: [0.72, 0.5] },
-    { scale: 1, origin: [0.5, 0.5] },
-    { scale: 1, origin: [0.5, 0.5] },
-    // 6
-    { scale: 3.2, origin: [0.85, 0.5] },
-    { scale: 3.2, origin: [0.85, 0.5] },
-    { scale: 3.2, origin: [0.85, 0.5] },
-    { scale: 3.2, origin: [0.85, 0.5] },
-    { scale: 1, origin: [0.5, 0.5] },
-    { scale: 1, origin: [0.5, 0.5] },
-    // 7
-    { scale: 3.2, origin: [0.8, 0.35] },
-    { scale: 3.2, origin: [0.8, 0.35] },
-    { scale: 3.2, origin: [0.8, 0.35] },
-    { scale: 3.2, origin: [0.8, 0.35] },
-    { scale: 1, origin: [0.5, 0.5] },
-    { scale: 1, origin: [0.5, 0.5] },
-    // 8
-    { scale: 3, origin: [0.68, 0.35] },
-    { scale: 3, origin: [0.68, 0.35] },
-    { scale: 1, origin: [0.5, 0.5] },
-  ];
+  const zoomData =
+    innerWidth < 1280
+      ? [
+          { scale: 1, origin: [0.5, 0.5] },
+          // 3
+          { scale: 3, origin: [0.05, 0.5] },
+          { scale: 3, origin: [0.05, 0.5] },
+          { scale: 3, origin: [0.05, 0.5] },
+          { scale: 3, origin: [0.05, 0.5] },
+          { scale: 1, origin: [0.5, 0.5] },
+          { scale: 1, origin: [0.5, 0.5] },
+          // 4
+          { scale: 2.6, origin: [0.37, 0.5] },
+          { scale: 2.6, origin: [0.37, 0.5] },
+          { scale: 2.6, origin: [0.37, 0.5] },
+          { scale: 2.6, origin: [0.37, 0.5] },
+          { scale: 1, origin: [0.5, 0.5] },
+          { scale: 1, origin: [0.5, 0.5] },
+          // 5
+          { scale: 3.8, origin: [0.76, 0.5] },
+          { scale: 3.8, origin: [0.76, 0.5] },
+          { scale: 3.8, origin: [0.76, 0.5] },
+          { scale: 1, origin: [0.5, 0.5] },
+          { scale: 1, origin: [0.5, 0.5] },
+          // 6
+          { scale: 4, origin: [0.85, 0.5] },
+          { scale: 4, origin: [0.85, 0.5] },
+          { scale: 4, origin: [0.85, 0.5] },
+          { scale: 4, origin: [0.85, 0.5] },
+          { scale: 1, origin: [0.5, 0.5] },
+          { scale: 1, origin: [0.5, 0.5] },
+          // 7
+          { scale: 4, origin: [0.8, 0.46] },
+          { scale: 4, origin: [0.8, 0.46] },
+          { scale: 4, origin: [0.8, 0.46] },
+          { scale: 4, origin: [0.8, 0.46] },
+          { scale: 1, origin: [0.5, 0.5] },
+          { scale: 1, origin: [0.5, 0.5] },
+          // 8
+          { scale: 3, origin: [0.68, 0.46] },
+          { scale: 3, origin: [0.68, 0.46] },
+          { scale: 1, origin: [0.5, 0.46] },
+        ]
+      : [
+          { scale: 1, origin: [0.5, 0.5] },
+          // 3
+          { scale: 3, origin: [0.1, 0.5] },
+          { scale: 3, origin: [0.1, 0.5] },
+          { scale: 3, origin: [0.1, 0.5] },
+          { scale: 3, origin: [0.1, 0.5] },
+          { scale: 1, origin: [0.5, 0.5] },
+          { scale: 1, origin: [0.5, 0.5] },
+          // 4
+          { scale: 3, origin: [0.4, 0.5] },
+          { scale: 3, origin: [0.4, 0.5] },
+          { scale: 3, origin: [0.4, 0.5] },
+          { scale: 3, origin: [0.4, 0.5] },
+          { scale: 1, origin: [0.5, 0.5] },
+          { scale: 1, origin: [0.5, 0.5] },
+          // 5
+          { scale: 3, origin: [0.72, 0.5] },
+          { scale: 3, origin: [0.72, 0.5] },
+          { scale: 3, origin: [0.72, 0.5] },
+          { scale: 1, origin: [0.5, 0.5] },
+          { scale: 1, origin: [0.5, 0.5] },
+          // 6
+          { scale: 3.2, origin: [0.85, 0.5] },
+          { scale: 3.2, origin: [0.85, 0.5] },
+          { scale: 3.2, origin: [0.85, 0.5] },
+          { scale: 3.2, origin: [0.85, 0.5] },
+          { scale: 1, origin: [0.5, 0.5] },
+          { scale: 1, origin: [0.5, 0.5] },
+          // 7
+          { scale: 3.2, origin: [0.8, 0.35] },
+          { scale: 3.2, origin: [0.8, 0.35] },
+          { scale: 3.2, origin: [0.8, 0.35] },
+          { scale: 3.2, origin: [0.8, 0.35] },
+          { scale: 1, origin: [0.5, 0.5] },
+          { scale: 1, origin: [0.5, 0.5] },
+          // 8
+          { scale: 3, origin: [0.68, 0.35] },
+          { scale: 3, origin: [0.68, 0.35] },
+          { scale: 1, origin: [0.5, 0.5] },
+        ];
 
-  const miniMaps = document.getElementsByClassName('top-fixed-2d-map');
+  function showHideMiniMap(index, mode) {
+    const startOpacity = mode === 'enter' ? 0 : 1;
+    const endOpacity = mode === 'enter' ? 1 : 0;
+    gsap.fromTo(
+      miniMaps[index],
+      { opacity: startOpacity, autoAlpha: 0 },
+      {
+        duration: 1,
+        opacity: endOpacity,
+        autoAlpha: 1,
+        ease: 'power1.inOut',
+        overwrite: 'auto',
+      }
+    );
+  }
+
+  const miniMaps = gsap.utils.toArray('.top-fixed-2d-map');
+  const triggerZoomIndexes = [1, 7, 13, 18, 24, 30];
 
   gsap.utils
     .toArray('.fixed-bg_scrollable-section')
@@ -129,24 +189,11 @@ function triggerZoom2dMap() {
               .getElementById('fixed-background')
               .classList.add('fixed-background');
           }
-          if (index === 1) {
-            miniMaps[0].classList.add('active');
-          }
-          if (index === 7) {
-            miniMaps[1].classList.add('active');
-          }
-          if (index === 13) {
-            miniMaps[2].classList.add('active');
-          }
-          if (index === 18) {
-            miniMaps[3].classList.add('active');
-          }
-          if (index === 24) {
-            miniMaps[4].classList.add('active');
-          }
-          if (index === 30) {
-            miniMaps[5].classList.add('active');
-          }
+          triggerZoomIndexes.forEach((sectionIndex, minimapIndex) => {
+            if (index === sectionIndex) {
+              showHideMiniMap(minimapIndex, 'enter');
+            }
+          });
         },
         onLeave() {
           if (index === zoomData.length - 1) {
@@ -154,24 +201,11 @@ function triggerZoom2dMap() {
               .getElementById('fixed-background')
               .classList.remove('fixed-background');
           }
-          if (index === 1) {
-            miniMaps[0].classList.remove('active');
-          }
-          if (index === 7) {
-            miniMaps[1].classList.remove('active');
-          }
-          if (index === 13) {
-            miniMaps[2].classList.remove('active');
-          }
-          if (index === 18) {
-            miniMaps[3].classList.remove('active');
-          }
-          if (index === 24) {
-            miniMaps[4].classList.remove('active');
-          }
-          if (index === 30) {
-            miniMaps[5].classList.remove('active');
-          }
+          triggerZoomIndexes.forEach((sectionIndex, minimapIndex) => {
+            if (index === sectionIndex) {
+              showHideMiniMap(minimapIndex, 'leave');
+            }
+          });
         },
         onEnterBack() {
           if (index === zoomData.length - 1) {
@@ -179,24 +213,11 @@ function triggerZoom2dMap() {
               .getElementById('fixed-background')
               .classList.add('fixed-background');
           }
-          if (index === 1) {
-            miniMaps[0].classList.add('active');
-          }
-          if (index === 7) {
-            miniMaps[1].classList.add('active');
-          }
-          if (index === 13) {
-            miniMaps[2].classList.add('active');
-          }
-          if (index === 18) {
-            miniMaps[3].classList.add('active');
-          }
-          if (index === 24) {
-            miniMaps[4].classList.add('active');
-          }
-          if (index === 30) {
-            miniMaps[5].classList.add('active');
-          }
+          triggerZoomIndexes.forEach((sectionIndex, minimapIndex) => {
+            if (index === sectionIndex) {
+              showHideMiniMap(minimapIndex, 'enter');
+            }
+          });
         },
         onLeaveBack() {
           if (index === 0) {
@@ -204,24 +225,11 @@ function triggerZoom2dMap() {
               .getElementById('fixed-background')
               .classList.remove('fixed-background');
           }
-          if (index === 1) {
-            miniMaps[0].classList.remove('active');
-          }
-          if (index === 7) {
-            miniMaps[1].classList.remove('active');
-          }
-          if (index === 13) {
-            miniMaps[2].classList.remove('active');
-          }
-          if (index === 18) {
-            miniMaps[3].classList.remove('active');
-          }
-          if (index === 24) {
-            miniMaps[4].classList.remove('active');
-          }
-          if (index === 30) {
-            miniMaps[5].classList.remove('active');
-          }
+          triggerZoomIndexes.forEach((sectionIndex, minimapIndex) => {
+            if (index === sectionIndex) {
+              showHideMiniMap(minimapIndex, 'leave');
+            }
+          });
         },
       });
     });

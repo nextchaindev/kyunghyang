@@ -1,5 +1,4 @@
 body.kyunghyang-news {
-  font-family: Pretendard-Regular;
   color: var(--dark);
 }
 
@@ -13,13 +12,6 @@ video.attached-video-bg {
   height: auto;
   object-fit: cover;
   z-index: -20;
-}
-
-.parallax {
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 footer.kyunghyang-footer {
@@ -46,4 +38,22 @@ footer.kyunghyang-footer div.footer-logos > div {
 
 footer.kyunghyang-footer div.footer-logos > div:first-of-type {
   justify-content: flex-end;
+}
+
+@media only screen and (max-width: 1919px) {
+}
+
+@media only screen and (max-width: 1279px) {
+  footer.kyunghyang-footer div.footer-logos {
+    gap: 40px;
+  }
+  footer.kyunghyang-footer div.footer-logos img {
+    max-width: 90%;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+}
+
+@media only screen and (max-width: 399px) {
 }
