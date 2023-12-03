@@ -56,8 +56,7 @@ function goToSection(i, mode) {
 // const dynamicSections = document.getElementsByClassName('absolute scrollable');
 
 gsap.utils.toArray('.scrollable').forEach((panel, i) => {
-  const config = {
-    markers: true,
+  ScrollTrigger.create({
     trigger: panel,
     onEnter: () => {
       document.getElementsByClassName('scrollable')[12].classList.add('enter1');
@@ -79,12 +78,7 @@ gsap.utils.toArray('.scrollable').forEach((panel, i) => {
 
       goToSection(i, 'enter');
     },
-  };
-  if (innerWidth < 768) {
-    config.start = 'top 10%';
-    config.end = 'bottom 10%';
-  }
-  ScrollTrigger.create(config);
+  });
 
   ScrollTrigger.create({
     trigger: panel,
