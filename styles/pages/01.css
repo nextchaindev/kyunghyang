@@ -322,6 +322,16 @@
   position: relative;
 }
 
+.page01 .mobile-3d1 {
+  cursor: auto;
+  background-image: url('/assets/images/01/2d-map-4th/36.1.JPG');
+}
+
+.page01 .mobile-3d2 {
+  cursor: auto;
+  background-image: url('/assets/images/01/2d-map-5th/41.1.JPG');
+}
+
 .page01 div.centre-2d-map-info-3d .notice-message {
   background-color: var(--green);
   padding: 12px;
