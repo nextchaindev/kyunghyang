@@ -327,6 +327,10 @@ if (!isNotPC) {
     element.classList.add('active');
   });
 
+  // const pq = document.querySelectorAll('.page01_quotes');
+  // pq[0].classList.add('mobile1');
+  // pq[1].classList.add('mobile2');
+
   const fc = document.querySelectorAll('.focused-place');
   fc.forEach((element) => {
     element.classList.add('mobile');
