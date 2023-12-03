@@ -28,6 +28,16 @@ if (!isNotPC) {
     element.classList.add('pc');
   });
 
+  if (!DeviceUtil.isIOS()) {
+  } else {
+    bg1.forEach((element) => {
+      element.classList.add('active');
+    });
+    bg2.forEach((element) => {
+      element.classList.add('active');
+    });
+  }
+
   function triggerZoomPointsMap() {
     const zoomData = [
       { scale: 1, origin: [0.5, 0.5] },
@@ -88,6 +98,16 @@ if (!isNotPC) {
   bg2a.forEach((element) => {
     element.classList.add('pc');
   });
+
+  if (!DeviceUtil.isIOS()) {
+  } else {
+    bg1a.forEach((element) => {
+      element.classList.add('active');
+    });
+    bg2a.forEach((element) => {
+      element.classList.add('active');
+    });
+  }
 
   function triggerZoom2dMap() {
     const zoomData =
@@ -311,4 +331,20 @@ if (!isNotPC) {
   fc.forEach((element) => {
     element.classList.add('mobile');
   });
+
+  if (!DeviceUtil.isIOS()) {
+  } else {
+    bg1.forEach((element) => {
+      element.classList.add('active');
+    });
+    bg2.forEach((element) => {
+      element.classList.add('active');
+    });
+    bg1a.forEach((element) => {
+      element.classList.add('active');
+    });
+    bg2a.forEach((element) => {
+      element.classList.add('active');
+    });
+  }
 }
