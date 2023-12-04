@@ -3,7 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, height=device-height, initial-scale=1"
+    />
     <meta
       name="title"
       content="개발되는 옛 도심, 통학로도 새단장. 광주광역시편"
@@ -54,7 +57,7 @@
     <div id="fullpage" class="relative">
       <!-- first page video -->
       <section id="intro-video-section" class="section active">
-        <video data-keepplaying autoplay muted loop id="introVideo">
+        <video data-keepplaying autoplay muted loop id="introVideo" playsinline>
           <source data-src="public/videos/인트로 영상1.mp4" type="video/mp4" />
         </video>
 
@@ -744,8 +747,14 @@
       <!-- the clip with car -->
       <section data-anchor="car-clip" class="section title-section">
         <div class="video-container">
-          <video id="car-video" class="video" width="320" height="240">
-            <source src="public/videos/car-clip.mp4" type="video/mp4" />
+          <video
+            id="car-video"
+            class="video"
+            width="320"
+            height="240"
+            playsinline
+          >
+            <source src="public/videos/car-clip.mp4#t=0.001" type="video/mp4" />
           </video>
           <img
             id="car-video-play"
@@ -939,8 +948,17 @@
       <!-- the clip with the girl -->
       <section data-anchor="girl-clip" class="section title-section">
         <div class="video-container">
-          <video id="girl-video" class="video" width="320" height="240">
-            <source src="public/videos/점멸신호등.mp4" type="video/mp4" />
+          <video
+            id="girl-video"
+            class="video"
+            width="320"
+            height="240"
+            playsinline
+          >
+            <source
+              src="public/videos/점멸신호등.mp4#t=0.001"
+              type="video/mp4"
+            />
           </video>
           <img
             id="girl-video-play"
@@ -1114,8 +1132,8 @@
         <div id="footer" class="flex-col justify-center gap-y-60">
           <div data-inviewport class="text-normal text-center text-white-small">
             <span
-              >공공디자인으로 행복한 공간 만들기 프로젝트
-              <b>광주광역시 계림도담길편</b></span
+              >공공디자인으로 행복한 공간 만들기 <br class="mobile-break" />
+              프로젝트 <b>광주광역시 계림도담길편</b></span
             >
             <br />
             <span><b>취재·제작</b> 경향신문 곽희양기자·최유진PD·백준서PD</span>
@@ -1390,10 +1408,7 @@
         licenseKey: 'Y8LPJ-LT5QI-3KV97-JFVJK-IZBZL',
         scrollBar: true,
         normalScrollElements: '.last-section',
-        scrollOverflowOptions: {
-          disablePointer: false,
-          preventDefault: false,
-        },
+        fitToSection: false,
         afterLoad: function (origin, destination, direction, trigger) {
           const theBarSections = document.querySelectorAll('.bar-section');
           for (let i = 0; i < theBarSections.length; i++) {
@@ -1445,6 +1460,47 @@
               const redZoneTextMobile = document.querySelector(
                 '#sat-red-zone-text-mobile'
               );
+
+              sectionEle.addEventListener('swiped', function (e) {
+                if (e.detail.dir === 'up') {
+                  scrollValue += ZOOM_SPEED;
+                  scrollValue = Math.min(scrollValue, zoomToNext);
+                } else {
+                  scrollValue -= ZOOM_SPEED;
+                  scrollValue = Math.max(zoomToPrev, scrollValue);
+                }
+                const zoom =
+                  scrollValue < MIN ? 1 : scrollValue > MAX ? MAX : scrollValue;
+                if (zoom === MIN) {
+                  sectionEle.style.transform = 'scale(1)';
+                  firstTitle.style.opacity = 1;
+                  secondTitle.style.opacity = 0;
+                  secondNormalPoint.style.opacity = 0;
+                  thirdNormalPoint.style.opacity = 0;
+                  fourthNormalPoint.style.opacity = 0;
+                  fifthNormalPoint.style.opacity = 0;
+                  yellowZone.style.opacity = 0;
+                  redZone.style.opacity = 0;
+                  yellowZoneTextMobile.style.opacity = 0;
+                  redZoneTextMobile.style.opacity = 0;
+                  canLeaveSatellite = true;
+                  handleSingleBarSection('1989', 'satellite-zoom-out');
+                } else if (zoom === MAX) {
+                  sectionEle.style.transform = 'scale(1.4)';
+                  firstTitle.style.opacity = 0;
+                  secondTitle.style.opacity = 1;
+                  secondNormalPoint.style.opacity = 1;
+                  thirdNormalPoint.style.opacity = 1;
+                  fourthNormalPoint.style.opacity = 1;
+                  fifthNormalPoint.style.opacity = 1;
+                  yellowZone.style.opacity = 1;
+                  redZone.style.opacity = 1;
+                  yellowZoneTextMobile.style.opacity = 1;
+                  redZoneTextMobile.style.opacity = 1;
+                  canLeaveSatellite = true;
+                  handleSingleBarSection('1989', 'satellite-zoom-in');
+                }
+              });
 
               sectionEle.addEventListener(
                 'wheel',
@@ -1517,6 +1573,35 @@
             canLeaveMap = false;
 
             if (!mapScrollEventAdded) {
+              mapSection.addEventListener('swiped', function (e) {
+                if (e.detail.dir === 'up') {
+                  mapScrollValue += MAP_ZOOM_SPEED;
+                  mapScrollValue = Math.min(mapScrollValue, mapZoomToNext);
+                } else {
+                  mapScrollValue -= MAP_ZOOM_SPEED;
+                  mapScrollValue = Math.max(mapZoomToPrev, mapScrollValue);
+                }
+
+                const zoom =
+                  mapScrollValue < MIN
+                    ? 1
+                    : mapScrollValue > MAX
+                    ? MAX
+                    : mapScrollValue;
+                if (zoom === MAP_MIN) {
+                  zoomOutMap();
+                  handleBarProgress('the-map-zoom-out');
+                  handleSingleBarSection(
+                    'the-map-zoom-out',
+                    'the-map-zoom-out'
+                  );
+                } else if (zoom === MAP_MAX) {
+                  zoomInMap();
+                  handleBarProgress('the-map-zoom-in');
+                  handleSingleBarSection('the-map-zoom-in', 'the-map-zoom-in');
+                }
+              });
+
               mapSection.addEventListener(
                 'wheel',
                 function (e) {
@@ -1590,6 +1675,33 @@
             canLeaveSecondMap = false;
 
             if (!secondMapScrollEventAdded) {
+              secondMapSection.addEventListener('swiped', function (e) {
+                if (e.detail.dir === 'up') {
+                  secondMapScrollValue += SECOND_MAP_ZOOM_SPEED;
+                  secondMapScrollValue = Math.min(
+                    secondMapScrollValue,
+                    secondMapZoomToNext
+                  );
+                } else {
+                  secondMapScrollValue -= SECOND_MAP_ZOOM_SPEED;
+                  secondMapScrollValue = Math.max(
+                    secondMapZoomToPrev,
+                    secondMapScrollValue
+                  );
+                }
+                const zoom =
+                  secondMapScrollValue < MIN
+                    ? 1
+                    : secondMapScrollValue > MAX
+                    ? MAX
+                    : secondMapScrollValue;
+                if (zoom === SECOND_MAP_MIN) {
+                  secondMapZoomOut();
+                } else if (zoom === SECOND_MAP_MAX) {
+                  secondMapZoomIn();
+                }
+              });
+
               secondMapSection.addEventListener(
                 'wheel',
                 function (e) {
@@ -1893,5 +2005,6 @@
     </script>
     <!-- the js file -->
     <script type="text/javascript" src="index.js"></script>
+    <script type="text/javascript"></script>
   </body>
 </html>
