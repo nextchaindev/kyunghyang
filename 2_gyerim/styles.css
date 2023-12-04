@@ -18,8 +18,15 @@
   font-display: swap;
 }
 
+section {
+  /* height: 100svh; */
+  /* height: calc(var(--vh, 1vh) * 100) !important; */
+}
+
 html {
   font-family: 'Pretendard';
+  /* height: 100%; */
+  /* height: calc(var(--vh, 1vh) * 100) !important; */
 }
 
 body::-webkit-scrollbar {
@@ -31,6 +38,7 @@ body {
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
   position: relative;
+  /* height: calc(var(--vh, 1vh) * 100) !important; */
 }
 
 button {
@@ -49,7 +57,7 @@ button {
 }
 
 #intro-video-section {
-  height: 100vh;
+  height: 100%;
   position: relative;
 }
 
@@ -106,7 +114,8 @@ button {
 
 .title-section {
   background-color: #f6f6f4;
-  height: 100vh;
+  height: 100%;
+  height: calc(100% - 100px);
   width: 100vw;
   position: relative;
 }
@@ -181,13 +190,13 @@ button {
 
 .image {
   object-fit: cover;
-  height: 100vh;
+  height: 100%;
   width: 100vw;
 }
 
 .object-fit-cover {
   object-fit: cover;
-  height: 100vh;
+  height: 100%;
   width: 100vw;
 }
 
@@ -757,7 +766,7 @@ h1.fly-text span:nth-child(37)[data-inviewport].is-inViewport {
   background-size: cover;
 
   /* dimensions are important, ensure it is tall enough to scroll */
-  min-height: 100vh;
+  min-height: 100%;
 
   /* you are free to lay out the container items with flexbox or whatever means you wish */
   display: flex;
@@ -847,7 +856,7 @@ h1.fly-text span:nth-child(37)[data-inviewport].is-inViewport {
 }
 
 .h-screen {
-  height: 100vh;
+  height: 100%;
 }
 
 .py-100 {
@@ -1058,7 +1067,7 @@ h1.fly-text span:nth-child(37)[data-inviewport].is-inViewport {
 }
 
 .half {
-  height: 100vh;
+  height: 100%;
   width: 50vw;
 }
 
@@ -1095,7 +1104,7 @@ h1.fly-text span:nth-child(37)[data-inviewport].is-inViewport {
 #scrollbar {
   position: fixed;
   top: 85px;
-  height: calc(100vh - 190px);
+  height: calc(100% - 190px);
   bottom: 85px;
   width: 155px;
   display: flex;
@@ -1154,23 +1163,23 @@ h1.fly-text span:nth-child(37)[data-inviewport].is-inViewport {
 }
 
 #bar-break-1 {
-  top: calc(100vh / 6 - 190px / 6);
+  top: calc(100% / 6 - 190px / 6);
 }
 
 #bar-break-2 {
-  top: calc((100vh / 3 - 190px / 3));
+  top: calc((100% / 3 - 190px / 3));
 }
 
 #bar-break-3 {
-  top: calc((100vh - 190px) / 2);
+  top: calc((100% - 190px) / 2);
 }
 
 #bar-break-4 {
-  top: calc((100vh - 190px) / 6 * 4);
+  top: calc((100% - 190px) / 6 * 4);
 }
 
 #bar-break-5 {
-  top: calc((100vh - 190px) / 6 * 5);
+  top: calc((100% - 190px) / 6 * 5);
 }
 
 .pointer {
@@ -1304,6 +1313,16 @@ h1 {
 
 /* up to desktop */
 @media only screen and (max-width: 1300px) {
+  #scrollbar {
+    top: 55px;
+    height: calc(100% - 110px);
+    bottom: 55px;
+  }
+
+  .parallax {
+    background-attachment: scroll;
+  }
+
   .satellite-main-point {
     left: 43%;
   }
@@ -1460,6 +1479,8 @@ h1 {
   .portrait {
     min-height: 150px;
     aspect-ratio: 1;
+    margin-top: 40px;
+    margin-bottom: 10px;
   }
 
   .text-box {
@@ -1547,7 +1568,7 @@ h1 {
 
   .chart {
     width: 300px;
-    top: 10%;
+    top: 15%;
     aspect-ratio: 86/50;
   }
 
@@ -1644,5 +1665,55 @@ h1 {
 
   .second-map-transform {
     transform: scale(2.2) translate(-15%, 200px);
+  }
+
+  section[data-anchor='wooden-chair'] h1 {
+    bottom: 15%;
+  }
+
+  section[data-anchor='white-bear'] h1 {
+    bottom: 15%;
+  }
+
+  section[data-anchor='traffic-light'] h1 {
+    bottom: 15%;
+  }
+
+  section[data-anchor='the-truck'] h1 {
+    bottom: 18%;
+  }
+
+  section[data-anchor='3-cars'] h1 {
+    bottom: 18%;
+  }
+
+  section[data-anchor='pavement-sits'] h1 {
+    bottom: 12%;
+  }
+
+  section[data-anchor='orange-pavement'] h1 {
+    bottom: 15%;
+  }
+
+  section[data-anchor='car-rear'] h1 {
+    bottom: 15%;
+  }
+
+  #footer span {
+    font-size: 12px;
+  }
+
+  #logo-1 {
+    height: 40px;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  #logo-2 {
+    height: 40px;
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
   }
 }
