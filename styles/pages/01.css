@@ -301,7 +301,7 @@
 
 .page01 div.centre-2d-map-info .info-content {
   position: absolute;
-  bottom: 60px;
+  bottom: 80px;
   display: flex;
   flex-direction: column;
   gap: 42px;
@@ -352,32 +352,27 @@
 .page01 div.page01_garden-life-guide {
   background-color: var(--light);
   text-align: center;
+  padding: 40px 160px;
 }
-.page01 div.page01_garden-life-guide:first-of-type {
-  padding: 90px 160px 0;
-}
-.page01 div.page01_garden-life-guide:nth-of-type(2) {
-  padding: 0 160px;
-}
-.page01 div.page01_garden-life-guide:nth-of-type(3) {
+/* .page01 div.page01_garden-life-guide:nth-of-type(3) {
   padding: 0 160px 180px;
-}
+} */
 
-.page01 div.page01_garden-life-guide .block-content1 {
+/* .page01 div.page01_garden-life-guide .block-content1 {
   margin-top: 100px;
 }
 
 .page01 div.page01_garden-life-guide .block-content2 {
   margin-top: 60px;
-}
+} */
 
-.page01 div.page01_garden-life-guide .video-container {
+/* .page01 div.page01_garden-life-guide .video-container {
   margin-top: 90px;
-}
+} */
 
-.page01 div.page01_garden-life-guide .block-content3 {
+/* .page01 div.page01_garden-life-guide .block-content3 {
   margin-top: 100px;
-}
+} */
 
 /* ------------------------------ garden life feedback section ------------------------------ */
 
@@ -500,7 +495,7 @@
     font-size: 18px;
   }
   .page01_hero .scroll-down {
-    bottom: 60px;
+    bottom: 80px;
     gap: 12px;
     font-size: 18px;
   }
@@ -644,7 +639,7 @@
     width: 400px;
   }
   .page01 div.centre-2d-map-info .info-content {
-    bottom: 50px;
+    bottom: 80px;
     left: 50% !important;
     text-align: center !important;
     transform: translateX(-50%);
@@ -656,7 +651,7 @@
     background-color: var(--green);
     padding: 12px;
     font-size: 28px;
-    bottom: 50px;
+    bottom: 80px;
   }
   /* ------------------------------ garden life feedback section ------------------------------ */
   .page01 div.page01_garden-life-feedback .title {
@@ -675,19 +670,13 @@
   .page01 div.page01_garden-life-feedback .feedback-content.right,
   .page01 div.page01_garden-life-feedback .feedback-content.bottom {
     top: unset;
-    bottom: 60px !important;
+    bottom: 80px !important;
     left: 50% !important;
     transform: translateX(-50%);
   }
   /* ------------------------------ garden life guide section ------------------------------ */
-  .page01 div.page01_garden-life-guide:first-of-type {
-    padding: 80px 80px 0;
-  }
-  .page01 div.page01_garden-life-guide:nth-of-type(2) {
-    padding: 0 80px;
-  }
-  .page01 div.page01_garden-life-guide:nth-of-type(3) {
-    padding: 0 80px 80px;
+  .page01 div.page01_garden-life-guide {
+    padding: 40px;
   }
   .page01 div.page01_garden-life-guide .block-content1 {
     margin-top: 56px;
@@ -724,7 +713,7 @@
     font-size: 16px;
   }
   .page01_hero .scroll-down {
-    bottom: 60px;
+    bottom: 80px;
     gap: 8px;
     font-size: 16px;
   }
@@ -859,14 +848,8 @@
     width: 250px;
   }
   /* ------------------------------ garden life guide section ------------------------------ */
-  .page01 div.page01_garden-life-guide:first-of-type {
+  .page01 div.page01_garden-life-guide {
     padding: 40px 5vw 0;
-  }
-  .page01 div.page01_garden-life-guide:nth-of-type(2) {
-    padding: 0 5vw;
-  }
-  .page01 div.page01_garden-life-guide:nth-of-type(3) {
-    padding: 0 5vw 40px;
   }
   .page01 div.page01_garden-life-guide .block-content1 {
     margin-top: 24px;
@@ -882,6 +865,15 @@
   .page01 div.embedded-video {
     height: auto;
     padding: 40px 0 80px;
+  }
+
+  .page01 div.page01_garden-life-feedback .feedback-content {
+    gap: 20px;
+    font-size: 40px;
+    max-width: 95%;
+  }
+  .feedback-content.bottom h3 {
+    color: var(--dark) !important;
   }
 }
 
