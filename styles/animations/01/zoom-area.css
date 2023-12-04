@@ -30,12 +30,12 @@
 
 .fixed-map .trigger-map.pc,
 .trigger-map-shadow.pc {
-  background-image: url(../../../assets/images/01/map/09-bg@2x.png);
+  background-image: url(../../../assets/images/01/map/09-bg.png);
 }
 
 .fixed-map .trigger-map.mobile,
 .trigger-map-shadow.mobile {
-  background-image: url(../../../assets/images/01/map/09-mobile-bg@2x.png);
+  background-image: url(../../../assets/images/01/map/09-mobile-bg.png);
 }
 
 .fixed-map_scrollable-section.mobile:not(.focused-place) {
