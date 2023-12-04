@@ -1262,6 +1262,9 @@ h1 > span {
 
 #satellite-zoom {
   transition: all 0.5s ease-in-out;
+  /* -webkit-transition: -webkit-transform 0.5s ease-in-out;
+  -moz-transition: transform 0.5s ease-in-out;
+  -o-transition: transform 0.5s ease-in-out; */
 }
 
 #satellite-title-1 {
@@ -1556,7 +1559,7 @@ h1 {
 
   .bottom-bg-black-text {
     font-size: 18px !important;
-    bottom: 20px;
+    bottom: 120px;
     white-space: nowrap;
     padding: 0;
     right: 10px;
@@ -1716,4 +1719,8 @@ h1 {
     left: 50%;
     transform: translateX(-50%);
   }
+}
+
+.satellite-scale {
+  transform: scale(1.4);
 }
