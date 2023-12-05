@@ -1,12 +1,53 @@
 $(document).ready(function () {
+  // the cyan progress
+  // const scrollProgress = document.getElementById('the-bar-progress');
+  // this var = true: allow to leave section by click on progress bar
+  let forceLeave = false;
+  // these vars = true: allow to leave section on scroll
+  let canLeaveSatellite = false;
+  let canLeaveMap = false;
+  let canLeaveSecondMap = false;
+  // satellite scroll value
+  let scrollValue = 1;
+  const MIN = 1;
+  const MAX = 2.2;
+  // const MAX = 7;
+  const ZOOM_SPEED = 0.4;
+  const zoomToNext = MAX + 0.1;
+  const zoomToPrev = MIN - 0.1;
+  let satelliteScrollEventAdded = false;
+
+  const sectionToPositionsMapping = {
+    1989: ['1989', 'satellite-zoom-out', 'satellite-zoom-in'],
+    'child-running': ['child-running'],
+    'the-map-zoom-out': ['the-map-zoom-out'],
+    'the-map-zoom-in': [
+      'the-map-zoom-in',
+      'wall-and-pavement',
+      'wooden-chair',
+      'white-bear',
+      'traffic-light',
+    ],
+    'map-no-zoom': [
+      'map-no-zoom',
+      'back-of-walking-kid',
+      'the-truck',
+      '3-cars',
+      'white-wall',
+      'short-hair-woman',
+      'pavement-sits',
+      'orange-pavement',
+      'talking-child',
+      'pavement-pole',
+    ],
+    'car-rear': ['car-rear', 'walking-people'],
+  };
+
   let fullPage = new fullpage('#fullpage', {
     licenseKey: 'Y8LPJ-LT5QI-3KV97-JFVJK-IZBZL',
     scrollBar: true,
     normalScrollElements: '',
-    scrollOverflowOptions: {
-      disablePointer: false,
-      preventDefault: false,
-    },
+    fitToSection: false,
     afterLoad: async function (origin, destination, direction, trigger) {
       console.log('destination.index', destination.index);
       switch (destination.index) {
@@ -58,6 +99,155 @@ $(document).ready(function () {
           break;
         default:
           break;
+      }
+
+      if (destination.anchor === 'satellite') {
+        if (origin.anchor === 'child-running') {
+          scrollValue = MAX;
+        } else {
+          scrollValue = MIN;
+        }
+        forceLeave = false;
+        canLeaveSatellite = false;
+        if (!satelliteScrollEventAdded) {
+          const sectionEle = $('#satellite-zoom');
+          const titleBoxEl = $('.center-top');
+
+          sectionEle.on('swiped', function (e) {
+            console.log('swiped', swiped);
+            if (e.detail.dir === 'up') {
+              scrollValue += ZOOM_SPEED;
+              scrollValue = Math.min(scrollValue, zoomToNext);
+            } else {
+              scrollValue -= ZOOM_SPEED;
+              scrollValue = Math.max(zoomToPrev, scrollValue);
+            }
+            const zoom =
+              scrollValue < MIN ? 1 : scrollValue > MAX ? MAX : scrollValue;
+            if (zoom === MIN) {
+              sectionEle.css({
+                transform: 'scale(1)',
+              });
+              canLeaveSatellite = true;
+            } else if (zoom === MAX) {
+              sectionEle.css({
+                transform: 'scale(1.4)',
+                transformOrigin: '100% 100%',
+              });
+              canLeaveSatellite = true;
+            }
+          });
+
+          sectionEle.on('wheel', function (e) {
+            if (e.originalEvent.deltaY > 0) {
+              scrollValue += ZOOM_SPEED;
+              scrollValue = Math.min(scrollValue, zoomToNext);
+            } else {
+              scrollValue -= ZOOM_SPEED;
+              scrollValue = Math.max(zoomToPrev, scrollValue);
+            }
+            const zoom =
+              scrollValue < MIN ? 1 : scrollValue > MAX ? MAX : scrollValue;
+            console.log(
+              'Math.round(zoom * 10) / 10',
+              Math.round(zoom * 10) / 10
+            );
+            switch (Math.round(zoom * 10) / 10) {
+              case MIN:
+                $('.point1').hide();
+                titleBoxEl.hide();
+                sectionEle.css({
+                  transform: 'scale(1)',
+                });
+                canLeaveSatellite = true;
+                break;
+              case 1.4:
+                $('#satellite-title-1').html(
+                  "<h3 class='text-light point-1'>" +
+                    '경기도 광명시 구도심에 있는 하안노인복지관은<br />어르신들의 ' +
+                    "<span class='text-strong'>핫 플레이스</span> 입니다" +
+                    '</h3>'
+                );
+                sectionEle.css({
+                  transform: 'scale(1.2)',
+                  transformOrigin: '100% 100%',
+                });
+                titleBoxEl.show();
+                titleBoxEl.css({
+                  transform: 'translateX(-54%)',
+                  top: '20.5%',
+                  left: '61%',
+                });
+                $('.point1').css({
+                  top: '42%',
+                  left: ' 57%',
+                });
+                $('.point1').show();
+
+                canLeaveSatellite = false;
+                break;
+              case 1.8:
+                $('#satellite-title-1').html(
+                  "<h3 class='text-light point-1'>" +
+                    '2023년 기준 등록 어르신이  ' +
+                    "<span class='text-strong'>4,200여명스</span> 입니다 <br/> 인근 철산동·소하동에 사는 어르신들도  이곳을 찾습니다." +
+                    '</h3>'
+                );
+                sectionEle.css({
+                  transform: 'scale(1.6)',
+                  transformOrigin: '100% 100%',
+                });
+                titleBoxEl.css({
+                  transform: 'translateX(-54%)',
+                  top: '20.5%',
+                  left: '61%',
+                });
+
+                $('.point1').css({
+                  top: '49%',
+                  left: ' 58%',
+                });
+                canLeaveSatellite = false;
+                break;
+              // case 2.2:
+              //   sectionEle.css({
+              //     transform: 'scale(2.6)',
+              //     transformOrigin: '0.37% 0.5%',
+              //   });
+              //   canLeaveSatellite = false;
+              //   break;
+              // case 2.6:
+              //   sectionEle.css({
+              //     transform: 'scale(3.8)',
+              //     transformOrigin: '0.76% 0.5%',
+              //   });
+              //   canLeaveSatellite = false;
+              //   break;
+              // case 3:
+              //   sectionEle.css({
+              //     transform: 'scale(4)',
+              //     transformOrigin: '0.85% 0.5%',
+              //   });
+              //   canLeaveSatellite = false;
+              //   break;
+              case MAX:
+                sectionEle.css({
+                  transform: 'scale(1.4)',
+                  transformOrigin: '100% 100%',
+                });
+                canLeaveSatellite = true;
+                break;
+              default:
+                sectionEle.css({
+                  transform: 'scale(1)',
+                });
+                canLeaveSatellite = true;
+                break;
+            }
+          });
+
+          satelliteScrollEventAdded = true;
+        }
       }
     },
     beforeLeave: function (origin, destination, direction, trigger) {
