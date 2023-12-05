@@ -1,24 +1,3 @@
-:root {
-  --primary: #866d6e;
-  --primary-light: #ead5d6;
-  --primary-dark: #644244;
-  --secondary: #c3bdaf;
-  --white: #ffffff;
-  --dark: #222222;
-  --grey: #e3e3dc;
-  --grey-1: #f6f6f6;
-  --grey-2: #cacaca;
-  --yellow: #ffdb45;
-  --light: #f6f6f4;
-  --green: #47b7bc;
-
-  --doc-height: 100vh;
-}
-
-* {
-  overflow: hidden;
-}
-
 /* Pretendard -- primary */
 
 @font-face {
@@ -65,6 +44,27 @@
   line-height: 1.5;
 }
 
+:root {
+  --primary: #866d6e;
+  --primary-light: #ead5d6;
+  --primary-dark: #644244;
+  --secondary: #c3bdaf;
+  --white: #ffffff;
+  --dark: #222222;
+  --grey: #e3e3dc;
+  --grey-1: #f6f6f6;
+  --grey-2: #cacaca;
+  --yellow: #ffdb45;
+  --light: #f6f6f4;
+  --green: #47b7bc;
+
+  --doc-height: 100vh;
+}
+
+* {
+  overflow: hidden;
+}
+
 body::-webkit-scrollbar {
   display: none;
 }
@@ -89,7 +89,7 @@ h2 {
 }
 
 h3 {
-  font-size: 36px;
+  font-size: 35px;
 }
 
 h4 {
@@ -430,7 +430,8 @@ object-fit-cover {
 /* start section 7 */
 .section-7,
 .section-8,
-.section-9 {
+.section-9,
+.section-11 {
   position: relative;
   background-color: #ffffff;
 }
@@ -559,7 +560,8 @@ object-fit-cover {
   justify-content: center;
 }
 
-.section-9-content .content {
+.section-9-content .content,
+.section-11 .feedback-content {
   color: var(--secondary);
   display: flex;
   align-items: center;
@@ -567,11 +569,16 @@ object-fit-cover {
   font-size: 80px;
   text-align: center;
   margin-top: 25px;
+  font-weight: bold;
 }
 
 /* end section 9 */
 
 /* start section 10 */
+.section-10 {
+  background-image: url(../../assets/images/01/map/bg.png);
+}
+
 #map-2d {
   position: relative;
 }
@@ -584,6 +591,8 @@ object-fit-cover {
 .map-2d-location {
   position: relative;
   padding: 0 74px;
+  width: 100%;
+  height: 100%;
 }
 /* end section 10 */
 
@@ -601,7 +610,8 @@ object-fit-cover {
   object-fit: cover;
 }
 
-.top-fixed-2d-map {
+.top-fixed-2d-map-1st,
+.top-fixed-2d-map-2nd {
   position: absolute;
   top: 50px;
   left: 50px;
@@ -615,6 +625,75 @@ object-fit-cover {
   height: auto;
 }
 /* end section 10 */
+
+/* start section 11 */
+
+.section-11-title {
+  background-color: #ffffff;
+  padding: 55px 0;
+}
+
+.section-11-title .title {
+  padding-left: 100px;
+}
+
+.feedback-content {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.info-content {
+  color: white;
+}
+.content-left {
+  position: absolute;
+  bottom: 25px;
+  left: 5%;
+}
+
+.content-right {
+  position: absolute;
+  bottom: 25px;
+  right: 5%;
+}
+/* end section 11 */
+
+.section-12 {
+  background-image: url(../../assets/images/01/2d-map-1st/18_img.png);
+}
+.section-13 {
+  background-image: url(../../assets/images/01/2d-map-1st/19_img.png);
+}
+.section-14 {
+  background-image: url(../../assets/images/01/2d-map-1st/20_img.png);
+}
+
+.section-16-img {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.section-16-title-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #ffffff;
+  width: 100%;
+  height: 100%;
+  padding: 4% 10px;
+}
+
+.section-17 {
+  background-image: url(../../assets/images/01/2d-map-2nd/23_img.png);
+}
+.section-18 {
+  background-image: url(../../assets/images/01/2d-map-2nd/24_img.png);
+}
+.section-19 {
+  background-image: url(../../assets/images/01/2d-map-2nd/25_img.png);
+}
 
 div.section-title-tag {
   background-color: var(--primary);
@@ -668,6 +747,10 @@ div.section-title-tag {
 
 .center-top {
   display: none;
+}
+/* map zoom animation smooth */
+.map-2d-location-1st {
+  transition: all 0.5s ease-in-out;
 }
 /* start reponsive */
 
@@ -767,6 +850,22 @@ div.section-title-tag {
   #section-2 {
     background-position: -800px;
   }
+
+  .section-11 img {
+    height: 700px;
+  }
+
+  .map-2d-location {
+    padding: 0 10px;
+  }
+
+  .content-left,
+  .content-right {
+    bottom: 25%;
+  }
+  .section-16-img {
+    height: 600px;
+  }
 }
 
 @media only screen and (max-width: 399px) {
@@ -786,10 +885,12 @@ div.section-title-tag {
     width: 300px;
   }
 
-  .section-9-content .content {
+  .section-9-content .content,
+  .section-11 .feedback-content {
     gap: 17px;
     font-size: 34px;
     margin-top: 24px;
+    width: 315px;
   }
 }
 

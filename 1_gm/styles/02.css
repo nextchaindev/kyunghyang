@@ -1165,7 +1165,9 @@ h1 > span {
 
 #satellite-zoom,
 #map-2d,
-.map-2d-location {
+.map-2d-location,
+.map-2d-location-1st,
+.map-2d-location-2nd {
   transition: all 0.5s ease-in-out;
 }
 
