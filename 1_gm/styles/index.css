@@ -561,7 +561,8 @@ object-fit-cover {
 }
 
 .section-9-content .content,
-.section-11 .feedback-content {
+.section-11 .feedback-content,
+.section-28 .content {
   color: var(--secondary);
   display: flex;
   align-items: center;
@@ -572,6 +573,17 @@ object-fit-cover {
   font-weight: bold;
 }
 
+.section-28 .content {
+  position: absolute;
+  bottom: 10%;
+  position: absolute;
+  transform: translate(-50%, 0);
+  left: 50%;
+}
+
+.section-28 .content h3 {
+  color: #ffffff;
+}
 /* end section 9 */
 
 /* start section 10 */
@@ -613,7 +625,8 @@ object-fit-cover {
 .top-fixed-2d-map-1st,
 .top-fixed-2d-map-2nd,
 .top-fixed-2d-map-3rd,
-.top-fixed-2d-map-4th {
+.top-fixed-2d-map-4th,
+.top-fixed-2d-map-5th {
   position: absolute;
   top: 50px;
   left: 50px;
@@ -721,6 +734,16 @@ object-fit-cover {
   background-image: url(../../assets/images/01/2d-map-4th/33_img.png);
 }
 
+.section-31 {
+  background-image: url(../../assets/images/01/2d-map-4th/37_img.png);
+}
+.section-32 {
+  background-image: url(../../assets/images/01/2d-map-4th/38_img.png);
+}
+.section-33 {
+  background-image: url(../../assets/images/01/2d-map-4th/39_img.png);
+}
+
 div.section-title-tag {
   background-color: var(--primary);
   color: var(--white);
@@ -778,7 +801,8 @@ div.section-title-tag {
 .map-2d-location-1st,
 .map-2d-location-2nd,
 .map-2d-location-3rd,
-.map-2d-location-4th {
+.map-2d-location-4th,
+.map-2d-location-5th {
   transition: all 0.5s ease-in-out;
 }
 /* start reponsive */
