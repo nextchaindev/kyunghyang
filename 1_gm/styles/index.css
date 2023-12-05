@@ -250,6 +250,12 @@ footer.kyunghyang-footer div.footer-logos > div:first-of-type {
 }
 /* end animate css */
 
+object-fit-cover {
+  object-fit: cover;
+  height: 100%;
+  width: 100vw;
+}
+
 /* ------------------------------ quote section ------------------------------ */
 .quotes-title {
   position: absolute;
@@ -411,8 +417,21 @@ footer.kyunghyang-footer div.footer-logos > div:first-of-type {
 .section-7,
 .section-8,
 .section-9 {
-  background-image: url(../../assets/images/01/map/09-bg.png);
   position: relative;
+}
+
+.full-child {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.parallax-img {
+  object-fit: cover;
+  height: 100%;
+  width: 100vw;
 }
 
 .circle-yellow {
@@ -440,9 +459,10 @@ footer.kyunghyang-footer div.footer-logos > div:first-of-type {
   left: 65%;
 }
 
-.map-popup-content.point1 {
-  top: 52.5%;
-  left: 65%;
+.point1 {
+  top: 42%;
+  left: 57%;
+  display: none;
 }
 .circle-yellow.point-2 {
   top: 42%;
@@ -459,6 +479,11 @@ footer.kyunghyang-footer div.footer-logos > div:first-of-type {
   height: auto;
   background-color: #d6c961;
   border-radius: 27px;
+}
+
+.satellite-map-zoom {
+  height: 100vh;
+  width: 100%;
 }
 
 /* end section 7 */
@@ -484,6 +509,13 @@ div.section-title-tag {
   justify-content: center;
 }
 
+#satellite-title-1 {
+  color: #ffffff;
+}
+
+.center-top {
+  display: none;
+}
 /* start reponsive */
 
 @media only screen and (max-width: 767px) {
