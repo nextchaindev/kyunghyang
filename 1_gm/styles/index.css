@@ -15,6 +15,10 @@
   --doc-height: 100vh;
 }
 
+* {
+  overflow: hidden;
+}
+
 /* Pretendard -- primary */
 
 @font-face {
@@ -244,6 +248,14 @@ footer.kyunghyang-footer div.footer-logos > div:first-of-type {
   align-items: center;
 }
 
+#section-2 {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 /* start animate css */
 .animate__animated.animate__fadeIn {
   --animate-duration: 2s;
@@ -258,15 +270,17 @@ object-fit-cover {
 
 /* ------------------------------ quote section ------------------------------ */
 .quotes-title {
-  position: absolute;
+  /* position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: max-content;
-  color: var(--secondary);
+  color: var(--secondary); */
   display: flex;
-  align-items: center;
-  gap: 74px;
+  justify-content: center;
+  /* align-items: center;
+  gap: 40px;
+  text-align: center; */
 }
 .quotes-title > div {
   padding: 20px 0 10px;
@@ -509,6 +523,31 @@ div.section-title-tag {
   justify-content: center;
 }
 
+.title-text {
+  color: rgb(34, 34, 34);
+  border-bottom: var(--secondary) solid 4px;
+  margin-top: 40px;
+  padding-bottom: 10px;
+}
+
+.opacity-0 {
+  opacity: 0;
+}
+
+.brown-big-text {
+  color: var(--secondary);
+  font-size: 60px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+}
+
 #satellite-title-1 {
   color: #ffffff;
 }
@@ -517,6 +556,20 @@ div.section-title-tag {
   display: none;
 }
 /* start reponsive */
+
+/* up to desktop */
+@media only screen and (max-width: 1300px) {
+  .parallax {
+    background-attachment: scroll;
+  }
+}
+
+/* tablet to up */
+@media only screen and (min-width: 768px) {
+  .mobile-break {
+    display: none;
+  }
+}
 
 @media only screen and (max-width: 767px) {
   h1 {
@@ -581,6 +634,24 @@ div.section-title-tag {
     position: static;
     transform: none;
     margin-top: 20px;
+  }
+
+  .mobile-break {
+    display: block; /* makes it have a width */
+    content: ''; /* clears default height */
+    margin-top: 2px; /* change this to whatever height you want it */
+  }
+
+  .quotes-title {
+    gap: 30px;
+  }
+
+  .brown-big-text {
+    font-size: 40px;
+  }
+
+  #section-2 {
+    background-position: -800px;
   }
 }
 
