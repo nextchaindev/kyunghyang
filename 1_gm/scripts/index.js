@@ -22,9 +22,9 @@ $(document).ready(function () {
           );
           $('#section-2').addClass('animate__animated animate__fadeIn');
           $('#section-2 .quotes-title').css('display', 'flex');
-          $('.section-2 .goingUp-text').addClass(
-            'animate__animated animate__fadeInUp'
-          );
+          // $('.section-2 .goingUp-text').addClass(
+          //   'animate__animated animate__fadeInUp'
+          // );
           break;
         case 2:
           $('#section-3').css(
@@ -33,9 +33,9 @@ $(document).ready(function () {
           );
           $('#section-3').addClass('animate__animated animate__fadeIn');
           $('#section-3 .quotes-title').css('display', 'flex');
-          $('.section-3 .goingUp-text').addClass(
-            'animate__animated animate__fadeInUp'
-          );
+          // $('.section-3 .goingUp-text').addClass(
+          //   'animate__animated animate__fadeInUp'
+          // );
           break;
         case 3:
           animateText(

@@ -248,6 +248,14 @@ footer.kyunghyang-footer div.footer-logos > div:first-of-type {
   align-items: center;
 }
 
+#section-2 {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 /* start animate css */
 .animate__animated.animate__fadeIn {
   --animate-duration: 2s;
@@ -256,16 +264,17 @@ footer.kyunghyang-footer div.footer-logos > div:first-of-type {
 
 /* ------------------------------ quote section ------------------------------ */
 .quotes-title {
-  position: absolute;
+  /* position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: max-content;
-  color: var(--secondary);
+  color: var(--secondary); */
   display: flex;
-  align-items: center;
+  justify-content: center;
+  /* align-items: center;
   gap: 40px;
-  text-align: center;
+  text-align: center; */
 }
 .quotes-title > div {
   padding: 20px 0 10px;
@@ -489,14 +498,6 @@ div.section-title-tag {
   justify-content: center;
 }
 
-.title-section {
-  background-color: #f6f6f4;
-  height: 100%;
-  height: calc(100% - 100px);
-  width: 100vw;
-  position: relative;
-}
-
 .title-text {
   color: rgb(34, 34, 34);
   border-bottom: var(--secondary) solid 4px;
@@ -504,8 +505,22 @@ div.section-title-tag {
   padding-bottom: 10px;
 }
 
+.opacity-0 {
+  opacity: 0;
+}
+
 .brown-big-text {
+  color: var(--secondary);
   font-size: 60px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
 }
 
 /* start reponsive */
@@ -521,10 +536,6 @@ div.section-title-tag {
 @media only screen and (min-width: 768px) {
   .mobile-break {
     display: none;
-  }
-
-  #section-2 {
-    background-position: unset;
   }
 }
 
