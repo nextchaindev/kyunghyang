@@ -775,50 +775,6 @@ h1.fly-text span:nth-child(37)[data-inviewport].is-inViewport {
   justify-content: center;
 }
 
-.section-7 {
-  background-image: url('../../2_gyerim/public/images/black_white.png');
-}
-
-.section-8 {
-  background-image: url('../../2_gyerim/public/images/1989.png');
-}
-
-.section-10 {
-  background-image: url('../../2_gyerim/public/images/11_img.png');
-}
-
-.section-20 {
-  background-image: url('../../2_gyerim/public/images/3_cars.png');
-}
-
-.section-21 {
-  background-image: url('../../2_gyerim/public/images/white_wall.png');
-}
-
-.section-22 {
-  background-image: url('../../2_gyerim/public/images/sit_on_pavement.png');
-}
-
-.section-23 {
-  background-image: url('../../2_gyerim/public/images/orange_pavement.png');
-}
-
-.section-24 {
-  background-image: url('../../2_gyerim/public/images/26_img1.png');
-}
-
-.section-25 {
-  background-image: url('../../2_gyerim/public/images/27_img.png');
-}
-
-.section-26 {
-  background-image: url('../../2_gyerim/public/images/28_img.png');
-}
-
-.section-27 {
-  background-image: url('../../2_gyerim/public/images/30_img.png');
-}
-
 .text-left {
   text-align: left;
 }
@@ -904,31 +860,6 @@ h1.fly-text span:nth-child(37)[data-inviewport].is-inViewport {
   z-index: 1;
 }
 
-.section-12 {
-  background-image: url('../../2_gyerim/public/images/15_img.png');
-}
-
-.section-13 {
-  background-image: url('../../2_gyerim/public/images/16_img.png');
-}
-
-.section-14 {
-  background-image: url('../../2_gyerim/public/images/17_img.png');
-}
-
-.section-15 {
-  background-image: url('../../2_gyerim/public/images/18_img.png');
-}
-
-.section-16 {
-  background-image: url('../../2_gyerim/public/images/22_img.png');
-  height: 70vh;
-  width: 100vw;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-}
-
 .fly-btm-left {
   position: absolute;
   left: 100px;
@@ -1012,14 +943,6 @@ h1.fly-text span:nth-child(37)[data-inviewport].is-inViewport {
 
 .opacity-1 {
   opacity: 1;
-}
-
-.section-18 {
-  background-image: url('../../2_gyerim/public/images/20_img.png');
-}
-
-.section-19 {
-  background-image: url('../../2_gyerim/public/images/21_img.png');
 }
 
 .fly-btm-right {
