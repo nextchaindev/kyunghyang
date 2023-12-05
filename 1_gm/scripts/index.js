@@ -10,6 +10,7 @@ $(document).ready(function () {
   let canLeaveMap3 = false;
   let canLeaveMap4 = false;
   let canLeaveMap5 = false;
+  let canLeaveMap6 = false;
 
   // satellite scroll value
   let scrollValue = 1;
@@ -29,6 +30,7 @@ $(document).ready(function () {
   let map2d_3rd_scroll_event_added = false;
   let map2d_4th_scroll_event_added = false;
   let map2d_5th_scroll_event_added = false;
+  let map2d_6th_scroll_event_added = false;
 
   let fullPage = new fullpage('#fullpage', {
     licenseKey: 'Y8LPJ-LT5QI-3KV97-JFVJK-IZBZL',
@@ -767,7 +769,7 @@ $(document).ready(function () {
                 minimapEl.css({
                   opacity: '0',
                 });
-                canLeaveMap4 = true;
+                canLeaveMap5 = true;
                 break;
               case MAP_2D_1st_MAX:
                 map2d.css({
@@ -786,6 +788,100 @@ $(document).ready(function () {
           });
 
           map2d_5th_scroll_event_added = true;
+        }
+      }
+      if (destination.anchor === 'map-2d-6th') {
+        scrollValue = MAP_2D_1st_MIN;
+        forceLeave = false;
+        canLeaveMap6 = false;
+        if (!map2d_6th_scroll_event_added) {
+          const mapEl = $('#map-2d-6th');
+          const minimapEl = $('.top-fixed-2d-map-6th');
+          const map2d = $('.map-2d-location-6th');
+
+          mapEl.on('swiped', function (e) {
+            if (e.detail.dir === 'up') {
+              scrollValue += ZOOM_SPEED;
+              scrollValue = Math.min(scrollValue, zoomToNext);
+            } else {
+              scrollValue -= ZOOM_SPEED;
+              scrollValue = Math.max(zoomToPrev, scrollValue);
+            }
+            const zoom =
+              scrollValue < MAP_2D_1st_MIN
+                ? 1
+                : scrollValue > MAP_2D_1st_MAX
+                ? MAP_2D_1st_MAX
+                : scrollValue;
+            switch (Math.round(zoom * 10) / 10) {
+              case MAP_2D_1st_MIN:
+                map2d.css({
+                  transform: 'scale(1)',
+                  transformOrigin: '100% 100%',
+                });
+                minimapEl.css({
+                  opacity: '0',
+                });
+                canLeaveMap6 = true;
+                break;
+              case MAP_2D_1st_MAX:
+                map2d.css({
+                  transform: 'scale(3.1)',
+                  transformOrigin: '85% 8%',
+                });
+                minimapEl.css({
+                  opacity: '1',
+                });
+                canLeaveMap6 = true;
+                break;
+              default:
+                canLeaveMap6 = true;
+                break;
+            }
+          });
+
+          mapEl.on('wheel', function (e) {
+            if (e.originalEvent.deltaY > 0) {
+              scrollValue += ZOOM_SPEED;
+              scrollValue = Math.min(scrollValue, zoomToNext);
+            } else {
+              scrollValue -= ZOOM_SPEED;
+              scrollValue = Math.max(zoomToPrev, scrollValue);
+            }
+            const zoom =
+              scrollValue < MAP_2D_1st_MIN
+                ? 1
+                : scrollValue > MAP_2D_1st_MAX
+                ? MAP_2D_1st_MAX
+                : scrollValue;
+            switch (Math.round(zoom * 10) / 10) {
+              case MAP_2D_1st_MIN:
+                map2d.css({
+                  transform: 'scale(1)',
+                  transformOrigin: '100% 100%',
+                });
+                minimapEl.css({
+                  opacity: '0',
+                });
+                canLeaveMap6 = true;
+                break;
+              case MAP_2D_1st_MAX:
+                map2d.css({
+                  transform: 'scale(3.1)',
+                  transformOrigin: '85% 8%',
+                });
+                minimapEl.css({
+                  opacity: '1',
+                });
+                canLeaveMap6 = true;
+                break;
+              default:
+                canLeaveMap6 = true;
+                break;
+            }
+          });
+
+          map2d_6th_scroll_event_added = true;
         }
       }
     },
@@ -874,6 +970,16 @@ $(document).ready(function () {
         if (
           ((scrollValue === zoomToPrev || scrollValue === zoomToNext) &&
             canLeaveMap5) ||
+          forceLeave
+        ) {
+          return true;
+        }
+        return false;
+      }
+      if (origin.anchor === 'map-2d-6th') {
+        if (
+          ((scrollValue === zoomToPrev || scrollValue === zoomToNext) &&
+            canLeaveMap6) ||
           forceLeave
         ) {
           return true;
@@ -1079,7 +1185,7 @@ $(document).ready(function () {
 
   renderViewer('viewer1', '../../assets/images/01/2d-map-4th/36.1.JPG');
 
-  // renderViewer('viewer2', '/assets/images/01/2d-map-5th/41.1.JPG');
+  renderViewer('viewer2', '/assets/images/01/2d-map-5th/41.1.JPG');
 
   const hanldeDisplayMovingMap = () => {
     if (window.matchMedia('(max-width: 767px)').matches) {
@@ -1090,6 +1196,7 @@ $(document).ready(function () {
       $('#map-2d-3rd-id').hide();
       $('#map-2d-4th-id').hide();
       $('#map-2d-5th-id').hide();
+      $('#map-2d-6th-id').hide();
     } else {
       // The viewport is at least 768 pixels wide
       $('#satelliteID').show();
@@ -1098,6 +1205,7 @@ $(document).ready(function () {
       $('#map-2d-4rd-id').show();
       $('#map-2d-3th-id').show();
       $('#map-2d-5th-id').show();
+      $('#map-2d-6th-id').show();
     }
   };
 
