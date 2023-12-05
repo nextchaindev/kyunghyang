@@ -626,7 +626,8 @@ object-fit-cover {
 .top-fixed-2d-map-2nd,
 .top-fixed-2d-map-3rd,
 .top-fixed-2d-map-4th,
-.top-fixed-2d-map-5th {
+.top-fixed-2d-map-5th,
+.top-fixed-2d-map-6th {
   position: absolute;
   top: 50px;
   left: 50px;
@@ -744,6 +745,16 @@ object-fit-cover {
   background-image: url(../../assets/images/01/2d-map-4th/39_img.png);
 }
 
+.section-36 {
+  background-image: url(../../assets/images/01/2d-map-5th/42_img.png);
+}
+.section-37 {
+  background-image: url(../../assets/images/01/2d-map-5th/43_img.png);
+}
+.section-38 {
+  background-image: url(../../assets/images/01/2d-map-5th/43.1.jpg);
+}
+
 div.section-title-tag {
   background-color: var(--primary);
   color: var(--white);
@@ -802,7 +813,8 @@ div.section-title-tag {
 .map-2d-location-2nd,
 .map-2d-location-3rd,
 .map-2d-location-4th,
-.map-2d-location-5th {
+.map-2d-location-5th,
+.map-2d-location-6th {
   transition: all 0.5s ease-in-out;
 }
 /* start reponsive */
