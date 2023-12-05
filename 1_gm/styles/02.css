@@ -1163,7 +1163,9 @@ h1 > span {
   text-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
 }
 
-#satellite-zoom {
+#satellite-zoom,
+#map-2d,
+.map-2d-location {
   transition: all 0.5s ease-in-out;
 }
 
