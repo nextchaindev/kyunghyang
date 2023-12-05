@@ -7,6 +7,8 @@ $(document).ready(function () {
   let canLeaveSatellite = false;
   let canLeaveMap = false;
   let canLeaveMap2 = false;
+  let canLeaveMap3 = false;
+  let canLeaveMap4 = false;
 
   // satellite scroll value
   let scrollValue = 1;
@@ -14,9 +16,8 @@ $(document).ready(function () {
   const MAX = 2.2;
 
   const MAP_2D_1st_MIN = 1;
-  const MAP_2D_2nd_MIN = 1;
   const MAP_2D_1st_MAX = 1.4;
-  const MAP_2D_2nd_MAX = 1.4;
+
   // const MAX = 7;
   const ZOOM_SPEED = 0.4;
   const zoomToNext = MAX + 0.1;
@@ -24,6 +25,8 @@ $(document).ready(function () {
   let satelliteScrollEventAdded = false;
   let map2d_1st_scroll_event_added = false;
   let map2d_2nd_scroll_event_added = false;
+  let map2d_3rd_scroll_event_added = false;
+  let map2d_4th_scroll_event_added = false;
 
   let fullPage = new fullpage('#fullpage', {
     licenseKey: 'Y8LPJ-LT5QI-3KV97-JFVJK-IZBZL',
@@ -316,7 +319,6 @@ $(document).ready(function () {
           const map2d = $('.map-2d-location-1st');
 
           mapEl.on('swiped', function (e) {
-            console.log('swiped');
             if (e.detail.dir === 'up') {
               scrollValue += ZOOM_SPEED;
               scrollValue = Math.min(scrollValue, zoomToNext);
@@ -358,8 +360,6 @@ $(document).ready(function () {
           });
 
           mapEl.on('wheel', function (e) {
-            console.log('wheel');
-            const minimapEl = $('.top-fixed-2d-map-1st');
             if (e.originalEvent.deltaY > 0) {
               scrollValue += ZOOM_SPEED;
               scrollValue = Math.min(scrollValue, zoomToNext);
@@ -408,7 +408,7 @@ $(document).ready(function () {
         }
       }
       if (destination.anchor === 'map-2d-2nd') {
-        scrollValue = MAP_2D_2nd_MIN;
+        scrollValue = MAP_2D_1st_MIN;
         forceLeave = false;
         canLeaveMap2 = false;
         if (!map2d_2nd_scroll_event_added) {
@@ -417,7 +417,6 @@ $(document).ready(function () {
           const map2d = $('.map-2d-location-2nd');
 
           mapEl.on('swiped', function (e) {
-            console.log('swiped');
             if (e.detail.dir === 'up') {
               scrollValue += ZOOM_SPEED;
               scrollValue = Math.min(scrollValue, zoomToNext);
@@ -426,13 +425,13 @@ $(document).ready(function () {
               scrollValue = Math.max(zoomToPrev, scrollValue);
             }
             const zoom =
-              scrollValue < MAP_2D_2nd_MIN
+              scrollValue < MAP_2D_1st_MIN
                 ? 1
-                : scrollValue > MAP_2D_2nd_MAX
-                ? MAP_2D_2nd_MAX
+                : scrollValue > MAP_2D_1st_MAX
+                ? MAP_2D_1st_MAX
                 : scrollValue;
             switch (Math.round(zoom * 10) / 10) {
-              case MAP_2D_2nd_MIN:
+              case MAP_2D_1st_MIN:
                 map2d.css({
                   transform: 'scale(1)',
                   transformOrigin: '100% 100%',
@@ -442,7 +441,7 @@ $(document).ready(function () {
                 });
                 canLeaveMap2 = true;
                 break;
-              case MAP_2D_2nd_MAX:
+              case MAP_2D_1st_MAX:
                 map2d.css({
                   transform: 'scale(1.8)',
                   transformOrigin: '-34% 57%',
@@ -459,8 +458,6 @@ $(document).ready(function () {
           });
 
           mapEl.on('wheel', function (e) {
-            console.log('wheel');
-            const minimapEl = $('.top-fixed-2d-map-2nd');
             if (e.originalEvent.deltaY > 0) {
               scrollValue += ZOOM_SPEED;
               scrollValue = Math.min(scrollValue, zoomToNext);
@@ -469,17 +466,17 @@ $(document).ready(function () {
               scrollValue = Math.max(zoomToPrev, scrollValue);
             }
             const zoom =
-              scrollValue < MAP_2D_2nd_MIN
+              scrollValue < MAP_2D_1st_MIN
                 ? 1
-                : scrollValue > MAP_2D_2nd_MAX
-                ? MAP_2D_2nd_MAX
+                : scrollValue > MAP_2D_1st_MAX
+                ? MAP_2D_1st_MAX
                 : scrollValue;
             console.log(
               'Math.round(zoom * 10) / 10',
               Math.round(zoom * 10) / 10
             );
             switch (Math.round(zoom * 10) / 10) {
-              case MAP_2D_2nd_MIN:
+              case MAP_2D_1st_MIN:
                 map2d.css({
                   transform: 'scale(1)',
                   transformOrigin: '100% 100%',
@@ -489,7 +486,7 @@ $(document).ready(function () {
                 });
                 canLeaveMap2 = true;
                 break;
-              case MAP_2D_2nd_MAX:
+              case MAP_2D_1st_MAX:
                 map2d.css({
                   transform: 'scale(1.7)',
                   transformOrigin: '24% 56%',
@@ -506,6 +503,194 @@ $(document).ready(function () {
           });
 
           map2d_2nd_scroll_event_added = true;
+        }
+      }
+      if (destination.anchor === 'map-2d-3rd') {
+        scrollValue = MAP_2D_1st_MIN;
+        forceLeave = false;
+        canLeaveMap3 = false;
+        if (!map2d_3rd_scroll_event_added) {
+          const mapEl = $('#map-2d-3rd');
+          const minimapEl = $('.top-fixed-2d-map-3rd');
+          const map2d = $('.map-2d-location-3rd');
+
+          mapEl.on('swiped', function (e) {
+            if (e.detail.dir === 'up') {
+              scrollValue += ZOOM_SPEED;
+              scrollValue = Math.min(scrollValue, zoomToNext);
+            } else {
+              scrollValue -= ZOOM_SPEED;
+              scrollValue = Math.max(zoomToPrev, scrollValue);
+            }
+            const zoom =
+              scrollValue < MAP_2D_1st_MIN
+                ? 1
+                : scrollValue > MAP_2D_1st_MAX
+                ? MAP_2D_1st_MAX
+                : scrollValue;
+            switch (Math.round(zoom * 10) / 10) {
+              case MAP_2D_1st_MIN:
+                map2d.css({
+                  transform: 'scale(1)',
+                  transformOrigin: '100% 100%',
+                });
+                minimapEl.css({
+                  opacity: '0',
+                });
+                canLeaveMap3 = true;
+                break;
+              case MAP_2D_1st_MAX:
+                map2d.css({
+                  transform: 'scale(2.8)',
+                  transformOrigin: '96% 56%',
+                });
+                minimapEl.css({
+                  opacity: '1',
+                });
+                canLeaveMap3 = true;
+                break;
+              default:
+                canLeaveMap3 = true;
+                break;
+            }
+          });
+
+          mapEl.on('wheel', function (e) {
+            if (e.originalEvent.deltaY > 0) {
+              scrollValue += ZOOM_SPEED;
+              scrollValue = Math.min(scrollValue, zoomToNext);
+            } else {
+              scrollValue -= ZOOM_SPEED;
+              scrollValue = Math.max(zoomToPrev, scrollValue);
+            }
+            const zoom =
+              scrollValue < MAP_2D_1st_MIN
+                ? 1
+                : scrollValue > MAP_2D_1st_MAX
+                ? MAP_2D_1st_MAX
+                : scrollValue;
+            switch (Math.round(zoom * 10) / 10) {
+              case MAP_2D_1st_MIN:
+                map2d.css({
+                  transform: 'scale(1)',
+                  transformOrigin: '100% 100%',
+                });
+                minimapEl.css({
+                  opacity: '0',
+                });
+                canLeaveMap3 = true;
+                break;
+              case MAP_2D_1st_MAX:
+                map2d.css({
+                  transform: 'scale(2.8)',
+                  transformOrigin: '96% 56%',
+                });
+                minimapEl.css({
+                  opacity: '1',
+                });
+                canLeaveMap3 = true;
+                break;
+              default:
+                canLeaveMap3 = true;
+                break;
+            }
+          });
+
+          map2d_3rd_scroll_event_added = true;
+        }
+      }
+      if (destination.anchor === 'map-2d-4th') {
+        scrollValue = MAP_2D_1st_MIN;
+        forceLeave = false;
+        canLeaveMap4 = false;
+        if (!map2d_4th_scroll_event_added) {
+          const mapEl = $('#map-2d-4th');
+          const minimapEl = $('.top-fixed-2d-map-4th');
+          const map2d = $('.map-2d-location-4th');
+
+          mapEl.on('swiped', function (e) {
+            if (e.detail.dir === 'up') {
+              scrollValue += ZOOM_SPEED;
+              scrollValue = Math.min(scrollValue, zoomToNext);
+            } else {
+              scrollValue -= ZOOM_SPEED;
+              scrollValue = Math.max(zoomToPrev, scrollValue);
+            }
+            const zoom =
+              scrollValue < MAP_2D_1st_MIN
+                ? 1
+                : scrollValue > MAP_2D_1st_MAX
+                ? MAP_2D_1st_MAX
+                : scrollValue;
+            switch (Math.round(zoom * 10) / 10) {
+              case MAP_2D_1st_MIN:
+                map2d.css({
+                  transform: 'scale(1)',
+                  transformOrigin: '100% 100%',
+                });
+                minimapEl.css({
+                  opacity: '0',
+                });
+                canLeaveMap4 = true;
+                break;
+              case MAP_2D_1st_MAX:
+                map2d.css({
+                  transform: 'scale(3.8)',
+                  transformOrigin: '113% 49%',
+                });
+                minimapEl.css({
+                  opacity: '1',
+                });
+                canLeaveMap4 = true;
+                break;
+              default:
+                canLeaveMap4 = true;
+                break;
+            }
+          });
+
+          mapEl.on('wheel', function (e) {
+            if (e.originalEvent.deltaY > 0) {
+              scrollValue += ZOOM_SPEED;
+              scrollValue = Math.min(scrollValue, zoomToNext);
+            } else {
+              scrollValue -= ZOOM_SPEED;
+              scrollValue = Math.max(zoomToPrev, scrollValue);
+            }
+            const zoom =
+              scrollValue < MAP_2D_1st_MIN
+                ? 1
+                : scrollValue > MAP_2D_1st_MAX
+                ? MAP_2D_1st_MAX
+                : scrollValue;
+            switch (Math.round(zoom * 10) / 10) {
+              case MAP_2D_1st_MIN:
+                map2d.css({
+                  transform: 'scale(1)',
+                  transformOrigin: '100% 100%',
+                });
+                minimapEl.css({
+                  opacity: '0',
+                });
+                canLeaveMap4 = true;
+                break;
+              case MAP_2D_1st_MAX:
+                map2d.css({
+                  transform: 'scale(3.8)',
+                  transformOrigin: '113% 49%',
+                });
+                minimapEl.css({
+                  opacity: '1',
+                });
+                canLeaveMap4 = true;
+                break;
+              default:
+                canLeaveMap4 = true;
+                break;
+            }
+          });
+
+          map2d_3rd_scroll_event_added = true;
         }
       }
     },
@@ -564,6 +749,26 @@ $(document).ready(function () {
         if (
           ((scrollValue === zoomToPrev || scrollValue === zoomToNext) &&
             canLeaveMap2) ||
+          forceLeave
+        ) {
+          return true;
+        }
+        return false;
+      }
+      if (origin.anchor === 'map-2d-3rd') {
+        if (
+          ((scrollValue === zoomToPrev || scrollValue === zoomToNext) &&
+            canLeaveMap3) ||
+          forceLeave
+        ) {
+          return true;
+        }
+        return false;
+      }
+      if (origin.anchor === 'map-2d-4th') {
+        if (
+          ((scrollValue === zoomToPrev || scrollValue === zoomToNext) &&
+            canLeaveMap4) ||
           forceLeave
         ) {
           return true;
@@ -751,30 +956,26 @@ $(document).ready(function () {
     ],
   });
 
-  if (window.matchMedia('(max-width: 767px)').matches) {
-    // The viewport is less than 768 pixels wide
-    $('#satelliteID').hide();
-    $('#map-2d-1st-id').hide();
-    $('#map-2d-2nd-id').hide();
-  } else {
-    // The viewport is at least 768 pixels wide
-    $('#satelliteID').show();
-    $('#map-2d-1st-id').show();
-    $('#map-2d-2nd-id').show();
-  }
-
-  $(window).resize(function () {
+  const hanldeDisplayMovingMap = () => {
     if (window.matchMedia('(max-width: 767px)').matches) {
       // The viewport is less than 768 pixels wide
       $('#satelliteID').hide();
       $('#map-2d-1st-id').hide();
-
       $('#map-2d-2nd-id').hide();
+      $('#map-2d-3rd-id').hide();
+      $('#map-2d-3th-id').hide();
     } else {
       // The viewport is at least 768 pixels wide
       $('#satelliteID').show();
       $('#map-2d-1st-id').show();
       $('#map-2d-2nd-id').show();
+      $('#map-2d-3rd-id').show();
+      $('#map-2d-3th-id').show();
     }
+  };
+
+  hanldeDisplayMovingMap();
+  $(window).resize(function () {
+    hanldeDisplayMovingMap();
   });
 });
