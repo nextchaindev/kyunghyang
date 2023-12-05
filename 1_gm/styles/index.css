@@ -611,7 +611,9 @@ object-fit-cover {
 }
 
 .top-fixed-2d-map-1st,
-.top-fixed-2d-map-2nd {
+.top-fixed-2d-map-2nd,
+.top-fixed-2d-map-3rd,
+.top-fixed-2d-map-4th {
   position: absolute;
   top: 50px;
   left: 50px;
@@ -650,12 +652,14 @@ object-fit-cover {
   position: absolute;
   bottom: 25px;
   left: 5%;
+  text-align: left;
 }
 
 .content-right {
   position: absolute;
   bottom: 25px;
   right: 5%;
+  text-align: right;
 }
 /* end section 11 */
 
@@ -693,6 +697,28 @@ object-fit-cover {
 }
 .section-19 {
   background-image: url(../../assets/images/01/2d-map-2nd/25_img.png);
+}
+
+.section-21 {
+  background-image: url(../../assets/images/01/2d-map-3rd/27_img.png);
+}
+
+.section-22 {
+  background-image: url(../../assets/images/01/2d-map-3rd/28_img.png);
+}
+
+.section-23 {
+  background-image: url(../../assets/images/01/2d-map-3rd/29_img.png);
+}
+
+.section-25 {
+  background-image: url(../../assets/images/01/2d-map-4th/31_img.png);
+}
+.section-26 {
+  background-image: url(../../assets/images/01/2d-map-4th/32_img.png);
+}
+.section-27 {
+  background-image: url(../../assets/images/01/2d-map-4th/33_img.png);
 }
 
 div.section-title-tag {
@@ -749,7 +775,10 @@ div.section-title-tag {
   display: none;
 }
 /* map zoom animation smooth */
-.map-2d-location-1st {
+.map-2d-location-1st,
+.map-2d-location-2nd,
+.map-2d-location-3rd,
+.map-2d-location-4th {
   transition: all 0.5s ease-in-out;
 }
 /* start reponsive */
