@@ -9,6 +9,7 @@ $(document).ready(function () {
   let canLeaveMap2 = false;
   let canLeaveMap3 = false;
   let canLeaveMap4 = false;
+  let canLeaveMap5 = false;
 
   // satellite scroll value
   let scrollValue = 1;
@@ -27,6 +28,7 @@ $(document).ready(function () {
   let map2d_2nd_scroll_event_added = false;
   let map2d_3rd_scroll_event_added = false;
   let map2d_4th_scroll_event_added = false;
+  let map2d_5th_scroll_event_added = false;
 
   let fullPage = new fullpage('#fullpage', {
     licenseKey: 'Y8LPJ-LT5QI-3KV97-JFVJK-IZBZL',
@@ -34,7 +36,6 @@ $(document).ready(function () {
     normalScrollElements: '',
     fitToSection: false,
     afterLoad: async function (origin, destination, direction, trigger) {
-      console.log('destination.index', destination.index);
       switch (destination.index) {
         case 0:
           $('.attached-video-bg').each(function (index) {
@@ -693,6 +694,100 @@ $(document).ready(function () {
           map2d_3rd_scroll_event_added = true;
         }
       }
+      if (destination.anchor === 'map-2d-5th') {
+        scrollValue = MAP_2D_1st_MIN;
+        forceLeave = false;
+        canLeaveMap4 = false;
+        if (!map2d_5th_scroll_event_added) {
+          const mapEl = $('#map-2d-5th');
+          const minimapEl = $('.top-fixed-2d-map-5th');
+          const map2d = $('.map-2d-location-5th');
+
+          mapEl.on('swiped', function (e) {
+            if (e.detail.dir === 'up') {
+              scrollValue += ZOOM_SPEED;
+              scrollValue = Math.min(scrollValue, zoomToNext);
+            } else {
+              scrollValue -= ZOOM_SPEED;
+              scrollValue = Math.max(zoomToPrev, scrollValue);
+            }
+            const zoom =
+              scrollValue < MAP_2D_1st_MIN
+                ? 1
+                : scrollValue > MAP_2D_1st_MAX
+                ? MAP_2D_1st_MAX
+                : scrollValue;
+            switch (Math.round(zoom * 10) / 10) {
+              case MAP_2D_1st_MIN:
+                map2d.css({
+                  transform: 'scale(1)',
+                  transformOrigin: '100% 100%',
+                });
+                minimapEl.css({
+                  opacity: '0',
+                });
+                canLeaveMap5 = true;
+                break;
+              case MAP_2D_1st_MAX:
+                map2d.css({
+                  transform: 'scale(3.0)',
+                  transformOrigin: '116% 7%',
+                });
+                minimapEl.css({
+                  opacity: '1',
+                });
+                canLeaveMap5 = true;
+                break;
+              default:
+                canLeaveMap5 = true;
+                break;
+            }
+          });
+
+          mapEl.on('wheel', function (e) {
+            if (e.originalEvent.deltaY > 0) {
+              scrollValue += ZOOM_SPEED;
+              scrollValue = Math.min(scrollValue, zoomToNext);
+            } else {
+              scrollValue -= ZOOM_SPEED;
+              scrollValue = Math.max(zoomToPrev, scrollValue);
+            }
+            const zoom =
+              scrollValue < MAP_2D_1st_MIN
+                ? 1
+                : scrollValue > MAP_2D_1st_MAX
+                ? MAP_2D_1st_MAX
+                : scrollValue;
+            switch (Math.round(zoom * 10) / 10) {
+              case MAP_2D_1st_MIN:
+                map2d.css({
+                  transform: 'scale(1)',
+                  transformOrigin: '100% 100%',
+                });
+                minimapEl.css({
+                  opacity: '0',
+                });
+                canLeaveMap4 = true;
+                break;
+              case MAP_2D_1st_MAX:
+                map2d.css({
+                  transform: 'scale(3.0)',
+                  transformOrigin: '116% 7%',
+                });
+                minimapEl.css({
+                  opacity: '1',
+                });
+                canLeaveMap5 = true;
+                break;
+              default:
+                canLeaveMap5 = true;
+                break;
+            }
+          });
+
+          map2d_5th_scroll_event_added = true;
+        }
+      }
     },
     beforeLeave: function (origin, destination, direction, trigger) {
       switch (destination.index) {
@@ -769,6 +864,16 @@ $(document).ready(function () {
         if (
           ((scrollValue === zoomToPrev || scrollValue === zoomToNext) &&
             canLeaveMap4) ||
+          forceLeave
+        ) {
+          return true;
+        }
+        return false;
+      }
+      if (origin.anchor === 'map-2d-5th') {
+        if (
+          ((scrollValue === zoomToPrev || scrollValue === zoomToNext) &&
+            canLeaveMap5) ||
           forceLeave
         ) {
           return true;
@@ -956,6 +1061,26 @@ $(document).ready(function () {
     ],
   });
 
+  function renderViewer(containerId, imgSrc) {
+    const container = document.getElementById(containerId);
+    const viewer = new PANOLENS.Viewer({
+      container,
+    });
+    const panorama = new PANOLENS.ImagePanorama(imgSrc);
+    viewer.add(panorama);
+    viewer.OrbitControls.noZoom = true;
+    container.onmousedown = () => {
+      container.style.cursor = 'grabbing';
+    };
+    container.onmouseup = () => {
+      container.style.cursor = 'grab';
+    };
+  }
+
+  renderViewer('viewer1', '../../assets/images/01/2d-map-4th/36.1.JPG');
+
+  // renderViewer('viewer2', '/assets/images/01/2d-map-5th/41.1.JPG');
+
   const hanldeDisplayMovingMap = () => {
     if (window.matchMedia('(max-width: 767px)').matches) {
       // The viewport is less than 768 pixels wide
@@ -963,14 +1088,16 @@ $(document).ready(function () {
       $('#map-2d-1st-id').hide();
       $('#map-2d-2nd-id').hide();
       $('#map-2d-3rd-id').hide();
-      $('#map-2d-3th-id').hide();
+      $('#map-2d-4th-id').hide();
+      $('#map-2d-5th-id').hide();
     } else {
       // The viewport is at least 768 pixels wide
       $('#satelliteID').show();
       $('#map-2d-1st-id').show();
       $('#map-2d-2nd-id').show();
-      $('#map-2d-3rd-id').show();
+      $('#map-2d-4rd-id').show();
       $('#map-2d-3th-id').show();
+      $('#map-2d-5th-id').show();
     }
   };
 
