@@ -15,6 +15,10 @@
   --doc-height: 100vh;
 }
 
+* {
+  overflow: hidden;
+}
+
 /* Pretendard -- primary */
 
 @font-face {
@@ -260,7 +264,8 @@ footer.kyunghyang-footer div.footer-logos > div:first-of-type {
   color: var(--secondary);
   display: flex;
   align-items: center;
-  gap: 74px;
+  gap: 40px;
+  text-align: center;
 }
 .quotes-title > div {
   padding: 20px 0 10px;
@@ -484,7 +489,44 @@ div.section-title-tag {
   justify-content: center;
 }
 
+.title-section {
+  background-color: #f6f6f4;
+  height: 100%;
+  height: calc(100% - 100px);
+  width: 100vw;
+  position: relative;
+}
+
+.title-text {
+  color: rgb(34, 34, 34);
+  border-bottom: var(--secondary) solid 4px;
+  margin-top: 40px;
+  padding-bottom: 10px;
+}
+
+.brown-big-text {
+  font-size: 60px;
+}
+
 /* start reponsive */
+
+/* up to desktop */
+@media only screen and (max-width: 1300px) {
+  .parallax {
+    background-attachment: scroll;
+  }
+}
+
+/* tablet to up */
+@media only screen and (min-width: 768px) {
+  .mobile-break {
+    display: none;
+  }
+
+  #section-2 {
+    background-position: unset;
+  }
+}
 
 @media only screen and (max-width: 767px) {
   h1 {
@@ -549,6 +591,24 @@ div.section-title-tag {
     position: static;
     transform: none;
     margin-top: 20px;
+  }
+
+  .mobile-break {
+    display: block; /* makes it have a width */
+    content: ''; /* clears default height */
+    margin-top: 2px; /* change this to whatever height you want it */
+  }
+
+  .quotes-title {
+    gap: 30px;
+  }
+
+  .brown-big-text {
+    font-size: 40px;
+  }
+
+  #section-2 {
+    background-position: -800px;
   }
 }
 
