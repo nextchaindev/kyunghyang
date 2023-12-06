@@ -1467,7 +1467,7 @@ div.video-container > iframe {
     object-fit: cover;
   }
   footer.kyunghyang-footer {
-    padding: 40px;
+    padding: 40px 0 80px 0;
     gap: 24px;
     max-width: 100%;
   }
@@ -1695,8 +1695,11 @@ div.video-container > iframe {
 }
 
 @media only screen and (max-width: 767px) {
+  .section-28 .content {
+    bottom: 80px;
+  }
   .section-6 {
-    padding: 60px 0 100px;
+    padding: 60px 0 80px;
   }
   .section-6 .section-title-tag {
     margin: 0 auto;
