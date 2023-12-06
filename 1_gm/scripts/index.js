@@ -1256,49 +1256,62 @@ $(document).ready(function () {
     hanldeDisplayMovingMap();
   });
 
-  const playIcons = document.getElementsByClassName('video-playpause');
+  function controllVideos() {
+    const isIOS = DeviceUtil.isIOS();
+    const video0 = document.getElementById('controlled-video1');
+    const video1 = document.getElementById('controlled-video2');
+    const playIcons = document.getElementsByClassName('video-playpause');
 
-  const video0 = document.getElementById('controlled-video1');
-  video0.addEventListener('click', () => {
-    if (video0.paused) {
-      video0.play();
+    console.log('isIOS', isIOS);
+    if (isIOS) {
+      video0.setAttribute('controls', 'controls');
+      video1.setAttribute('controls', 'controls');
+      playIcons[0].style.opacity = 0;
+      playIcons[1].style.opacity = 0;
     } else {
-      video0.pause();
-    }
-  });
-  playIcons[0].addEventListener('click', () => {
-    if (video0.paused) {
-      video0.play();
-    } else {
-      video0.pause();
-    }
-  });
-  video0.onplay = () => {
-    playIcons[0].style.opacity = 0;
-  };
-  video0.onpause = () => {
-    playIcons[0].style.opacity = 1;
-  };
+      video0.addEventListener('click', () => {
+        if (video0.paused) {
+          video0.play();
+        } else {
+          video0.pause();
+        }
+      });
+      playIcons[0].addEventListener('click', () => {
+        if (video0.paused) {
+          video0.play();
+        } else {
+          video0.pause();
+        }
+      });
+      video0.onplay = () => {
+        playIcons[0].style.opacity = 0;
+      };
+      video0.onpause = () => {
+        playIcons[0].style.opacity = 1;
+      };
 
-  const video1 = document.getElementById('controlled-video2');
-  video1.addEventListener('click', () => {
-    if (video1.paused) {
-      video1.play();
-    } else {
-      video1.pause();
+      video1.addEventListener('click', () => {
+        if (video1.paused) {
+          video1.play();
+        } else {
+          video1.pause();
+        }
+      });
+      playIcons[1].addEventListener('click', () => {
+        if (video1.paused) {
+          video1.play();
+        } else {
+          video1.pause();
+        }
+      });
+      video1.onplay = () => {
+        playIcons[1].style.opacity = 0;
+      };
+      video1.onpause = () => {
+        playIcons[1].style.opacity = 1;
+      };
     }
-  });
-  playIcons[1].addEventListener('click', () => {
-    if (video1.paused) {
-      video1.play();
-    } else {
-      video1.pause();
-    }
-  });
-  video1.onplay = () => {
-    playIcons[1].style.opacity = 0;
-  };
-  video1.onpause = () => {
-    playIcons[1].style.opacity = 1;
-  };
+  }
+
+  controllVideos();
 });
