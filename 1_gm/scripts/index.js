@@ -1219,15 +1219,22 @@ $(document).ready(function () {
   );
 
   const hanldeDisplayMovingMap = () => {
-    if (window.matchMedia('(max-width: 767px)').matches) {
+    const isNotPC = DeviceUtil.isNotPC();
+    if (isNotPC) {
       // The viewport is less than 768 pixels wide
       $('#satelliteID').hide();
-      $('#map-2d-1st-id').hide();
-      $('#map-2d-2nd-id').hide();
-      $('#map-2d-3rd-id').hide();
-      $('#map-2d-4th-id').hide();
-      $('#map-2d-5th-id').hide();
-      $('#map-2d-6th-id').hide();
+      // $('#map-2d-1st-id').hide();
+      // $('#map-2d-2nd-id').hide();
+      // $('#map-2d-3rd-id').hide();
+      // $('#map-2d-4th-id').hide();
+      // $('#map-2d-5th-id').hide();
+      // $('#map-2d-6th-id').hide();
+      $('#map-2d-1st-id').addClass('mobile-2d-bg1');
+      $('#map-2d-2nd-id').addClass('mobile-2d-bg2');
+      $('#map-2d-3rd-id').addClass('mobile-2d-bg3');
+      $('#map-2d-4th-id').addClass('mobile-2d-bg4');
+      $('#map-2d-5th-id').addClass('mobile-2d-bg5');
+      $('#map-2d-6th-id').addClass('mobile-2d-bg6');
     } else {
       // The viewport is at least 768 pixels wide
       $('#satelliteID').show();
