@@ -47,7 +47,7 @@ $(document).ready(function () {
         case 1:
           $('#section-2').css(
             'background-image',
-            'url(../../assets/images/01/young-girl-bg/04_img.png)'
+            'url(../assets/images/01/young-girl-bg/04_img.png)'
           );
           $('#section-2').addClass('animate__animated animate__fadeIn');
           $('#section-2 .quotes-title').css('display', 'flex');
@@ -58,7 +58,7 @@ $(document).ready(function () {
         case 2:
           $('#section-3').css(
             'background-image',
-            'url(../../assets/images/01/middle-woman-bg/05_img.png)'
+            'url(../assets/images/01/middle-woman-bg/05_img.png)'
           );
           $('#section-3').addClass('animate__animated animate__fadeIn');
           $('#section-3 .quotes-title').css('display', 'flex');
@@ -199,13 +199,13 @@ $(document).ready(function () {
                 });
                 titleBoxEl.css({
                   transform: 'translateX(-54%)',
-                  top: '20.5%',
-                  left: '61%',
+                  top: '18.5%',
+                  left: '54%',
                 });
 
                 $('.point1').css({
-                  top: '49%',
-                  left: ' 58%',
+                  top: '44%',
+                  left: ' 51%',
                 });
                 canLeaveSatellite = false;
                 break;
@@ -283,12 +283,12 @@ $(document).ready(function () {
                 titleBoxEl.show();
                 titleBoxEl.css({
                   transform: 'translateX(-54%)',
-                  top: '20.5%',
+                  top: '26.5%',
                   left: '61%',
                 });
                 $('.point1').css({
-                  top: '42%',
-                  left: ' 57%',
+                  top: '52%',
+                  left: ' 58%',
                 });
                 $('.point1').show();
 
@@ -307,13 +307,13 @@ $(document).ready(function () {
                 });
                 titleBoxEl.css({
                   transform: 'translateX(-54%)',
-                  top: '20.5%',
-                  left: '61%',
+                  top: '18.5%',
+                  left: '54%',
                 });
 
                 $('.point1').css({
-                  top: '49%',
-                  left: ' 58%',
+                  top: '44%',
+                  left: '51%',
                 });
                 canLeaveSatellite = false;
                 break;
@@ -1222,7 +1222,7 @@ $(document).ready(function () {
 
   renderViewer(
     'viewer1',
-    '../../assets/images/01/2d-map-4th/36.1.JPG',
+    '../assets/images/01/2d-map-4th/36.1.JPG',
     'notice-viewer1'
   );
 
