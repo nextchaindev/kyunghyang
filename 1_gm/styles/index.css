@@ -1466,6 +1466,69 @@ div.video-container > iframe {
   height: var(--doc-height) !important;
 }
 
+.mobile-2d-bg1 {
+  background-image: url(../../../assets/images/01/2d-map/map-1st.png),
+    url(../../../assets/images/01/map/bg.png);
+  background-size: 100%, cover;
+  background-position: 0vw 36vh, center;
+  background-repeat: no-repeat;
+}
+
+.mobile-2d-bg2 {
+  background-image: url(../../../assets/images/01/2d-map/map-2nd.png),
+    url(../../../assets/images/01/map/bg.png);
+  background-size: 100%, cover;
+  background-position: 0vw 36vh, center;
+  background-repeat: no-repeat;
+}
+
+.mobile-2d-bg3 {
+  background-image: url(../../../assets/images/01/2d-map/map-3rd.png),
+    url(../../../assets/images/01/map/bg.png);
+  background-size: 100%, cover;
+  background-position: 0vw 36vh, center;
+  background-repeat: no-repeat;
+}
+
+.mobile-2d-bg4 {
+  background-image: url(../../../assets/images/01/2d-map/map-4th.png),
+    url(../../../assets/images/01/map/bg.png);
+  background-size: 100%, cover;
+  background-position: 0vw 36vh, center;
+  background-repeat: no-repeat;
+}
+
+.mobile-2d-bg5 {
+  background-image: url(../../../assets/images/01/2d-map/map-5th.png),
+    url(../../../assets/images/01/map/bg.png);
+  background-size: 100%, cover;
+  background-position: 0vw 36vh, center;
+  background-repeat: no-repeat;
+}
+
+.mobile-2d-bg6 {
+  background-image: url(../../../assets/images/01/2d-map/map-6th.png),
+    url(../../../assets/images/01/map/bg.png);
+  background-size: 100%, cover;
+  background-position: 0vw 36vh, center;
+  background-repeat: no-repeat;
+}
+
+.mobile-2d-bg1 .map-2d-location-1st,
+.mobile-2d-bg2 .map-2d-location-2nd,
+.mobile-2d-bg3 .map-2d-location-3rd,
+.mobile-2d-bg4 .map-2d-location-4th,
+.mobile-2d-bg5 .map-2d-location-5th,
+.mobile-2d-bg6 .map-2d-location-6th,
+.mobile-2d-bg1 .top-fixed-2d-map-1st,
+.mobile-2d-bg2 .top-fixed-2d-map-2nd,
+.mobile-2d-bg3 .top-fixed-2d-map-3rd,
+.mobile-2d-bg4 .top-fixed-2d-map-4th,
+.mobile-2d-bg5 .top-fixed-2d-map-5th,
+.mobile-2d-bg6 .top-fixed-2d-map-6th {
+  display: none;
+}
+
 @media only screen and (max-width: 1279px) {
   div.video-fullscreen-container {
     padding: 0;
@@ -1938,5 +2001,84 @@ div.video-container > iframe {
   }
   .video-playpause img {
     width: 40px;
+  }
+}
+
+/* scroll */
+
+.section-stick {
+  mix-blend-mode: difference;
+  margin: auto;
+  opacity: 0;
+  position: fixed;
+  right: 41px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 4px;
+  z-index: 1000;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.section-stick .section-wrap {
+  mix-blend-mode: difference;
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 150px;
+  height: 8vh;
+  gap: 11px;
+}
+
+.section-stick .section-wrap .section-name {
+  color: var(--primary);
+  white-space: pre-line;
+  text-align: right;
+}
+
+.section-stick .section-wrap .text_active {
+  color: var(--grey);
+}
+
+.section-stick .section-wrap .stick,
+.section-stick .section-wrap .active {
+  border: none;
+}
+
+.section-stick .section-wrap .stick {
+  position: relative;
+  width: 4px;
+  height: 100%;
+  background-color: var(--primary);
+  transition: all var(--time-animation) ease-in-out;
+}
+.section-stick .section-wrap .stick .stick-progress {
+  height: 0%;
+  background-color: var(--grey);
+  width: 4px;
+  max-height: 100%;
+  -webkit-transition: height 0.1s ease-in-out;
+  -moz-transition: height 0.1s ease-in-out;
+  -o-transition: height 0.1s ease-in-out;
+  transition: height 0.1s ease-in-out;
+}
+
+.section-stick .section-wrap .active {
+  position: absolute;
+  background-color: var(--primary);
+  box-shadow: 0px 0px 12px 1px #ffffff;
+  color: #ffffff;
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+}
+
+@media only screen and (max-width: 1279px) {
+  .section-stick {
+    display: none;
   }
 }

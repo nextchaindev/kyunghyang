@@ -234,10 +234,6 @@ $(document).ready(function () {
             }
             const zoom =
               scrollValue < MIN ? 1 : scrollValue > MAX ? MAX : scrollValue;
-            console.log(
-              'Math.round(zoom * 10) / 10',
-              Math.round(zoom * 10) / 10
-            );
             switch (Math.round(zoom * 10) / 10) {
               case MIN:
                 $('.point1').hide();
@@ -387,10 +383,6 @@ $(document).ready(function () {
                 : scrollValue > MAP_2D_1st_MAX
                 ? MAP_2D_1st_MAX
                 : scrollValue;
-            console.log(
-              'Math.round(zoom * 10) / 10',
-              Math.round(zoom * 10) / 10
-            );
             switch (Math.round(zoom * 10) / 10) {
               case MAP_2D_1st_MIN:
                 map2d.css({
@@ -485,10 +477,6 @@ $(document).ready(function () {
                 : scrollValue > MAP_2D_1st_MAX
                 ? MAP_2D_1st_MAX
                 : scrollValue;
-            console.log(
-              'Math.round(zoom * 10) / 10',
-              Math.round(zoom * 10) / 10
-            );
             switch (Math.round(zoom * 10) / 10) {
               case MAP_2D_1st_MIN:
                 map2d.css({
@@ -1002,7 +990,6 @@ $(document).ready(function () {
 
   // scroll down button
   $('#scrollDownButton').on('click', function () {
-    console.log('fullpage', fullPage);
     fullPage.moveTo('the-tea-girl');
   });
 
@@ -1205,13 +1192,19 @@ $(document).ready(function () {
     if (isNotPC) {
       // The viewport is less than 768 pixels wide
       $('#satelliteID').hide();
-      $('#map-2d-1st-id').hide();
-      $('#map-2d-2nd-id').hide();
-      $('#map-2d-3rd-id').hide();
-      $('#map-2d-4th-id').hide();
-      $('#map-2d-5th-id').hide();
-      $('#map-2d-6th-id').hide();
+      // $('#map-2d-1st-id').hide();
+      // $('#map-2d-2nd-id').hide();
+      // $('#map-2d-3rd-id').hide();
+      // $('#map-2d-4th-id').hide();
+      // $('#map-2d-5th-id').hide();
+      // $('#map-2d-6th-id').hide();
       $('.section-7-mobile').show();
+      $('#map-2d-1st-id').addClass('mobile-2d-bg1');
+      $('#map-2d-2nd-id').addClass('mobile-2d-bg2');
+      $('#map-2d-3rd-id').addClass('mobile-2d-bg3');
+      $('#map-2d-4th-id').addClass('mobile-2d-bg4');
+      $('#map-2d-5th-id').addClass('mobile-2d-bg5');
+      $('#map-2d-6th-id').addClass('mobile-2d-bg6');
     } else {
       // The viewport is at least 768 pixels wide
       $('#satelliteID').show();
@@ -1341,4 +1334,155 @@ $(document).ready(function () {
       },
     });
   });
+
+  function scrollBarCalculator() {
+    const TIME_OUT = 600; // It should be the same transition time of the sections
+    const body = document.querySelector('body');
+    const listSections = document.querySelectorAll('.section_scroll');
+    const sectionsQty = document.querySelectorAll('.section_scroll').length;
+    const sectionStick = document.querySelector('.section-stick');
+    const sectionScroll = document.getElementById('section-scroll');
+    const listHideScrollSreens = document.querySelectorAll('.hide_scroll');
+    const page01 = document.body;
+
+    let startFlag = true;
+    let qty = 0,
+      main = null,
+      next = null;
+
+    const listSectionScroll = [
+      '노인들의 인지장애',
+      '노인들의 치매와\n사회적 비용',
+      '하안노인\n종합복지관',
+      '인생정원 MAP',
+      '입구',
+      '기억산책길',
+      '오감놀이터',
+      '정원 쉼터',
+      '마음숲',
+      '초록마루',
+      '인생정원\n해설사',
+    ];
+
+    let listSessionHeight = [];
+
+    const listSectionIds = [
+      'section_scroll1',
+      'section_scroll2',
+      'satelliteID',
+      'map-2d-1st-id',
+      'section_scroll5',
+      'map-2d-2nd-id',
+      'map-2d-3rd-id',
+      'map-2d-4th-id',
+      'map-2d-5th-id',
+      'map-2d-6th-id',
+      'section_scroll11',
+    ];
+
+    const listHideIds = [
+      'section-1',
+      'hide_scroll2',
+      'hide_scroll3',
+      'hide_scroll4',
+      'hide_scroll5',
+      'hide_scroll6',
+      'hide_scroll7',
+      'hide_scroll8',
+      'hide_scroll9',
+      'hide_scroll10',
+      'hide_scroll11',
+    ];
+
+    Array(sectionsQty)
+      .fill()
+      .forEach((values, index) => {
+        sectionStick.innerHTML =
+          // sectionStick.innerHTML + `<div class="stick">${listSectionScroll[index]}</div>`;
+          sectionStick.innerHTML +
+          `<div class="section-wrap" ">
+      <div class="section-name" id = "section_text${index + 1}">${
+            listSectionScroll[index]
+          }</div>
+      <div class="stick" id = "section${
+        index + 1
+      }"><div class="stick-progress" id="myBar${index + 1}"></div></div>
+    </div>`;
+      });
+
+    listSections.forEach((values, index) => {
+      values.setAttribute('id', listSectionIds[index]);
+    });
+
+    listHideScrollSreens.forEach((values, index) => {
+      values.setAttribute('id', listHideIds[index]);
+    });
+
+    listSessionHeight = [];
+    listSections.forEach((values, index) => {
+      listSessionHeight.push(values.offsetTop);
+    });
+    listSessionHeight.push(document.documentElement.scrollHeight);
+
+    document.addEventListener('scroll', (event) => {
+      let scrolledSesssonHeight = 0;
+      for (let index = 0; index < listHideIds.length; index++) {
+        if (
+          document.documentElement.scrollTop -
+            document.getElementById(listHideIds[index]).offsetTop ==
+          0
+        ) {
+          sectionScroll.style.opacity = 0;
+          index = listHideIds.length;
+        } else {
+          sectionScroll.style.opacity = 1;
+        }
+      }
+      listSections.forEach((section, index) => {
+        const sectionTextID = document.getElementById(
+          `section_text${index + 1}`
+        );
+        const sectionTextIDprevious = document.getElementById(
+          `section_text${index}`
+        );
+        const sectionScreen = document.getElementById(
+          section.getAttribute('id')
+        );
+        if (document.documentElement.scrollTop - sectionScreen.offsetTop >= 0) {
+          qty = index + 1;
+          scrolledSesssonHeight = listSessionHeight[index];
+          for (let j = 0; j < listSections.length; j++) {
+            const sectionTextIDRest = document.getElementById(
+              `section${j + 1}`
+            );
+            sectionTextIDRest.classList.remove('text_active');
+          }
+          sectionTextID.classList.add('text_active');
+          if (sectionTextIDprevious != null) {
+            sectionTextIDprevious.classList.remove('text_active');
+          }
+          var scrolled =
+            ((document.documentElement.scrollTop -
+              scrolledSesssonHeight +
+              innerHeight) /
+              (listSessionHeight[qty] - scrolledSesssonHeight)) *
+            100;
+          document.getElementById(`myBar${qty || 1}`).style.height =
+            scrolled + '%';
+          var previous = document.getElementById(`myBar${qty + 1}`);
+          if (previous != null) {
+            previous.style.height = 0 + '%';
+          }
+        } else {
+          sectionTextID.classList.remove('text_active');
+        }
+      });
+    });
+  }
+
+  scrollBarCalculator();
 });
+
+// document.getElementById('page01').addEventListener('scroll', (event) => {
+//   alert('scroll');
+// });

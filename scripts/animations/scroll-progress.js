@@ -26,6 +26,20 @@ const listSectionScroll = [
   '인생정원\n해설사',
 ];
 
+const listSectionIds = [
+  'section_scroll1',
+  'section_scroll2',
+  'satelliteID',
+  'map-2d-1st-id',
+  'section_scroll5',
+  'map-2d-2nd-id',
+  'map-2d-3rd-id',
+  'map-2d-4th-id',
+  'map-2d-5th-id',
+  'map-2d-6th-id',
+  'section_scroll11',
+];
+
 let listSessionHeight = [];
 
 Array(sectionsQty)

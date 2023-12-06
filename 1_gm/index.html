@@ -60,10 +60,15 @@
     <!-- <link rel="stylesheet" href="./styles/02.css" /> -->
     <link rel="stylesheet" href="./styles/index.css" />
   </head>
-  <body>
+  <body id="page01">
     <div id="fullpage" class="relative">
+      <div class="section-stick" id="section-scroll"></div>
       <!-- section 1 -->
-      <div data-anchor="banner-video" id="section-1" class="section active">
+      <div
+        data-anchor="banner-video"
+        id="section-1"
+        class="section active hide_scroll"
+      >
         <video playsinline autoplay muted loop class="attached-video-bg">
           <source src="./assets/videos/home-banner-bg.mp4" type="video/mp4" />
           귀하의 브라우저는 HTML5 비디오를 지원하지 않습니다
@@ -89,7 +94,11 @@
       </div>
 
       <!-- section 2 -->
-      <div class="section" style="background-color: white">
+      <div
+        class="section section_scroll"
+        style="background-color: white"
+        is="section_scroll1"
+      >
         <div
           data-anchor="the-tea-girl"
           id="section-2"
@@ -152,7 +161,7 @@
       </div>
 
       <!-- section 6 -->
-      <div class="section section-6">
+      <div class="section section-6 section_scroll" id="section_scroll2">
         <div class="section-6-content">
           <div class="section-title-tag">대한민국 치매 현황</div>
           <div class="statistics">
@@ -197,7 +206,7 @@
       <div
         data-anchor="satellite"
         id="satelliteID"
-        class="section title-section flex-center"
+        class="section title-section flex-center section_scroll"
       >
         <div id="satellite-zoom" class="full-child">
           <img
@@ -396,7 +405,7 @@
       <div
         data-anchor="map-2d-1st"
         id="map-2d-1st-id"
-        class="section section-10 title-section flex-center"
+        class="section section-10 title-section flex-center section_scroll"
       >
         <div id="map-2d-1st" class="full-child">
           <img
@@ -418,7 +427,10 @@
       </div>
 
       <!-- section 11 -->
-      <div class="section section-11 bg-black-30 parallax">
+      <div
+        class="section section-11 bg-black-30 parallax section_scroll"
+        id="section_scroll5"
+      >
         <img
           src="./assets/images/01/2d-map-1st/17_img.png"
           width="100%"
@@ -472,7 +484,7 @@
       <div
         data-anchor="map-2d-2nd"
         id="map-2d-2nd-id"
-        class="section section-10 title-section flex-center"
+        class="section section-10 title-section flex-center section_scroll"
       >
         <div id="map-2d-2nd" class="full-child">
           <img
@@ -553,7 +565,7 @@
       <div
         data-anchor="map-2d-3rd"
         id="map-2d-3rd-id"
-        class="section section-10 title-section flex-center"
+        class="section section-10 title-section flex-center section_scroll"
       >
         <div id="map-2d-3rd" class="full-child">
           <img
@@ -605,7 +617,7 @@
       <div
         data-anchor="map-2d-4th"
         id="map-2d-4th-id"
-        class="section section-10 title-section flex-center"
+        class="section section-10 title-section flex-center section_scroll"
       >
         <div id="map-2d-4th" class="full-child">
           <img
@@ -655,7 +667,7 @@
         </div>
       </div>
       <!-- section 28 -->
-      <div class="section section-28 parallax">
+      <div class="section section-28 parallax hide_scroll" id="hide_scroll2">
         <div class="flex-end fullscreen">
           <div class="relative">
             <div class="section-16-title-content">
@@ -693,7 +705,7 @@
       <div
         data-anchor="map-2d-5th"
         id="map-2d-5th-id"
-        class="section section-10 title-section flex-center"
+        class="section section-10 title-section flex-center section_scroll"
       >
         <div id="map-2d-5th" class="full-child">
           <img
@@ -716,10 +728,7 @@
 
       <!-- section 30 - 3d viewr - 1st -->
       <div class="section section-30">
-        <div
-          class="centre-2d-map-info-3d fullscreen snap-item fixed-bg_scrollable-section"
-          id="viewer1"
-        >
+        <div class="centre-2d-map-info-3d fullscreen snap-item" id="viewer1">
           <div class="notice-message" id="notice-viewer1">
             <h4>화면에서 마우스를 움직이면 360도 영상으로 볼 수 있어요</h4>
           </div>
@@ -763,7 +772,7 @@
       <div
         data-anchor="map-2d-6th"
         id="map-2d-6th-id"
-        class="section section-10 title-section flex-center"
+        class="section section-10 title-section flex-center section_scroll"
       >
         <div id="map-2d-6th" class="full-child">
           <img
@@ -786,10 +795,7 @@
 
       <!-- section 35 - 3d viewr - 2rd -->
       <div class="section section-30">
-        <div
-          class="centre-2d-map-info-3d fullscreen snap-item fixed-bg_scrollable-section"
-          id="viewer2"
-        >
+        <div class="centre-2d-map-info-3d fullscreen snap-item" id="viewer2">
           <div class="notice-message" id="notice-viewer2">
             <h4>화면에서 마우스를 움직이면 360도 영상으로 볼 수 있어요</h4>
           </div>
@@ -827,8 +833,8 @@
         </div>
       </div>
       <!-- section 39 - video -->
-      <div class="section section-39">
-        <div class="video-fullscreen-container snap-item hide_scroll">
+      <div class="section section-39 hide_scroll" id="hide_scroll3">
+        <div class="video-fullscreen-container snap-item">
           <div class="video-container">
             <video playsinline preload="none" id="controlled-video1">
               <source
@@ -849,7 +855,7 @@
       </div>
 
       <!-- section 40 -->
-      <div class="section section-40">
+      <div class="section section-40 section_scroll" id="section_scroll11">
         <div class="section-40-content">
           <div class="info-content content-center text-black">
             <div class="section-title-tag">대한민국 치매 현황</div>
@@ -878,7 +884,7 @@
 
       <!-- section 41 - video -->
       <div class="section section-41 bg-white">
-        <div class="video-fullscreen-container snap-item hide_scroll">
+        <div class="video-fullscreen-container snap-item">
           <div class="video-container">
             <video playsinline preload="none" id="controlled-video2">
               <source
@@ -899,7 +905,7 @@
       </div>
 
       <!-- section 42 -->
-      <div class="section section-42 parallax">
+      <div class="section section-42 parallax hide_scroll" id="hide_scroll4">
         <div class="flex-end fullscreen">
           <div class="relative">
             <div class="section-16-title-content">
@@ -933,12 +939,12 @@
       </div>
 
       <!-- section 43 -->
-      <div class="section section-43">
+      <div class="section section-43 hide_scroll" id="hide_scroll5">
         <img src="./assets/images/01/home-garden-life-feedback/46_img2.png" />
       </div>
 
       <!-- section 44 -->
-      <div class="section section-42 parallax">
+      <div class="section section-42 parallax hide_scroll" id="hide_scroll6">
         <div class="flex-end fullscreen">
           <div class="relative">
             <div class="section-16-title-content">
@@ -973,7 +979,7 @@
       </div>
 
       <!-- section 45 -->
-      <div class="section section-43">
+      <div class="section section-43 hide_scroll" id="hide_scroll7">
         <img src="./assets/images/01/home-garden-life-feedback/47_img2.png" />
         <div
           class="info-content section-45-content-center goingUp-text text-quotes"
@@ -989,7 +995,7 @@
         </div>
       </div>
       <!-- section 46 -->
-      <div class="section section-9">
+      <div class="section section-9 hide_scroll" id="hide_scroll8">
         <div class="section-9-content">
           <h3 class="text-light goingUp-text section-9-title">
             노형석 하안노인종합복지관 팀장은 말합니다
@@ -1019,7 +1025,7 @@
       </div>
 
       <!-- section 47 - youtube link -->
-      <div class="section section-47">
+      <div class="section section-47 hide_scroll" id="hide_scroll9">
         <div class="video-fullscreen-container">
           <div class="video-container">
             <iframe
@@ -1032,51 +1038,54 @@
         </div>
       </div>
 
-      <div class="section section-48 parallax"></div>
-      <footer
-        class="kyunghyang-footer snap-item hide_scroll section section-49 parallax"
-      >
-        <div>
-          <p class="text-body">
-            공공디자인으로 행복한 공간 만들기 프로젝트 광명 인생정원편
-          </p>
-          <p class="text-body">
-            경향신문 곽희양 기자·<span class="text-strong">양다영 PD</span
-            >·<span class="text-strong">모진수 PD</span>
-          </p>
-          <p class="text-body">사업주관 한국공예·디자인문화진흥원</p>
-          <p class="text-body">협력 경기 광명시</p>
-        </div>
-        <div class="footer-logos">
+      <div
+        class="section section-48 parallax hide_scroll"
+        id="hide_scroll10"
+      ></div>
+      <div class="section section-49 parallax hide_scroll" id="hide_scroll11">
+        <footer class="kyunghyang-footer snap-item hide_scroll">
           <div>
-            <a href="#">
-              <img
-                src="./assets/images/footer-logo/logo1.png"
-                srcset="
-                  ./assets/images/footer-logo/logo1@2x.png 2x,
-                  ./assets/images/footer-logo/logo1@3x.png 3x
-                "
-              />
-            </a>
+            <p class="text-body">
+              공공디자인으로 행복한 공간 만들기 프로젝트 광명 인생정원편
+            </p>
+            <p class="text-body">
+              경향신문 곽희양 기자·<span class="text-strong">양다영 PD</span
+              >·<span class="text-strong">모진수 PD</span>
+            </p>
+            <p class="text-body">사업주관 한국공예·디자인문화진흥원</p>
+            <p class="text-body">협력 경기 광명시</p>
+          </div>
+          <div class="footer-logos">
+            <div>
+              <a href="#">
+                <img
+                  src="./assets/images/footer-logo/logo1.png"
+                  srcset="
+                    ./assets/images/footer-logo/logo1@2x.png 2x,
+                    ./assets/images/footer-logo/logo1@3x.png 3x
+                  "
+                />
+              </a>
+            </div>
+            <div>
+              <a href="#">
+                <img
+                  src="./assets/images/footer-logo/logo2.png"
+                  srcset="
+                    ./assets/images/footer-logo/logo2@2x.png 2x,
+                    ./assets/images/footer-logo/logo2@3x.png 3x
+                  "
+                />
+              </a>
+            </div>
           </div>
           <div>
-            <a href="#">
-              <img
-                src="./assets/images/footer-logo/logo2.png"
-                srcset="
-                  ./assets/images/footer-logo/logo2@2x.png 2x,
-                  ./assets/images/footer-logo/logo2@3x.png 3x
-                "
-              />
-            </a>
+            <p class="copyright text-body">
+              CopyrightⓒThe Kyunghyang Shinmun, All rights reserved
+            </p>
           </div>
-        </div>
-        <div>
-          <p class="copyright text-body">
-            CopyrightⓒThe Kyunghyang Shinmun, All rights reserved
-          </p>
-        </div>
-      </footer>
+        </footer>
+      </div>
     </div>
 
     <!-- jquery -->
