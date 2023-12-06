@@ -1,4 +1,10 @@
 $(document).ready(function () {
+  const documentHeight = () => {
+    const doc = document.documentElement;
+    doc.style.setProperty('--vh', `${window.innerHeight * 0.01}px`);
+  };
+  window.addEventListener('resize', documentHeight);
+
   // the cyan progress
   // const scrollProgress = document.getElementById('the-bar-progress');
   // this var = true: allow to leave section by click on progress bar
@@ -39,6 +45,7 @@ $(document).ready(function () {
     scrollBar: true,
     normalScrollElements: '',
     fitToSection: false,
+    bigSectionsDestination: 'top',
     anchors: ['the-tea-girl'],
     afterLoad: async function (origin, destination, direction, trigger) {
       switch (destination.index) {
