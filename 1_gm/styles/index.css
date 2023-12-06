@@ -890,6 +890,11 @@ object-fit-cover {
   background-image: url('../../assets/images/01/2d-map-5th/41.1.JPG');
 }
 
+.mobile-3d1 .notice-message,
+.mobile-3d1 .notice-message {
+  opacity: 0;
+}
+
 .notice-message {
   background-color: var(--green);
   padding: 12px;

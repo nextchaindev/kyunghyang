@@ -1203,8 +1203,6 @@ $(document).ready(function () {
       const viewers = document.querySelectorAll('.centre-2d-map-info-3d');
       viewers[0].classList.add('mobile-3d1');
       viewers[1].classList.add('mobile-3d2');
-      document.getElementById('notice-viewer1').style.opacity = 0;
-      document.getElementById('notice-viewer2').style.opacity = 0;
     } else {
       const container = document.getElementById(containerId);
       const viewer = new PANOLENS.Viewer({
@@ -1269,6 +1267,8 @@ $(document).ready(function () {
     if (isIOS) {
       video0.setAttribute('controls', 'true');
       video1.setAttribute('controls', 'true');
+      video0.setAttribute('preload', 'none');
+      video1.setAttribute('preload', 'none');
       playIcons[0].style.opacity = 0;
       playIcons[1].style.opacity = 0;
     } else {
