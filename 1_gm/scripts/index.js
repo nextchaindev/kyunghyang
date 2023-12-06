@@ -1342,7 +1342,7 @@ $(document).ready(function () {
   });
 
   function scrollBarCalculator() {
-    const TIME_OUT = 600; // It should be the same transition time of the sections
+    const TIME_OUT = 600; // It should be the same transition time of the sections.
     const body = document.querySelector('body');
     const listSections = document.querySelectorAll('.section_scroll');
     const sectionsQty = document.querySelectorAll('.section_scroll').length;
