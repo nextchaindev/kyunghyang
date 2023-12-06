@@ -1206,12 +1206,12 @@ canvas#statistics-chart-canvas {
 
   .content-left,
   .content-right {
-    width: 90vw;
-    bottom: 15vh;
+    width: 90vw !important;
+    bottom: 15vh !important;
     left: 5vw !important;
   }
   .img-1920-760 {
-    height: 600px;
+    height: 500px !important;
     object-fit: cover;
   }
   .section-43 {
@@ -1252,6 +1252,27 @@ canvas#statistics-chart-canvas {
 }
 
 @media only screen and (max-width: 767px) {
+  .section-6 {
+    padding: 20px 0;
+  }
+  .section-6 .section-title-tag {
+    margin: 0 auto;
+  }
+  .section-6 .statistics {
+    margin-top: 20px;
+  }
+  .statistics .statistics-chart {
+    padding: 10px;
+  }
+  #statistics-content2 {
+    margin: 0;
+  }
+  .section-6 .statistics h6 {
+    margin: 0;
+  }
+  canvas#statistics-chart-canvas {
+    height: 150px !important;
+  }
   .profile-image {
     width: 250px;
   }
@@ -1329,6 +1350,7 @@ div.video-container > iframe {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: rgb(0, 0, 0, 0.3);
 }
 
 .video-container > video,
@@ -1429,22 +1451,30 @@ div.video-container > iframe {
   background-repeat: no-repeat;
 }
 
-.mobile-2d-bg1 .map-2d-location-1st,
-.mobile-2d-bg2 .map-2d-location-2nd,
-.mobile-2d-bg3 .map-2d-location-3rd,
-.mobile-2d-bg4 .map-2d-location-4th,
-.mobile-2d-bg5 .map-2d-location-5th,
-.mobile-2d-bg6 .map-2d-location-6th,
-.mobile-2d-bg1 .top-fixed-2d-map-1st,
-.mobile-2d-bg2 .top-fixed-2d-map-2nd,
-.mobile-2d-bg3 .top-fixed-2d-map-3rd,
-.mobile-2d-bg4 .top-fixed-2d-map-4th,
-.mobile-2d-bg5 .top-fixed-2d-map-5th,
-.mobile-2d-bg6 .top-fixed-2d-map-6th {
-  display: none;
-}
-
 @media only screen and (max-width: 1279px) {
+  .text-body {
+    line-height: 20px;
+  }
+  .img-1920-760 {
+    height: 600px;
+    min-height: 75%;
+    object-fit: cover;
+  }
+  footer.kyunghyang-footer {
+    padding: 40px;
+    gap: 24px;
+    max-width: 100%;
+  }
+  footer.kyunghyang-footer div.footer-logos {
+    flex-direction: column;
+    gap: 24px;
+  }
+  footer.kyunghyang-footer div.footer-logos img {
+    max-width: calc(100vw - 80px);
+  }
+  footer.kyunghyang-footer div.footer-logos > div {
+    justify-content: center !important;
+  }
   div.video-fullscreen-container {
     padding: 0;
   }
@@ -1686,8 +1716,11 @@ div.video-container > iframe {
     width: 100vw;
   }
   .text-quotes {
-    max-width: 95vw !important;
-    gap: 20px !important;
+    max-width: 90vw !important;
+    gap: 10px !important;
+  }
+  .text-quotes > *:nth-child(2) {
+    flex: 1 !important;
   }
   .hero .tag-title {
     top: 50px;

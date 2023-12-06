@@ -1223,18 +1223,18 @@ $(document).ready(function () {
     if (isNotPC) {
       // The viewport is less than 768 pixels wide
       $('#satelliteID').hide();
-      // $('#map-2d-1st-id').hide();
-      // $('#map-2d-2nd-id').hide();
-      // $('#map-2d-3rd-id').hide();
-      // $('#map-2d-4th-id').hide();
-      // $('#map-2d-5th-id').hide();
-      // $('#map-2d-6th-id').hide();
-      $('#map-2d-1st-id').addClass('mobile-2d-bg1');
-      $('#map-2d-2nd-id').addClass('mobile-2d-bg2');
-      $('#map-2d-3rd-id').addClass('mobile-2d-bg3');
-      $('#map-2d-4th-id').addClass('mobile-2d-bg4');
-      $('#map-2d-5th-id').addClass('mobile-2d-bg5');
-      $('#map-2d-6th-id').addClass('mobile-2d-bg6');
+      $('#map-2d-1st-id').hide();
+      $('#map-2d-2nd-id').hide();
+      $('#map-2d-3rd-id').hide();
+      $('#map-2d-4th-id').hide();
+      $('#map-2d-5th-id').hide();
+      $('#map-2d-6th-id').hide();
+      $('#map-2d-1st-id-mobile').addClass('mobile-2d-bg1');
+      $('#map-2d-2nd-id-mobile').addClass('mobile-2d-bg2');
+      $('#map-2d-3rd-id-mobile').addClass('mobile-2d-bg3');
+      $('#map-2d-4th-id-mobile').addClass('mobile-2d-bg4');
+      $('#map-2d-5th-id-mobile').addClass('mobile-2d-bg5');
+      $('#map-2d-6th-id-mobile').addClass('mobile-2d-bg6');
     } else {
       // The viewport is at least 768 pixels wide
       $('#satelliteID').show();
@@ -1244,6 +1244,12 @@ $(document).ready(function () {
       $('#map-2d-3th-id').show();
       $('#map-2d-5th-id').show();
       $('#map-2d-6th-id').show();
+      $('#map-2d-1st-id-mobile').hide();
+      $('#map-2d-2nd-id-mobile').hide();
+      $('#map-2d-3rd-id-mobile').hide();
+      $('#map-2d-4th-id-mobile').hide();
+      $('#map-2d-5th-id-mobile').hide();
+      $('#map-2d-6th-id-mobile').hide();
     }
   };
 
