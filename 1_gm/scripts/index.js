@@ -4,6 +4,15 @@ $(document).ready(function () {
     doc.style.setProperty('--vh', `${window.innerHeight * 0.01}px`);
   };
   window.addEventListener('resize', documentHeight);
+  function debounce(func, delay) {
+    let timeoutId;
+    return function (...args) {
+      clearTimeout(timeoutId);
+      timeoutId = setTimeout(() => {
+        func.apply(this, args);
+      }, delay);
+    };
+  }
 
   // the cyan progress
   // const scrollProgress = document.getElementById('the-bar-progress');
@@ -151,7 +160,7 @@ $(document).ready(function () {
           const sectionEle = $('#satellite-zoom');
           const titleBoxEl = $('.center-top');
 
-          sectionEle.on('swiped', function (e) {
+          const handleSwiped = debounce(function (e) {
             if (e.detail.dir === 'up') {
               scrollValue += ZOOM_SPEED;
               scrollValue = Math.min(scrollValue, zoomToNext);
@@ -242,9 +251,13 @@ $(document).ready(function () {
                 $('.point1').hide();
                 break;
             }
+          }, 50);
+
+          sectionEle.on('swiped', function (e) {
+            handleSwiped;
           });
 
-          sectionEle.on('wheel', function (e) {
+          const handleScroll = debounce(function (e) {
             if (e.originalEvent.deltaY > 0) {
               scrollValue += ZOOM_SPEED;
               scrollValue = Math.min(scrollValue, zoomToNext);
@@ -254,6 +267,7 @@ $(document).ready(function () {
             }
             const zoom =
               scrollValue < MIN ? 1 : scrollValue > MAX ? MAX : scrollValue;
+
             switch (Math.round(zoom * 10) / 10) {
               case MIN:
                 $('.point1').hide();
@@ -335,7 +349,9 @@ $(document).ready(function () {
                 $('#satellite-black-box').hide();
                 break;
             }
-          });
+          }, 50);
+
+          sectionEle.on('wheel', handleScroll);
           satelliteScrollEventAdded = true;
         }
       }
@@ -941,11 +957,7 @@ $(document).ready(function () {
       }
 
       if (origin.anchor === 'satellite') {
-        if (
-          ((scrollValue === zoomToPrev || scrollValue === zoomToNext) &&
-            canLeaveSatellite) ||
-          forceLeave
-        ) {
+        if (canLeaveSatellite || forceLeave) {
           return true;
         }
         return false;
