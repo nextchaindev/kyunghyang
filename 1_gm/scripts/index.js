@@ -41,6 +41,8 @@ $(document).ready(function () {
   let map2d_4th_scroll_event_added = false;
   let map2d_5th_scroll_event_added = false;
   let map2d_6th_scroll_event_added = false;
+  let scrollBarTrigger = false;
+
   $('.point1').hide();
   let fullPage = new fullpage('#fullpage', {
     licenseKey: 'Y8LPJ-LT5QI-3KV97-JFVJK-IZBZL',
@@ -943,6 +945,11 @@ $(document).ready(function () {
       // $('.section-6-text-box-1st').html('');
       // }
 
+      if (scrollBarTrigger) {
+        scrollBarTrigger = false;
+        return true;
+      }
+
       if (origin.anchor === 'satellite') {
         if (canLeaveSatellite || forceLeave) {
           return true;
@@ -1457,6 +1464,7 @@ $(document).ready(function () {
       document
         .getElementById(`section_text${index + 1}`)
         .addEventListener('click', () => {
+          scrollBarTrigger = true;
           fullPage.moveTo(listSectionLabels[index], 1);
         });
     });
