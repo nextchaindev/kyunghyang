@@ -1261,25 +1261,27 @@ $(document).ready(function () {
 
   function controllVideos() {
     const isIOS = DeviceUtil.isIOS();
-    const video0 = document.getElementById('controlled-video1');
-    const video1 = document.getElementById('controlled-video2');
+    const video = document.querySelectorAll('video');
     const playIcons = document.getElementsByClassName('video-playpause');
+    video[0].setAttribute('muted', 'true');
+    video[1].setAttribute('muted', 'true');
     if (isIOS) {
-      video0.setAttribute('controls', 'true');
-      video1.setAttribute('controls', 'true');
-      video0.setAttribute('preload', 'none');
-      video1.setAttribute('preload', 'none');
+      video[0].setAttribute('controls', 'true');
+      video[1].setAttribute('controls', 'true');
+      video[0].setAttribute('preload', 'none');
+      video[1].setAttribute('preload', 'none');
       playIcons[0].style.opacity = 0;
       playIcons[1].style.opacity = 0;
     } else {
-      var playPromise = video0.play();
-      var playPromise = video1.play();
-      function controlVideo1() {
-        if (video0.paused) {
+      var playPromise = video[0].play();
+      var playPromise = video[1].play();
+      function controlvideo1() {
+        if (video[0].paused) {
           if (playPromise !== undefined) {
             playPromise
               .then((_) => {
-                video0.play();
+                video[0].play();
+                playIcons[0].style.opacity = 0;
               })
               .catch((error) => {
                 console.error('Can not resolve this video!');
@@ -1289,7 +1291,8 @@ $(document).ready(function () {
           if (playPromise !== undefined) {
             playPromise
               .then((_) => {
-                video0.pause();
+                video[0].pause();
+                playIcons[0].style.opacity = 1;
               })
               .catch((error) => {
                 console.error('Can not resolve this video!');
@@ -1298,11 +1301,12 @@ $(document).ready(function () {
         }
       }
       function controlVideo2() {
-        if (video1.paused) {
+        if (video[1].paused) {
           if (playPromise !== undefined) {
             playPromise
               .then((_) => {
-                video1.play();
+                video[1].play();
+                playIcons[1].style.opacity = 0;
               })
               .catch((error) => {
                 console.error('Can not resolve this video!');
@@ -1312,7 +1316,8 @@ $(document).ready(function () {
           if (playPromise !== undefined) {
             playPromise
               .then((_) => {
-                video1.pause();
+                video[1].pause();
+                playIcons[1].style.opacity = 1;
               })
               .catch((error) => {
                 console.error('Can not resolve this video!');
@@ -1320,23 +1325,11 @@ $(document).ready(function () {
           }
         }
       }
-      video0.addEventListener('click', controlVideo1);
-      playIcons[0].addEventListener('click', controlVideo1);
-      video0.onplay = () => {
-        playIcons[0].style.opacity = 0;
-      };
-      video0.onpause = () => {
-        playIcons[0].style.opacity = 1;
-      };
+      video[0].addEventListener('click', controlvideo1);
+      playIcons[0].addEventListener('click', controlvideo1);
 
-      video1.addEventListener('click', controlVideo2);
+      video[1].addEventListener('click', controlVideo2);
       playIcons[1].addEventListener('click', controlVideo2);
-      video1.onplay = () => {
-        playIcons[1].style.opacity = 0;
-      };
-      video1.onpause = () => {
-        playIcons[1].style.opacity = 1;
-      };
     }
   }
 
