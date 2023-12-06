@@ -33,6 +33,7 @@ $(document).ready(function () {
   let map2d_6th_scroll_event_added = false;
   let scrollBarTrigger = false;
 
+  $('.point1').hide();
   let fullPage = new fullpage('#fullpage', {
     licenseKey: 'Y8LPJ-LT5QI-3KV97-JFVJK-IZBZL',
     scrollBar: true,
@@ -155,7 +156,6 @@ $(document).ready(function () {
               scrollValue < MIN ? 1 : scrollValue > MAX ? MAX : scrollValue;
             switch (Math.round(zoom * 10) / 10) {
               case MIN:
-                $('.point1').hide();
                 titleBoxEl.hide();
                 sectionEle.css({
                   transform: 'scale(1)',
