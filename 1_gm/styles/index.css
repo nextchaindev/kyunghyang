@@ -675,7 +675,7 @@ canvas#statistics-chart-canvas {
 }
 
 .profile-image {
-  width: 360px;
+  width: 300px;
   object-fit: cover;
 }
 
@@ -992,10 +992,10 @@ canvas#statistics-chart-canvas {
 }
 
 .notice-message {
-  background-color: var(--green);
+  background-color: rgba(0, 0, 0, 0.3) !important;
   padding: 12px;
   font-size: 28px;
-  color: var(--dark);
+  color: var(--white);
   position: absolute;
   bottom: 60px;
   left: 50%;
@@ -1224,10 +1224,6 @@ canvas#statistics-chart-canvas {
     font-size: 18px;
   }
 
-  .profile-image {
-    width: 300px;
-  }
-
   .section-9-content .content,
   .section-11 .feedback-content {
     gap: 17px;
@@ -1245,6 +1241,9 @@ canvas#statistics-chart-canvas {
 }
 
 @media only screen and (max-width: 767px) {
+  .profile-image {
+    width: 250px;
+  }
   .section-title-tag {
     font-size: 20px;
     padding: 4px 20px;
