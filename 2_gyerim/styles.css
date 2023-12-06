@@ -907,7 +907,7 @@ h1.fly-text span:nth-child(37)[data-inviewport].is-inViewport {
 #second-map-blue-point-container-3 {
   position: absolute;
   top: 60.5%;
-  left: 18.5%;
+  left: 6.5%;
 }
 
 .ease-in-out {
@@ -1049,7 +1049,7 @@ h1.fly-text span:nth-child(37)[data-inviewport].is-inViewport {
 }
 
 .video {
-  width: 100%;
+  width: 80vw;
   height: auto;
 }
 
@@ -1296,6 +1296,10 @@ h1 {
   transform: scale(2.5) translate(-5%, 300px);
 }
 
+#map-section {
+  background-image: url('public/images/13_img.png');
+}
+
 /* try to put the main point in satellite page to be right place */
 
 @media only screen and (max-width: 1900px) {
@@ -1437,6 +1441,25 @@ h1 {
   .second-map-transform {
     transform: scale(2) translate(-5%, 250px);
   }
+
+  #map-section {
+    background-position: -250px;
+  }
+
+  #blue-point-container-1,
+  #second-map-blue-point-container-1 {
+    left: 80.5%;
+  }
+
+  #blue-point-container-2,
+  #second-map-blue-point-container-2 {
+    left: 80.5%;
+  }
+
+  #blue-point-container-3,
+  #second-map-blue-point-container-3 {
+    left: 10.5%;
+  }
 }
 
 /* tablet to up */
@@ -1567,8 +1590,9 @@ h1 {
   }
 
   .chart {
-    width: 300px;
-    top: 15%;
+    width: 360px;
+    top: 10%;
+    left: 5px;
     aspect-ratio: 86/50;
   }
 
@@ -1715,5 +1739,44 @@ h1 {
     top: 40px;
     left: 50%;
     transform: translateX(-50%);
+  }
+
+  .section-4 {
+    background-position: -1000px;
+  }
+
+  .section-20 {
+    background-position: -400px;
+  }
+
+  .section-22 {
+    background-position: -300px;
+  }
+
+  .section-24 {
+    background-position: -1200px;
+  }
+
+  .h-three > h1 {
+    margin-left: 32px;
+  }
+
+  #map-section {
+    background-position: -200px;
+  }
+
+  #blue-point-container-1,
+  #second-map-blue-point-container-1 {
+    display: none;
+  }
+
+  #blue-point-container-2,
+  #second-map-blue-point-container-2 {
+    display: none;
+  }
+
+  #blue-point-container-3,
+  #second-map-blue-point-container-3 {
+    left: 16.5%;
   }
 }
