@@ -160,6 +160,8 @@ $(document).ready(function () {
                   transform: 'scale(1)',
                 });
                 canLeaveSatellite = true;
+                $('#satellite-black-box').hide();
+                $('.point1').hide();
                 break;
               case 1.4:
                 $('#satellite-title-1').html(
@@ -169,20 +171,21 @@ $(document).ready(function () {
                     '</h3>'
                 );
                 sectionEle.css({
-                  transform: 'scale(1.2)',
-                  transformOrigin: '100% 100%',
+                  transform: 'scale(1.1)',
+                  transformOrigin: '85% 100%',
                 });
                 titleBoxEl.show();
                 titleBoxEl.css({
-                  transform: 'translateX(-54%)',
-                  top: '20.5%',
+                  transform: 'translateX(-40%)',
+                  top: '32.5%',
                   left: '61%',
                 });
                 $('.point1').css({
-                  top: '42%',
-                  left: ' 57%',
+                  top: '60%',
+                  left: ' 63%',
                 });
                 $('.point1').show();
+                $('#satellite-black-box').hide();
 
                 canLeaveSatellite = false;
                 break;
@@ -198,22 +201,28 @@ $(document).ready(function () {
                   transformOrigin: '100% 100%',
                 });
                 titleBoxEl.css({
-                  transform: 'translateX(-54%)',
-                  top: '18.5%',
-                  left: '54%',
+                  transform: 'translateX(-63%)',
+                  top: '16.5%',
+                  left: '53%',
                 });
 
                 $('.point1').css({
                   top: '44%',
-                  left: ' 51%',
+                  left: '45%',
                 });
+                $('.point1').show();
+                $('#satellite-title-1').show();
+                $('#satellite-black-box').hide();
                 canLeaveSatellite = false;
                 break;
               case MAX:
                 sectionEle.css({
-                  transform: 'scale(1.4)',
-                  transformOrigin: '100% 100%',
+                  transform: 'scale(3.5)',
+                  transformOrigin: '48% 62%',
                 });
+                $('.point1').hide();
+                $('#satellite-title-1').hide();
+                $('#satellite-black-box').show();
                 canLeaveSatellite = true;
                 break;
               default:
@@ -221,6 +230,8 @@ $(document).ready(function () {
                   transform: 'scale(1)',
                 });
                 canLeaveSatellite = true;
+                $('#satellite-black-box').hide();
+                $('.point1').hide();
                 break;
             }
           });
@@ -450,8 +461,8 @@ $(document).ready(function () {
                 break;
               case MAP_2D_1st_MAX:
                 map2d.css({
-                  transform: 'scale(1.8)',
-                  transformOrigin: '-34% 57%',
+                  transform: 'scale(1.7)',
+                  transformOrigin: '24% 56%',
                 });
                 minimapEl.css({
                   opacity: '1',
