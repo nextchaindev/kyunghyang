@@ -142,7 +142,6 @@ $(document).ready(function () {
           const titleBoxEl = $('.center-top');
 
           sectionEle.on('swiped', function (e) {
-            console.log('swiped', swiped);
             if (e.detail.dir === 'up') {
               scrollValue += ZOOM_SPEED;
               scrollValue = Math.min(scrollValue, zoomToNext);
@@ -277,7 +276,7 @@ $(document).ready(function () {
                     '</h3>'
                 );
                 sectionEle.css({
-                  transform: 'scale(1.2)',
+                  transform: 'scale(1.3)',
                   transformOrigin: '100% 100%',
                 });
                 titleBoxEl.show();

@@ -1012,6 +1012,9 @@ canvas#statistics-chart-canvas {
   display: none;
 }
 /* map zoom animation smooth */
+
+#satellite-zoom,
+#map-2d,
 .map-2d-location-1st,
 .map-2d-location-2nd,
 .map-2d-location-3rd,
