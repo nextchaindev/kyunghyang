@@ -477,6 +477,14 @@ footer.kyunghyang-footer div.footer-logos > div:first-of-type {
   background-color: #ffffff;
 }
 
+.section-7-4 {
+  background-image: url(../assets/images/01/map/12_img.png);
+}
+
+.section-7-5 {
+  background-image: url(../assets/images/01/map/map-f3.png);
+}
+
 .full-child {
   position: absolute;
   top: 0;
@@ -1310,6 +1318,14 @@ canvas#statistics-chart-canvas {
   }
   .section-45-content-center {
     font-size: 18px;
+  }
+
+  .section-7-5 {
+    background-image: url(../assets/images/01/map/map-f3.png),
+      url(../assets/images/01/map/bg.png) !important;
+    background-size: 190%, cover;
+    background-position: -47vw 20vh, center;
+    background-repeat: no-repeat;
   }
 }
 
