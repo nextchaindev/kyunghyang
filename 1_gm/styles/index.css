@@ -382,6 +382,7 @@ footer.kyunghyang-footer div.footer-logos > div:first-of-type {
 /* start setion 4 */
 #section-4 {
   background-image: url(../assets/images/01/old-man-bg/06_img.png);
+  background-position-x: 76%;
 }
 
 .section-4-text-box {
@@ -833,6 +834,7 @@ canvas#statistics-chart-canvas {
 
 .section-12 {
   background-image: url(../assets/images/01/2d-map-1st/18_img.png);
+  background-position-x: 25%;
 }
 .section-13 {
   background-image: url(../assets/images/01/2d-map-1st/19_img.png);
@@ -938,6 +940,7 @@ canvas#statistics-chart-canvas {
 
 .section-22 {
   background-image: url(../assets/images/01/2d-map-3rd/28_img.png);
+  background-position-x: 0%;
 }
 
 .section-23 {
@@ -949,6 +952,7 @@ canvas#statistics-chart-canvas {
 }
 .section-26 {
   background-image: url(../assets/images/01/2d-map-4th/32_img.png);
+  background-position-x: 72%;
 }
 .section-27 {
   background-image: url(../assets/images/01/2d-map-4th/33_img.png);
