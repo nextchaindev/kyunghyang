@@ -499,6 +499,7 @@ footer.kyunghyang-footer div.footer-logos > div:first-of-type {
   padding: 16px;
   background-color: #d6c96166;
   border-radius: 25px;
+  pointer-events: none;
 }
 
 .map-popup-content {
@@ -534,6 +535,7 @@ footer.kyunghyang-footer div.footer-logos > div:first-of-type {
   width: max-content;
   max-width: 100%;
   position: absolute;
+  pointer-events: none;
 }
 
 .section-7-mobile {
@@ -556,23 +558,27 @@ footer.kyunghyang-footer div.footer-logos > div:first-of-type {
 .section-7-mobile-1 {
   background-color: rgb(0, 0, 0, 0.5);
   width: fit-content;
+  max-width: 90%;
   height: fit-content;
   padding: 10px;
   position: absolute;
   transform: translate(-51%, -50%);
   left: 50%;
   top: 43%;
+  overflow-wrap: break-word;
 }
 
 .section-7-mobile-2 {
   background-color: rgb(0, 0, 0, 0.5);
   width: fit-content;
+  max-width: 90%;
   height: fit-content;
   padding: 10px;
   position: absolute;
   transform: translate(-51%, -50%);
   left: 54%;
   top: 46%;
+  overflow-wrap: break-word;
 }
 
 .section-7-mobile-content-box {
@@ -1537,6 +1543,9 @@ div.video-container > iframe {
 }
 
 @media only screen and (max-width: 1279px) {
+  .section-6-text-content {
+    font-size: 25px;
+  }
   .text-body {
     line-height: 20px;
   }
@@ -1645,28 +1654,6 @@ div.video-container > iframe {
     align-items: center;
     gap: 40px;
     width: 680px;
-  }
-  div.statistics .statistics-chart {
-    flex: unset;
-    width: 100%;
-    padding: 16px 80px;
-  }
-  div.statistics .statistics-chart > *:not(canvas) {
-    margin-top: 12px;
-  }
-  div.statistics .statistics-chart > .flex-center {
-    gap: 12px;
-  }
-  div.statistics .statistics-chart .primary,
-  div.statistics .statistics-chart .secondary {
-    width: 14px;
-    height: 14px;
-    margin-right: 6px;
-  }
-  div.statistics .statistics-contents {
-    width: 100%;
-    padding-left: 80px;
-    gap: 20px;
   }
 
   /* ------------------------------ map section ------------------------------ */
@@ -1792,6 +1779,28 @@ div.video-container > iframe {
 }
 
 @media only screen and (max-width: 767px) {
+  div.statistics .statistics-chart {
+    flex: unset;
+    width: 100%;
+    padding: 16px 80px;
+  }
+  div.statistics .statistics-chart > *:not(canvas) {
+    margin-top: 12px;
+  }
+  div.statistics .statistics-chart > .flex-center {
+    gap: 12px;
+  }
+  div.statistics .statistics-chart .primary,
+  div.statistics .statistics-chart .secondary {
+    width: 14px;
+    height: 14px;
+    margin-right: 6px;
+  }
+  div.statistics .statistics-contents {
+    width: 100%;
+    padding-left: 80px;
+    gap: 20px;
+  }
   #map-2d-1st > img,
   #map-2d-2nd > img,
   #map-2d-3rd > img,
