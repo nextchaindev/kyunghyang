@@ -199,13 +199,13 @@ $(document).ready(function () {
                 });
                 titleBoxEl.css({
                   transform: 'translateX(-54%)',
-                  top: '20.5%',
-                  left: '61%',
+                  top: '18.5%',
+                  left: '54%',
                 });
 
                 $('.point1').css({
-                  top: '49%',
-                  left: ' 58%',
+                  top: '44%',
+                  left: ' 51%',
                 });
                 canLeaveSatellite = false;
                 break;
@@ -283,12 +283,12 @@ $(document).ready(function () {
                 titleBoxEl.show();
                 titleBoxEl.css({
                   transform: 'translateX(-54%)',
-                  top: '20.5%',
+                  top: '26.5%',
                   left: '61%',
                 });
                 $('.point1').css({
-                  top: '42%',
-                  left: ' 57%',
+                  top: '52%',
+                  left: ' 58%',
                 });
                 $('.point1').show();
 
@@ -307,13 +307,13 @@ $(document).ready(function () {
                 });
                 titleBoxEl.css({
                   transform: 'translateX(-54%)',
-                  top: '20.5%',
-                  left: '61%',
+                  top: '18.5%',
+                  left: '54%',
                 });
 
                 $('.point1').css({
-                  top: '49%',
-                  left: ' 58%',
+                  top: '44%',
+                  left: '51%',
                 });
                 canLeaveSatellite = false;
                 break;
