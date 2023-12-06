@@ -2,29 +2,29 @@
 
 @font-face {
   font-family: Pretendard-Regular;
-  src: url(../../assets/fonts/Pretendard/Pretendard-Regular.woff);
+  src: url(../assets/fonts/Pretendard/Pretendard-Regular.woff);
 }
 
 @font-face {
   font-family: Pretendard-Bold;
-  src: url(../../assets/fonts/Pretendard/Pretendard-Bold.woff);
+  src: url(../assets/fonts/Pretendard/Pretendard-Bold.woff);
 }
 
 @font-face {
   font-family: Pretendard-Light;
-  src: url(../../assets/fonts/Pretendard/Pretendard-Light.woff);
+  src: url(../assets/fonts/Pretendard/Pretendard-Light.woff);
 }
 
 @font-face {
   font-family: Pretendard-SemiBold;
-  src: url(../../assets/fonts/Pretendard/Pretendard-SemiBold.woff);
+  src: url(../assets/fonts/Pretendard/Pretendard-SemiBold.woff);
 }
 
 /* NotoSans -- secondary */
 
 @font-face {
   font-family: NotoSans-Bold;
-  src: url(../../assets/fonts/Noto_Sans_KR/static/NotoSansKR-Bold.ttf);
+  src: url(../assets/fonts/Noto_Sans_KR/static/NotoSansKR-Bold.ttf);
 }
 
 .text-strong {
@@ -165,7 +165,7 @@ h6 {
 }
 
 .bg-grey-img {
-  background-image: url(../../assets/images/01/map/bg.png);
+  background-image: url(../assets/images/01/map/bg.png);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -375,7 +375,7 @@ object-fit-cover {
 
 /* start setion 4 */
 #section-4 {
-  background-image: url(../../assets/images/01/old-man-bg/06_img.png);
+  background-image: url(../assets/images/01/old-man-bg/06_img.png);
 }
 
 .section-4-text-box {
@@ -390,7 +390,7 @@ object-fit-cover {
 
 /* start setion 5 */
 #section-5 {
-  background-image: url(../../assets/images/01/old-woman-bg/07_img.png);
+  background-image: url(../assets/images/01/old-woman-bg/07_img.png);
 }
 
 .section-5-text-box {
@@ -617,7 +617,7 @@ object-fit-cover {
 
 /* start section 10 */
 .section-10 {
-  background-image: url(../../assets/images/01/map/bg.png);
+  background-image: url(../assets/images/01/map/bg.png);
 }
 
 #map-2d {
@@ -745,13 +745,13 @@ object-fit-cover {
 /* end section 11 */
 
 .section-12 {
-  background-image: url(../../assets/images/01/2d-map-1st/18_img.png);
+  background-image: url(../assets/images/01/2d-map-1st/18_img.png);
 }
 .section-13 {
-  background-image: url(../../assets/images/01/2d-map-1st/19_img.png);
+  background-image: url(../assets/images/01/2d-map-1st/19_img.png);
 }
 .section-14 {
-  background-image: url(../../assets/images/01/2d-map-1st/20_img.png);
+  background-image: url(../assets/images/01/2d-map-1st/20_img.png);
 }
 
 .img-1920-760 {
@@ -822,55 +822,55 @@ object-fit-cover {
 }
 
 .section-17 {
-  background-image: url(../../assets/images/01/2d-map-2nd/23_img.png);
+  background-image: url(../assets/images/01/2d-map-2nd/23_img.png);
 }
 .section-18 {
-  background-image: url(../../assets/images/01/2d-map-2nd/24_img.png);
+  background-image: url(../assets/images/01/2d-map-2nd/24_img.png);
 }
 .section-19 {
-  background-image: url(../../assets/images/01/2d-map-2nd/25_img.png);
+  background-image: url(../assets/images/01/2d-map-2nd/25_img.png);
 }
 
 .section-21 {
-  background-image: url(../../assets/images/01/2d-map-3rd/27_img.png);
+  background-image: url(../assets/images/01/2d-map-3rd/27_img.png);
 }
 
 .section-22 {
-  background-image: url(../../assets/images/01/2d-map-3rd/28_img.png);
+  background-image: url(../assets/images/01/2d-map-3rd/28_img.png);
 }
 
 .section-23 {
-  background-image: url(../../assets/images/01/2d-map-3rd/29_img.png);
+  background-image: url(../assets/images/01/2d-map-3rd/29_img.png);
 }
 
 .section-25 {
-  background-image: url(../../assets/images/01/2d-map-4th/31_img.png);
+  background-image: url(../assets/images/01/2d-map-4th/31_img.png);
 }
 .section-26 {
-  background-image: url(../../assets/images/01/2d-map-4th/32_img.png);
+  background-image: url(../assets/images/01/2d-map-4th/32_img.png);
 }
 .section-27 {
-  background-image: url(../../assets/images/01/2d-map-4th/33_img.png);
+  background-image: url(../assets/images/01/2d-map-4th/33_img.png);
 }
 
 .section-31 {
-  background-image: url(../../assets/images/01/2d-map-4th/37_img.png);
+  background-image: url(../assets/images/01/2d-map-4th/37_img.png);
 }
 .section-32 {
-  background-image: url(../../assets/images/01/2d-map-4th/38_img.png);
+  background-image: url(../assets/images/01/2d-map-4th/38_img.png);
 }
 .section-33 {
-  background-image: url(../../assets/images/01/2d-map-4th/39_img.png);
+  background-image: url(../assets/images/01/2d-map-4th/39_img.png);
 }
 
 .section-36 {
-  background-image: url(../../assets/images/01/2d-map-5th/42_img.png);
+  background-image: url(../assets/images/01/2d-map-5th/42_img.png);
 }
 .section-37 {
-  background-image: url(../../assets/images/01/2d-map-5th/43_img.png);
+  background-image: url(../assets/images/01/2d-map-5th/43_img.png);
 }
 .section-38 {
-  background-image: url(../../assets/images/01/2d-map-5th/43.1.jpg);
+  background-image: url(../assets/images/01/2d-map-5th/43.1.jpg);
 }
 
 .section-39 {
@@ -878,7 +878,7 @@ object-fit-cover {
 }
 
 .section-42 {
-  background-image: url(../../assets/images/01/home-garden-life-feedback/46_img1.png);
+  background-image: url(../assets/images/01/home-garden-life-feedback/46_img1.png);
 }
 
 .section-title-tag {
@@ -934,14 +934,14 @@ object-fit-cover {
 
 .mobile-3d1 {
   cursor: auto;
-  background-image: url('../../assets/images/01/2d-map-4th/36.1.JPG');
+  background-image: url('../assets/images/01/2d-map-4th/36.1.JPG');
   background-size: cover;
   height: 100%;
 }
 
 .mobile-3d2 {
   cursor: auto;
-  background-image: url('../../assets/images/01/2d-map-5th/41.1.JPG');
+  background-image: url('../assets/images/01/2d-map-5th/41.1.JPG');
   background-size: cover;
   height: 100%;
 }
@@ -1015,7 +1015,7 @@ object-fit-cover {
 
 .section-48,
 .section-49 {
-  background-image: url(../../assets/images/01/outro/49_img.png);
+  background-image: url(../assets/images/01/outro/49_img.png);
 }
 
 .kyunghyang-footer {
@@ -1646,8 +1646,8 @@ div.video-container > iframe {
     text-align: left;
   }
   div.centre-2d-map-info.no1 {
-    background-image: url(../../assets/images/01/map/map-f3.png),
-      url(../../assets/images/01/map/bg.png) !important;
+    background-image: url(../assets/images/01/map/map-f3.png),
+      url(../assets/images/01/map/bg.png) !important;
     background-size: 190%, cover;
     background-position: -47vw 20vh, center;
   }
