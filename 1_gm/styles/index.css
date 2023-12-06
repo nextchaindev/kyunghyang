@@ -59,6 +59,7 @@
   --green: #47b7bc;
 
   --doc-height: 100vh;
+  --vh: 1vh;
 }
 
 .fullscreen {
@@ -619,12 +620,11 @@ footer.kyunghyang-footer div.footer-logos > div:first-of-type {
 .slick-slide img {
   border-radius: 18px;
   height: 300px;
+  aspect-ratio: 1;
   object-fit: cover;
 }
-
-.slick-track {
-  display: flex;
-  gap: 20px;
+.slick-slide {
+  margin: 0 10px;
 }
 
 .slick-left-arrow {
@@ -832,6 +832,7 @@ canvas#statistics-chart-canvas {
 }
 .section-8 .fp-overflow {
   height: fit-content;
+  margin-top: -15vh;
 }
 
 /* end section 11 */
@@ -1075,13 +1076,15 @@ canvas#statistics-chart-canvas {
 
 .satellite-box-img-mobile {
   width: 300px;
-  height: 300px;
+  max-width: 100%;
+  aspect-ratio: 1;
+  height: auto;
   object-fit: cover;
 }
 
-.satellite-black-box-content > * + * {
+/* .satellite-black-box-content > * + * {
   padding-left: 93px;
-}
+} */
 
 .mobile-3d1 {
   cursor: auto;
@@ -1475,7 +1478,7 @@ div.statistics .mobile-break {
     object-fit: cover;
   }
   footer.kyunghyang-footer {
-    padding: 40px 0 80px 0;
+    padding: 20px 0 80px 0;
     gap: 24px;
     max-width: 100%;
   }
@@ -1718,17 +1721,35 @@ div.statistics .mobile-break {
   .section-26 {
     background-position-x: 72%;
   }
+  #satellite-black-box {
+    padding: 40px;
+  }
+  .satellite-box-img {
+    width: 500px;
+    max-width: 100%;
+    height: auto;
+    aspect-ratio: 1;
+  }
+  #section-1 .section-1-text-box .scroll-down {
+    gap: 10px;
+    font-size: 17px;
+    bottom: 100px;
+  }
+  .scroll-down img {
+    width: 26px;
+    height: 26px;
+  }
   .section-28 .content {
     bottom: 80px;
   }
   .section-6 {
-    padding: 60px 0 80px;
+    padding: 40px 0 80px;
   }
   .section-6 .section-title-tag {
     margin: 0 auto;
   }
   .section-6 .statistics {
-    margin-top: 10px;
+    margin-top: 32px;
   }
   .statistics .statistics-chart {
     padding: 4px;
@@ -1838,7 +1859,7 @@ div.statistics .mobile-break {
   }
 
   .section-6 .section-title-tag {
-    margin-top: 32px;
+    margin-top: 0;
   }
 
   .statistics-contents-box {
@@ -2133,6 +2154,11 @@ div.statistics .mobile-break {
   .feedback-content.bottom h3 {
     color: var(--dark) !important;
   }
+
+  #section-1 .section-1-text-box .tag-title {
+    top: 80px;
+    font-size: 18px;
+  }
 }
 
 @media only screen and (max-width: 499px) {
@@ -2153,10 +2179,6 @@ div.statistics .mobile-break {
   }
   h6 {
     font-size: 11px;
-  }
-
-  #section-1 .section-1-text-box .tag-title {
-    font-size: 18px;
   }
 
   .section-9-content .content,
