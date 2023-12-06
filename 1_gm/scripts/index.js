@@ -37,6 +37,7 @@ $(document).ready(function () {
     scrollBar: true,
     normalScrollElements: '',
     fitToSection: false,
+    anchors: ['the-tea-girl'],
     afterLoad: async function (origin, destination, direction, trigger) {
       switch (destination.index) {
         case 0:
@@ -990,7 +991,7 @@ $(document).ready(function () {
 
   // scroll down button
   $('#scrollDownButton').on('click', function () {
-    fullPage.moveTo('the-tea-girl');
+    fullPage.moveTo('the-tea-girl', 1);
   });
 
   function animateText(selector, newText, isChart) {
