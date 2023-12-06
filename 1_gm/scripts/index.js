@@ -1272,20 +1272,56 @@ $(document).ready(function () {
       playIcons[0].style.opacity = 0;
       playIcons[1].style.opacity = 0;
     } else {
-      video0.addEventListener('click', () => {
+      var playPromise = video0.play();
+      var playPromise = video1.play();
+      function controlVideo1() {
         if (video0.paused) {
-          video0.play();
+          if (playPromise !== undefined) {
+            playPromise
+              .then((_) => {
+                video0.play();
+              })
+              .catch((error) => {
+                console.error('Can not resolve this video!');
+              });
+          }
         } else {
-          video0.pause();
+          if (playPromise !== undefined) {
+            playPromise
+              .then((_) => {
+                video0.pause();
+              })
+              .catch((error) => {
+                console.error('Can not resolve this video!');
+              });
+          }
         }
-      });
-      playIcons[0].addEventListener('click', () => {
-        if (video0.paused) {
-          video0.play();
+      }
+      function controlVideo2() {
+        if (video1.paused) {
+          if (playPromise !== undefined) {
+            playPromise
+              .then((_) => {
+                video1.play();
+              })
+              .catch((error) => {
+                console.error('Can not resolve this video!');
+              });
+          }
         } else {
-          video0.pause();
+          if (playPromise !== undefined) {
+            playPromise
+              .then((_) => {
+                video1.pause();
+              })
+              .catch((error) => {
+                console.error('Can not resolve this video!');
+              });
+          }
         }
-      });
+      }
+      video0.addEventListener('click', controlVideo1);
+      playIcons[0].addEventListener('click', controlVideo1);
       video0.onplay = () => {
         playIcons[0].style.opacity = 0;
       };
@@ -1293,20 +1329,8 @@ $(document).ready(function () {
         playIcons[0].style.opacity = 1;
       };
 
-      video1.addEventListener('click', () => {
-        if (video1.paused) {
-          video1.play();
-        } else {
-          video1.pause();
-        }
-      });
-      playIcons[1].addEventListener('click', () => {
-        if (video1.paused) {
-          video1.play();
-        } else {
-          video1.pause();
-        }
-      });
+      video1.addEventListener('click', controlVideo2);
+      playIcons[1].addEventListener('click', controlVideo2);
       video1.onplay = () => {
         playIcons[1].style.opacity = 0;
       };
