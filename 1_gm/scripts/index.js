@@ -267,6 +267,8 @@ $(document).ready(function () {
                   transform: 'scale(1)',
                 });
                 canLeaveSatellite = true;
+                $('#satellite-black-box').hide();
+                $('.point1').hide();
                 break;
               case 1.4:
                 $('#satellite-title-1').html(
@@ -276,20 +278,21 @@ $(document).ready(function () {
                     '</h3>'
                 );
                 sectionEle.css({
-                  transform: 'scale(1.3)',
-                  transformOrigin: '100% 100%',
+                  transform: 'scale(1.1)',
+                  transformOrigin: '85% 100%',
                 });
                 titleBoxEl.show();
                 titleBoxEl.css({
-                  transform: 'translateX(-54%)',
-                  top: '26.5%',
+                  transform: 'translateX(-40%)',
+                  top: '32.5%',
                   left: '61%',
                 });
                 $('.point1').css({
-                  top: '52%',
-                  left: ' 58%',
+                  top: '60%',
+                  left: ' 63%',
                 });
                 $('.point1').show();
+                $('#satellite-black-box').hide();
 
                 canLeaveSatellite = false;
                 break;
@@ -305,43 +308,28 @@ $(document).ready(function () {
                   transformOrigin: '100% 100%',
                 });
                 titleBoxEl.css({
-                  transform: 'translateX(-54%)',
-                  top: '18.5%',
-                  left: '54%',
+                  transform: 'translateX(-63%)',
+                  top: '16.5%',
+                  left: '53%',
                 });
 
                 $('.point1').css({
                   top: '44%',
-                  left: '51%',
+                  left: '45%',
                 });
+                $('.point1').show();
+                $('#satellite-title-1').show();
+                $('#satellite-black-box').hide();
                 canLeaveSatellite = false;
                 break;
-              // case 2.2:
-              //   sectionEle.css({
-              //     transform: 'scale(2.6)',
-              //     transformOrigin: '0.37% 0.5%',
-              //   });
-              //   canLeaveSatellite = false;
-              //   break;
-              // case 2.6:
-              //   sectionEle.css({
-              //     transform: 'scale(3.8)',
-              //     transformOrigin: '0.76% 0.5%',
-              //   });
-              //   canLeaveSatellite = false;
-              //   break;
-              // case 3:
-              //   sectionEle.css({
-              //     transform: 'scale(4)',
-              //     transformOrigin: '0.85% 0.5%',
-              //   });
-              //   canLeaveSatellite = false;
-              //   break;
               case MAX:
                 sectionEle.css({
-                  transform: 'scale(1.4)',
-                  transformOrigin: '100% 100%',
+                  transform: 'scale(3.5)',
+                  transformOrigin: '48% 62%',
                 });
+                $('.point1').hide();
+                $('#satellite-title-1').hide();
+                $('#satellite-black-box').show();
                 canLeaveSatellite = true;
                 break;
               default:
@@ -349,6 +337,7 @@ $(document).ready(function () {
                   transform: 'scale(1)',
                 });
                 canLeaveSatellite = true;
+                $('#satellite-black-box').hide();
                 break;
             }
           });
