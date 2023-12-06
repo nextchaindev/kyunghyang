@@ -1065,8 +1065,10 @@ canvas#statistics-chart-canvas {
 }
 
 .satellite-box-img {
-  width: 690px;
   height: 690px;
+  max-height: 50vh;
+  aspect-ratio: 1;
+  width: auto;
   object-fit: cover;
 }
 
@@ -1225,6 +1227,11 @@ div.video-container > iframe {
   width: 100%;
   aspect-ratio: 16 / 9;
   height: auto;
+}
+
+div.statistics .mobile-break {
+  margin-top: 24px;
+  display: block;
 }
 
 .video-container {
