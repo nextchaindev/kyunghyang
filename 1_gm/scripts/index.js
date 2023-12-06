@@ -208,27 +208,6 @@ $(document).ready(function () {
                 });
                 canLeaveSatellite = false;
                 break;
-              // case 2.2:
-              //   sectionEle.css({
-              //     transform: 'scale(2.6)',
-              //     transformOrigin: '0.37% 0.5%',
-              //   });
-              //   canLeaveSatellite = false;
-              //   break;
-              // case 2.6:
-              //   sectionEle.css({
-              //     transform: 'scale(3.8)',
-              //     transformOrigin: '0.76% 0.5%',
-              //   });
-              //   canLeaveSatellite = false;
-              //   break;
-              // case 3:
-              //   sectionEle.css({
-              //     transform: 'scale(4)',
-              //     transformOrigin: '0.85% 0.5%',
-              //   });
-              //   canLeaveSatellite = false;
-              //   break;
               case MAX:
                 sectionEle.css({
                   transform: 'scale(1.4)',
@@ -1221,7 +1200,9 @@ $(document).ready(function () {
   );
 
   const hanldeDisplayMovingMap = () => {
-    if (window.matchMedia('(max-width: 767px)').matches) {
+    const isNotPC = DeviceUtil.isNotPC();
+
+    if (isNotPC) {
       // The viewport is less than 768 pixels wide
       $('#satelliteID').hide();
       $('#map-2d-1st-id').hide();
@@ -1230,6 +1211,7 @@ $(document).ready(function () {
       $('#map-2d-4th-id').hide();
       $('#map-2d-5th-id').hide();
       $('#map-2d-6th-id').hide();
+      $('.section-7-mobile').show();
     } else {
       // The viewport is at least 768 pixels wide
       $('#satelliteID').show();
@@ -1239,6 +1221,7 @@ $(document).ready(function () {
       $('#map-2d-3th-id').show();
       $('#map-2d-5th-id').show();
       $('#map-2d-6th-id').show();
+      $('.section-7-mobile').hide();
     }
   };
 
