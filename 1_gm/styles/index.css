@@ -274,6 +274,11 @@ footer.kyunghyang-footer div.footer-logos > div:first-of-type {
 }
 /* end animate css */
 
+.black-box {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 0 20px;
+}
+
 .obj-cover {
   object-fit: cover;
   /* height: 100%; */
