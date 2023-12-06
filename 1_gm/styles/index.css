@@ -408,12 +408,14 @@ object-fit-cover {
   width: 50%;
   background-color: var(--white);
   padding: 40px 45px;
+  flex: 1;
 }
 
 .section-6 .statistics-contents {
   padding-left: 32px;
   position: relative;
   width: 100%;
+  flex: 1;
 }
 
 .section-6-text-box-1st {
@@ -432,11 +434,11 @@ object-fit-cover {
 }
 
 .statistics-contents-box {
-  width: 90%;
-  position: absolute;
+  /* width: 90%; */
+  /* position: absolute;
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); */
 }
 
 /* end section 6 */
@@ -1037,8 +1039,8 @@ object-fit-cover {
 
   .statistics-contents-box {
     width: 100%;
-    position: static;
-    transform: none;
+    /* position: static;
+    transform: none; */
     margin-top: 20px;
   }
 

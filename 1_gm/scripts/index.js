@@ -78,13 +78,57 @@ $(document).ready(function () {
             '사회 활동이 줄어 자존감이 떨어지고 <br/> 홀로 회상에 잠기거나 <br/> 우울감에 허우적거리기도 합니다.'
           );
           break;
-        case 5:
-          animateText(
-            '.section-6-text-box-1st',
-            '이 같은 어려움을 겪는 어르신은 해마다 늘고 있어요. <br/> <br/> 2026년이면 65세 이상이 <br/> <br/> 우리나라 인구 5명 중 1명이 됩니다. <br/> <br/> 어른신들은 홀로 지낼수록 치매에 걸리기 쉽습니다. <br/> 사회가 감당해야 할 비용도 늘어납니다. ',
-            true
+        case 5: {
+          // animateText(
+          //   '.section-6-text-box-1st',
+          //   '이 같은 어려움을 겪는 어르신은 해마다 늘고 있어요. <br/> <br/> 2026년이면 65세 이상이 <br/> <br/> 우리나라 인구 5명 중 1명이 됩니다. <br/> <br/> 어른신들은 홀로 지낼수록 치매에 걸리기 쉽습니다. <br/> 사회가 감당해야 할 비용도 늘어납니다. ',
+          //   true
+          // );
+          $('.section-6-text-box-1st').addClass(
+            'animate__animated animate__fadeIn'
           );
+          $('.section-6-text-box-1st').css('display', 'flex');
+
+          const ctx = document
+            .getElementById('statistics-chart-canvas')
+            .getContext('2d');
+
+          const firstColor = ColorUtil.getComputedColor('--primary');
+          const secondColor = ColorUtil.getComputedColor('--primary-light');
+          window.homeStatisticsChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+              labels: [2017, 2018, 2019, 2020, 2021],
+              datasets: [
+                {
+                  label: '60세 이상 추정치매환자수',
+                  backgroundColor: firstColor,
+                  data: [4, 5, 6, 7, 8],
+                  barThickness: 15,
+                },
+                {
+                  label: '치매환자 1인당 치매관리비',
+                  backgroundColor: secondColor,
+                  data: [5, 6, 7, 8, 9],
+                  barThickness: 15,
+                },
+              ],
+            },
+            options: {
+              animation: {
+                duration: 4000,
+              },
+              responsive: true,
+              plugins: {
+                legend: {
+                  display: false,
+                },
+              },
+            },
+          });
+
           break;
+        }
         default:
           break;
       }
@@ -890,18 +934,18 @@ $(document).ready(function () {
         case 1:
           $('#section-2').css('background-image', 'none');
           $('#section-2').removeClass('animate__animated animate__fadeIn');
-          $('#section-2 .quotes-title').hide();
-          $('.section-2 .goingUp-text').removeClass(
-            'animate__animated animate__fadeInUp'
-          );
+          // $('#section-2 .quotes-title').hide();
+          // $('.section-2 .goingUp-text').removeClass(
+          //   'animate__animated animate__fadeInUp'
+          // );
           break;
         case 2:
           $('#section-3').css('background-image', 'none');
           $('#section-3').removeClass('animate__animated animate__fadeIn');
-          $('#section-3 .quotes-title').hide();
-          $('.section-3 .goingUp-text').removeClass(
-            'animate__animated animate__fadeInUp'
-          );
+          // $('#section-3 .quotes-title').hide();
+          // $('.section-3 .goingUp-text').removeClass(
+          //   'animate__animated animate__fadeInUp'
+          // );
           break;
         default:
           break;
@@ -912,9 +956,9 @@ $(document).ready(function () {
       if (destination.index !== 4) {
         $('.section-5-text-box-1st').html('');
       }
-      if (destination.index !== 5) {
-        $('.section-6-text-box-1st').html('');
-      }
+      // if (destination.index !== 5) {
+      // $('.section-6-text-box-1st').html('');
+      // }
 
       if (origin.anchor === 'satellite') {
         if (
@@ -1095,46 +1139,6 @@ $(document).ready(function () {
     },
   };
 
-  // chart
-  const ctx = document
-    .getElementById('statistics-chart-canvas')
-    .getContext('2d');
-
-  const firstColor = ColorUtil.getComputedColor('--primary');
-  const secondColor = ColorUtil.getComputedColor('--primary-light');
-
-  window.homeStatisticsChart = new Chart(ctx, {
-    type: 'bar',
-    data: {
-      labels: [2017, 2018, 2019, 2020, 2021],
-      datasets: [
-        {
-          label: '60세 이상 추정치매환자수',
-          backgroundColor: firstColor,
-          data: [4, 5, 6, 7, 8],
-          barThickness: 15,
-        },
-        {
-          label: '치매환자 1인당 치매관리비',
-          backgroundColor: secondColor,
-          data: [5, 6, 7, 8, 9],
-          barThickness: 15,
-        },
-      ],
-    },
-    options: {
-      animation: {
-        duration: 4000,
-      },
-      responsive: true,
-      plugins: {
-        legend: {
-          display: false,
-        },
-      },
-    },
-  });
-
   $('.section-8-carousel').slick({
     centerMode: true,
     centerPadding: '60px',
@@ -1199,7 +1203,8 @@ $(document).ready(function () {
       const viewers = document.querySelectorAll('.centre-2d-map-info-3d');
       viewers[0].classList.add('mobile-3d1');
       viewers[1].classList.add('mobile-3d2');
-      document.getElementById(messageId).style.opacity = 0;
+      document.getElementById('notice-viewer1').style.opacity = 0;
+      document.getElementById('notice-viewer2').style.opacity = 0;
     } else {
       const container = document.getElementById(containerId);
       const viewer = new PANOLENS.Viewer({
@@ -1261,8 +1266,6 @@ $(document).ready(function () {
     const video0 = document.getElementById('controlled-video1');
     const video1 = document.getElementById('controlled-video2');
     const playIcons = document.getElementsByClassName('video-playpause');
-
-    console.log('isIOS', isIOS);
     if (isIOS) {
       video0.setAttribute('controls', 'true');
       video1.setAttribute('controls', 'true');
@@ -1314,4 +1317,56 @@ $(document).ready(function () {
   }
 
   controllVideos();
+
+  gsap.registerPlugin(ScrollTrigger);
+  // REVEAL //
+  gsap.utils.toArray('.goingUp-text').forEach(function (elem) {
+    ScrollTrigger.create({
+      trigger: elem,
+      start: 'top 100%',
+      end: 'bottom 0%',
+      onEnter: function () {
+        gsap.fromTo(
+          elem,
+          { y: 100, autoAlpha: 0 },
+          {
+            delay: 0.5,
+            duration: 1.5,
+            y: 0,
+            autoAlpha: 1,
+            ease: 'back',
+            overwrite: 'auto',
+          }
+        );
+      },
+      onLeave: function () {
+        gsap.fromTo(
+          elem,
+          { autoAlpha: 1 },
+          { autoAlpha: 0, overwrite: 'auto' }
+        );
+      },
+      onEnterBack: function () {
+        gsap.fromTo(
+          elem,
+          { y: -100, autoAlpha: 0 },
+          {
+            delay: 0.5,
+            duration: 1.5,
+            y: 0,
+            autoAlpha: 1,
+            ease: 'back',
+            overwrite: 'auto',
+          }
+        );
+      },
+      onLeaveBack: function () {
+        gsap.fromTo(
+          elem,
+          { autoAlpha: 1 },
+          { autoAlpha: 0, overwrite: 'auto' }
+        );
+      },
+    });
+  });
 });
