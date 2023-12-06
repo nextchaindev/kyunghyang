@@ -1264,8 +1264,8 @@ $(document).ready(function () {
 
     console.log('isIOS', isIOS);
     if (isIOS) {
-      video0.setAttribute('controls', 'controls');
-      video1.setAttribute('controls', 'controls');
+      video0.setAttribute('controls', 'true');
+      video1.setAttribute('controls', 'true');
       playIcons[0].style.opacity = 0;
       playIcons[1].style.opacity = 0;
     } else {
