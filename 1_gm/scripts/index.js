@@ -1420,6 +1420,7 @@ $(document).ready(function () {
       'hide_scroll8',
       'hide_scroll9',
       'hide_scroll10',
+      'hide_scroll11',
     ];
 
     Array(sectionsQty)
@@ -1456,7 +1457,8 @@ $(document).ready(function () {
       let scrolledSesssonHeight = 0;
       for (let index = 0; index < listHideIds.length; index++) {
         if (
-          document.documentElement.scrollTop - hideScrollScreen.offsetTop ==
+          document.documentElement.scrollTop -
+            document.getElementById(listHideIds[index]).offsetTop ==
           0
         ) {
           sectionScroll.style.opacity = 0;
