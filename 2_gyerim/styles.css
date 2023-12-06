@@ -907,7 +907,7 @@ h1.fly-text span:nth-child(37)[data-inviewport].is-inViewport {
 #second-map-blue-point-container-3 {
   position: absolute;
   top: 60.5%;
-  left: 18.5%;
+  left: 6.5%;
 }
 
 .ease-in-out {
@@ -1296,6 +1296,10 @@ h1 {
   transform: scale(2.5) translate(-5%, 300px);
 }
 
+#map-section {
+  background-image: url('public/images/13_img.png');
+}
+
 /* try to put the main point in satellite page to be right place */
 
 @media only screen and (max-width: 1900px) {
@@ -1436,6 +1440,25 @@ h1 {
 
   .second-map-transform {
     transform: scale(2) translate(-5%, 250px);
+  }
+
+  #map-section {
+    background-position: -250px;
+  }
+
+  #blue-point-container-1,
+  #second-map-blue-point-container-1 {
+    left: 80.5%;
+  }
+
+  #blue-point-container-2,
+  #second-map-blue-point-container-2 {
+    left: 80.5%;
+  }
+
+  #blue-point-container-3,
+  #second-map-blue-point-container-3 {
+    left: 10.5%;
   }
 }
 
@@ -1736,5 +1759,24 @@ h1 {
 
   .h-three > h1 {
     margin-left: 32px;
+  }
+
+  #map-section {
+    background-position: -200px;
+  }
+
+  #blue-point-container-1,
+  #second-map-blue-point-container-1 {
+    display: none;
+  }
+
+  #blue-point-container-2,
+  #second-map-blue-point-container-2 {
+    display: none;
+  }
+
+  #blue-point-container-3,
+  #second-map-blue-point-container-3 {
+    left: 16.5%;
   }
 }
