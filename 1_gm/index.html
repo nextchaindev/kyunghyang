@@ -100,7 +100,7 @@
         >
           <div class="quotes-title goingUp-text">
             <h1 class="text-strong-2 text-center">
-              <div class="goingUp-text opacity-0">
+              <div>
                 <span class="brown-big-text">&ldquo;</span>
                 <span class="text-strong title-text">우리는 늙습니다.?</span>
                 <span class="brown-big-text">&rdquo;</span>
@@ -176,7 +176,18 @@
             </div>
             <div class="statistics-contents">
               <div class="statistics-contents-box">
-                <div class="text-normal-6 section-6-text-box-1st"></div>
+                <div class="section-6-text-box-1st">
+                  <div class="goingUp-text">
+                    이 같은 어려움을 겪는 어르신은 해마다 늘고 있어요. <br />
+                    <br />
+                    2026년이면 65세 이상이 <br />
+                    <br />
+                    우리나라 인구 5명 중 1명이 됩니다. <br />
+                    <br />
+                    어른신들은 홀로 지낼수록 치매에 걸리기 쉽습니다. <br />
+                    사회가 감당해야 할 비용도 늘어납니다.
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -1013,8 +1024,6 @@
     <script type="text/javascript" src="./libs/360/three.min.js"></script>
     <script type="text/javascript" src="./libs/360/panolens.min.js"></script>
 
-    <script src="./scripts/index.js"></script>
-
     <!-- text title animation -->
     <script
       type="text/javascript"
@@ -1024,58 +1033,7 @@
       type="text/javascript"
       src="./../libs/gsap/minified/ScrollTrigger.min.js"
     ></script>
-    <script type="text/javascript">
-      gsap.registerPlugin(ScrollTrigger);
-      // REVEAL //
-      gsap.utils.toArray('.goingUp-text').forEach(function (elem) {
-        ScrollTrigger.create({
-          trigger: elem,
-          start: 'top 100%',
-          end: 'bottom 0%',
-          onEnter: function () {
-            gsap.fromTo(
-              elem,
-              { y: 100, autoAlpha: 0 },
-              {
-                delay: 0.5,
-                duration: 1.5,
-                y: 0,
-                autoAlpha: 1,
-                ease: 'back',
-                overwrite: 'auto',
-              }
-            );
-          },
-          onLeave: function () {
-            gsap.fromTo(
-              elem,
-              { autoAlpha: 1 },
-              { autoAlpha: 0, overwrite: 'auto' }
-            );
-          },
-          onEnterBack: function () {
-            gsap.fromTo(
-              elem,
-              { y: -100, autoAlpha: 0 },
-              {
-                delay: 0.5,
-                duration: 1.5,
-                y: 0,
-                autoAlpha: 1,
-                ease: 'back',
-                overwrite: 'auto',
-              }
-            );
-          },
-          onLeaveBack: function () {
-            gsap.fromTo(
-              elem,
-              { autoAlpha: 1 },
-              { autoAlpha: 0, overwrite: 'auto' }
-            );
-          },
-        });
-      });
-    </script>
+
+    <script src="./scripts/index.js"></script>
   </body>
 </html>
