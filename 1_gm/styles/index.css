@@ -883,15 +883,22 @@ object-fit-cover {
 .mobile-3d1 {
   cursor: auto;
   background-image: url('../../assets/images/01/2d-map-4th/36.1.JPG');
+  background-size: cover;
+  height: 100%;
 }
 
 .mobile-3d2 {
   cursor: auto;
   background-image: url('../../assets/images/01/2d-map-5th/41.1.JPG');
+  background-size: cover;
+  height: 100%;
+}
+.section-30 > div {
+  height: 100%;
 }
 
 .mobile-3d1 .notice-message,
-.mobile-3d1 .notice-message {
+.mobile-3d2 .notice-message {
   opacity: 0;
 }
 
