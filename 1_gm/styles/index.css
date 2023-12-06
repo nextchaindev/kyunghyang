@@ -552,6 +552,7 @@ footer.kyunghyang-footer div.footer-logos > div:first-of-type {
 .slick-slide img {
   border-radius: 18px;
   height: 300px;
+  object-fit: cover;
 }
 
 .slick-track {
