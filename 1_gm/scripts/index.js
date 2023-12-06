@@ -1266,118 +1266,54 @@ $(document).ready(function () {
     video[0].setAttribute('muted', 'true');
     video[1].setAttribute('muted', 'true');
     if (isIOS) {
-      video[0].setAttribute('controls', 'true');
-      video[1].setAttribute('controls', 'true');
-      video[0].setAttribute('preload', 'none');
-      video[1].setAttribute('preload', 'none');
-      playIcons[0].style.opacity = 0;
-      playIcons[1].style.opacity = 0;
+      video0.setAttribute('controls', 'true');
+      video1.setAttribute('controls', 'true');
+      video0.setAttribute('preload', 'none');
+      video1.setAttribute('preload', 'none');
+      playIcons[0].style.display = 'none';
+      playIcons[1].style.display = 'none';
     } else {
-      // var playPromise = video[0].play();
-      // var playPromise = video[1].play();
-      function controlVideo1() {
-        playIcons[0].addEventListener('click', onButtonClick);
-
-        function onButtonClick() {
-          // This will allow us to play video later...
-          video[0].load();
-          fetchVideoAndPlay();
+      video0.addEventListener('click', () => {
+        if (video0.paused) {
+          video0.play();
+        } else {
+          video0.pause();
         }
-
-        function fetchVideoAndPlay() {
-          fetch('../assets/videos/home-edu-program.mp4')
-            .then((response) => response.blob())
-            .then((blob) => {
-              video.srcObject = blob;
-              return video.play();
-            })
-            .then((_) => {
-              // Video playback started ;)
-            })
-            .catch((e) => {
-              // Video playback failed ;(
-              console.log('Error', e);
-            });
+      });
+      playIcons[0].addEventListener('click', () => {
+        if (video0.paused) {
+          video0.play();
+        } else {
+          video0.pause();
         }
-        // if (video[0].paused) {
-        //   if (playPromise !== undefined) {
-        //     playPromise
-        //       .then((_) => {
-        //         video[0].play();
-        //         playIcons[0].style.opacity = 0;
-        //       })
-        //       .catch((error) => {
-        //         console.error('Can not resolve this video!');
-        //       });
-        //   }
-        // } else {
-        //   if (playPromise !== undefined) {
-        //     playPromise
-        //       .then((_) => {
-        //         video[0].pause();
-        //         playIcons[0].style.opacity = 1;
-        //       })
-        //       .catch((error) => {
-        //         console.error('Can not resolve this video!');
-        //       });
-        //   }
-        // }
-      }
-      function controlVideo2() {
-        playIcons[1].addEventListener('click', onButtonClick);
+      });
+      video0.onplay = () => {
+        playIcons[0].style.opacity = 0;
+      };
+      video0.onpause = () => {
+        playIcons[0].style.opacity = 1;
+      };
 
-        function onButtonClick() {
-          // This will allow us to play video later...
-          video[1].load();
-          fetchVideoAndPlay();
+      video1.addEventListener('click', () => {
+        if (video1.paused) {
+          video1.play();
+        } else {
+          video1.pause();
         }
-
-        function fetchVideoAndPlay() {
-          fetch('../assets/videos/home-garden-life-guide.mp4')
-            .then((response) => response.blob())
-            .then((blob) => {
-              video.srcObject = blob;
-              return video.play();
-            })
-            .then((_) => {
-              // Video playback started ;)
-            })
-            .catch((e) => {
-              // Video playback failed ;(
-              console.log('Error', e);
-            });
+      });
+      playIcons[1].addEventListener('click', () => {
+        if (video1.paused) {
+          video1.play();
+        } else {
+          video1.pause();
         }
-        // if (video[1].paused) {
-        //   if (playPromise !== undefined) {
-        //     playPromise
-        //       .then((_) => {
-        //         video[1].play();
-        //         playIcons[1].style.opacity = 0;
-        //       })
-        //       .catch((error) => {
-        //         console.error('Can not resolve this video!');
-        //       });
-        //   }
-        // } else {
-        //   if (playPromise !== undefined) {
-        //     playPromise
-        //       .then((_) => {
-        //         video[1].pause();
-        //         playIcons[1].style.opacity = 1;
-        //       })
-        //       .catch((error) => {
-        //         console.error('Can not resolve this video!');
-        //       });
-        //   }
-        // }
-      }
-      // video[0].addEventListener('click', controlvideo1);
-      // playIcons[0].addEventListener('click', controlvideo1);
-      controlVideo1();
-
-      // video[1].addEventListener('click', controlVideo2);
-      // playIcons[1].addEventListener('click', controlVideo2);
-      controlVideo2();
+      });
+      video1.onplay = () => {
+        playIcons[1].style.opacity = 0;
+      };
+      video1.onpause = () => {
+        playIcons[1].style.opacity = 1;
+      };
     }
   }
 
