@@ -1266,52 +1266,52 @@ $(document).ready(function () {
     video[0].setAttribute('muted', 'true');
     video[1].setAttribute('muted', 'true');
     if (isIOS) {
-      video0.setAttribute('controls', 'true');
-      video1.setAttribute('controls', 'true');
-      video0.setAttribute('preload', 'none');
-      video1.setAttribute('preload', 'none');
+      video[1].setAttribute('controls', 'true');
+      video[2].setAttribute('controls', 'true');
+      video[1].setAttribute('preload', 'none');
+      video[2].setAttribute('preload', 'none');
       playIcons[0].style.display = 'none';
       playIcons[1].style.display = 'none';
     } else {
-      video0.addEventListener('click', () => {
-        if (video0.paused) {
-          video0.play();
+      video[1].addEventListener('click', () => {
+        if (video[1].paused) {
+          video[1].play();
         } else {
-          video0.pause();
+          video[1].pause();
         }
       });
       playIcons[0].addEventListener('click', () => {
-        if (video0.paused) {
-          video0.play();
+        if (video[1].paused) {
+          video[1].play();
         } else {
-          video0.pause();
+          video[1].pause();
         }
       });
-      video0.onplay = () => {
+      video[1].onplay = () => {
         playIcons[0].style.opacity = 0;
       };
-      video0.onpause = () => {
+      video[1].onpause = () => {
         playIcons[0].style.opacity = 1;
       };
 
-      video1.addEventListener('click', () => {
-        if (video1.paused) {
-          video1.play();
+      video[2].addEventListener('click', () => {
+        if (video[2].paused) {
+          video[2].play();
         } else {
-          video1.pause();
+          video[2].pause();
         }
       });
       playIcons[1].addEventListener('click', () => {
-        if (video1.paused) {
-          video1.play();
+        if (video[2].paused) {
+          video[2].play();
         } else {
-          video1.pause();
+          video[2].pause();
         }
       });
-      video1.onplay = () => {
+      video[2].onplay = () => {
         playIcons[1].style.opacity = 0;
       };
-      video1.onpause = () => {
+      video[2].onpause = () => {
         playIcons[1].style.opacity = 1;
       };
     }
