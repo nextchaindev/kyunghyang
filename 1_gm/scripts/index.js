@@ -1167,25 +1167,67 @@ $(document).ready(function () {
     ],
   });
 
-  function renderViewer(containerId, imgSrc) {
-    const container = document.getElementById(containerId);
-    const viewer = new PANOLENS.Viewer({
-      container,
-    });
-    const panorama = new PANOLENS.ImagePanorama(imgSrc);
-    viewer.add(panorama);
-    viewer.OrbitControls.noZoom = true;
-    container.onmousedown = () => {
-      container.style.cursor = 'grabbing';
-    };
-    container.onmouseup = () => {
-      container.style.cursor = 'grab';
-    };
+  function renderViewer(containerId, imgSrc, messageId) {
+    const isNotPC = DeviceUtil.isNotPC();
+    if (isNotPC) {
+      // const message = document.getElementById(messageId);
+      // message.getElementsByTagName('h4')[0].innerText = 'Tab to explore';
+      // const container = document.getElementById(containerId);
+      // const viewer = new PANOLENS.Viewer({
+      //   container,
+      // });
+      // message.onclick = () => {
+      //   if (
+      //     message.getElementsByTagName('h4')[0].innerText === 'Tab to explore'
+      //   ) {
+      //     message.getElementsByTagName('h4')[0].innerText =
+      //       '화면에서 마우스를 움직이면 360도 영상으로 볼 수 있어요';
+      //     const panorama = new PANOLENS.ImagePanorama(imgSrc);
+      //     viewer.add(panorama);
+      //     viewer.OrbitControls.noZoom = true;
+      //     container.onmousedown = () => {
+      //       container.style.cursor = 'grabbing';
+      //     };
+      //     container.onmouseup = () => {
+      //       container.style.cursor = 'grab';
+      //     };
+      //   } else {
+      //     message.getElementsByTagName('h4')[0].innerText = 'Tab to explore';
+      //     viewer.dispose();
+      //   }
+      // };
+      const viewers = document.querySelectorAll('.centre-2d-map-info-3d');
+      viewers[0].classList.add('mobile-3d1');
+      viewers[1].classList.add('mobile-3d2');
+      document.getElementById(messageId).style.opacity = 0;
+    } else {
+      const container = document.getElementById(containerId);
+      const viewer = new PANOLENS.Viewer({
+        container,
+      });
+      const panorama = new PANOLENS.ImagePanorama(imgSrc);
+      viewer.add(panorama);
+      viewer.OrbitControls.noZoom = true;
+      container.onmousedown = () => {
+        container.style.cursor = 'grabbing';
+      };
+      container.onmouseup = () => {
+        container.style.cursor = 'grab';
+      };
+    }
   }
 
-  renderViewer('viewer1', '../../assets/images/01/2d-map-4th/36.1.JPG');
+  renderViewer(
+    'viewer1',
+    '../../assets/images/01/2d-map-4th/36.1.JPG',
+    'notice-viewer1'
+  );
 
-  renderViewer('viewer2', '/assets/images/01/2d-map-5th/41.1.JPG');
+  renderViewer(
+    'viewer2',
+    '/assets/images/01/2d-map-5th/41.1.JPG',
+    'notice-viewer2'
+  );
 
   const hanldeDisplayMovingMap = () => {
     if (window.matchMedia('(max-width: 767px)').matches) {

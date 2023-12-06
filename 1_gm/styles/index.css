@@ -878,6 +878,27 @@ object-fit-cover {
   color: #ffffff;
 }
 
+.mobile-3d1 {
+  cursor: auto;
+  background-image: url('../../assets/images/01/2d-map-4th/36.1.JPG');
+}
+
+.mobile-3d2 {
+  cursor: auto;
+  background-image: url('../../assets/images/01/2d-map-5th/41.1.JPG');
+}
+
+.notice-message {
+  background-color: var(--green);
+  padding: 12px;
+  font-size: 28px;
+  color: var(--dark);
+  position: absolute;
+  bottom: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
 .center-top {
   display: none;
 }
@@ -974,6 +995,11 @@ object-fit-cover {
 
   h6 {
     font-size: 14px;
+  }
+
+  .notice-message {
+    font-size: 20px;
+    width: 90vw;
   }
 
   .text-body {
@@ -1176,6 +1202,12 @@ media .video-container {
   }
   .video-playpause img {
     width: 80px;
+  }
+  .notice-message {
+    background-color: var(--green);
+    padding: 12px;
+    font-size: 28px;
+    bottom: 80px;
   }
 }
 
