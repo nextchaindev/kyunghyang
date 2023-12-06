@@ -261,11 +261,10 @@ footer.kyunghyang-footer div.footer-logos > div:first-of-type {
   align-items: center;
 }
 
-#section-2 {
-  width: 100vw;
-  height: 100vh;
+.flex-end {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: flex-end;
   align-items: center;
 }
 
@@ -275,12 +274,19 @@ footer.kyunghyang-footer div.footer-logos > div:first-of-type {
 }
 /* end animate css */
 
-object-fit-cover {
+.obj-cover {
   object-fit: cover;
-  height: 100%;
-  width: 100vw;
+  /* height: 100%; */
+  /* width: 100vw; */
 }
 
+#section-2 {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 /* ------------------------------ quote section ------------------------------ */
 .quotes-title {
   /* position: absolute;
@@ -445,6 +451,8 @@ object-fit-cover {
   color: var(--dark);
   font-size: 36px;
   margin-top: 40px;
+  width: max-content;
+  max-width: 90vw;
 }
 
 .statistics-contents-box {
@@ -620,6 +628,10 @@ object-fit-cover {
   background-image: url(../assets/images/01/map/bg.png);
 }
 
+canvas#statistics-chart-canvas {
+  height: 300px !important;
+}
+
 #map-2d {
   position: relative;
 }
@@ -755,19 +767,33 @@ object-fit-cover {
 }
 
 .img-1920-760 {
-  position: absolute;
-  left: 0;
-  bottom: 0;
+  width: 100%;
+  aspect-ratio: 1920/760;
+  height: auto;
+}
+
+.section-16 .fp-overflow,
+.section-28 .fp-overflow,
+.section-42 .fp-overflow {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  background-color: var(--white);
+}
+.section-16 img,
+.section-28 img,
+.section-42 img {
+  margin-bottom: -8px;
+}
+.section-16 .content,
+.section-28 .content,
+.section-42 .content {
+  width: max-content;
+  max-width: 90vw;
 }
 
 .section-16-title-content {
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-color: #ffffff;
-  width: 100%;
-  height: 100%;
-  padding: 4% 10px;
+  padding: 0 5vw;
 }
 
 .text-right {
@@ -960,9 +986,15 @@ object-fit-cover {
   font-size: 28px;
   color: var(--dark);
   position: absolute;
-  bottom: 100px;
+  bottom: 60px;
   left: 50%;
   transform: translateX(-50%);
+  width: max-content;
+  max-width: 90vw;
+}
+
+.notice-message h4 {
+  margin: 0;
 }
 
 .center-top {
@@ -1614,9 +1646,6 @@ div.video-container > iframe {
   div.statistics .statistics-chart {
     padding: 16px;
     flex: unset;
-  }
-  div.statistics .statistics-chart canvas {
-    height: 300px;
   }
   div.statistics .statistics-contents {
     padding-left: 16px;
