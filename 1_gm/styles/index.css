@@ -1381,6 +1381,69 @@ div.video-container > iframe {
   height: var(--doc-height) !important;
 }
 
+.mobile-2d-bg1 {
+  background-image: url(../../../assets/images/01/2d-map/map-1st.png),
+    url(../../../assets/images/01/map/bg.png);
+  background-size: 100%, cover;
+  background-position: 0vw 36vh, center;
+  background-repeat: no-repeat;
+}
+
+.mobile-2d-bg2 {
+  background-image: url(../../../assets/images/01/2d-map/map-2nd.png),
+    url(../../../assets/images/01/map/bg.png);
+  background-size: 100%, cover;
+  background-position: 0vw 36vh, center;
+  background-repeat: no-repeat;
+}
+
+.mobile-2d-bg3 {
+  background-image: url(../../../assets/images/01/2d-map/map-3rd.png),
+    url(../../../assets/images/01/map/bg.png);
+  background-size: 100%, cover;
+  background-position: 0vw 36vh, center;
+  background-repeat: no-repeat;
+}
+
+.mobile-2d-bg4 {
+  background-image: url(../../../assets/images/01/2d-map/map-4th.png),
+    url(../../../assets/images/01/map/bg.png);
+  background-size: 100%, cover;
+  background-position: 0vw 36vh, center;
+  background-repeat: no-repeat;
+}
+
+.mobile-2d-bg5 {
+  background-image: url(../../../assets/images/01/2d-map/map-5th.png),
+    url(../../../assets/images/01/map/bg.png);
+  background-size: 100%, cover;
+  background-position: 0vw 36vh, center;
+  background-repeat: no-repeat;
+}
+
+.mobile-2d-bg6 {
+  background-image: url(../../../assets/images/01/2d-map/map-6th.png),
+    url(../../../assets/images/01/map/bg.png);
+  background-size: 100%, cover;
+  background-position: 0vw 36vh, center;
+  background-repeat: no-repeat;
+}
+
+.mobile-2d-bg1 .map-2d-location-1st,
+.mobile-2d-bg2 .map-2d-location-2nd,
+.mobile-2d-bg3 .map-2d-location-3rd,
+.mobile-2d-bg4 .map-2d-location-4th,
+.mobile-2d-bg5 .map-2d-location-5th,
+.mobile-2d-bg6 .map-2d-location-6th,
+.mobile-2d-bg1 .top-fixed-2d-map-1st,
+.mobile-2d-bg2 .top-fixed-2d-map-2nd,
+.mobile-2d-bg3 .top-fixed-2d-map-3rd,
+.mobile-2d-bg4 .top-fixed-2d-map-4th,
+.mobile-2d-bg5 .top-fixed-2d-map-5th,
+.mobile-2d-bg6 .top-fixed-2d-map-6th {
+  display: none;
+}
+
 @media only screen and (max-width: 1279px) {
   div.video-fullscreen-container {
     padding: 0;
