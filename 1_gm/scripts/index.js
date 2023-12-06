@@ -1397,6 +1397,19 @@ $(document).ready(function () {
       'section_scroll11',
     ];
 
+    const listSectionLabels = [
+      'the-tea-girl',
+      'section_scroll2',
+      'satellite',
+      'map-2d-1st',
+      'seciton_scroll5',
+      'map-2d-2nd',
+      'map-2d-3rd',
+      'map-2d-4th',
+      'map-2d-5th',
+      'map-2d-6th',
+    ];
+
     const listHideIds = [
       'section-1',
       'hide_scroll2',
@@ -1417,7 +1430,7 @@ $(document).ready(function () {
         sectionStick.innerHTML =
           // sectionStick.innerHTML + `<div class="stick">${listSectionScroll[index]}</div>`;
           sectionStick.innerHTML +
-          `<div class="section-wrap" ">
+          `<div class="section-wrap">
       <div class="section-name" id = "section_text${index + 1}">${
             listSectionScroll[index]
           }</div>
@@ -1429,6 +1442,11 @@ $(document).ready(function () {
 
     listSections.forEach((values, index) => {
       values.setAttribute('id', listSectionIds[index]);
+      document
+        .getElementById(`section_text${index + 1}`)
+        .addEventListener('click', () => {
+          fullPage.moveTo(listSectionLabels[index], 1);
+        });
     });
 
     listHideScrollSreens.forEach((values, index) => {

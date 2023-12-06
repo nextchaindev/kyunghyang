@@ -1369,6 +1369,7 @@ div.video-container > iframe {
   color: var(--primary);
   white-space: pre-line;
   text-align: right;
+  cursor: pointer;
 }
 
 .section-stick .section-wrap .text_active {
