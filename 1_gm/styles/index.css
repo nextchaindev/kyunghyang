@@ -552,6 +552,7 @@ footer.kyunghyang-footer div.footer-logos > div:first-of-type {
 .slick-slide img {
   border-radius: 18px;
   height: 300px;
+  object-fit: cover;
 }
 
 .slick-track {
@@ -1229,7 +1230,7 @@ canvas#statistics-chart-canvas {
   .content-left,
   .content-right {
     width: 90vw;
-    bottom: 10vh;
+    bottom: 15vh;
     left: 5vw !important;
   }
   .img-1920-760 {
