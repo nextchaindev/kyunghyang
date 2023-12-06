@@ -918,6 +918,23 @@ object-fit-cover {
   font-size: 40px;
 }
 
+.section-47 {
+  background-color: #ffffff;
+}
+
+.youtube {
+  width: 50%;
+}
+
+.section-48 {
+  background-image: url(../../assets/images/01/outro/49_img.png);
+}
+
+.kyunghyang-footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
 /* start reponsive */
 
 /* up to desktop */
