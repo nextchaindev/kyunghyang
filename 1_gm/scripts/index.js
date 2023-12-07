@@ -94,7 +94,7 @@ $(document).ready(function () {
         case 4:
           animateText(
             '.section-5-text-box-1st',
-            '사회 활동이 줄어 자존감이 떨어지고 <br/> 홀로 회상에 잠기거나 <br/> 우울감에 허우적거리기도 합니다.'
+            '사회 활동이 줄어 자존감이 떨어지고 <br/> 홀로 회상에 잠기거나 <br/> 우울감에 허우적거리기도 합니다'
           );
           break;
         case 5: {
@@ -1165,35 +1165,13 @@ $(document).ready(function () {
   function renderViewer(containerId, imgSrc, messageId) {
     const isNotPC = DeviceUtil.isNotPC();
     if (isNotPC) {
-      // const message = document.getElementById(messageId);
-      // message.getElementsByTagName('h4')[0].innerText = 'Tab to explore';
-      // const container = document.getElementById(containerId);
-      // const viewer = new PANOLENS.Viewer({
-      //   container,
-      // });
-      // message.onclick = () => {
-      //   if (
-      //     message.getElementsByTagName('h4')[0].innerText === 'Tab to explore'
-      //   ) {
-      //     message.getElementsByTagName('h4')[0].innerText =
-      //       '화면에서 마우스를 움직이면 360도 영상으로 볼 수 있어요';
-      //     const panorama = new PANOLENS.ImagePanorama(imgSrc);
-      //     viewer.add(panorama);
-      //     viewer.OrbitControls.noZoom = true;
-      //     container.onmousedown = () => {
-      //       container.style.cursor = 'grabbing';
-      //     };
-      //     container.onmouseup = () => {
-      //       container.style.cursor = 'grab';
-      //     };
-      //   } else {
-      //     message.getElementsByTagName('h4')[0].innerText = 'Tab to explore';
-      //     viewer.dispose();
-      //   }
-      // };
       const viewers = document.querySelectorAll('.centre-2d-map-info-3d');
       viewers[0].classList.add('mobile-3d1');
       viewers[1].classList.add('mobile-3d2');
+      document.getElementById('notice-viewer1').innerHTML =
+        'PC 버전에서는 360도 화면을 확인할 수 있습니다';
+      document.getElementById('notice-viewer2').innerHTML =
+        'PC 버전에서는 360도 화면을 확인할 수 있습니다';
     } else {
       const container = document.getElementById(containerId);
       const viewer = new PANOLENS.Viewer({

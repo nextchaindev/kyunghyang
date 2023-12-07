@@ -1103,11 +1103,6 @@ canvas#statistics-chart-canvas {
   height: 100%;
 }
 
-.mobile-3d1 .notice-message,
-.mobile-3d2 .notice-message {
-  opacity: 0;
-}
-
 .notice-message {
   background-color: rgba(0, 0, 0, 0.3) !important;
   padding: 12px;
@@ -1119,6 +1114,11 @@ canvas#statistics-chart-canvas {
   transform: translateX(-50%);
   width: max-content;
   max-width: 90vw;
+}
+
+.mobile-3d1 .notice-message,
+.mobile-3d2 .notice-message {
+  bottom: 15%;
 }
 
 .notice-message h4 {
@@ -1482,15 +1482,20 @@ div.statistics .mobile-break {
     gap: 24px;
     max-width: 100%;
   }
+  footer.kyunghyang-footer > * {
+    padding: 0 40px;
+    width: 100%;
+  }
   footer.kyunghyang-footer div.footer-logos {
     flex-direction: column;
     gap: 24px;
+    align-items: flex-start;
   }
   footer.kyunghyang-footer div.footer-logos img {
-    max-width: calc(100vw - 80px);
+    max-width: 60vw;
   }
-  footer.kyunghyang-footer div.footer-logos > div {
-    justify-content: center !important;
+  footer.kyunghyang-footer div.footer-logos > div:last-of-type img {
+    transform: scale(0.75);
   }
   div.video-fullscreen-container {
     padding: 0;
@@ -1703,9 +1708,17 @@ div.statistics .mobile-break {
     font-size: 28px;
     bottom: 80px;
   }
+  div.statistics .mobile-break {
+    margin-top: 12px;
+    display: block;
+  }
 }
 
 @media only screen and (max-width: 767px) {
+  div.statistics .mobile-break {
+    margin-top: 2px;
+    display: block;
+  }
   #section-4 {
     background-position-x: 76%;
   }
@@ -1771,6 +1784,10 @@ div.statistics .mobile-break {
     font-size: 20px;
     padding: 4px 20px;
   }
+  .section-40-content > div,
+  .section-9-content {
+    margin-top: -40px;
+  }
   .section-40-content-text {
     font-size: 18px;
     margin-top: 20px;
@@ -1826,8 +1843,8 @@ div.statistics .mobile-break {
   }
 
   .text-body {
-    font-size: 13px;
-    line-height: 22px;
+    font-size: 12px;
+    line-height: 16px;
   }
 
   .section-6-content {
@@ -2163,10 +2180,10 @@ div.statistics .mobile-break {
 
 @media only screen and (max-width: 499px) {
   h1 {
-    font-size: 25px;
+    font-size: 22px;
   }
   h2 {
-    font-size: 18px;
+    font-size: 16px;
   }
   h3 {
     font-size: 16px;
@@ -2175,17 +2192,32 @@ div.statistics .mobile-break {
     font-size: 16px;
   }
   h5 {
-    font-size: 14px;
+    font-size: 13px;
   }
   h6 {
     font-size: 11px;
   }
-
+  .profile-image {
+    width: 200px;
+  }
   .section-9-content .content,
   .section-11 .feedback-content {
     gap: 17px;
     font-size: 34px;
     margin-top: 24px;
     width: 315px;
+  }
+  #section-1 .section-1-text-box .tag-title {
+    top: 40px;
+    font-size: 16px;
+    padding: 4px 20px 2px;
+  }
+  #section-1 .section-1-text-box .scroll-down {
+    gap: 6px;
+    font-size: 12px;
+  }
+  .scroll-down img {
+    width: 20px;
+    height: 20px;
   }
 }
