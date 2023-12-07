@@ -1169,9 +1169,9 @@ $(document).ready(function () {
       viewers[0].classList.add('mobile-3d1');
       viewers[1].classList.add('mobile-3d2');
       document.getElementById('notice-viewer1').innerHTML =
-        'PC 버전에서는 360도 화면을 확인할 수 있습니다';
+        'PC버전에서 360도 화면을 볼 수 있어요';
       document.getElementById('notice-viewer2').innerHTML =
-        'PC 버전에서는 360도 화면을 확인할 수 있습니다';
+        'PC버전에서 360도 화면을 볼 수 있어요';
     } else {
       const container = document.getElementById(containerId);
       const viewer = new PANOLENS.Viewer({
