@@ -198,7 +198,7 @@ $(document).ready(function () {
                   left: '61%',
                 });
                 $('.point1').css({
-                  top: '60%',
+                  top: '58%',
                   left: ' 63%',
                 });
                 $('.point1').show();
@@ -224,7 +224,7 @@ $(document).ready(function () {
                 });
 
                 $('.point1').css({
-                  top: '44%',
+                  top: '42%',
                   left: '45%',
                 });
                 $('.point1').show();
@@ -297,7 +297,7 @@ $(document).ready(function () {
                   left: '61%',
                 });
                 $('.point1').css({
-                  top: '60%',
+                  top: '58%',
                   left: ' 63%',
                 });
                 $('.point1').show();
@@ -323,7 +323,7 @@ $(document).ready(function () {
                 });
 
                 $('.point1').css({
-                  top: '44%',
+                  top: '42%',
                   left: '45%',
                 });
                 $('.point1').show();
