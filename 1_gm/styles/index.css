@@ -1302,48 +1302,48 @@ div.statistics .mobile-break {
 }
 
 .mobile-2d-bg1 {
-  background-image: url(../../../assets/images/01/2d-map/map-1st.png),
-    url(../../../assets/images/01/map/bg.png);
+  background-image: url(../assets/images/01/2d-map/map-1st.png),
+    url(../assets/images/01/map/bg.png);
   background-size: 100%, cover;
   background-position: 0vw 36vh, center;
   background-repeat: no-repeat;
 }
 
 .mobile-2d-bg2 {
-  background-image: url(../../../assets/images/01/2d-map/map-2nd.png),
-    url(../../../assets/images/01/map/bg.png);
+  background-image: url(../assets/images/01/2d-map/map-2nd.png),
+    url(../assets/images/01/map/bg.png);
   background-size: 100%, cover;
   background-position: 0vw 36vh, center;
   background-repeat: no-repeat;
 }
 
 .mobile-2d-bg3 {
-  background-image: url(../../../assets/images/01/2d-map/map-3rd.png),
-    url(../../../assets/images/01/map/bg.png);
+  background-image: url(../assets/images/01/2d-map/map-3rd.png),
+    url(../assets/images/01/map/bg.png);
   background-size: 100%, cover;
   background-position: 0vw 36vh, center;
   background-repeat: no-repeat;
 }
 
 .mobile-2d-bg4 {
-  background-image: url(../../../assets/images/01/2d-map/map-4th.png),
-    url(../../../assets/images/01/map/bg.png);
+  background-image: url(../assets/images/01/2d-map/map-4th.png),
+    url(../assets/images/01/map/bg.png);
   background-size: 100%, cover;
   background-position: 0vw 36vh, center;
   background-repeat: no-repeat;
 }
 
 .mobile-2d-bg5 {
-  background-image: url(../../../assets/images/01/2d-map/map-5th.png),
-    url(../../../assets/images/01/map/bg.png);
+  background-image: url(../assets/images/01/2d-map/map-5th.png),
+    url(../assets/images/01/map/bg.png);
   background-size: 100%, cover;
   background-position: 0vw 36vh, center;
   background-repeat: no-repeat;
 }
 
 .mobile-2d-bg6 {
-  background-image: url(../../../assets/images/01/2d-map/map-6th.png),
-    url(../../../assets/images/01/map/bg.png);
+  background-image: url(../assets/images/01/2d-map/map-6th.png),
+    url(../assets/images/01/map/bg.png);
   background-size: 100%, cover;
   background-position: 0vw 36vh, center;
   background-repeat: no-repeat;

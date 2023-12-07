@@ -66,7 +66,7 @@ $(document).ready(function () {
         case 1:
           $('#section-2').css(
             'background-image',
-            'url(../assets/images/01/young-girl-bg/04_img.png)'
+            'url(./assets/images/01/young-girl-bg/04_img.png)'
           );
           $('#section-2').addClass('animate__animated animate__fadeIn');
           $('#section-2 .quotes-title').css('display', 'flex');
@@ -77,7 +77,7 @@ $(document).ready(function () {
         case 2:
           $('#section-3').css(
             'background-image',
-            'url(../assets/images/01/middle-woman-bg/05_img.png)'
+            'url(./assets/images/01/middle-woman-bg/05_img.png)'
           );
           $('#section-3').addClass('animate__animated animate__fadeIn');
           $('#section-3 .quotes-title').css('display', 'flex');
@@ -1191,13 +1191,13 @@ $(document).ready(function () {
 
   renderViewer(
     'viewer1',
-    '../assets/images/01/2d-map-4th/36.1.JPG',
+    './assets/images/01/2d-map-4th/36.1.JPG',
     'notice-viewer1'
   );
 
   renderViewer(
     'viewer2',
-    '/assets/images/01/2d-map-5th/41.1.JPG',
+    './assets/images/01/2d-map-5th/41.1.JPG',
     'notice-viewer2'
   );
 
