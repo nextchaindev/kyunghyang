@@ -339,7 +339,7 @@ button {
   position: absolute;
   right: 15%;
   top: 10%;
-  width: 43%;
+  width: 39%;
   aspect-ratio: 86/50;
 }
 
@@ -385,6 +385,12 @@ button {
 }
 
 .high-break-down {
+  display: block; /* makes it have a width */
+  content: ''; /* clears default height */
+  margin-bottom: 10px; /* change this to whatever height you want it */
+}
+
+.desktop-high-break-down {
   display: block; /* makes it have a width */
   content: ''; /* clears default height */
   margin-bottom: 10px; /* change this to whatever height you want it */
@@ -907,7 +913,7 @@ h1.fly-text span:nth-child(37)[data-inviewport].is-inViewport {
 #second-map-blue-point-container-3 {
   position: absolute;
   top: 60.5%;
-  left: 6.5%;
+  left: 18.5%;
 }
 
 .ease-in-out {
@@ -1317,6 +1323,10 @@ h1 {
 
 /* up to desktop */
 @media only screen and (max-width: 1300px) {
+  .desktop-high-break-down {
+    display: none;
+  }
+
   #scrollbar {
     top: 55px;
     height: calc(100% - 110px);
@@ -1446,19 +1456,28 @@ h1 {
     background-position: -250px;
   }
 
-  #blue-point-container-1,
+  #blue-point-container-1 {
+    left: 80.5%;
+  }
+
   #second-map-blue-point-container-1 {
+    left: 44%;
+  }
+
+  #blue-point-container-2 {
     left: 80.5%;
   }
 
-  #blue-point-container-2,
   #second-map-blue-point-container-2 {
-    left: 80.5%;
+    left: 40%;
   }
 
-  #blue-point-container-3,
+  #blue-point-container-3 {
+    left: 14.5%;
+  }
+
   #second-map-blue-point-container-3 {
-    left: 10.5%;
+    display: none;
   }
 }
 
@@ -1591,7 +1610,7 @@ h1 {
 
   .chart {
     width: 360px;
-    top: 10%;
+    top: 14%;
     left: 5px;
     aspect-ratio: 86/50;
   }
@@ -1622,7 +1641,7 @@ h1 {
     width: 70%;
     aspect-ratio: 1;
     left: 4%;
-    top: 37%;
+    top: 32%;
   }
 
   .text-dark-big {
@@ -1630,7 +1649,7 @@ h1 {
   }
 
   .mobile-talking-guy-parallax {
-    background-position: 840px;
+    background-position: 770px;
   }
 
   .play-button {
@@ -1643,7 +1662,7 @@ h1 {
   }
 
   .my-100 {
-    margin: 50px 0px;
+    margin: 30px 0px;
   }
 
   .tablet-break {
@@ -1742,7 +1761,7 @@ h1 {
   }
 
   .section-4 {
-    background-position: -1000px;
+    background-position: -400px;
   }
 
   .section-20 {
@@ -1753,30 +1772,92 @@ h1 {
     background-position: -300px;
   }
 
-  .section-24 {
+  /* .section-24 {
     background-position: -1200px;
-  }
+  } */
 
   .h-three > h1 {
-    margin-left: 32px;
+    margin-left: 40px;
+    margin-bottom: 50px;
   }
 
   #map-section {
     background-position: -200px;
   }
 
-  #blue-point-container-1,
+  #blue-point-container-1 {
+    display: none;
+  }
+
   #second-map-blue-point-container-1 {
+    left: 46%;
+  }
+
+  #blue-point-container-2 {
     display: none;
   }
 
-  #blue-point-container-2,
   #second-map-blue-point-container-2 {
-    display: none;
+    left: 30%;
   }
 
-  #blue-point-container-3,
-  #second-map-blue-point-container-3 {
+  #blue-point-container-3 {
     left: 16.5%;
+  }
+
+  #second-map-blue-point-container-3 {
+    display: none;
+  }
+}
+
+/* extra smol */
+@media only screen and (max-width: 374px) {
+  .chart {
+    width: 290px;
+    top: 8%;
+  }
+
+  .py-100 {
+    padding: 0;
+  }
+
+  #blue-point-container-3 {
+  }
+
+  #map-section {
+    background-position: -100px;
+  }
+
+  .map-transform {
+    transform: scale(1.9) translate(12%, -100px);
+  }
+
+  #mini-map {
+    left: 10px;
+  }
+
+  #second-mini-map {
+    left: 10px;
+  }
+
+  #square-light {
+    top: 27%;
+  }
+
+  .mobile-talking-guy-parallax {
+    background-position: 570px;
+  }
+
+  .h-three > h1 {
+    margin-left: 6px;
+    margin-bottom: 20px;
+  }
+
+  #second-map-blue-point-container-2 {
+    left: 25%;
+  }
+
+  .second-map-transform {
+    transform: scale(2) translate(-15%, 150px);
   }
 }
