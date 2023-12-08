@@ -330,14 +330,14 @@ button {
 
 .fly–btm-right {
   position: absolute;
-  right: 15%;
+  left: 50%;
   bottom: 6%;
   text-align: right;
 }
 
 .chart {
   position: absolute;
-  right: 15%;
+  left: 50%;
   top: 10%;
   width: 39%;
   aspect-ratio: 86/50;
@@ -1430,11 +1430,14 @@ h1 {
   }
 
   .chart {
-    position: absolute;
-    right: 22%;
-    top: 20%;
-    width: 57%;
-    aspect-ratio: 86/50;
+    left: 30%;
+    top: 5%;
+    width: 55%;
+  }
+
+  .fly–btm-right {
+    left: 30%;
+    bottom: 6%;
   }
 
   .portrait {
@@ -1571,6 +1574,13 @@ h1 {
 }
 
 @media only screen and (max-width: 767px) {
+  #scrollbar {
+    display: none;
+  }
+  .fly–btm-right.mobile-display {
+    left: 0%;
+    bottom: 6%;
+  }
   .satellite-main-point {
     left: 32%;
     top: 40%;
