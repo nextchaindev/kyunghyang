@@ -907,7 +907,14 @@ h1.fly-text span:nth-child(37)[data-inviewport].is-inViewport {
   background: rgba(33, 141, 145, 0.8);
 }
 
-#yellow-point {
+#yellow-point1 {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#yellow-point2 {
   position: absolute;
   top: 48%;
   left: 50%;
