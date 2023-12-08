@@ -1820,7 +1820,7 @@ h1 {
   }
 
   #map-section {
-    background-position: -200px;
+    background-position: 18% 50%;
   }
 
   #blue-point-container-1 {
@@ -1840,8 +1840,8 @@ h1 {
   }
 
   #blue-point-container-3 {
-    top: 62.5%;
-    left: 2%;
+    top: 60.5%;
+    left: 12%;
   }
 
   #second-map-blue-point-container-3 {
