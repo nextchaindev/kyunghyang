@@ -841,27 +841,53 @@ h1.fly-text span:nth-child(37)[data-inviewport].is-inViewport {
   background-image: url('public/images/28_img.png');
 }
 
+.section-26a .fp-overflow {
+  width: 100%;
+  height: 100%;
+}
+
 .section-26a .video-container {
-  width: 100vw;
-  height: 100vh;
+  position: relative;
+  aspect-ratio: 16 / 9;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #fff;
   padding: 90px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .section-26a .video-container > iframe {
-  width: 100%;
   aspect-ratio: 16 / 9;
-  height: auto;
+  width: 100%;
+  height: 100%;
+  max-height: 100%;
+  max-width: 100%;
 }
 
 .section-27 {
   background-image: url('public/images/30_img.png');
+}
+
+.section-28 {
+  background-image: url('public/images/30_img.png');
+}
+
+.section-28 > div {
+  display: flex;
+  justify-content: flex-end !important;
+  flex-direction: column;
+  width: 100%;
+}
+
+.fp-watermark {
+  opacity: 0;
+}
+
+#footer {
+  width: 100%;
 }
 
 .text-left {
@@ -1366,6 +1392,10 @@ h1 {
 #map-section {
   background-image: url('public/images/13_img.png');
 }
+
+/* .footer {
+  background-image: ;
+} */
 
 /* try to put the main point in satellite page to be right place */
 
