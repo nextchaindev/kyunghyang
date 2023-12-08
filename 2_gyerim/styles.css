@@ -909,9 +909,37 @@ h1.fly-text span:nth-child(37)[data-inviewport].is-inViewport {
 
 #yellow-point1 {
   position: absolute;
-  top: 40%;
+  top: 43%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+#yellow-point1-mobile {
+  position: absolute;
+  top: 31%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 270px;
+}
+
+#yellow-point1-mobile img {
+  width: 100%;
+  object-fit: cover;
+  height: auto;
+}
+
+#yellow-point2-mobile {
+  position: absolute;
+  top: 29%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 270px;
+}
+
+#yellow-point2-mobile img {
+  width: 100%;
+  object-fit: cover;
+  height: auto;
 }
 
 #yellow-point2 {
