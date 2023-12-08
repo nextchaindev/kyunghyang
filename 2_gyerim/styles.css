@@ -841,6 +841,25 @@ h1.fly-text span:nth-child(37)[data-inviewport].is-inViewport {
   background-image: url('public/images/28_img.png');
 }
 
+.section-26a .video-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  padding: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section-26a .video-container > iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  height: auto;
+}
+
 .section-27 {
   background-image: url('public/images/30_img.png');
 }
@@ -886,6 +905,13 @@ h1.fly-text span:nth-child(37)[data-inviewport].is-inViewport {
   padding: 8px 20px;
   border-radius: 30px;
   background: rgba(33, 141, 145, 0.8);
+}
+
+#yellow-point {
+  position: absolute;
+  top: 48%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 #blue-point-container-1,
@@ -1807,6 +1833,9 @@ h1 {
 
   #second-map-blue-point-container-3 {
     display: none;
+  }
+  .section-26a .video-container {
+    padding: 0;
   }
 }
 
