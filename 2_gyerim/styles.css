@@ -279,6 +279,11 @@ button {
   font-weight: 300;
   text-align: left;
   color: #fff;
+  /* padding: 12px 17px; */
+}
+
+.section-22 .fly-text,
+.section-24 .fly-text {
   padding: 12px 17px;
 }
 
@@ -936,7 +941,7 @@ h1.fly-text span:nth-child(37)[data-inviewport].is-inViewport {
 
 #yellow-point1 {
   position: absolute;
-  top: 43%;
+  top: 26%;
   left: 50%;
   transform: translate(-50%, -50%);
 }

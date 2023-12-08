@@ -279,7 +279,7 @@ button {
   font-weight: 300;
   text-align: left;
   color: #fff;
-  padding: 12px 17px;
+  /* padding: 12px 17px; */
 }
 
 .bg-cyan {
