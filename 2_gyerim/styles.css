@@ -873,6 +873,7 @@ h1.fly-text span:nth-child(37)[data-inviewport].is-inViewport {
 
 .section-28 {
   background-image: url('public/images/30_img.png');
+  justify-content: flex-end !important;
 }
 
 .section-28 > div {
