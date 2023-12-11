@@ -672,26 +672,40 @@ gsap.utils.toArray('.revealUp').forEach(function (elem) {
 // END: swipe detector
 
 // START: panolens
+function isNotPC() {
+  const userAgent = navigator.userAgent.toLowerCase();
+  var isMobile = /iPhone|Android/i.test(navigator.userAgent);
+  const isTablet =
+    /(ipad|tablet|(android(?!.*mobile))|(windows(?!.*phone)(.*touch))|kindle|playbook|silk|(puffin(?!.*(IP|AP|WP))))/.test(
+      userAgent
+    );
+  return isMobile || isTablet;
+}
+
 function renderPanorama(containerId, imgSrc) {
   const container = document.getElementById(containerId);
   if (container) {
-    const viewer = new PANOLENS.Viewer({
-      container,
-      controlBar: false,
-    });
-    const panorama = new PANOLENS.ImagePanorama(imgSrc);
-    viewer.add(panorama);
-    viewer.OrbitControls.noZoom = true;
-    container.onmousedown = () => {
-      container.style.cursor = 'grabbing';
-    };
-    container.onmouseup = () => {
-      container.style.cursor = 'grab';
-    };
+    if (isNotPC()) {
+      container.style.backgroundImage = `url(${imgSrc})`;
+    } else {
+      const viewer = new PANOLENS.Viewer({
+        container,
+        controlBar: false,
+      });
+      const panorama = new PANOLENS.ImagePanorama(imgSrc);
+      viewer.add(panorama);
+      viewer.OrbitControls.noZoom = true;
+      container.onmousedown = () => {
+        container.style.cursor = 'grabbing';
+      };
+      container.onmouseup = () => {
+        container.style.cursor = 'grab';
+      };
+    }
   }
 }
 
-renderPanorama('flower-panorama', './public/images/2층 메인 전시실 사진.JPG');
+renderPanorama('flower-panorama', './public/images/1st_panorama.JPG');
 renderPanorama('blue-panorama', './public/images/2nd_panorama.JPG');
 
 // END panolens

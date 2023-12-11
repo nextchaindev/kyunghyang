@@ -1101,7 +1101,7 @@ h1.fly-text span:nth-child(37)[data-inviewport].is-inViewport {
 
 .fly-btm-center {
   position: absolute;
-  bottom: 100px;
+  bottom: 120px;
   width: 100%;
   text-align: center;
   left: 0;
@@ -1438,7 +1438,7 @@ h1 {
 }
 
 .gap-large {
-  column-gap: 50px;
+  column-gap: 40px;
   row-gap: 50px;
 }
 
@@ -1525,6 +1525,7 @@ h1 {
 
   .portrait {
     height: 45vw;
+    width: 45vw;
     aspect-ratio: 1;
   }
 
@@ -1625,6 +1626,26 @@ h1 {
 }
 
 @media only screen and (max-width: 767px) {
+  #footer {
+    padding-bottom: 120px;
+  }
+
+  #the-road-fly-text,
+  #the-park-sits-text,
+  #the-park-stair-text,
+  #the-park-bridge-text,
+  #the-bike-text,
+  #the-purple-art-text,
+  #the-umbrellas-text {
+    bottom: 120px;
+  }
+
+  #the-library-text,
+  #the-pos-text,
+  #the-bright-room-text {
+    bottom: 160px;
+  }
+
   #logo-1 {
     height: 40px;
     top: -40px;
@@ -1664,7 +1685,7 @@ h1 {
   }
 
   .dual-title {
-    padding: 25% 0px;
+    padding: 35% 0px;
   }
 
   #scrollbar {
@@ -1685,7 +1706,8 @@ h1 {
   }
 
   .portrait {
-    min-height: 150px;
+    height: 160px;
+    width: 160px;
     aspect-ratio: 1;
     margin-top: 40px;
     margin-bottom: 10px;
@@ -1774,12 +1796,7 @@ h1 {
     background-position: -300px;
   }
 
-  .chart {
-    /* width: 500px; */
-  }
-
   .text-dark-big {
-    text-align: center;
     font-size: 32px;
   }
 
@@ -1890,6 +1907,24 @@ h1 {
 
   .section-26a .video-container {
     padding: 0;
+  }
+
+  #text-map-1 {
+    left: -5px;
+  }
+
+  #text-map-2 {
+    right: 5px;
+    bottom: 120px;
+  }
+
+  #the-plate-text {
+    left: -5px;
+  }
+
+  .fly-btm-left,
+  .fly-btm-right {
+    bottom: 120px !important;
   }
 }
 
