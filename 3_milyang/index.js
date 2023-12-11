@@ -28,15 +28,6 @@ const mapZoomToNext = MAP_MAX + 0.1;
 const mapZoomToPrev = MIN - 0.1;
 let mapScrollEventAdded = false;
 
-// 2nd map scroll value
-let secondMapScrollValue = 1;
-const SECOND_MAP_MIN = 1;
-const SECOND_MAP_MAX = 1.4;
-const SECOND_MAP_ZOOM_SPEED = 0.4;
-const secondMapZoomToNext = SECOND_MAP_MAX + 0.1;
-const secondMapZoomToPrev = SECOND_MAP_MIN - 0.1;
-let secondMapScrollEventAdded = false;
-
 // anchor variables
 const INTRO_VIDEO = 'intro-video';
 const AGRI_INDUSTRIAL = 'agri-industrial';
@@ -66,7 +57,7 @@ const THE_FLOWER_PANORAMA = 'the-flower-panorama';
 const THE_POS = 'the-pos';
 const THE_BLUE_PANORAMA = 'the-blue-panorama';
 const THE_BRIGHT_ROOM = 'the-bright-room';
-const THE_GLASS_WOMAN = 'the-glass-woman';
+const THE_GLASS_WOMAN = 'talking-glass-woman';
 const ROOF_CLIP = 'roof-clip';
 const BLACK_AND_WHITE = 'black-and-white';
 const FOOTER = 'footer';
@@ -164,7 +155,7 @@ let myFullpage = new fullpage('#fullpage', {
   scrollBar: true,
   normalScrollElements: '.last-section',
   fitToSection: false,
-  afterLoad: function (origin, destination, direction, trigger) {
+  afterLoad: function (origin, destination) {
     const theBarSections = document.querySelectorAll('.bar-section');
     for (let i = 0; i < theBarSections.length; i++) {
       const theBarProgress = theBarSections[i].children?.[0];
@@ -180,19 +171,15 @@ let myFullpage = new fullpage('#fullpage', {
     };
 
     // the map
-    if (destination.anchor === 'the-map') {
+    if (destination.anchor === THE_MAP_WHITE_DOT) {
       if (!forceLeave) {
         const isSectionBefore = origin.index < destination.index;
         if (isSectionBefore) {
           mapScrollValue = MAP_MIN;
           zoomOutMap();
-          handleBarProgress('the-map-zoom-out');
-          handleSingleBarSection('the-map-zoom-out', 'the-map-zoom-out');
         } else {
           mapScrollValue = MAP_MAX;
           zoomInMap();
-          handleBarProgress('the-map-zoom-in');
-          handleSingleBarSection('the-map-zoom-in', 'the-map-zoom-in');
         }
       }
       showScrollBar();
@@ -216,12 +203,8 @@ let myFullpage = new fullpage('#fullpage', {
               : mapScrollValue;
           if (zoom === MAP_MIN) {
             zoomOutMap();
-            handleBarProgress('the-map-zoom-out');
-            handleSingleBarSection('the-map-zoom-out', 'the-map-zoom-out');
           } else if (zoom === MAP_MAX) {
             zoomInMap();
-            handleBarProgress('the-map-zoom-in');
-            handleSingleBarSection('the-map-zoom-in', 'the-map-zoom-in');
           }
         });
 
@@ -243,12 +226,8 @@ let myFullpage = new fullpage('#fullpage', {
                 : mapScrollValue;
             if (zoom === MAP_MIN) {
               zoomOutMap();
-              handleBarProgress('the-map-zoom-out');
-              handleSingleBarSection('the-map-zoom-out', 'the-map-zoom-out');
             } else if (zoom === MAP_MAX) {
               zoomInMap();
-              handleBarProgress('the-map-zoom-in');
-              handleSingleBarSection('the-map-zoom-in', 'the-map-zoom-in');
             }
           },
           { passive: true }
@@ -294,6 +273,7 @@ let myFullpage = new fullpage('#fullpage', {
     }
 
     if (barPositionToSections[THE_MAP_WHITE_DOT].includes(destination.anchor)) {
+      console.log('ff');
       showScrollBar();
       setTextOpacity('the-map-white-dot-progress-text');
       handleBarProgress(THE_MAP_WHITE_DOT);
@@ -324,18 +304,8 @@ let myFullpage = new fullpage('#fullpage', {
       }
     }
   },
-  beforeLeave: function (origin, destination, direction, trigger) {
-    if (origin.anchor === 'satellite') {
-      if (
-        ((scrollValue === zoomToPrev || scrollValue === zoomToNext) &&
-          canLeaveSatellite) ||
-        forceLeave
-      ) {
-        return true;
-      }
-      return false;
-    }
-    if (origin.anchor === 'the-map') {
+  beforeLeave: function (origin) {
+    if (origin.anchor === THE_MAP_WHITE_DOT) {
       if (
         ((mapScrollValue === mapZoomToNext ||
           mapScrollValue === mapZoomToPrev) &&
@@ -345,35 +315,6 @@ let myFullpage = new fullpage('#fullpage', {
         return true;
       }
       return false;
-    }
-    if (origin.anchor === 'map-no-zoom') {
-      if (
-        ((secondMapScrollValue === secondMapZoomToNext ||
-          secondMapScrollValue === secondMapZoomToPrev) &&
-          canLeaveSecondMap) ||
-        forceLeave
-      ) {
-        return true;
-      }
-      return false;
-    }
-    if (
-      origin.anchor === 'buildings-with-stadium' &&
-      destination.anchor === '1989'
-    ) {
-      const text = document.querySelector('#buildings-text');
-      text.style.opacity = 0;
-    }
-    if (
-      origin.anchor === '1989' &&
-      destination.anchor === 'buildings-with-stadium'
-    ) {
-      const text = document.querySelector('#buildings-text');
-      text.style.opacity = 1;
-    }
-    if (origin.anchor === 'children-1') {
-      const introVideo = document.querySelector('#introVideo');
-      introVideo.play();
     }
   },
 });
