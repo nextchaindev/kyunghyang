@@ -837,7 +837,8 @@ h1.fly-text span:nth-child(37)[data-inviewport].is-inViewport {
 }
 
 .section-20 {
-  background-image: url('public/images/20_img.png');
+  background-image: url('public/images/white-dot.png');
+  transition: all 0.5s ease-in-out;
 }
 
 .section-21 {
@@ -922,7 +923,7 @@ h1.fly-text span:nth-child(37)[data-inviewport].is-inViewport {
 }
 
 .portrait {
-  width: 90%;
+  width: 30vh;
   max-width: 420px;
   aspect-ratio: 1;
 }
@@ -932,8 +933,7 @@ h1.fly-text span:nth-child(37)[data-inviewport].is-inViewport {
 }
 
 .py-100 {
-  padding-top: 100px;
-  padding-bottom: 100px;
+  padding: 10vh 0px;
 }
 
 .mx-80 {
@@ -1376,15 +1376,11 @@ h1 {
 }
 
 .map-transform {
-  transform: scale(2.5) translate(30%, -150px);
-}
-
-.second-map-transform {
-  transform: scale(2.5) translate(-5%, 300px);
+  transform: scale(2) translate(-10%, -150px);
 }
 
 #map-section {
-  background-image: url('public/images/10_bg.png');
+  background-image: url('public/images/white-dot.png');
 }
 
 .white-text-large {
@@ -1445,6 +1441,12 @@ h1 {
 @media only screen and (max-width: 1900px) {
   .satellite-main-point {
     left: 45%;
+  }
+}
+
+@media only screen and (max-width: 1475px) {
+  .py-100 {
+    padding: 50px 0px;
   }
 }
 
@@ -1516,8 +1518,8 @@ h1 {
   }
 
   .portrait {
-    height: 300px;
-    width: 300px;
+    height: 250px;
+    width: 250px;
     aspect-ratio: 1;
   }
 
@@ -1593,12 +1595,7 @@ h1 {
     font-size: 46px;
   }
 
-  .second-map-transform {
-    transform: scale(2) translate(-5%, 250px);
-  }
-
   #map-section {
-    background-position: -250px;
   }
 }
 
@@ -1847,14 +1844,11 @@ h1 {
 
   .mini-map {
     width: 300px;
+    left: 0;
   }
 
   .map-transform {
-    transform: scale(1.9) translate(18%, -100px);
-  }
-
-  .second-map-transform {
-    transform: scale(2.2) translate(-15%, 200px);
+    transform: scale(1.9) translate(-18%, -100px);
   }
 
   section[data-anchor='wooden-chair'] h1 {
@@ -1927,12 +1921,8 @@ h1 {
     margin-bottom: 20px;
   }
 
-  #map-section {
-    background-position: -100px;
-  }
-
   .map-transform {
-    transform: scale(1.9) translate(12%, -100px);
+    transform: scale(2.1) translate(-15%, -100px);
   }
 
   .mobile-talking-guy-parallax {
@@ -1941,10 +1931,6 @@ h1 {
 
   #second-map-blue-point-container-2 {
     left: 25%;
-  }
-
-  .second-map-transform {
-    transform: scale(2) translate(-15%, 150px);
   }
 
   .text-white-large {
