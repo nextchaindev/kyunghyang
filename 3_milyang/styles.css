@@ -848,16 +848,8 @@ h1.fly-text span:nth-child(37)[data-inviewport].is-inViewport {
   background-image: url('public/images/23_img.png');
 }
 
-.section-24 {
-  background-image: url('public/images/26_img1.png');
-}
-
 .section-25 {
   background-image: url('public/images/25_img.png');
-}
-
-.section-26 {
-  background-image: url('public/images/28_img.png');
 }
 
 .section-26a .fp-overflow {
@@ -930,7 +922,7 @@ h1.fly-text span:nth-child(37)[data-inviewport].is-inViewport {
 }
 
 .portrait {
-  width: 100%;
+  width: 90%;
   max-width: 420px;
   aspect-ratio: 1;
 }
@@ -1524,8 +1516,8 @@ h1 {
   }
 
   .portrait {
-    height: 45vw;
-    width: 45vw;
+    height: 300px;
+    width: 300px;
     aspect-ratio: 1;
   }
 
