@@ -273,7 +273,6 @@ let myFullpage = new fullpage('#fullpage', {
     }
 
     if (barPositionToSections[THE_MAP_WHITE_DOT].includes(destination.anchor)) {
-      console.log('ff');
       showScrollBar();
       setTextOpacity('the-map-white-dot-progress-text');
       handleBarProgress(THE_MAP_WHITE_DOT);
