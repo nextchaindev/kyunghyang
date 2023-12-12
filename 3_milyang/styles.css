@@ -828,10 +828,6 @@ h1.fly-text span:nth-child(37)[data-inviewport].is-inViewport {
   background-image: url('public/images/09_img.png');
 }
 
-.section-10 {
-  background-image: url('public/images/10_bg.png');
-}
-
 .section-11 {
   background-image: url('public/images/11_img.png');
 }
@@ -1436,6 +1432,10 @@ h1 {
   left: 6%;
 }
 
+.scale-half {
+  transform: scale(0.5) translate(0px, -200px);
+}
+
 /* to the end of desktop */
 /* try to put the main point in satellite page to be right place */
 @media only screen and (max-width: 1900px) {
@@ -1611,6 +1611,14 @@ h1 {
 
   .mobile-break {
     display: none;
+  }
+
+  #map-no-text {
+    display: none;
+  }
+
+  .section-10 {
+    background-image: url('public/images/10_bg.png');
   }
 }
 
