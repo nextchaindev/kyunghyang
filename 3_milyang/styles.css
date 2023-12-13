@@ -1436,6 +1436,32 @@ h1 {
   transform: scale(0.5) translate(0px, -200px);
 }
 
+div.video-fullscreen-container {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--white);
+  padding: 90px;
+}
+
+div.video-container {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+div.video-container > video,
+div.video-container > iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  height: auto;
+}
+
 /* to the end of desktop */
 /* try to put the main point in satellite page to be right place */
 @media only screen and (max-width: 1900px) {
@@ -1464,6 +1490,9 @@ h1 {
 @media only screen and (max-width: 1300px) {
   .dual-title {
     padding: 15% 0px;
+  }
+  div.video-fullscreen-container {
+    padding: 0;
   }
 
   .desktop-high-break-down {
