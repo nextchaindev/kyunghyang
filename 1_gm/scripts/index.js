@@ -1176,6 +1176,7 @@ $(document).ready(function () {
       const container = document.getElementById(containerId);
       const viewer = new PANOLENS.Viewer({
         container,
+        controlBar: false,
       });
       const panorama = new PANOLENS.ImagePanorama(imgSrc);
       viewer.add(panorama);
